@@ -1,0 +1,122 @@
+<div id="nscontainer">
+    <h1>EnetCOLLECT Literature DEMO</h1>
+
+    <div id="menu" class="navbar">
+        <ul class="nav navbar-nav">
+            <li (click)="nav(1)">
+                <a>Home</a>
+            </li>
+            <li *ngIf="isLoggedIn&&!isAdmin" (click)="nav(2)">
+                <a>Suggest entry</a>
+            </li>
+            <li *ngIf="isAdmin&&isLoggedIn" (click)="nav(3)">
+                <a>Add entry</a>
+            </li>
+            <li *ngIf="isAdmin&&isLoggedIn" (click)="nav(4)">
+                <a>Review suggestions</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-right navbar-nav">
+            <li *ngIf="!isLoggedIn" (click)="isLoggedIn = true;">
+                <a>Login</a>
+            </li>
+            <li (click)="isAdmin = !isAdmin">
+                <a>Admin</a>
+            </li>
+            <li *ngIf="isLoggedIn" (click)="isLoggedIn = false;nav(1)">
+                <a>Logout</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="hspace">
+        <br/>
+    </div>
+
+    <div id="litlist" [hidden]="!showLitlist">
+        Literature list
+        <br/>
+        <div *ngFor="let entry of litlist">
+
+            {{entry['author']}}. {{entry['year']}}. <i>{{entry["title"]}}</i>. {{entry["journal"]}}. <a href="{{entry['file']}}" *ngIf="isLoggedIn">[PDF]</a>
+            <br/>
+            <b>Keywords</b>: {{entry["keywords"]}}
+            <br/>
+            <b>Summary</b>: {{entry["summary"]}}
+            <hr/>
+        </div>
+    </div>
+    <div id="addentry" [hidden]="!showAddEntry||isAdmin">
+        Suggest entry
+        <br/>
+        <form>
+            <div  class="form-group">
+                <label>Author(s): <input type="text" class="form-control" #author></label>
+            </div>
+            <div class="form-group">
+                <label>Year: <input type="text" class="form-control" #year></label>
+            </div>
+            <div class="form-group">
+                <label>Title: <input type="text" class="form-control" #title></label>
+            </div>
+            <div class="form-group">
+                <label>Journal: <input type="text" class="form-control" #journal></label>
+            </div>
+            <div class="form-group">
+                <label>Keywords: <input type="text" class="form-control" #keywords></label>
+            </div>
+            <div class="form-group">
+                <label>Summary: <input type="text" class="form-control" #summary></label>
+            </div>
+            <div class="form-group">
+                <label>File: <input type="file" class="form-control"></label>
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="suggest(author.value,year.value,title.value,journal.value,keywords.value,summary.value)">Submit</button>
+        </form>
+    </div>
+    <div id="addentryadmin" [hidden]="!isAdmin||!showAddEntry">
+        Add entry
+        <br/>
+        <form>
+            <div  class="form-group">
+                <label>Author(s): <input type="text" class="form-control" #aauthor></label>
+            </div>
+            <div class="form-group">
+                <label>Year: <input type="text" class="form-control" #ayear></label>
+            </div>
+            <div class="form-group">
+                <label>Title: <input type="text" class="form-control" #atitle></label>
+            </div>
+            <div class="form-group">
+                <label>Journal: <input type="text" class="form-control" #ajournal></label>
+            </div>
+            <div class="form-group">
+                <label>Keywords: <input type="text" class="form-control" #akeywords></label>
+            </div>
+            <div class="form-group">
+                <label>Summary: <input type="text" class="form-control" #asummary></label>
+            </div>
+            <div class="form-group">
+                <label>File: <input type="file" class="form-control"></label>
+            </div>
+            <button type="reset" class="btn btn-primary" (click)="addEntry(aauthor.value,ayear.value,atitle.value,ajournal.value,akeywords.value,asummary.value)">Submit</button>
+        </form>
+    </div>
+    <div id="review" [hidden]="!isAdmin||!showReview">
+        Review suggested entries
+        <br/>
+        <div *ngFor="let entry of revlist">
+
+            {{entry['author']}}. {{entry['year']}}. <i>{{entry["title"]}}</i>. {{entry["journal"]}}. <a href="{{entry['file']}}" *ngIf="isLoggedIn">[PDF]</a>
+            <br/>
+            <b>Keywords</b>: {{entry["keywords"]}}
+            <br/>
+            <b>Summary</b>: {{entry["summary"]}}
+            <br/>
+            <button type="button" class="btn btn-default" (click)="accept(entry)">Accept</button>
+            <button type="button" class="btn btn-danger" (click)="reject(entry)">Reject</button>
+            <hr/>
+        </div>
+    </div>
+</div>

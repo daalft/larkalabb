@@ -1,0 +1,29 @@
+body {
+    background-color: lightgray;
+    margin-left: 20%;
+
+}
+
+#maintitle {
+    font-family: sans-serif;
+}
+
+#errormessage {
+
+}
+
+#sadbird {
+
+    padding: 50px;
+    margin: 50px;
+}
+
+#links{
+    text-align: left;
+}
+
+#bird-copyright {
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+}

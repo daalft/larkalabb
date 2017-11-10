@@ -1,0 +1,10 @@
+<div>Diagnostic Test</div>
+
+<div id="testcontainer">
+    <span *ngFor="let word of words" class="dia-selectable" (click)="select(word)" [ngClass]="{'dia-selected':word['selected']}">
+        {{word["word"]}}
+    </span>
+</div>
+
+<button class="btn btn-primary" type="submit" (click)="updateBounds()">Done</button>
+

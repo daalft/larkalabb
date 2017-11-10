@@ -1,0 +1,176 @@
+<!-- LIsten and WRIte eXercise -->
+<div class="title">
+    LiWriX - Listen and Write Exercise
+</div>
+<!-- MENU -->
+<!-- spelling, word, phrase, sentence -->
+<div *ngIf="!level">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <label for="type">Select type</label>
+            <select id="type" #type  class="form-control">
+                <option>Words</option>
+                <option>Words spell</option>
+                <option>Phrases</option>
+                <option disabled>Sentences</option>
+            </select>
+
+            <input type="checkbox" #mwe class="checkbox-inline" id="mwes" checked disabled><label for="mwes">Include MWEs <span class="fa fa-question-circle"></span></label>
+        </div>
+        <!-- levels to train -->
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <label for="level">Select level <span class="fa fa-question-circle"></span></label>
+            <select id="level" #level class="form-control">
+                <option>A1</option>
+                <option>A2</option>
+                <option>B1</option>
+                <option>B2</option>
+                <option>C1</option>
+            </select>
+        </div>
+        <!-- mode: selfstudy, test -->
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <div><b>Select mode</b></div>
+            <label><input type="radio" name="mode" checked #mode1>Selfstudy</label>
+            <label><input type="radio" name="mode" #mode2>Test</label>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="ready">
+        <button type="submit" (click)="setParams(type.selectedIndex,mwe.checked,level.selectedIndex,(mode1.checked?0:mode2.checked?1:2))" class="btn btn-primary">{{localizer.localize('liwrix-play')}}</button>
+    </div>
+
+    <div id="attribution">
+        Words sampled from <a href="">SVAlex</a> (Thomas François, Elena Volodina, Ildikó Pilán, Anaïs Tack. 2016)
+        <br/>
+        Text-to-Speech (TTS) by Nuance Vocalizer Embedded 3.0
+    </div>
+</div>
+
+<!-- secondary menu bar -->
+<!--
+<div class="row" *ngIf="level">
+    Mode: {{mode}} <span *ngIf="spell">(spell)</span>
+    MWE: {{mwe}}
+    Level: {{level}}
+    <button type="reset" class="btn btn-danger" (click)="level=null">Change settings</button>
+</div>
+-->
+
+<!-- score -->
+<div class="row">
+    <div *ngIf="getTotal()>0">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <b>Correct: </b> {{getCorrect()}}/{{getTotal()}}
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <b>Score: </b> {{score}}
+        </div>
+    </div>
+</div>
+
+<!-- EXERCISE -->
+<div class="row" *ngIf="currentWord['path']">
+    <!-- audio element -->
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+        <audio controls autoplay>
+            <source src="{{currentWord['path']}}" type="audio/wav">
+            Your browser does not support WAV file format.
+        </audio>
+    </div>
+    <!-- answer field -->
+    <div class="col-lg-4 col-md-3 col-sm-4 col-xs-4">
+        <input [ngClass]="{sparkleyVowel: currentWord['special-vowel'], sparkleyConsonant: currentWord['special-consonant']}" type="text" id="answer-{{currentWord['id']}}" title="Type here" class="form-control" (keypress)="keyhandler($event)">
+    </div>
+    <!-- submit button -->
+    <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+        <!-- spacer -->
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        <button type="submit" class="btn btn-primary" (click)="next()">{{localizer.localize('liwrix-check')}}</button>
+    </div>
+    <div class="col-lg-2 col-md-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div *ngIf="!showHint&&currentWord['hints']">
+                    <button type="button" class="btn btn-default" (click)="hint(currentWord['id'])">{{localizer.localize('liwrix-show-sentences')}}</button>
+                </div>
+                <div *ngIf="showHint">
+                    <button type="button" class="btn btn-default" (click)="showHint = false;">{{localizer.localize('liwrix-hide-sentences')}}</button>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div *ngIf="!showFirst&&showHint">
+                    <button type="button" class="btn btn-default" (click)="hint2();">{{localizer.localize('liwrix-show-first')}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- hint -->
+<div [hidden]="!showHint">
+    <div *ngIf="currentWord['hints']">
+        <div *ngIf="!showFirst">
+            <div *ngFor="let obj of currentWord['hints'][0]">
+                {{obj["sent_left"]}}
+                {{obj["target"]}}
+                {{obj["sent_right"]}}
+            </div>
+        </div>
+        <div *ngIf="showFirst">
+            <div *ngFor="let obj of currentWord['hints'][1]">
+                {{obj["sent_left"]}}
+                <span style="font-weight: bold; color: red;">{{obj["target"]}}</span>
+                {{obj["sent_right"]}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- previous words -->
+<div class="row" *ngFor="let previous of previousWords">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
+        <audio controls>
+            <source src="{{previous['path']}}" type="audio/wav">
+        </audio>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <input type="text" id="answer-{{previous['id']}}" title="Type here" [disabled]="mode==1" value="{{previous['answers'][previous['answers'].length-1]}}" class="form-control" (keypress)="keyhandler($event, previous['id'])">
+    </div>
+
+    <div *ngIf="mode==0">
+        <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+            <div *ngIf="currentWord['path']">
+                <span *ngIf="check(previous['id'])" class="fa fa-smile-o" style="color: green; line-height: inherit; font-size: large"></span>
+                <span *ngIf="!check(previous['id'])" class="fa fa-frown-o" style="color: red; line-height: inherit; font-size: large"></span>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <div *ngIf="!check(previous['id'])">
+                <button type="submit" class="btn btn-primary" (click)="checkManual(previous['id'])">{{localizer.localize('liwrix-check')}}</button>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2">
+            <!--
+            <div *ngIf="!check(previous['id'])">
+                <button type="button" class="btn btn-default" (click)="hint(previous['id'])">{{localizer.localize('liwrix-show-hint')}}</button>
+            </div>
+            -->
+        </div>
+    </div>
+    <div *ngIf="mode==1">
+        <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+            <div *ngIf="currentWord['path']">
+                <span *ngIf="check(previous['id'])" class="fa fa-smile-o" style="color: green; line-height: inherit; font-size: large"></span>
+                <span *ngIf="!check(previous['id'])" class="fa fa-frown-o" style="color: red; line-height: inherit; font-size: large"></span>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2">
+            {{previous['word']}}
+        </div>
+    </div>
+</div>
+
+<pleasewait #waiter></pleasewait>

@@ -1,0 +1,23 @@
+<h1>Tree Kernel evaluation</h1>
+
+<input type="text" #qq title="Query" style="width: 100px">
+<button (click)="fetchSentence(qq.value)" class="btn btn-primary">Generate words!!</button>
+
+<div id="content">
+    <div id="wordbar">
+        <div id="pleasewait" *ngIf="tokens.length == 0">Enter a search term and click the button to generate words!</div>
+        <div id="words" *ngIf="tokens.length > 0">
+            <span *ngFor="let word of tokens" class="listable">{{word}}</span>
+        </div>
+    </div>
+
+    <div id="compositionbar">
+        <input type="text" title="Write here" id="composition" #comp>
+    </div>
+
+    <div id="buttonbar">
+
+        <button type="button" class="btn btn-default" (click)="evaluate(comp.value)">Continue</button>
+
+    </div>
+</div>

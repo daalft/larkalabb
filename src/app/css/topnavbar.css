@@ -1,0 +1,54 @@
+.menu-column {
+    position: absolute;
+    top: 0;
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(255, 255, 255, 0.90);
+    overflow: hidden;
+    height: 100%;
+    animation-name: expander;
+    animation-duration: 1s;
+    width: 200px;
+    z-index: 999;
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.menu-title {
+    font-weight: bold;
+    color: orange;
+    margin-bottom: 5px;
+}
+
+#left-menu {
+    left: 0;
+    border-right: 2px solid rgba(255, 149, 0, 0.55);
+}
+
+#right-menu {
+    right: 0;
+    border-left: 2px solid rgba(255, 149, 0, 0.55);
+}
+
+.breakout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+}
+
+@keyframes expander {
+    from {width: 160px; opacity: 0.0;}
+    to {width: 200px; opacity: 1.0;}
+}
+
+hr {
+    color: rgba(255, 149, 0, 0.55);
+}
+
+.errorText {
+    color: darkred;
+    font-weight: bold;
+}

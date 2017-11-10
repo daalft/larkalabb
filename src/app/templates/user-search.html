@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="select-title">{{localizer.localize('userWords')}}</div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <input id="searchfield" type="text" title="User search" class="form-control" #userinput (keyup.enter)="fetch(userinput.value)">
+    </div>
+    <div class="col-lg-6">
+        <button class="btn btn-danger form-control" (click)="clearWordlist()">{{localizer.localize('remove_wordlist')}}</button>
+    </div>
+</div>
+<div class="row alert alert-danger fade in" [hidden]="everythingFine">
+    <div class="col-lg-12">
+        <a class="close" data-dismiss="alert" aria-label="close" (click)="everythingFine = true">&times;</a>
+        <strong>{{localizer.localize('error')}}</strong> {{localizer.localize('could_not_find')}} {{getStaticCurrentUserSearch()}}!
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div *ngFor="let option of words" class="selectable" [ngClass]="{selactive: option.active}" (click)="option.active = !option.active; updateCount();">
+            {{option.word}}
+            <a class="close" (click)="remove(option)" title="{{localizer.localize('remove_word')}}">&times;</a>
+        </div>
+    </div>
+</div>

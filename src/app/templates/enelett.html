@@ -1,0 +1,14 @@
+<div style="font-size: 20px; color: white;">
+    ENELETT
+</div>
+<br/>
+<div align="center" style="margin-left: 35%; margin-right: 35%;">
+    <label for="uip">Enter word</label>
+    <input class="form-control" id="uip" #uip (keypress)="keyhandler($event,uip.value)">
+    <br/>
+    <button type="submit" class="btn btn-primary form-control" (click)="demo(uip.value)">Check</button>
+</div>
+<br/>
+<div *ngIf="result" align="center" style="border: 1px dashed black; margin-left: 35%; margin-right: 35%;">
+    <span style="font-size: larger; font-weight: bold;">{{result}}</span>
+</div>

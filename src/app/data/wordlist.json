@@ -1,0 +1,51 @@
+[
+  {"name":  "general", "lexin":-1},
+  {"name":  "academic", "lexin":-1},
+
+
+  {"name":  "family", "lexin":1},
+
+  {"name":  "bodyParts", "lexin":2},
+  {"name":  "bodyOrgans", "lexin":3},
+
+  {"name":  "hospitals", "lexin":4},
+
+  {"name":  "food", "lexin":5},
+  {"name":  "kitchenUtencils", "lexin":6},
+  {"name":  "cookingMeals", "lexin":7},
+
+  {"name":  "clothes", "lexin":8},
+  {"name":  "clothesAndAccessories", "lexin":9},
+
+  {"name":  "house", "lexin":10},
+  {"name":  "kitchenBathroom", "lexin":11},
+  {"name":  "furniture", "lexin":12},
+
+  {"name":  "handicraft", "lexin":13},
+  {"name":  "crafts", "lexin":14},
+
+  {"name":  "education", "lexin":15},
+
+  {"name":  "post", "lexin":16},
+
+  {"name":  "traffic", "lexin":17},
+  {"name":  "cars", "lexin":18},
+
+  {"name":  "music", "lexin":19},
+  {"name":  "massMedium", "lexin":20},
+
+  {"name":  "sports", "lexin":21},
+
+  {"name":  "landscape", "lexin":22},
+  {"name":  "trees", "lexin":23},
+  {"name":  "flowers", "lexin":24},
+
+  {"name":  "fishes", "lexin":25},
+  {"name":  "birds", "lexin":26},
+  {"name":  "animals", "lexin":27},
+  {"name":  "domesticAnimals", "lexin":28},
+
+  {"name":  "farm", "lexin":29},
+  {"name":  "time", "lexin":30},
+  {"name":"weather", "lexin":32}
+]

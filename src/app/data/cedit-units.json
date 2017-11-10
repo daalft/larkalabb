@@ -1,0 +1,42 @@
+[
+  {
+    "val": "characters",
+    "text": "Characters"
+  },
+  {
+    "val": "dialogues",
+    "text": "Dialogues"
+  },
+  {
+    "val": "dictionary entry",
+    "text": "Dictionary entry"
+  },
+  {
+    "val": "full sentences",
+    "text": "Full sentences"
+  },
+  {
+    "val": "incomplete sentences",
+    "text": "Incomplete sentences"
+  },
+  {
+    "val": "numbers",
+    "text": "Numbers"
+  },
+  {
+    "val": "phrases",
+    "text": "Phrases"
+  },
+  {
+    "val": "question answer",
+    "text": "Question-answer"
+  },
+  {
+    "val": "single words",
+    "text": "Single words"
+  },
+  {
+    "val": "texts",
+    "text": "Texts/examples of text writing"
+  }
+]

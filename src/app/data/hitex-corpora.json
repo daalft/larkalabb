@@ -1,0 +1,78 @@
+[
+  {"name": "LäsBart",
+  "description": "",
+    "id": "lasbart"
+  },
+  {"name": "SUC3",
+    "description": "",
+    "id": "suc"
+  },
+  {"name": "Bloggmix2012",
+    "description": "",
+    "id": "bloggmix2012"
+  },
+  {"name": "Talbanken",
+    "description": "",
+    "id": "talbanken"
+  },
+  {"name": "GP2012",
+    "description": "",
+    "id": "gp2012"
+  },
+  {"name": "ROM99",
+    "description": "",
+    "id": "rom99"
+  },
+  {"name": "Academic texts: Humaniora",
+    "description": "",
+    "id": "SWEACHUM"
+  },
+  {"name": "Academic texts: Samhällsvetenskap",
+    "description": "",
+    "id": "SWEACSAM"
+  },
+  {"name": "Novels: Bonniersromaner I (1976-77)",
+    "description": "",
+    "id": "ROMI"
+  },
+  {"name": "Novels: Bonniersromaner II (1980-81)",
+    "description": "",
+    "id": "ROMII"
+  },
+  {"name": "Novels: SUC-romaner",
+    "description": "",
+    "id": "STORSUC"
+  },
+  {"name": "Newspaper texts: 8 sidor",
+    "description": "",
+    "id": "ATTASIDOR"
+  },
+  {"name": "Newspaper texts: DN 1987",
+    "description": "",
+    "id": "DN1987"
+  },
+  {"name": "Newspaper texts: GP - Två dagar",
+    "description": "",
+    "id": "GP2D"
+  },
+  {"name": "Newspaper texts: GP 2011",
+    "description": "",
+    "id": "GP2011"
+  },
+  {"name": "PAROLE",
+    "description": "",
+    "id": "PAROLE"
+  },
+  {"name": "Svenska Wikipedia (januari 2013)",
+    "description": "",
+    "id": "WIKIPEDIA-SV"
+  },
+  {"name": "SweWaC - Swedish Web as Corpus",
+    "description": "",
+    "id": "SWEWAC"
+  },
+  {"name": "Twittermix",
+    "description": "",
+    "id": "TWITTER"
+  }
+]

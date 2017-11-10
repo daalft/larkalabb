@@ -1,0 +1,59 @@
+.bgcs {
+    min-width: 15px;
+    min-height: 10px;
+    line-height: inherit;
+    display: inline-block;
+}
+
+.receptive.blue {
+    background-color: rgba(0, 176, 232, 0.20);
+}
+
+.productive.blue {
+    background-color: rgba(0, 176, 232, 0.80);
+}
+
+.receptive.green {
+    background-color: rgba(0, 170, 0, 0.20);
+}
+
+.productive.green {
+    background-color: rgba(0, 170, 0, 0.80);
+}
+
+.receptive.yellow {
+    background-color: rgba(255, 255, 0, 0.20);
+}
+
+.productive.yellow {
+    background-color: rgba(255, 255, 0, 0.80);
+}
+
+.receptive.orange {
+    background-color: rgba(255, 165, 0, 0.20);
+}
+
+.productive.orange {
+    background-color: rgba(255, 165, 0, 0.80);
+}
+
+.receptive.red {
+    background-color: rgba(255, 0, 0, 0.20);
+}
+
+.productive.red {
+    background-color: rgba(255, 0, 0, 0.80);    
+}
+
+.out-of-saldo {
+    border-bottom: dotted red;
+}
+
+td {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bgcs.inactive {
+    background-color: rgba(14, 34, 49, 0.20);
+}

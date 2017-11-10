@@ -1,0 +1,188 @@
+
+<nav class="navbar navbar-default">
+
+    <div class="col-xs-12 hidden-lg hidden-md hidden-sm">
+        <div class="dropdown-toggle col-xs-9" role="button" id="dropdownMenuXs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="fa fa-fw fa-bars" style="font-size: 1.5em; margin: 0 5px; line-height: inherit"></span>
+        </div>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuXs">
+
+            <div class="dropdown-item-wrapper-xs"><a routerLink="/linguist"><div class="dropdown-item">{{localize('exe_generator')}}</div></a></div>
+            <div class="dropdown-item-wrapper-xs"><a routerLink="/hitex"><div class="dropdown-item">{{localize('hitex')}}</div></a></div>
+            <div class="dropdown-item-wrapper-xs"><a routerLink="/editor"><div class="dropdown-item">{{localize('corpus-editor')}}</div></a></div>
+            <div class="dropdown-item-wrapper-xs"><a routerLink="/texteval"><div class="dropdown-item">{{localize('text-evaluation')}}</div></a></div>
+
+            <hr class="separator"/>
+
+            <div *ngIf="!loggedIn()" class="dropdown-item-wrapper-xs"><div class="mock-link dropdown-item" (click)="loginModal.open()">{{localize('login')}}</div></div>
+            <div *ngIf="loggedIn()" class="dropdown-item-wrapper-xs"><div class="mock-link dropdown-item" (click)="logout()">{{localize('logout')}}</div></div>
+
+            <hr class="separator"/>
+
+            <div class="dropdown-item-wrapper-xs"><div class="dropdown-item" (click)="aboutLarkaModal.open()">{{localize('larka_about')}}</div></div>
+            <div class="dropdown-item-wrapper-xs"><div class="dropdown-item" (click)="citeLarkaModal.open()">{{localize('larka_cite')}}</div></div>
+
+
+        </div>
+
+        <div class="langswitcher-xs col-xs-3">
+            <span class="fa fa-fw" style="font-size: 1.5em; margin: 0 5px; line-height: inherit" [ngClass]="{'fa-flag':getLanguage()=='sv','fa-flag-o':getLanguage()=='en'}" (click)="setLanguage('sv')">SV</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;<!-- required for correct display -->
+            <span class="fa fa-fw" style="font-size: 1.5em; margin: 0 5px; line-height: inherit" [ngClass]="{'fa-flag-o':getLanguage()=='sv','fa-flag':getLanguage()=='en'}" (click)="setLanguage('en')">EN</span>
+        </div>
+    </div>
+    <modal #citeLarkaModal>
+        <modal-header>
+            <h3>{{localizer.localize('larka_cite')}}</h3>
+        </modal-header>
+        <modal-body>
+            <div>
+                Elena Volodina, Ildikó Pilán, Lars Borin and Therese Lindström Tiedemann. 2014.
+                <i>A flexible language learning platform based on language resources and web services.</i>
+                Proceedings of LREC 2014, Reykjavik, Iceland.
+            </div>
+            <br/>
+            <div>
+                <img src="app/img/bibtex.png"><!-- needs relative address with root node -->
+                <br/>
+<pre>
+@inProceedings&#123;Volodina-Elena2014-3,
+    title = "A flexible language learning platform based on language resources and web services",
+    booktitle = "Proceedings of LREC 2014, Reykjavik, Iceland",
+    author = "Volodina, Elena and Pilán,Ildikó and Borin, Lars and Lindström, Therese Tiedemann",
+    year = "2014",
+    isbn = "978-2-9517408-8-4",
+    url = "http://www.lrec-conf.org/proceedings/lrec2014/pdf/892_Paper.pdf",
+    pages = "3973--3978"
+&#125;
+</pre>
+            </div>
+        </modal-body>
+        <modal-footer>
+            <button type="button" class="btn btn-default" data-dismiss="modal" (click)="citeLarkaModal.dismiss()">{{localizer.localize('close')}}</button>
+        </modal-footer>
+    </modal>
+    <modal #aboutLarkaModal>
+        <modal-header>
+            <h3>{{localizer.localize('larka_about')}}</h3>
+        </modal-header>
+        <modal-body>
+            <div [innerHtml]="localizer.localize('about_body')"></div>
+            <br/><br/>
+            <b>{{localizer.localize('about_man')}}</b>
+            <br/>
+            <a href="https://spraakbanken.gu.se/eng/personal/lars">Lars Borin</a>
+            <br/>
+            <a href="https://spraakbanken.gu.se/eng/personal/markus">Markus Forsberg</a>
+            <br/><br/>
+            <b>{{localizer.localize('about_dev')}}</b>
+            <br/>
+            <a href="https://spraakbanken.gu.se/eng/personal/elena">Elena Volodina</a>
+            <br/>
+            <a href="https://spraakbanken.gu.se/eng/personal/ildiko">Ildikó Pilán</a>
+            <br/>
+            <a href="https://spraakbanken.gu.se/eng/personal/jonupp">Jonatan Uppström</a>
+            <br/>
+            <a href="https://spraakbanken.gu.se/eng/personal/david">David Alfter</a>
+        </modal-body>
+        <modal-footer>
+            <button type="button" class="btn btn-default" data-dismiss="modal" (click)="aboutLarkaModal.dismiss()">{{localizer.localize('close')}}</button>
+        </modal-footer>
+    </modal>
+    <modal #loginModal>
+        <modal-header>
+            <h4 class="modal-title">{{localizer.localize('login')}}</h4>
+        </modal-header>
+        <modal-body>
+            <form #loginForm="ngForm">
+                <div class="form-group">
+                    <label for="username">{{localizer.localize('username')}}</label>
+                    <input name="username" autofocus type="text" class="form-control" id="username" required ngControl="username" #user>
+                </div>
+                <div class="form-group">
+                    <label for="password">{{localizer.localize('password')}}</label>
+                    <input name="upw" type="password" class="form-control" id="password" required ngControl="password" #pw>
+                </div>
+                <div class="checkbox">
+                    <label><input name="rememberme" type="checkbox" id="remember_me" value="" [(ngModel)]="keep_checkbox">
+                    {{localizer.localize('remember_me')}}</label>
+                </div>
+            </form>
+        </modal-body>
+        <modal-footer>
+            <button type="submit" class="btn btn-primary" [disabled]="!loginForm.form.valid" (click)="tryLogin(user.value, pw.value)">{{localizer.localize('login')}}</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" (click)="loginModal.dismiss()">{{localizer.localize('cancel')}}</button>
+        </modal-footer>
+    </modal>
+
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+
+            <li [ngClass]="{active:isSelected(1)}" (click)="setSelected(1)">
+                <!--
+                TODO change to role selection
+                Student of linguistics  -> /linguist
+                 Language learner       -> /learner
+                 Teacher                -> /teacher?
+                 Researcher             -> /researcher?
+                -->
+                <a>
+                <div class="dropdown">
+                    <div class="dropdown-toggle" role="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{localize('exe_generator')}}
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <div class="dropdown-item-wrapper"><div class="dropdown-item"><a routerLink="/linguist">{{localize('menu-linguist')}}</a></div></div>
+                        <div class="dropdown-item-wrapper"><div class="dropdown-item"><a routerLink="/learner">{{localize('menu-learner')}}</a></div></div>
+                        <!--
+                        <div class="dropdown-item-wrapper"><div class="dropdown-item"><a routerLink="/teacher">{{localize('menu-teacher')}}</a></div></div>
+                        <div class="dropdown-item-wrapper"><div class="dropdown-item"><a routerLink="/researcher">{{localize('menu-researcher')}}</a></div></div>
+                        -->
+                    </div>
+                </div>
+                </a>
+            </li>
+            <li [ngClass]="{active:isSelected(2)}" (click)="setSelected(2)">
+                <a routerLink="/hitex">{{localize('hitex')}}</a>
+            </li>
+            <li [ngClass]="{active:isSelected(3)}" (click)="setSelected(3)">
+                <a routerLink="/editor">{{localize('corpus-editor')}}</a>
+            </li>
+            <li [ngClass]="{active:isSelected(4)}" (click)="setSelected(4)">
+                <a routerLink="/texteval">{{localize('text-evaluation')}}</a>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+
+            <li class="active" [ngClass]="{active:getLanguage()=='sv'}">
+                <a (click)="setLanguage('sv')" class="mock-link">{{localize('swedish')}}</a>
+            </li>
+            <li [ngClass]="{active:getLanguage()=='en'}">
+                <a (click)="setLanguage('en')" class="mock-link">{{localize('english')}}</a>
+            </li>
+
+            <li>
+
+                <div class="dropdown">
+                    <div class="dropdown-toggle" role="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="fa fa-fw fa-bars" style="font-size: 1.5em; margin: 0 5px; line-height: inherit"></span>
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+
+                        <div *ngIf="!loggedIn()" class="dropdown-item-wrapper"><div class="mock-link dropdown-item" (click)="loginModal.open()">{{localize('login')}}</div></div>
+                        <div *ngIf="loggedIn()" class="dropdown-item-wrapper"><div class="mock-link dropdown-item" (click)="logout()">{{localize('logout')}}</div></div>
+                        <hr class="separator"/>
+                        <div class="dropdown-item-wrapper"><div class="dropdown-item" (click)="aboutLarkaModal.open()">{{localize('larka_about')}}</div></div>
+                        <div class="dropdown-item-wrapper"><div class="dropdown-item" (click)="citeLarkaModal.open()">{{localize('larka_cite')}}</div></div>
+                    </div>
+                </div>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>

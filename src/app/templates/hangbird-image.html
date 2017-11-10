@@ -1,0 +1,116 @@
+<pleasewait></pleasewait>
+<h1>Word guess</h1>
+
+<div *ngIf="!currentWord">
+    <div class="row">
+        <div id="instruction" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">{{localizer.localize('hb-instructions')}}</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <select (change)="setLanguage($event)" class="form-control">
+                <option *ngFor="let lang of languages" value="{{lang}}">{{localizer.localize(lang)}}</option>
+            </select>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <select (change)="setLevel($event)" class="form-control">
+                <option *ngFor="let level of levels" value="{{level}}">{{localizer.localize(level)}}</option>
+            </select>
+        </div>
+        <div class="col-lg-6 col-md-6 hidden-sm hidden-xs"></div>
+    </div>
+    <br/>
+    <div class="row">
+        <button type="button" class="btn btn-default" (click)="startGame()">{{localizer.localize('hangbird-play')}}</button>
+    </div>
+
+    <div id="attribution">
+        Definitions and translations from Lexin
+        <br/>
+        Words sampled from <a href="">SVAlex</a> (Thomas François, Elena Volodina, Ildikó Pilán, Anaïs Tack. 2016)
+        <br/>
+        Pictographic symbols used are a property of CATEDU (<a href="http://arasaac.org/">http://arasaac.org/</a>) under <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode">Creative Common’s License</a> and they have been created by Sergio Palao. Licenses: CC (BY-NC-SA)
+    </div>
+</div>
+
+<div *ngIf="currentWord">
+    <div *ngIf="!showImages">
+        <div id="infobar">
+            <div [hidden]="!ongoing"><b>Tries</b>: {{numberOfTries}}/{{maxNumberOfTries}}</div>
+
+            <div [hidden]="ongoing"><button type="button" class="btn btn-default" (click)="restartGame()">{{localizer.localize('hb-new-game')}}</button></div>
+
+            <br/>
+            <div class="scorekeeper"><b>Score</b>: {{totalScore}}</div>
+        </div>
+        <!--
+            <div id="eggrow">
+                <img class="vegg" *ngFor="let ei of eggindices" [src]="'app/img/egg1-'+(inARow+1>ei?'col':'unc')+'.png'">
+                <img [src]="'app/img/egg6-'+(inARow>4?'col':'ucol')+'.png'">
+            </div>
+        -->
+        <div id="description">
+            <b>Definition:</b>
+            <div>{{description}} <span [hidden]="!msd">({{msd}})</span></div>
+        </div>
+
+        <div [hidden]="showHint" id="translation-show">
+            <b>{{localizer.localize('hb-help-translation')}}</b>
+            <div class="mock-link" (click)="showTrans()">{{localizer.localize('hb-show-translation')}}</div>
+        </div>
+        <div [hidden]="!showHint" id="translation">
+            <b>{{localizer.localize('hb-help-translation')}}</b>
+            <div>{{translation}}</div>
+        </div>
+
+        <div id="playarea">
+            <span class="hb-letter" *ngFor="let letter of currentWordVector"><img src="app/img/hbegg.png" align="middle" [hidden]="letter!='_'"><span class="uncovered" [hidden]="letter=='_'">{{letter}}</span></span>
+        </div>
+
+        <div>
+            <button class="btn btn-default hb-button" *ngFor="let l of letters" (click)="tryLetter(l)">{{l}}</button>
+        </div>
+    </div>
+
+    <!-- image show part -->
+
+    <div *ngIf="showImages">
+
+        <div class="row">
+            <span style="font-size: large;">{{localizer.localize('hb-select-image-instruction')}}</span>
+        </div>
+
+        <div class="row dashed-border" style="margin-bottom: 20px; margin-top: 10px">
+            <div>
+                <b>Definition:</b>
+                <div>{{description}} <span [hidden]="!msd">({{msd}})</span></div>
+            </div>
+
+            <div>
+                <b>{{localizer.localize('hb-translation')}}</b>
+                <div>{{translation}}</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!--<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">-->
+            <img class="hb-img-margin" [src]="images[0]" (click)="selectImage(0)" [ngClass]="{thickBorder: selectedArray[0]}">
+
+
+            <img class="hb-img-margin" [src]="images[1]" (click)="selectImage(1)" [ngClass]="{thickBorder: selectedArray[1]}">
+
+        </div>
+        <div class="row">
+
+            <img class="hb-img-margin" [src]="images[2]" (click)="selectImage(2)" [ngClass]="{thickBorder: selectedArray[2]}">
+
+
+            <img class="hb-img-margin" [src]="images[3]" (click)="selectImage(3)" [ngClass]="{thickBorder: selectedArray[3]}">
+
+        </div>
+
+        <div class="row">
+            <button type="submit" (click)="restartGame()" class="btn btn-default">Continue</button>
+        </div>
+    </div>
+</div>
+

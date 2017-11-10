@@ -1,0 +1,24 @@
+[
+  {"word":"grad",
+  "pos":"nn"
+  },
+  {"word":"nummer",
+    "pos":"nn"
+  },
+  {"word":"ros",
+    "pos":"nn"
+  },
+  {"word":"nej",
+    "pos":"in"
+  },
+  {"word":"åka",
+    "pos":"vb"
+  },
+  {"word":"fotboll",
+    "pos":"nn"
+  },
+  {
+    "word": "fritid",
+    "pos": "nn"
+  }
+]

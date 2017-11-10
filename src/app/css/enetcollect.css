@@ -1,0 +1,9 @@
+#nscontainer {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 100%;
+    padding-left: 50px;
+}

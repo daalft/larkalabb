@@ -1,0 +1,43 @@
+.dia-selectable {
+    background-color: lavender;
+    padding: 10px 20px;
+    margin: 5px;
+    font-weight: bold;
+    font-family: "Titillium", Helvetica, "Helvetica Neue", serif;
+    line-height: inherit;
+    border-radius: 5px;
+    /* prevent selection of text*/
+
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+}
+
+.dia-selected {
+    background-color: #eebdae;
+    box-shadow: #0e2231 0 0 2px;
+}
+
+#testcontainer {
+
+}
+
+.page {
+
+    margin: 20px;
+    background-color: rgba(232, 169, 59, 0.11);
+    border: 1px solid rgba(255, 172, 45, 0.69);
+    border-radius: 5px;
+}
+
+.gappair {
+    padding: 10px;
+}
+
+input {
+    background-color: transparent;
+}

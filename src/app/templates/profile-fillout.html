@@ -1,0 +1,280 @@
+<!--
+<div class="" [hidden]="login.loggedIn">
+    Please log in to access this page.
+</div>
+-->
+<div class="" [hidden]="loggedIn()">
+
+<form>
+    <div class="signup-inner col-lg-6 col-md-8 col-sm-12 col-xs-12">
+        <fieldset>
+            <legend>Personal information</legend>
+        <div id="personal">
+            <div class="form-group">
+                Name (optional)
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <input type="text" class="form-control" title="First name" placeholder="First name" id="firstname">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <input type="text" class="form-control" title="Middle name" placeholder="Middle name" id="middlename">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <input type="text" class="form-control" title="Last name" placeholder="Last name" id="lastname">
+                    </div>
+                </div>
+            </div>
+            <!-- // Authentification is handled separately
+            <div class="form-group">
+                <label>
+                    Choose a username (optional)
+                    <input type="text" class="form-control">
+                </label>
+
+            </div>
+
+            <div class="form-group">
+                <label>
+                    E-mail address
+                    <input type="email" required class="form-control">
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>Choose a password
+                    <input type="{{showpw?'text':'password'}}" class="form-control" required>
+                </label>
+                <br/>
+                <label>
+                    Show password
+                    <input type="checkbox" (click)="toggleShowPassword()">
+                </label>
+
+            </div>
+            -->
+            <div class="form-group">
+
+                Year of birth
+                <div class="row">
+                <div class="col-lg-3">
+                <input class="form-control" id="yob" type="text" required maxlength="4" pattern="(19|20)[0-9]{2}" title="Year of birth (yyyy)" placeholder="YYYY">
+                </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                Gender (optional)
+                <br/>
+                <div class="form-group">
+                    <label>
+                        Male
+                        <input type="radio" name="sex" class="radio" value="male">
+                    </label>
+                    <label>
+                        Female
+                        <input type="radio" name="sex" class="radio" value="female">
+                    </label>
+                    <label>
+                        Other
+                        <input type="radio" name="sex" class="radio" value="other">
+                    </label>
+                </div>
+            </div>
+        </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Educational information</legend>
+
+        <div id="learning">
+            <!-- highest educational level -->
+
+            <div class="form-group">
+
+                What is your highest educational level?
+                <div class="row">
+<div class="col-lg-6">
+                <select class="form-control" title="Highest educational level" id="hel" required>
+                    <option *ngFor="let educationLevel of educationLevels">{{educationLevel}}</option>
+                </select>
+</div>
+                </div>
+            </div>
+            <div class="form-group">
+
+                How long have you been <b>learning</b> Swedish?
+
+                <div class="row">
+                    <div class="col-lg-3">
+                        <input type="text" required pattern="[1-9]([0-9]+)?" class="form-control" id="tles">
+                    </div>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="tlesu">
+                            <option>months</option>
+                            <option>years</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                How long have you been <b>living in</b> Sweden?
+
+
+                <div class="row">
+                    <div class="col-lg-3">
+                        <input type="text" required pattern="[1-9]([0-9]+)?" class="form-control" id="tlis">
+                    </div>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="tlisu">
+                            <option>months</option>
+                            <option>years</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                    <em>If you know what your CEFR level is</em>, please indicate it here.
+
+                <br/>
+                <label>
+                    A1
+                    <input type="radio" name="cefr" class="form-control" value="A1">
+                </label>
+                <label>
+                    A2
+                    <input type="radio" name="cefr" class="form-control" value="A2">
+                </label>
+
+                <label>
+                    B1
+                    <input type="radio" name="cefr" class="form-control" value="B1">
+                </label>
+                <label>
+                    B2
+                    <input type="radio" name="cefr" class="form-control" value="B2">
+                </label>
+
+                <label>
+                    C1
+                    <input type="radio" name="cefr" class="form-control" value="C1">
+                </label>
+                <label>
+                    C2
+                    <input type="radio" name="cefr" class="form-control" value="C2">
+                </label>
+                <label>
+                    I don't know
+                    <input type="radio" name="cefr" class="form-control" value="X">
+                </label>
+            </div>
+        </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Language information</legend>
+        <div id="language">
+            <!-- country -->
+            <!-- TODO do we need this information?
+            <autocomplete-field required [colwidth]="6" [values]="countries" [label]="'In what country have you lived the longest time?'" [limitTo]="5" (selectedValueEmitter)="handleValue($event)"></autocomplete-field>
+            -->
+            <!-- languages -->
+
+            <lang-select required id="langselect" #langselect [langs]="languages"></lang-select>
+        </div>
+
+        </fieldset>
+
+        <br/>
+        <!-- if teacher -->
+
+        <fieldset>
+            <legend>Role</legend>
+        <div id="role">
+            <div class="form-group">
+                <label>
+                    What best describes your role?
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" id="learner">
+                    Learner of Swedish
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" id="sweteacher">
+                    Teacher of Swedish
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" (change)="teacherToggle()" id="teacher">
+                    Teacher (Not Swedish)
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" id="linguist">
+                    Linguist
+                </label>
+                <br/>
+                <label>
+                    <input type="checkbox" id="researcher">
+                    Researcher (Non-linguist)
+                </label>
+
+            </div>
+
+            <div [hidden]="noTeacher">
+                <div class="form-group">
+                    <label>
+                        What are you teaching?
+                        <input type="text" class="form-control" id="teachingsubject">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        At what level are you teaching?
+                        <input type="text" class="form-control" id="teachinglevel">
+                    </label>
+                </div>
+            </div>
+        </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Teacher information</legend>
+        <div id="teacherinfo">
+            If you have been given a teacher ID, enter it here
+
+            <div class="form-group">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <label>
+                    Teacher ID (optional)
+
+                    <input type="text" pattern="[A-HJ-N]{4}[1-9][5-9][0-4][P-Z]{2,3}" class="form-control" id="teacherid">
+
+                </label>
+                    </div>
+            </div>
+            </div>
+        </div>
+        </fieldset>
+
+        <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <button type="submit" class="btn btn-primary" style="width: 100%" (click)="validateSave()">Register!</button>
+        </div>
+        </div>
+
+    </div>
+
+    <div class="col-lg-6 col-md-4 hidden-sm hidden-xs" id="spacer">
+
+    </div>
+</form>
+</div>

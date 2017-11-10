@@ -1,0 +1,32 @@
+<user-navbar></user-navbar>
+<div id="optionbox" [ngClass]="{optionsOpen: showOptions}">
+    <div [hidden]="showOptions">
+        <div id="optionresume">
+            <ul class="nav nav-pills">
+            <li role="presentation"><a class="mock-link" (click)="showOptions = !showOptions">{{localize(exerciseName)}}</a></li>
+            <li role="presentation"><a class="mock-link" (click)="showOptions = !showOptions">{{numberOfChoices[0] + localize('of') + numberOfChoices[1] + localize(exerciseParticle)}}</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-12" style="text-align: center"><span class="mock-link fa fa-fw fa-chevron-down center-block" title="{{localize('show_settings')}}" (click)="showOptions = !showOptions"></span></div>
+    </div>
+    <div [hidden]="!showOptions" id="fulloptions">
+        <div id="optionheader">{{localize('settings')}}</div>
+            <div class="col-lg-6">
+                <div class="select-title">{{localizer.localize('selectAnExercise')}}</div>
+                <div class="selectable" *ngFor="let label of labels1" [ngClass]="{selactive:label.selected}" (click)="setSelected(label)">
+                    {{localize(label.name)}}
+                </div>
+            </div>
+            <choice-selector [choices]="getChoiceForSelected()" class="col-lg-6"></choice-selector>
+        <div class="col-lg-12" style="text-align: center"><span class="mock-link fa fa-fw fa-chevron-up" title="{{localize('hide_settings')}}" (click)="showOptions = !showOptions;calculateResume()"></span></div>
+    </div>
+    <hr/>
+
+</div>
+<div class="col-lg-12">
+    <mode-selector #modeSelector (modeChangeEmitter)="handleModeChange($event)" (generateEmitter)="generate($event)" [options]="'selfstudy_checkbox,control_checkbox'"></mode-selector> <!-- temporarily removed modes: diagnostic_test,timer_checkbox -->
+</div>
+<div class="container" id="exercises">
+    <exercise-component (nextRequester)="generate($event)"></exercise-component>
+</div>
+

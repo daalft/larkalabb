@@ -1,0 +1,76 @@
+<pleasewait></pleasewait>
+<h2>Word guess (Estonian demo)</h2>
+
+<div *ngIf="!currentWord">
+    <div class="row">
+    <div id="instruction" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Select a language for translation hints and click Play!</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <select class="form-control">
+        <option>English</option>
+        <option>Finnish</option>
+        <option>French</option>
+        <option>German</option>
+    </select>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <select (change)="setLevel($event)" class="form-control">
+        <option *ngFor="let level of levels" value="{{level}}">{{level}}</option>
+    </select>
+        </div>
+        <div class="col-lg-6 col-md-6 hidden-sm hidden-xs"></div>
+    </div>
+    <br/>
+    <div class="row">
+    <button type="button" class="btn btn-default" (click)="startGame()">Play!</button>
+    </div>
+</div>
+
+<div *ngIf="currentWord">
+    <div id="infobar">
+        <div [hidden]="!ongoing"><b>Tries</b>: {{numberOfTries}}/{{maxNumberOfTries}}</div>
+        <div [hidden]="ongoing"><button type="button" class="btn btn-default" (click)="startGame()">Play again!</button></div>
+        <br/>
+        <div class="scorekeeper"><b>Score</b>: {{totalScore}}</div>
+    </div>
+<!--
+    <div id="eggrow">
+        <img class="vegg" *ngFor="let ei of eggindices" [src]="'app/img/egg1-'+(inARow+1>ei?'col':'unc')+'.png'">
+        <img [src]="'app/img/egg6-'+(inARow>4?'col':'ucol')+'.png'">
+    </div>
+-->
+    <div class="dashed-border">
+    <div [hidden]="!showImage">
+        <img [src]="image" class="hb-image">
+    </div>
+    <div [hidden]="showImage" (click)="showImage = true" class="mock-link">
+        <b>Show image</b>
+    </div>
+    <div [hidden]="!showDescription">
+        <b>Definition:</b>
+        <div>{{description}}</div>
+    </div>
+    <div [hidden]="showDescription" (click)="showDescription = true" class="mock-link">
+        <b>Show definition</b>
+    </div>
+    <div [hidden]="showHint">
+
+        <div class="mock-link" (click)="showTrans()">
+            <b>Show translation</b>
+        </div>
+    </div>
+    <div [hidden]="!showHint">
+        <b>Translation:</b>
+        <div>{{translation}}</div>
+    </div>
+    </div>
+    <div id="playarea">
+        <span class="hb-letter" *ngFor="let letter of currentWordVector"><img src="app/img/hbegg.png" align="middle" [hidden]="letter!='_'"><span class="uncovered" [hidden]="letter=='_'">{{letter}}</span></span>
+    </div>
+
+    <div>
+        <button class="btn btn-default hb-button" *ngFor="let l of letters" (click)="tryLetter(l)">{{l}}</button>
+    </div>
+</div>
+

@@ -1,0 +1,29 @@
+<div>
+    <div id="page1" [hidden]="currentPage!=1" class="signup-inner col-lg-6 col-md-8 col-sm-12 col-xs-12">
+        <form>
+        <fieldset>
+            <legend>Username and password</legend>
+            <div class="form-group">
+
+                <label>{{localizer.localize('register-username')}}<input type="text" class="form-control" #usn required></label>
+                <label>{{localizer.localize('register-password')}}<input type="password" class="form-control" #upw required></label>
+
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" (click)="nextPage(usn.value,upw.value)">Continue</button>
+            </div>
+        </fieldset>
+        </form>
+    </div>
+
+    <div id="page2" [hidden]="currentPage!=2">
+        <profile-fillout (emitter)="createUser($event)" (status)="bubble($event)"></profile-fillout>
+    </div>
+
+    <div id="page3" [hidden]="currentPage!=3">
+        <div>Welcome {{uname}}!</div>
+        <div>
+            Your profile has been created. You can log in using the menu on the right.
+        </div>
+    </div>
+</div>

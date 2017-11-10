@@ -1,0 +1,60 @@
+<h1>Vocabulary Multiple Choice</h1>
+<pleasewait></pleasewait>
+<button type="button" (click)="generate()" class="btn btn-primary">Click to generate!</button>
+
+<div *ngIf="target">
+
+    <div class="row exercise active">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+            {{index}}
+        </div>
+        <div class="col-lg-5 col-md-7 col-sm-7 col-xs-8">
+            <span class="">{{sentence_left}}</span>
+            <span class="" [hidden]="target=='...'">_____</span>
+            <span class="">{{sentence_right}}</span>
+        </div>
+        <div class="col-lg-3 col-md-2 col-sm-2 col-xs-3">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
+                    <select (change)="setAnswer($event)" class="form-control">
+                        <option *ngFor="let distractor of distractors">{{distractor}}</option>
+                    </select>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                    <div (click)="checkAnswer()" class="mock-link"><i class="bigicon fa fa-arrow-circle-o-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-2 col-sm-2 hidden-xs">
+
+        </div>
+    </div>
+
+    <div class="row exercise" *ngFor="let p of previous">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+            {{p.index}}
+        </div>
+        <div class="col-lg-5 col-md-7 col-sm-7 col-xs-8">
+            <span class="">{{p.sentence_left}}</span>
+            <span class="">_____</span>
+            <span class="">{{p.sentence_right}}</span>
+        </div>
+        <div class="col-lg-3 col-md-2 col-sm-2 col-xs-3">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
+                    <select (change)="reviseAnswer(p,$event)" class="form-control">
+                        <option *ngFor="let distractor of p.distractors" [selected]="p.answer === distractor">{{distractor}}</option>
+                    </select>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+                    <span class="bigicon fa fa-check" [ngClass]="{hidden:!isCorrect(p)}"></span>
+                    <span class="bigicon fa fa-times" [ngClass]="{hidden:isCorrect(p)}"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-2 col-sm-2 hidden-xs">
+
+        </div>
+    </div>
+
+</div>

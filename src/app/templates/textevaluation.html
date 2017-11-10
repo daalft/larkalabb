@@ -1,0 +1,204 @@
+<pleasewait #waiter></pleasewait>
+<div id="texteval">
+    <div class="texteval-content col-lg-8 col-md-8 col-sm-6 col-xs-6">
+        <div [hidden]="!unprocessed">
+            <label for="text">{{localizer.localize('texteval-instruction1')}}</label>
+            <textarea id="text" class="form-control" rows="15" #userinput></textarea>
+            <div *ngIf="devMode">
+                <button type="submit" class="btn btn-danger" (click)="renderJson(userinput.value)">
+                    Render JSON
+                </button>
+            </div>
+        </div>
+        <div [hidden]="unprocessed">
+            <span *ngFor="let word of words"><span [ngClass]="getStyle(word)">{{word[0]}}</span> </span>
+            <div *ngIf="devMode">
+                <button type="button" class="btn btn-default" (click)="unprocessed = true">
+                    Go back!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="texteval-options col-lg-4 col-md-4 col-sm-6 col-xs-6">
+        <div id="textoressay">
+            <p><b>{{localizer.localize('texteval-choose-mode')}}</b> <span style="line-height: inherit" class="fa fa-question-circle mock-link" title="{{localizer.localize('whatisthis')}}" (click)="assessModal.open()"></span></p>
+
+            <ul class="nav nav-pills">
+                <li role="presentation" [ngClass]="{active:assessEssay}"><a (click)="setAssessmentMode(2)">{{localizer.localize('texteval-assess-essay')}}</a></li>
+                <li role="presentation" [ngClass]="{active:assessText}"><a (click)="setAssessmentMode(1)">{{localizer.localize('texteval-assess-text')}}</a></li>
+            </ul>
+        </div>
+        <hr/>
+        <div id="mark-words" class="form-group">
+            <p><b>{{localizer.localize('texteval-mark-words')}}</b> <span style="line-height: inherit" class="fa fa-question-circle mock-link" title="{{localizer.localize('whatisthis')}}"></span></p>
+            <div class="checkbox">
+                <label><input type="checkbox" value="a1" #a1 [(ngModel)]="ca1">A1</label> <span class="bgcs receptive blue" title="{{localizer.localize('texteval-receptive')}}"></span> <span class="bgcs productive blue" [ngClass]="{'inactive':assessText}" title="{{localizer.localize('texteval-productive')}}"></span>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="a2" #a2 [(ngModel)]="ca2">A2</label> <span class="bgcs receptive green" title="{{localizer.localize('texteval-receptive')}}"></span> <span class="bgcs productive green" [ngClass]="{'inactive':assessText}" title="{{localizer.localize('texteval-productive')}}"></span>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="b1" #b1 [(ngModel)]="cb1">B1</label> <span class="bgcs receptive yellow" title="{{localizer.localize('texteval-receptive')}}"></span> <span class="bgcs productive yellow" [ngClass]="{'inactive':assessText}" title="{{localizer.localize('texteval-productive')}}"></span>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="b2" #b2 [(ngModel)]="cb2">B2</label> <span class="bgcs receptive orange" title="{{localizer.localize('texteval-receptive')}}"></span> <span class="bgcs productive orange" [ngClass]="{'inactive':assessText}" title="{{localizer.localize('texteval-productive')}}"></span>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="c1" #c1 [(ngModel)]="cc1">C1</label> <span class="bgcs receptive red" title="{{localizer.localize('texteval-receptive')}}"></span> <span class="bgcs productive red" [ngClass]="{'inactive':assessText}" title="{{localizer.localize('texteval-productive')}}"></span>
+            </div>
+            <!--
+            <div class="checkbox"> TODO do we have C2 data??
+                <label><input type="checkbox" value="c2" disabled="disabled" title="{{localizer.localize('texteval-no-c2')}}">C2</label>
+            </div>
+            -->
+        </div>
+        <hr/>
+        <div id="texteval-misc">
+            <p><b>{{localizer.localize('texteval-misc')}}</b> <span style="line-height: inherit" class="fa fa-question-circle mock-link" title="{{localizer.localize('whatisthis')}}"></span></p>
+            <div class="checkbox">
+                <label><input type="checkbox" value="unknown" [(ngModel)]="cunk">{{localizer.localize('texteval-mark-unknown')}}</label>
+            </div>
+
+            <div class="checkbox">
+                <label><input type="checkbox" value="spellchecker" [(ngModel)]="csch">{{localizer.localize('texteval-spellcheck')}}</label>
+            </div>
+        </div>
+        <hr/>
+        <div class="texteval-button">
+            <button type="submit" class="btn btn-primary" (click)="runAssessment()" *ngIf="unprocessed">
+                {{localizer.localize('texteval-assess')}}
+            </button>
+            <button type="submit" class="btn btn-primary" (click)="editText()" *ngIf="!unprocessed">
+                {{localizer.localize('texteval-go-back')}}
+            </button>
+            <button type="reset" class="btn btn-danger" (click)="reset()">
+                {{localizer.localize('texteval-reset')}}
+            </button>
+        </div>
+    </div>
+
+</div>
+<div class="row" id="texteval-result" *ngIf="!unprocessed">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div>
+            <h3>{{localizer.localize('texteval-evaluation')}}</h3>
+        </div>
+    <div id="general-level">
+        <b>{{localizer.localize('texteval-overall-level')}}: </b>
+        {{responseObject.cefrML}}
+        <!--
+        <table>
+            <tr *ngIf="responseObject.cefrML">
+                <td>{{localizer.localize('texteval-cefrML')}}</td>
+                <td>{{responseObject.cefrML}}</td>
+            </tr>
+            <tr>
+                <td>{{localizer.localize('texteval-cefrKelly')}}</td>
+                <td>{{responseObject.cefrKelly}}</td>
+            </tr>
+            <tr>
+                <td>{{localizer.localize('texteval-cefrSvalex')}}</td>
+                <td>{{responseObject.cefrSvalex}}</td>
+            </tr>
+            <tr>
+                <td>{{localizer.localize('texteval-cefrSwell')}}</td>
+                <td>{{responseObject.cefrSwell}}</td>
+            </tr>
+        </table>
+        -->
+    </div>
+    <div id="detailed-level">
+        <b>{{localizer.localize('texteval-detailed-evaluation')}}</b>
+        <br/>
+        <table id="result-table">
+            <tr>
+                <td>{{localizer.localize('texteval-nrSents')}}</td>
+                <td>{{responseObject.nrSents}}</td>
+            </tr>
+            <tr>
+                <td>{{localizer.localize('texteval-nrTokens')}}</td>
+                <td>{{responseObject.nrTokens}}</td>
+            </tr>
+            <tr>
+                <td>{{localizer.localize('texteval-nonLemmatized')}}</td>
+                <td>{{responseObject.nonLemmatized}}</td>
+            </tr>
+            <tr>
+                <td>{{localizer.localize('texteval-avgSentLen')}}</td>
+                <td>{{responseObject.avgSentLen}}</td>
+            </tr>
+            <tr>
+                <td>{{localizer.localize('texteval-avgTokLen')}}</td>
+                <td>{{responseObject.avgTokLen}}</td>
+            </tr>
+            <tr><!-- group this together with avg sent and tok len?? -->
+                <td>{{localizer.localize('texteval-avgDepLen')}}</td>
+                <td>{{responseObject.avgDepLen}}</td>
+            </tr>
+
+            <tr>
+                <td>{{localizer.localize('texteval-lixScore')}}</td>
+                <td>{{responseObject.lixScore}} ({{localizer.localize(responseObject.lixMapping)}})</td>
+            </tr>
+
+            <tr>
+                <td>{{localizer.localize('texteval-nominalRatio')}}</td>
+                <td>{{responseObject.nominalRatio}}</td>
+            </tr>
+            <tr>
+                <td>{{localizer.localize('texteval-pntonn')}}</td>
+                <td>{{responseObject.pntonn}}</td>
+            </tr>
+
+            <!--
+            <tr>
+                <td>{{localizer.localize('texteval-')}}</td>
+                <td>{{responseObject.}}</td>
+            </tr>
+            <tr>
+                <td>{{localizer.localize('texteval-')}}</td>
+                <td>{{responseObject.}}</td>
+            </tr>
+            -->
+        </table>
+    </div>
+    </div>
+</div>
+
+<!-- MODALS -->
+
+<modal #assessModal>
+    <modal-header>
+        <h4 class="modal-title">{{localizer.localize('texteval-assessment-header')}}</h4>
+    </modal-header>
+    <modal-body>
+
+    </modal-body>
+    <modal-footer>
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="assessModal.dismiss()">{{localizer.localize('close')}}</button>
+    </modal-footer>
+</modal>
+
+<modal #cefrModal>
+    <modal-header>
+        <h4 class="modal-title">{{localizer.localize('texteval-cefr-header')}}</h4>
+    </modal-header>
+    <modal-body>
+
+    </modal-body>
+    <modal-footer>
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="cefrModal.dismiss()">{{localizer.localize('close')}}</button>
+    </modal-footer>
+</modal>
+<modal #additionalModal>
+    <modal-header>
+        <h4 class="modal-title">{{localizer.localize('texteval-additional-header')}}</h4>
+    </modal-header>
+    <modal-body>
+
+    </modal-body>
+    <modal-footer>
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="additionalModal.dismiss()">{{localizer.localize('close')}}</button>
+    </modal-footer>
+</modal>

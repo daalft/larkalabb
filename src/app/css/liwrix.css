@@ -1,0 +1,26 @@
+.title {
+    font-size: large;
+    font-family: "Titillium", Helvetica, "Helvetica Neue", serif;
+    margin-bottom: 10px;
+}
+
+.sparkleyVowel {
+    background-color: rgba(0, 176, 232, 0.31);
+    color: darkblue;
+}
+
+.sparkleyConsonant {
+    background-color: rgba(232, 228, 0, 0.31);
+    color: #000000;
+}
+
+#attribution  {
+    float: right;
+    bottom: 10%;
+    right: 20%;
+}
+
+audio {
+    width: 200px;
+    display: block;
+}

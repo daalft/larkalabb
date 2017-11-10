@@ -1,0 +1,134 @@
+
+<div *ngIf="visible" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+    <modal #reportModal>
+        <modal-header>
+            <h4 class="modal-title">{{localizer.localize('report_sentence')}}</h4>
+        </modal-header>
+        <modal-body>
+            <div class="form-group">
+                <div class="report-explanation">
+                    {{localizer.localize('report_explanation')}}
+                </div>
+                <br/>
+                <div class="report-sentence">
+                    <span *ngFor="let word of reported_sentence; let i = index"><span (click)="mark(i)" [ngClass]="{marked: word.selected}">{{word.word}}</span> </span>
+                </div>
+            </div>
+            <hr/>
+            <div class="form-group">
+                <div class="report-explanation">
+                    {{localizer.localize('report_skip_explanation')}}
+                </div>
+                <br/>
+                <div class="report-type">
+                    <select class="form-control">
+                        <option>---</option>
+                        <option>Sexuality</option>
+                        <option>Violence</option>
+                        <option>Insult</option>
+                    </select>
+                </div>
+            </div>
+        </modal-body>
+        <modal-footer [show-default-buttons]="true">
+
+        </modal-footer>
+    </modal>
+
+    <div class="row instructions">
+        {{localizer.localize('trainPOS1_instruction')}}
+    </div>
+    <div class="row exercise header">
+        <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs">
+            <!-- task number -->
+            {{localizer.localize('number')}}
+        </div>
+        <div class="col-lg-5 col-md-7 col-md-7 hidden-xs">
+            {{localizer.localize('exe_sentence')}}
+        </div>
+        <div class="col-lg-3 col-md-2 col-sm-2 hidden-xs">
+            <!-- answer here -->
+            {{localizer.localize('yr_answer')}}
+        </div>
+        <div class="col-lg-3 col-md-2 col-sm-2 hidden-xs">
+            <!-- links -->
+            {{localizer.localize('json_link')}}
+        </div>
+    </div>
+    <div [hidden]="current.target[0].word=='...'">
+        <div class="row exercise active">
+
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                <!-- task number -->
+                {{previousExamples.length+1}}
+            </div>
+            <div class="col-lg-5 col-md-7 col-sm-7 col-xs-8">
+                <span *ngFor="let word of current.sentence_left" (click)="showInformation(word)" class="word">{{word.word}} </span>
+                <span *ngFor="let word of current.target" class="target" (click)="showInformation(word)">{{word.word}} </span>
+                <span *ngFor="let word of current.sentence_right" (click)="showInformation(word)" class="word">{{word.word}} </span>
+            </div>
+            <div class="col-lg-3 col-md-2 col-sm-2 col-xs-3">
+                <!-- answer here -->
+                <div class="row">
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
+                        <select (blur)="setCurrent($event.target.value)" class="form-control">
+                            <option disabled selected value> -- </option>
+                            <option *ngFor="let option of current.distractors" value="{{option}}">{{localizer.localize(option)}}</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3" style="text-align: center;vertical-align: middle">
+                        <a class="mock-link" title="{{localizer.localize('check_answer')}}" (click)="archive()"><span class="bigicon fa fa-arrow-circle-o-right"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-2 col-sm-2 hidden-xs">
+                <!-- links -->
+                <div class="help-link mock-link" (click)="pronounce(current)">
+                    PRON
+                </div>
+                <div class="help-link mock-link" (click)="tree(current)">
+                    TREE
+                </div>
+                <div class="help-link mock-link" (click)="showjson(current)">
+                    JSON
+                </div>
+                <div class="help-link mock-link report-link" (click)="report(current)">
+                    <span class="fa fa-exclamation"></span>R<span class="fa fa-exclamation"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row exercise" *ngFor="let previous of previousExamples">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+            <!-- task number -->
+            {{previous.index}}
+        </div>
+        <div class="col-lg-5 col-md-7 col-sm-7 col-xs-8">
+            <span *ngFor="let word of previous.sentence_left">{{word.word}} </span>
+            <span *ngFor="let word of previous.target" class="target">{{word.word}} </span>
+            <span *ngFor="let word of previous.sentence_right">{{word.word}} </span>
+        </div>
+        <div class="col-lg-3 col-md-2 col-sm-2 col-xs-3">
+            <!-- answer here -->
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
+                    <select (change)="evaluate($event.target.value,previous)" class="form-control" [disabled]="mode!=='selfstudy_checkbox'">
+                        <option *ngFor="let option of previous.distractors" value="{{option}}" [selected]="previous.answer === option" >{{localizer.localize(option)}}</option>
+                    </select>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                    <span class="bigicon fa fa-check" [ngClass]="{hidden:!isCorrect(previous)}"></span>
+                    <span class="bigicon fa fa-times" [ngClass]="{hidden:isCorrect(previous)}"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-2 col-sm-2 hidden-xs">
+            <!-- links -->
+            {{previous.links}}
+        </div>
+    </div>
+</div>
+<div *ngIf="!visible">
+No data
+</div>

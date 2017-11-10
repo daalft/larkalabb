@@ -1,0 +1,360 @@
+<pleasewait #waiter></pleasewait>
+
+<h2>Cefrit annotation editor</h2>
+
+<div class="row">
+    <!-- tab switch -->
+</div>
+<div class="row">
+    <!-- instructions -->
+</div>
+<div class="row"> <!-- navigation/button row -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-inline">
+        <a href="https://spraakbanken.gu.se/larka/annotation_manual_v2.pdf" target="_blank"><button type="button" class="btn btn-default">{{localizer.localize('cedit-annotation-manual')}}</button></a>
+        <div style="float:right">
+            <label>Session key: <input type="text" id="sessionid" class="form-control" [value]="getUserkey()"></label>
+            <button type="button" class="btn btn-default" (click)="restoreSession()">Restore session</button>
+        </div>
+    </div>
+</div>
+<br/>
+<div class="row"> <!-- main content -->
+    <!-- x, 50%, x -->
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+        <br/>
+        <div class="list-group" [hidden]="showGenre">
+            <a class="list-group-item" (click)="coursebookmodal.open()">Coursebook</a>
+            <a class="list-group-item" (click)="showExtras = !showExtras">Extras <i class="fa fa-angle-double-down" aria-hidden="true" style="float: right; line-height: inherit;"></i></a>
+            <div [hidden]="!showExtras">
+                <a class="list-group-item" (click)="insertOpeningTag('extra')"><i class="fa fa-caret-right"></i> Extra info</a>
+                <a class="list-group-item" (click)="insertOpeningTag('contents')"><i class="fa fa-caret-right"></i> Table of contents</a>
+            </div>
+            <a class="list-group-item" (click)="lessonmodal.open()">Lesson</a>
+            <a class="list-group-item" (click)="textmodal.open()">Text</a>
+                <a class="list-group-item" (click)="showGenre = !showGenre"><i class="fa fa-caret-right"></i> Genre <i class="fa fa-angle-double-right" aria-hidden="true" style="float: right; line-height: inherit;"></i></a>
+                <a class="list-group-item" (click)="insertSubheading()"><i class="fa fa-caret-right"></i> Subheading</a>
+
+            <a class="list-group-item" (click)="activitymodal.open()">Activity/Task</a>
+            <a class="list-group-item" (click)="insertActivityInstruction()"><i class="fa fa-caret-right"></i> Activity instruction</a>
+
+            <a class="list-group-item" (click)="listmodal.open()">List</a>
+            <a class="list-group-item" (click)="langexmodal.open()">Language example</a>
+            <a class="list-group-item list-group-item-danger" (click)="finalize()">Finalize</a>
+        </div>
+        <div class="list-group" [hidden]="!showGenre">
+            <a class="list-group-item list-group-item-danger" (click)="showGenre = !showGenre"><i class="fa fa-angle-double-left"></i> Back</a>
+            <a class="list-group-item" (click)="showNarration = !showNarration">
+                <b>Narration</b> <i class="fa fa-angle-double-down" aria-hidden="true" style="float: right; line-height: inherit;"></i>
+            </a>
+            <div class="" [hidden]="!showNarration">
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Description</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Fiction</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> News article</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Personal story</a>
+            </div>
+            <a class="list-group-item" (click)="showFacts = !showFacts">
+                <b>Facts</b> <i class="fa fa-angle-double-down" aria-hidden="true" style="float: right; line-height: inherit;"></i>
+            </a>
+            <div class="group" [hidden]="!showFacts">
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Autobiography</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Biography</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Demonstration</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Explanation</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Facts</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Geographical facts</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Historical facts</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Instruction</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Procedures</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Report</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Rules</a>
+            </div>
+            <a class="list-group-item" (click)="showEvaluation = !showEvaluation">
+                <b>Evaluation</b> <i class="fa fa-angle-double-down" aria-hidden="true" style="float: right; line-height: inherit;"></i>
+            </a>
+            <div class="" [hidden]="!showEvaluation">
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Advertisement</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Argumentation</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Discussion</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Exposition</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Interpretation, exegesis</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Personal reflection</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Persuasion</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Review</a>
+            </div>
+            <a class="list-group-item" (click)="showOther = !showOther">
+                <b>Other</b> <i class="fa fa-angle-double-down" aria-hidden="true" style="float: right; line-height: inherit;"></i>
+            </a>
+            <div class="" [hidden]="!showOther">
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Anecdote, joke</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Dialogue</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Language tip</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Letter</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Lyrics</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Notice, short message</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Puzzle</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Questionnaire</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Quotation</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Recipe</a>
+                <a class="list-group-item" (click)="insertGenre($event)"><i class="fa fa-caret-right"></i> Rhyme</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-7 col-md-7 col-sm-6 col-xs-4">
+        <label for="cedit-content">Textbook content</label>
+        <textarea class="form-control" id="cedit-content" #cedit></textarea>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+        <b>List of tags</b>
+        <div *ngFor="let tag of taglist">{{tag}}</div>
+    </div>
+</div>
+
+<div class="row"> <!-- footer -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <button type="button" class="btn btn-default" (click)="downloadFile()">{{localizer.localize('cedit-download-file')}}</button>
+        <button type="button" class="btn btn-default" (click)="saveProgress()">{{localizer.localize('cedit-save')}}</button>
+        <span *ngIf="lastsaved">
+            Last saved: {{lastsaved}}
+        </span>
+    </div>
+</div>
+
+<br/><br/>
+
+<modal #coursebookmodal (onClose)="insertCoursebook()" (onOpen)="focusCoursebook()">
+    <modal-header>
+        <span class="cedit-title">New coursebook</span>
+    </modal-header>
+    <modal-body>
+        <form>
+            <div class="form-group">
+                <label>Book title: <input type="text" class="form-control" id="cbtitle"></label>
+            </div>
+            <div class="form-group">
+                <label>Author: <input type="text" class="form-control" id="cbauthor"></label>
+            </div>
+            <div class="form-group">
+                <label>Publication year: <input type="text" class="form-control" id="cbyear"></label>
+            </div>
+            <div class="form-group">
+                <label>Publisher: <input type="text" class="form-control" id="cbpublisher"></label>
+            </div>
+            <div class="form-group">
+                <label>ISBN: <input type="text" class="form-control" id="cbisbn"></label>
+            </div>
+        </form>
+    </modal-body>
+    <modal-footer>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default" (click)="coursebookmodal.close();">Ok</button>
+        </div>
+    </modal-footer>
+</modal>
+
+<modal #lessonmodal (onClose)="insertLesson()" (onOpen)="focusLesson(lessonmodal)">
+    <modal-header>
+        <span class="cedit-title">New lesson</span>
+    </modal-header>
+    <modal-body>
+        <div class="form-group">
+            <label>Select proficiency level
+                <select id="lecefr">
+                    <option *ngFor="let level of levels" [selected]="currentLevel == level">{{level}}</option>
+                </select>
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Assign ID:
+                <input type="text" class="form-control" [value]="lessoncounter" id="leid">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                Title, if applicable:
+                <input type="text" class="form-control" id="letitle">
+            </label>
+        </div>
+    </modal-body>
+    <modal-footer>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default" (click)="lessonmodal.close()">Ok</button>
+        </div>
+    </modal-footer>
+</modal>
+
+<modal #textmodal (onClose)="insertText()" (onOpen)="focusText(textmodal)">
+    <modal-header>
+        <span class="cedit-title">New text</span>
+    </modal-header>
+    <modal-body>
+        <div class="form-group">
+            <label>Assign ID:
+                <input type="text" class="form-control" [value]="'text_'+lessoncounter+'_'+textcounter" id="tid">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Assign reference, if applicable:
+                <input type="text" class="form-control" id="tref">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                Title, if applicable:
+                <input type="text" class="form-control" id="ttitle">
+            </label>
+        </div>
+        <div id="topics"> <!-- topics -->
+            <b>Relevant topics</b><br/>
+            <ul class="checkbox-grid" id="ttopics">
+                <li *ngFor="let topic of topics"><label><input type="checkbox" value="{{topic['val']}}"> {{topic['text']}}</label></li>
+            </ul>
+        </div>
+    </modal-body>
+    <modal-footer>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default" (click)="textmodal.close()">Ok</button>
+        </div>
+    </modal-footer>
+</modal>
+
+<modal #activitymodal (onClose)="insertActivity()" (onOpen)="focusActivity(activitymodal)">
+    <modal-header>
+        <span class="cedit-title">New activity</span>
+    </modal-header>
+    <modal-body>
+        <div class="form-group">
+            <label>Assign ID:
+                <input type="text" class="form-control" [value]="'task_'+lessoncounter+'_'+activitycounter" id="aid">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Assign reference, if applicable:
+                <input type="text" class="form-control" id="aref">
+            </label>
+        </div>
+        <div class="form-group" id="skills">
+            <b>Target skills</b><br/>
+            <ul class="checkbox-grid" id="askills">
+                <li *ngFor="let skill of skills"><label><input type="checkbox" value="{{skill['val']}}"> {{skill['text']}}</label></li>
+            </ul>
+        </div>
+        <div class="form-group" id="competences">
+            <b>Target competences</b><br/>
+            <ul class="checkbox-grid" id="acompetences">
+                <li *ngFor="let competence of competences"><label><input type="checkbox" value="{{competence['val']}}"> {{competence['text']}}</label></li>
+            </ul>
+        </div>
+        <div class="form-group" id="activitytypes">
+            <b>Relevant activity types</b><br/>
+            <ul class="checkbox-grid" id="atypes">
+                <li *ngFor="let activitytype of activitytypes"><label><input type="checkbox" value="{{activitytype['val']}}"> {{activitytype['text']}}</label></li>
+            </ul>
+        </div>
+        <div class="form-group" id="formats">
+            <b>Relevant formats</b><br/>
+            <ul class="checkbox-grid" id="aformats">
+                <li *ngFor="let formato of formats"><label><input type="checkbox" value="{{formato['val']}}"> {{formato['text']}}</label></li>
+            </ul>
+        </div>
+    </modal-body>
+    <modal-footer>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default" (click)="activitymodal.close()">Ok</button>
+        </div>
+    </modal-footer>
+</modal>
+
+<modal #listmodal (onClose)="insertList()" (onOpen)="focusList(listmodal)">
+    <modal-header>
+        <span class="cedit-title">New list</span>
+    </modal-header>
+    <modal-body>
+        <div class="form-group">
+            <label>Assign ID:
+                <input type="text" class="form-control" [value]="'list_'+lessoncounter+'_'+listcounter" id="liid">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Assign reference, if applicable:
+                <input type="text" class="form-control" id="liref">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                Title, if applicable:
+                <input type="text" class="form-control" id="lititle">
+            </label>
+        </div>
+        <div class="form-group" id="skills2">
+            <b>Target skills</b><br/>
+            <ul class="checkbox-grid" id="liskills">
+                <li *ngFor="let skill of skills"><label><input type="checkbox" value="{{skill['val']}}"> {{skill['text']}}</label></li>
+            </ul>
+        </div>
+        <div class="form-group" id="competences2">
+            <b>Target competences</b><br/>
+            <ul class="checkbox-grid" id="licompetences">
+                <li *ngFor="let competence of competences"><label><input type="checkbox" value="{{competence['val']}}"> {{competence['text']}}</label></li>
+            </ul>
+        </div>
+        <div class="form-group" id="units">
+            <b>Linguistic unit</b><br/>
+            <ul class="checkbox-grid" id="liunits">
+                <li *ngFor="let unit of units"><label><input type="checkbox" value="{{unit['val']}}"> {{unit['text']}}</label></li>
+            </ul>
+        </div>
+    </modal-body>
+    <modal-footer>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default" (click)="listmodal.close()">Ok</button>
+        </div>
+    </modal-footer>
+</modal>
+
+
+<modal #langexmodal (onClose)="insertLangex()" (onOpen)="focusLangex(langexmodal)">
+    <modal-header>
+        <span class="cedit-title">New language example</span>
+    </modal-header>
+    <modal-body>
+        <div class="form-group">
+            <label>Assign ID:
+                <input type="text" class="form-control" [value]="'langex_'+lessoncounter+'_'+langexcounter" id="laid">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Assign reference, if applicable:
+                <input type="text" class="form-control" id="laref">
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                Title, if applicable:
+                <input type="text" class="form-control" id="latitle">
+            </label>
+        </div>
+        <div class="form-group" id="skills3">
+            <b>Target skills</b><br/>
+            <ul class="checkbox-grid" id="laskills">
+                <li *ngFor="let skill of skills"><label><input type="checkbox" value="{{skill['val']}}"> {{skill['text']}}</label></li>
+            </ul>
+        </div>
+        <div class="form-group" id="competences3">
+            <b>Target competences</b><br/>
+            <ul class="checkbox-grid" id="lacompetences">
+                <li *ngFor="let competence of competences"><label><input type="checkbox" value="{{competence['val']}}"> {{competence['text']}}</label></li>
+            </ul>
+        </div>
+        <div class="form-group" id="units2">
+            <b>Linguistic unit</b><br/>
+            <ul class="checkbox-grid" id="launits">
+                <li *ngFor="let unit of units"><label><input type="checkbox" value="{{unit['val']}}"> {{unit['text']}}</label></li>
+            </ul>
+        </div>
+    </modal-body>
+    <modal-footer>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default" (click)="langexmodal.close()">Ok</button>
+        </div>
+    </modal-footer>
+</modal>

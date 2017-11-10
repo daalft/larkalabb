@@ -1,0 +1,71 @@
+
+<div>
+    <div [hidden]="page != 1" id="page1" class="page">
+        <div [hidden]="gap > 2" id="bg1gp1" (keypress)="nextgap($event)" class="gappair">
+
+            <div>Lotta och Samuel chockas när de inser hur olika de <input id="ggg1" type="text"> på sin relation.
+
+            </div>
+            <div>Jag är arbetsledare och <input id="ggg2" type="text"> till att de andra jobbar och gör bra grejer.
+            </div>
+        </div>
+        <div [hidden]="gap != 2" id="bg1gp2" (keypress)="nextpage($event)" class="gappair">
+            <div>I dag <input type="text" id="ggg3"> hans politiska engagemang annorlunda ut.</div>
+            <div>Jag <input type="text" id="ggg4"> inte ut som 60 , många tror inte jag är 50 ens.
+
+            </div>
+        </div>
+    </div>
+    <div [hidden]="page != 2" id="page2" class="page">
+
+        <div [hidden]="gap > 4" id="bg2gp1" (keypress)="nextgap($event)" class="gappair">
+            <div>Förnuftet gör att vi kan <input id="ggg5" type="text"> ut farorna.
+
+            </div>
+            <div>De vill <input type="text" id="ggg6"> bort både det lokala och centrala facket .
+
+            </div>
+        </div>
+        <div [hidden]="gap != 4" id="bg2gp2" (keypress)="nextpage($event)" class="gappair">
+            <div>Ingen kunde <input type="text" id="ggg7"> med den här krisen .
+
+            </div>
+            <div>Då kan ni <input type="text" id="ggg8"> ut min ålder.
+
+            </div>
+        </div>
+    </div>
+    <div [hidden]="page != 3" id="page3">
+        <div class="etitle">Sentence rearrangement</div>
+        <div class="eexpl">Rearrange the following segments to form a sentence.</div>
+        <div class="econtent">
+            <ul id="sortable">
+                <li>jag</li>
+                <li>ett paraply</li>
+                <li>ute</li>
+                <li>det regnar</li>
+                <li>så</li>
+                <li>tar</li>
+            </ul>
+        </div>
+
+        <br/>
+        <button type="button" class="btn btn-default" (click)="page=4">Next</button>
+    </div>
+    <div [hidden]="page != 4" id="page4">
+        <div class="etitle">Sentence composition</div>
+        <div class="eexpl">Write a sentence using all of these words:</div>
+        <div class="econtent">
+            <span class="listable">katt</span>
+            <span class="listable">kök</span>
+            <span class="listable">fönsterbräda</span>
+            <span class="listable">ligga</span>
+            <span class="listable">på</span>
+            <span class="listable">stor</span>
+            <span class="listable">i</span>
+            <span class="listable">en</span>
+            <br/>
+            <input type="text" title="solution" style="width: 300px;">
+        </div>
+    </div>
+</div>

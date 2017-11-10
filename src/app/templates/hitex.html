@@ -1,0 +1,500 @@
+<pleasewait #waiter></pleasewait>
+
+<div class="title">{{localizer.localize('hitex-title')}}</div>
+
+<div class="container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div id="simple-options" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <label for="searchfield">{{localizer.localize('hitex-search-for')}}</label>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <label for="pos">{{localizer.localize('hitex-pos')}} ({{localizer.localize('hitex-optional')}})</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            {{localizer.localize(searchmodeString())}} <span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a (click)="changeMode(0)">{{localizer.localize('hitex-lemma')}}</a></li>
+                            <li><a (click)="changeMode(1)">{{localizer.localize('hitex-wordform')}}</a></li>
+                            <li><a (click)="changeMode(2)">{{localizer.localize('hitex-cqp')}}</a></li>
+                        </ul>
+                    </div>
+                    <input id="searchfield" #searchfield type="text" class="form-control"
+                           title="{{localizer.localize('hitex-searchfield')}}" (keypress)="keyhandler($event.keyCode)">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <select id="pos" title="{{localizer.localize('hitex-pos')}}"
+                        [disabled]="cqpmode" class="form-control" (change)="changePos($event)">
+                    <option>{{localizer.localize('hitex-any')}}</option>
+                    <option *ngFor="let name of pos_names">{{localizer.localize('pos_'+name)}} ({{name}})
+                    </option>
+                </select>
+            </div>
+
+        </div>
+        <div class="unfloat">&nbsp;</div>
+
+        <div class="row">
+            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+                <button type="submit" class="btn btn-primary form-control" (click)="run()">{{localizer.localize('hitex-go')}}
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="unfloat">&nbsp;</div>
+
+    <div>
+        <div class="checkbox">
+            <label><input type="checkbox" id="usedefaults" (change)="useDefaults = !useDefaults" checked>Use default parameters</label>
+        </div>
+
+        <div class="title-link" (click)="showAdvancedOptions=!showAdvancedOptions" [hidden]="useDefaults"><span
+                class="fa fa-cogs"></span>&nbsp;{{localizer.localize('hitex-advanced')}}
+        </div>
+    </div>
+
+    <div id="advanced-options" [hidden]="useDefaults">
+        <div>
+            <span class="mock-link advanced-menu-link" (click)="toggle(0)">1. {{localizer.localize('hitex-general')}}</span>
+            <div [hidden]="!menuToggle[0]" class="advanced-menu-item">
+
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        Corpora to use
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <ul id="hitex-corpus-list" class="checkbox-grid">
+                            <li *ngFor="let corpus of corpora"><label><input type="checkbox" title="{{corpus['description']}}" value="{{corpus['id']}}"> {{corpus["name"]}}</label></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        Number of sentences to select from
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+
+                                <input  class="form-control" type="text" id="max_kwics" title="Number of sentences to select from">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        Number of sentences to show
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+
+                                <input class="form-control" type="text" id="maxhit" title="Number of sentences to show">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        Show sub-optimal sentences
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+
+                        <input type="checkbox" id="preserve_bad" title="Show sub-optimal sentences">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <span class="mock-link advanced-menu-link" (click)="toggle(1)">2. {{localizer.localize('hitex-target-search-pattern')}}</span>
+            <div [hidden]="!menuToggle[1]" class="advanced-menu-item">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        {{localizer.localize('hitex-pattern-repetition')}}
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                       [option2]="localizer.localize('hitex-rank')"
+                                       name="repkw"></switch-toggle>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        {{localizer.localize('hitex-pattern-position')}}
+                    </div>
+
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+
+                                <div class="input-group">
+                                    <input type="text" size="3" maxlength="3" class="percent-input form-control" aria-label="position-percent" id="kw_pos_percent">
+                                    <span class="input-group-addon" id="pos-percent">%</span>
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default dropdown-toggle"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            {{localizer.localize(searchtermPositionString())}} <span
+                                                class="caret"></span></button>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li><a (click)="setSearchtermPosition(0)">{{localizer.localize('hitex-of-start')}}</a>
+                                            </li>
+                                            <li><a (click)="setSearchtermPosition(1)">{{localizer.localize('hitex-of-end')}}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="unfloat">&nbsp;</div>
+
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                       [option2]="localizer.localize('hitex-rank')" name="kw_position"></switch-toggle>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div>
+            <span class="mock-link advanced-menu-link" (click)="toggle(2)">3. {{localizer.localize('hitex-wellformedness')}}</span>
+            <div [hidden]="!menuToggle[2]" class="advanced-menu-item">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        {{localizer.localize('hitex-no-dep-root')}}
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                       [option2]="localizer.localize('hitex-rank')" name="root"></switch-toggle>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        {{localizer.localize('hitex-elliptic')}}
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                       [option2]="localizer.localize('hitex-rank')" name="elliptic"></switch-toggle>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        {{localizer.localize('hitex-incomplete-sentence')}}
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                       [option2]="localizer.localize('hitex-rank')" name="sent_tokenization"></switch-toggle>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        {{localizer.localize('hitex-non-lemmatized-over')}}
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="input-group">
+                                    <input type="text" size="3" maxlength="3" class="form-control percent-input" id="non_lemmatized_thr">
+                                    <span class="input-group-addon" id="non-lemma-percent">%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="unfloat">&nbsp;</div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6"></div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                       [option2]="localizer.localize('hitex-rank')" name="non_lemmatized"></switch-toggle>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        {{localizer.localize('hitex-non-alphabetical')}}
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="input-group">
+                                    <input type="text" size="3" maxlength="3" class="form-control percent-input" id="non_alpha_thr">
+                                    <span class="input-group-addon" id="non-alpha-percent">%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="unfloat">&nbsp;</div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6"></div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                       [option2]="localizer.localize('hitex-rank')" name="non_alpha"></switch-toggle>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <span class="mock-link advanced-menu-link" (click)="toggle(3)">4. {{localizer.localize('hitex-context-independence')}}</span>
+            <div [hidden]="!menuToggle[3]" class="advanced-menu-item">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        {{localizer.localize('hitex-isolated-connectives')}}
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                       [option2]="localizer.localize('hitex-rank')" name="struct_conn"></switch-toggle>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        {{localizer.localize('hitex-pronominal-anaphora')}}
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                       [option2]="localizer.localize('hitex-rank')" name="anaphora-PN"></switch-toggle>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        {{localizer.localize('hitex-adverbial-anaphora')}}
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                       [option2]="localizer.localize('hitex-rank')" name="anaphora-AB"></switch-toggle>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <span class="mock-link advanced-menu-link" (click)="toggle(4)">5. {{localizer.localize('hitex-readability')}}</span>
+            <div [hidden]="!menuToggle[4]" class="advanced-menu-item">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        <b>{{localizer.localize('hitex-cefr-level')}}</b>
+                    </div>
+
+                    <div class="btn-group col-lg-10 col-md-9 col-sm-7 col-xs-6" data-toggle="buttons" role="group" id="cefrs">
+                        <!--<label class="btn btn-default"><input type="radio" name="cefr" value="all" class="disabled">{{localizer.localize('hitex-all')}}</label>-->
+                        <label class="btn btn-default"><input type="radio" name="cefr" value="A1">A1</label>
+                        <label class="btn btn-default"><input type="radio" name="cefr" value="A2">A2</label>
+                        <label class="btn btn-default"><input type="radio" name="cefr" value="B1">B1</label>
+                        <label class="btn btn-default"><input type="radio" name="cefr" value="B2">B2</label>
+                        <label class="btn btn-default"><input type="radio" name="cefr" value="C1">C1</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <span class="mock-link advanced-menu-link" (click)="toggle(5)">6. {{localizer.localize('hitex-additional-structural')}}</span>
+            <div [hidden]="!menuToggle[5]" class="advanced-menu-item">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        {{localizer.localize('hitex-negative-formulation')}}
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                       [option2]="localizer.localize('hitex-rank')" name="neg_form"></switch-toggle>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        {{localizer.localize('hitex-sentence-length')}}
+                    </div>
+
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                        {{localizer.localize('hitex-min')}}
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                        <input type="text" id="min_len" title="Minimum sentence length" class="form-control">
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                        {{localizer.localize('hitex-max')}}
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                        <input type="text" id="max_len" title="Maximum sentence length" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="unfloat">&nbsp;</div>
+
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+
+                    </div>
+                    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                        <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                       [option2]="localizer.localize('hitex-rank')" name="length"></switch-toggle>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <span class="mock-link advanced-menu-link" (click)="toggle(6)">7. {{localizer.localize('hitex-additional-lexical')}}</span>
+            <div [hidden]="!menuToggle[6]" class="advanced-menu-item">
+                <div>
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6 positive-ranker">
+                            {{localizer.localize('hitex-typicality')}}
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                            <switch-toggle [option1]="'Ranker'" [option2]="'Off'" name="typicality"></switch-toggle>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6 positive-ranker">
+                            {{localizer.localize('hitex-word-frequency')}}
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                            <switch-toggle [option1]="'Ranker'" [option2]="'Off'" name="svalex_fr"></switch-toggle>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                            {{localizer.localize('hitex-difficult-vocab')}}
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                            <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                           [option2]="localizer.localize('hitex-rank')" name="diff_voc_kelly"></switch-toggle>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                            {{localizer.localize('hitex-oov')}}
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                            <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                           [option2]="localizer.localize('hitex-rank')" name="out_of_svalex"></switch-toggle>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                            {{localizer.localize('hitex-sensitive-vocab')}}
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                            <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                           [option2]="localizer.localize('hitex-rank')" name="sensitive_voc"></switch-toggle>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                            <ul class="checkbox-grid" id="sensitive_voc_cats">
+                                <li *ngFor="let topic of sensitiveTopics">
+                                    <label><input type="checkbox" value="{{topic.toLowerCase()}}"> {{topic}}</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                            {{localizer.localize('hitex-proper-names')}}
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                            <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                           [option2]="localizer.localize('hitex-rank')" [name]="'proper_name'"></switch-toggle>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-5 col-xs-6">
+                            {{localizer.localize('hitex-abbreviations')}}
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-sm-7 col-xs-6">
+                            <switch-toggle [option1]="localizer.localize('hitex-filter')"
+                                           [option2]="localizer.localize('hitex-rank')" name="abbrev"></switch-toggle>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div [hidden]="!searchRun"> <!-- results -->
+        <br/>
+        <div class="title">Results</div>
+        <table>
+            <tr>
+                <th>Rank</th>
+                <th>Score</th>
+                <th>Sentence</th>
+            </tr>
+            <tr [hidden]="!searchRun || hits.length > 0">
+                <td colspan="3">No sentences matched your criteria. See below for sentences with violations.</td>
+            </tr>
+            <template ngFor let-hit [ngForOf]="hits">
+                <tr (click)="hit['showInfo'] = !hit['showInfo']">
+                    <td>{{hit["rank"]}}</td>
+                    <td>{{hit["score"]}}</td>
+                    <td>{{hit["sentence_left"]}} <span class="hitex-target">{{hit["target"]}}</span> {{hit["sentence_right"]}}</td>
+                </tr>
+                <tr [hidden]="!hit['showInfo']" *ngFor="let violation of hit['violations']" class="hitex-info">
+                    <td colspan="3"><b>{{violation["message"]}}</b> {{violation["data"]}}</td>
+                </tr>
+                <tr [hidden]="hit['violations'].length > 0 || !hit['showInfo']">
+                    <td colspan="3">No violations found.</td>
+                </tr>
+            </template>
+        </table>
+        <br/><br/>
+        <div class="title">Results with violations</div>
+        <table>
+            <tr>
+                <th>Rank</th>
+                <th>Score</th>
+                <th>Sentence</th>
+            </tr>
+            <template ngFor let-hit [ngForOf]="badhits">
+                <tr (click)="hit['showInfo'] = !hit['showInfo']">
+                    <td>{{hit["rank"]}}</td>
+                    <td>{{hit["score"]}}</td>
+                    <td>{{hit["sentence_left"]}} <span class="hitex-target">{{hit["target"]}}</span> {{hit["sentence_right"]}}</td>
+                </tr>
+                <tr [hidden]="!hit['showInfo']" *ngFor="let violation of hit['violations']" class="hitex-info">
+                    <td colspan="3"><b>{{violation["message"]}}</b> {{violation["data"]}}</td>
+                </tr>
+            </template>
+        </table>
+    </div>
+</div>

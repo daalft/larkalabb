@@ -1,0 +1,11 @@
+
+<div id="pw-background" [hidden]="!waiting">
+        <div *ngIf="showLark()" class="spinner">
+            <img src="app/img/turnbird.gif"/>
+        </div>
+        <div *ngIf="!showLark()" class="spinner">
+            <img src="app/img/dinobird.gif"/>
+        </div>
+    <div class="text">{{localizer.localize('please-wait')}}</div>
+</div>
+

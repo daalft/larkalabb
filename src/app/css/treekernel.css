@@ -1,0 +1,16 @@
+input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px dashed #00b0e8;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.listable {
+    background-color: rgba(176, 196, 222, 0.49);
+    padding: 5px 10px;
+    margin: 5px 10px;
+    border-radius: 5px;
+}

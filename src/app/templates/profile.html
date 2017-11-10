@@ -1,0 +1,13 @@
+<profile-menu (cp)="changePage($event)"></profile-menu>
+
+<div [hidden]="currentPage != 0">
+    <profile-overview></profile-overview>
+</div>
+<!--
+<div [hidden]="currentPage != 1">
+    <profile-fillout></profile-fillout>
+</div>
+-->
+<div [hidden]="currentPage != 2">
+    <learner-progress></learner-progress>
+</div>

@@ -1,0 +1,14 @@
+<div *ngIf="label">
+    <label>{{label}}</label>
+</div>
+<div class="row">
+<div class="col-lg-{{colwidth}} col-md-{{colwidth}} col-sm-{{colwidth}} col-xs-{{colwidth}}">
+    <input type="text" title="Search field" #in (keyup)="onKeyup($event,in.value)" [(ngModel)]="selectedValue" class="text-input form-control">
+</div>
+</div>
+<div class="row">
+    <ul [hidden]="noPropositions" class="col-lg-{{colwidth}} col-md-{{colwidth}} col-sm-{{colwidth}} col-xs-{{colwidth}}">
+        <li *ngFor="let proposition of currentProps" (click)="setField(proposition)" [ngClass]="{highlighted: proposition.highlight}">{{proposition.name}}</li>
+    </ul>
+
+</div>

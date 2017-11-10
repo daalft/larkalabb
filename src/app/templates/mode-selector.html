@@ -1,0 +1,9 @@
+<pleasewait></pleasewait>
+<div class="row modeselector">
+
+    <ul class="nav nav-pills col-lg-10 col-md-10 col-sm-10 col-xs-8">
+        <li role="presentation" *ngFor="let modus of modes" [ngClass]="{active:isActive(modus)}"><a class="mock-link" (click)="setMode(modus)">{{localizer.localize(modus)}}</a></li>
+    </ul>
+    <button class="btn btn-primary col-lg-2 col-md-2 col-sm-2 col-xs-4" (click)="generate()" [ngClass]="{disabled:busyGenerating}">{{localizer.localize('generate')}}!</button>
+
+</div>

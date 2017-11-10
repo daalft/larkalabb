@@ -1,0 +1,35 @@
+.navbar {
+    min-height: 20px;
+    margin-bottom: 5px;
+}
+
+.nav > li > a {
+    padding: 5px 12px;
+}
+
+.container {
+    width: 100%;
+}
+
+.separator {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.tagger-back {
+    background-color: rgba(0, 170, 0, 0.21);
+}
+
+.tagger-front {
+    background-color: rgba(0, 176, 232, 0.04);
+}
+
+.tagger-target {
+    font-weight: bold;
+    color: #2e6da4;
+}
+
+.tagger-error {
+    font-weight: bold;
+    color: #a41d3c;
+}

@@ -1,0 +1,63 @@
+<div class="title">
+    SiWoCo - Single Word lexical Complexity
+</div>
+
+<div>
+    <div class="row">
+
+    <label for="uinput">Write a lemma</label>
+    <input id="uinput" type="text" class="form-control" #uinput (keypress)="keyhandler($event,uinput.value,upos.value,(rec.checked?'receptive':(pro.checked?'productive':'both')))">
+    </div>
+    <div class="row">
+    <label for="upos">Select a part-of-speech</label>
+    <select id="upos" class="form-control" #upos>
+        <option selected value="NN">noun</option>
+        <option value="VB">verb</option>
+        <option value="JJ">adjective</option>
+        <option value="AB">adverb</option>
+        <option value="PN">pronoun</option>
+        <option value="PM">proper name</option>
+    </select>
+    </div>
+    <div class="row">
+    <label>Receptive
+        <input type="radio" name="rop" id="rec" checked #rec>
+    </label>
+    <label>Productive
+        <input type="radio" name="rop" id="pro" #pro>
+    </label>
+        <label>Both
+        <input type="radio" name="rop" id="both"></label>
+    </div>
+    <div class="row">
+    <button type="submit" class="btn btn-primary" (click)="predict(uinput.value,upos.value,(rec.checked?'receptive':(pro.checked?'productive':'both')))">Go!</button>
+    </div>
+</div>
+
+<div *ngIf="analyses.length > 0">
+    <div class="title">Results</div>
+    <table>
+        <tr>
+            <th>Word</th>
+            <th>POS</th>
+            <th>ROP</th>
+            <th>Predicted level</th>
+        </tr>
+        <tr *ngFor="let analysis of analyses">
+            <td>{{analysis['word']}}</td>
+            <td>{{analysis['pos']}}</td>
+            <td>{{analysis['rop']}}</td>
+            <td>
+                <div *ngIf="analysis['rop']=='both'">
+                    R: {{analysis['level'][0]}}
+                    P: {{analysis['level'][1]}}
+                </div>
+                <div *ngIf="analysis['rop']!='both'">
+                    {{analysis['level']}}
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<pleasewait #waiter></pleasewait>

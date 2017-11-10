@@ -1,0 +1,118 @@
+[
+  {
+    "val": "animals",
+    "text": "Animals"
+  },
+  {
+    "val": "arts",
+    "text": "Arts"
+  },
+  {
+    "val": "clothes and appearances",
+    "text": "Clothes & appearances"
+  },
+  {
+    "val": "crime and punishment",
+    "text": "Crime & punishment"
+  },
+  {
+    "val": "culture and traditions",
+    "text": "Culture & traditions"
+  },
+  {
+    "val": "daily life",
+    "text": "Daily life"
+  },
+  {
+    "val": "economy",
+    "text": "Economy"
+  },
+  {
+    "val": "education",
+    "text": "Education"
+  },
+  {
+    "val": "family and relatives",
+    "text": "Family & relatives"
+  },
+  {
+    "val": "famous people",
+    "text": "Famous people"
+  },
+  {
+    "val": "food and drink",
+    "text": "Food & drink"
+  },
+  {
+    "val": "free time; entertainment",
+    "text": "Free time, entertainment"
+  },
+  {
+    "val": "greetings; introductions",
+    "text": "Greetings/Introductions"
+  },
+  {
+    "val": "health and body care",
+    "text": "Health & body care"
+  },
+  {
+    "val": "history",
+    "text": "History"
+  },
+  {
+    "val": "house and home; environment",
+    "text": "House & home, environment"
+  },
+  {
+    "val": "jobs and professions",
+    "text": "Jobs & professions"
+  },
+  {
+    "val": "languages",
+    "text": "Languages"
+  },
+  {
+    "val": "personal identification",
+    "text": "Personal identification"
+  },
+  {
+    "val": "places",
+    "text": "Places"
+  },
+  {
+    "val": "politics and power",
+    "text": "Politics & power"
+  },
+  {
+    "val": "relations with other people",
+    "text": "Relations with other people"
+  },
+  {
+    "val": "religion; myths and legends",
+    "text": "Religion, myths & legends"
+  },
+  {
+    "val": "science and technology",
+    "text": "Sciency & technology"
+  },
+  {
+    "val": "services",
+    "text": "Services"
+  },
+  {
+    "val": "shopping",
+    "text": "Shopping"
+  },
+  {
+    "val": "sports",
+    "text": "Sports"
+  },
+  {
+    "val": "travel",
+    "text": "Travel"
+  },
+  {
+    "val": "weather and nature",
+    "text": "Weather & nature"
+  }
+]

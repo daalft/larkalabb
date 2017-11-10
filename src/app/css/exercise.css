@@ -1,0 +1,79 @@
+.word {
+    color: #337ab7;
+    cursor: pointer;
+}
+
+.target {
+    font-weight: bold;
+    color: #f0ad4e;
+    cursor: pointer;
+}
+
+.active {
+    border: 1px solid rgba(255, 150, 16, 0.50);
+    background-color: rgba(255, 150, 16, 0.05);
+    border-radius: 5px;
+}
+
+.exercise {
+    padding: 5px 15px;
+    margin: 5px 5px;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.instructions {
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.header {
+    font-weight: bold;
+
+}
+
+.margincontainer {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.bigicon {
+    font-size: 2em;
+}
+
+.help-link {
+    border: 1px solid black;
+    font-family: "Titillium", Helvetica, "Helvetica Neue", serif;
+    text-transform: uppercase;
+    padding: 1px 5px;
+    float: left;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.report-link {
+    color: red;
+}
+
+.report-explanation {
+    border: 1px dashed black;
+    padding: 10px 20px;
+    background-color: lightcyan;
+}
+
+.report-sentence {
+    padding: 10px 20px;
+}
+
+.marked {
+    background-color: darkred;
+    color: floralwhite;
+    padding: 2px;
+}
+
+.report-type {
+    padding: 10px 20px;
+}

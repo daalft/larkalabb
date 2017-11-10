@@ -1,0 +1,46 @@
+<user-navbar></user-navbar>
+<div id="optionbox" [ngClass]="{optionsOpen: showOptions}">
+    <div [hidden]="showOptions">
+        <div id="optionresume">
+            <ul class="nav nav-pills">
+                <li role="presentation"><a class="mock-link" (click)="showOptions = !showOptions">{{localize(exerciseName)}}</a></li>
+                <li role="presentation"><a [class.hidden]="disableMulti1" class="mock-link" (click)="showOptions = !showOptions">{{numberOfWordChoices[0] + localize('of') + numberOfWordChoices[1] + localize(exerciseParticle)}}</a></li>
+                <li role="presentation"><a class="mock-link" (click)="showOptions = !showOptions">{{numberOfLevelChoices[0] + localize('of') + numberOfLevelChoices[1] + localize(levelParticle)}}</a></li>
+                <li role="presentation" [class.hidden]="!useCustom"><a class="mock-link" (click)="showOptions = !showOptions">{{customWordCount + pluralize(localize('userWordlist_Note'))}}</a></li>
+                <li role="presentation" [class.hidden]="useCustom"><a class="mock-link" (click)="showOptions = !showOptions">{{localizer.localize(getCurrentWordlist())}}</a></li>
+
+            </ul>
+        </div>
+        <div class="col-lg-12" style="text-align: center"><span class="mock-link fa fa-fw fa-chevron-down center-block" title="{{localize('show_settings')}}" (click)="showOptions = !showOptions"></span></div>
+    </div>
+    <div [hidden]="!showOptions" id="fulloptions">
+        <div id="optionheader">{{localize('settings')}}</div>
+        <div class="col-lg-3">
+            <div class="select-title">{{localizer.localize('selectAnExercise')}}</div>
+            <div class="selectable" *ngFor="let label of labels1" [ngClass]="{selactive:label.selected}" (click)="setSelected(label)">
+                {{localize(label.name)}}
+            </div>
+        </div>
+
+        <choice-selector [choices]="multi1" class="col-lg-3" [disabled]="disableMulti1"></choice-selector>
+        <choice-selector [choices]="multi2" class="col-lg-3"></choice-selector>
+        <div class="col-lg-3">
+            <div class="select-title">{{localizer.localize('wordlist_note')}}</div>
+            <br/>
+            <ul class="nav nav-pills">
+                <li role="presentation" [ngClass]="{active:!useCustom}"><a class="mock-link" (click)="useCustom = false">{{localizer.localize('wordlist')}}</a> </li>
+                <li role="presentation" [ngClass]="{active:useCustom}"><a class="mock-link" (click)="useCustom = true">{{localizer.localize('custom_search')}}</a> </li>
+            </ul>
+            <br/>
+            <user-search [hidden]="!useCustom" (numberChange)="handleUserSearchNumberChange($event)"></user-search>
+            <wordlist-selector [hidden]="useCustom" (wordlistChange)="handleWordlistChange($event)"></wordlist-selector>
+        </div>
+        <!-- TODO: there is either the custom wordlist of the given wordlist -->
+        <!-- TODO: add wordlist chooser -->
+
+
+        <div class="col-lg-12" style="text-align: center"><span class="mock-link fa fa-fw fa-chevron-up" title="{{localize('hide_settings')}}" (click)="showOptions = !showOptions;calculateResume()"></span></div>
+    </div>
+
+</div>
+<hr/>

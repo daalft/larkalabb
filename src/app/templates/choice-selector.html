@@ -1,0 +1,14 @@
+<div class="select-title" (click)="sense(choices.data)">
+    {{localizer.localize(choices.title)}}
+</div>
+
+<div *ngFor="let array of choices.data">
+    <div class="overlay" *ngIf="disabled">
+        <div *ngIf="array.header" class="select-header">{{localizer.localize(array.header.name)}}</div>
+        <div class="unselectable" *ngFor="let label of array.labels">{{localizer.localize(label.name)}}</div>
+    </div>
+    <div *ngIf="!disabled">
+        <div *ngIf="array.header" class="select-header" (click)="sense2(array.labels)">{{localizer.localize(array.header.name)}}</div>
+        <div class="selectable" [ngClass]="{selactive:label.selected}" *ngFor="let label of array.labels" (click)="label.selected = !label.selected">{{localizer.localize(label.name)}}</div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div>
+<label for="tinput">Enter some text in Swedish:</label><input type="text" id="tinput" #tinput>
+    <br/>
+<button type="submit" class="btn btn-danger" (click)="speak(tinput.value);">Click me for TTS!</button>
+</div>
+
+<div>
+
+    <audio controls *ngFor="let uri of uris">
+        <source src="{{uriprefix+uri}}" type="audio/wav">
+        Your browser does not support the audio element or file format (WAV).
+    </audio>
+</div>

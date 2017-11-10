@@ -1,0 +1,18 @@
+<div>
+    <div class="select-title">
+        {{localizer.localize('selectDomain')}}
+    </div>
+    <div *ngFor="let wl of getMainLists()" class="selectable" (click)="setSelected(wl)" [ngClass]="{selactive: wl.selected}">{{localizer.localize(wl.name)}}</div>
+    <!--
+    <div class="selectable selactive" [hidden]="getSelectedIndex() < 2">
+        {{localizer.localize(getSelected(getSelectedIndex()).name)}}
+    </div>
+    -->
+    <div [hidden]="showAll">
+        <button class="btn btn-default form-control" (click)="showAll = true">{{localizer.localize('show_more')}}</button>
+    </div>
+    <div [hidden]="!showAll">
+        <div *ngFor="let wl of getOtherLists()" class="selectable" (click)="setSelected(wl)" [ngClass]="{selactive: wl.selected}">{{localizer.localize(wl.name)}}</div>
+        <button class="btn btn-default form-control" (click)="showAll = false">{{localizer.localize('show_less')}}</button>
+    </div>
+</div>

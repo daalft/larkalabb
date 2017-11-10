@@ -1,0 +1,27 @@
+<div class="tagger-back">
+
+    <div [hidden]="sentences.length > 0">
+        <textarea title="input" #input></textarea>
+        <textarea title="tagged" #tagged></textarea>
+        <button class="btn btn-default" (click)="acquire(input.value, tagged.value)">Process</button>
+    </div>
+
+    <div class="tagger-front" [hidden]="sentences.length == 0">
+        Progress: {{index+1}} / {{sentences.length}}
+        <div id="sentence" [innerHtml]="getCurrent()">
+
+        </div>
+        <br/>
+        <input type="text" title="controller" (keyup)="activate($event)">
+    </div>
+
+    <div [hidden]="resulthidden">
+    <textarea title="rs">
+        {{resultsen}}
+    </textarea>
+
+    <textarea title="rp">
+        {{resultpar}}
+    </textarea>
+    </div>
+</div>

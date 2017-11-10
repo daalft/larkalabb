@@ -1,0 +1,38 @@
+<div class="informationBox" [ngClass]="{hidden: !isVisible}">
+
+    <div class="group">
+        <h3 class="instructionheader">
+            <a>{{localizer.localize('morphology')}}</a>
+        </h3>
+        <div id="morphology">
+        </div>
+    </div>
+
+    <div class="group">
+        <h3 class="instructionheader">
+            <a>{{localizer.localize('wikipedia')}}</a>
+        </h3>
+        <div id="wikipedia">
+        </div>
+    </div>
+
+    <div class="group">
+        <h3 class="instructionheader">
+            <a>{{localizer.localize('encyclopedia')}}</a>
+        </h3>
+        <div id="wiktionary">
+        </div>
+    </div>
+
+    <div class="group">
+        <h3 class="instructionheader">
+            <a>{{localizer.localize('avatar')}}</a>
+        </h3>
+        <div id="monica">
+        </div>
+    </div>
+
+    <div class="closeButton">
+        <span class="fa fa-close" (click)="isVisible = false"></span>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="back" *ngIf="showOne || showTwo" (click)="close()">
+<div id="one" *ngIf="showOne" class="overlay-menu-column">
+    <div class="">
+        {{localizer.localize('menu-linguist')}}
+    </div>
+
+    <div class="">
+        {{localizer.localize('menu-learner')}}
+    </div>
+</div>
+
+<div id="two" *ngIf="showTwo" class="overlay-menu-column">
+
+</div>
+</div>

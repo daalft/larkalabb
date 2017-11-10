@@ -1,0 +1,73 @@
+<div class="form-group">
+    <label>Select your mother tongue(s)</label>
+    <div *ngFor="let mt of mothertongues">
+        <autocomplete-field [colwidth]="6" (selectedValueEmitter)="handleMtSet($event)" [values]="langs" [limitTo]="5"></autocomplete-field>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <button class="btn btn-default" (click)="addMothertongue()"><span class="fa fa-plus"></span></button>
+        </div>
+    </div>
+
+
+</div>
+
+<div>
+    <label>Please indicate all other languages you know</label>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            Language
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            Proficiency
+        </div>
+    </div>
+    <br/>
+    <div *ngFor="let ot of othertongues; let i = index">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <autocomplete-field [colwidth]="12" [values]="langs" [limitTo]="5" (selectedValueEmitter)="handleOtSet($event)" class="inliner"></autocomplete-field>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="inliner">
+                    <label>
+                        A1
+                        <input type="radio" name="otcefr{{i}}" class="form-control" value="A1" required>
+                    </label>
+                    <label>
+                        A2
+                        <input type="radio" name="otcefr{{i}}" class="form-control" value="A2">
+                    </label>
+
+                    <label>
+                        B1
+                        <input type="radio" name="otcefr{{i}}" class="form-control" value="B1">
+                    </label>
+                    <label>
+                        B2
+                        <input type="radio" name="otcefr{{i}}" class="form-control" value="B2">
+                    </label>
+
+                    <label>
+                        C1
+                        <input type="radio" name="otcefr{{i}}" class="form-control" value="C1">
+                    </label>
+                    <label>
+                        C2
+                        <input type="radio" name="otcefr{{i}}" class="form-control" value="C2">
+                    </label>
+                    <label>
+                        I don't know
+                        <input type="radio" name="otcefr{{i}}" class="form-control" value="X">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <button class="btn btn-default" (click)="addOthertongue()"><span class="fa fa-plus"></span></button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,119 @@
+body {
+    background-color: #2ecc40;
+}
+
+.hb-letter {
+    margin: 5px;
+    width: 37px;
+    height: 46px;
+    font-size: 1.2em;
+    display: inline-block;
+    text-align: center;
+    /*vertical-align: middle;*/
+}
+
+.uncovered {
+    /*vertical-align: bottom;*/
+}
+#description {
+    padding: 20px;
+}
+
+.dashed-border {
+    border: 1px dashed black;
+}
+
+#translation {
+    padding: 20px;
+}
+
+#translation-show {
+    padding: 20px;
+}
+
+.imgfix {
+    margin-bottom: 5px;
+}
+
+#playarea {
+    /*align-content: center;
+    vertical-align: middle;*/
+}
+
+.vegg {
+    margin: 5px;
+}
+
+.scorekeeper {
+    border: 1px solid black;
+    padding: 5px 10px;
+    margin: 5px;
+    float: right;
+}
+
+.hb-image {
+    height: 100px;
+    width: 100px;
+}
+
+#attribution  {
+    float: right;
+    bottom: 10%;
+    right: 20%;
+}
+
+.thickBorder {
+    border: 3px solid red;
+}
+
+.hb-img-margin {
+    margin-bottom: 5px;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+    /* Styles */
+    .hb-img-margin {
+        width: 100px;
+    }
+}
+@media only screen
+and (min-width : 480px) and (max-width: 768px){
+    .hb-img-margin {
+        width: 100px;
+    }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px) {
+    /* Styles */
+    .hb-img-margin {
+        width: 200px;
+    }
+}
+@media only screen
+and (min-width : 1024px) and (max-width: 1224px){
+    .hb-img-margin {
+        width: 200px;
+    }
+}
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) and (max-width: 1824px){
+    /* Styles */
+    .hb-img-margin {
+        width: 200px;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+    /* Styles */
+    .hb-img-margin {
+        width: 200px;
+    }
+}

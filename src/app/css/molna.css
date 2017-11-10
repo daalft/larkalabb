@@ -1,0 +1,87 @@
+.etype {
+    margin: 10px 20px;
+    padding: 5px 5px;
+   /* background-color: rgba(46, 204, 64, 0.16);*/
+
+}
+
+.etitle {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.econtent {
+    padding: 10px;
+}
+
+.eexpl {
+    font-weight: bold;
+}
+
+.eeval {
+    padding: 10px;
+}
+
+input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px dashed blue;
+    width: 50px;
+}
+
+.listable {
+    padding: 5px 10px;
+}
+
+.eselectable {
+    background-color: lightgray;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.eselactive {
+    background-color: rgba(35, 139, 45, 0.72);
+}
+
+.draggable {
+
+}
+
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#sortable li { margin: 3px 3px 3px 0; width: 150px; text-align: center;    background-color: lightgray;
+    padding: 5px 10px;
+    border-radius: 5px; font-size: 1.2em; height: 1.5em; line-height: 1.2em}
+html>body #sortable li { height: 1.5em; line-height: 1.2em; }
+.ui-state-highlight { height: 1.5em; line-height: 1.2em; }
+
+.oddRowColor {
+    background-color: rgba(186, 186, 186, 0.27);
+}
+
+th {
+    background-color: rgba(63, 63, 63, 0.2);
+    padding: 5px;
+    margin: 5px 5px;
+}
+
+.center-align {
+    text-align: center;
+}
+
+td {
+    padding: 5px;
+    margin: 2px 5px;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.important {
+    color: #e10000;
+}

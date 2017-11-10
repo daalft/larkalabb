@@ -1,0 +1,28 @@
+
+ul {
+    list-style-type: none;
+    padding: 0;
+
+    border: 1px solid darkgray;
+    position: absolute;
+    z-index: 88;
+    background-color: white;
+    margin-left: 15px;
+
+}
+
+li:hover {
+    background-color: lightgray;
+}
+
+.highlighted {
+    background-color: rgba(232, 182, 102, 0.3);
+}
+
+button {
+    width: 100%;
+}
+
+.inliner {
+    display: inline;
+}

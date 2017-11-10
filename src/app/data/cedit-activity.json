@@ -1,0 +1,66 @@
+[
+  {
+    "val": "brainstorming",
+    "text": "Brainstorming"
+  },
+  {
+    "val": "essay",
+    "text": "Composition/essay writing"
+  },
+  {
+    "val": "dialogue",
+    "text": "Dialogue/Interview"
+  },
+  {
+    "val": "dictation",
+    "text": "Dictation"
+  },
+  {
+    "val": "discussion",
+    "text": "Discussion"
+  },
+  {
+    "val": "error correction",
+    "text": "Error correction"
+  },
+  {
+    "val": "form manipulation",
+    "text": "Form manipulation"
+  },
+  {
+    "val": "information search",
+    "text": "Information search"
+  },
+  {
+    "val": "monologue",
+    "text": "Monologue"
+  },
+  {
+    "val": "pre-reading",
+    "text": "Pre-reading"
+  },
+  {
+    "val": "question/answers",
+    "text": "Question answering"
+  },
+  {
+    "val": "reading aloud",
+    "text": "Reading aloud"
+  },
+  {
+    "val": "role-playing",
+    "text": "Role-playing"
+  },
+  {
+    "val": "summary",
+    "text": "Summary"
+  },
+  {
+    "val": "text questions",
+    "text": "Text questions"
+  },
+  {
+    "val": "translation",
+    "text": "Translation"
+  }
+]

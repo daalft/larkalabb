@@ -1,0 +1,227 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h2>Exercise type evaluation</h2>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+
+    <div class="exetype" [hidden]="currentEx != -2">
+        <div class="etitle">Introduction</div>
+        <div class="eexpl"></div>
+        <div class="econtent">
+            <p>
+                Our aim is to evaluate different exercise formats for use in a diagnostic test at different levels of proficiency according to the <a href="http://www.coe.int/t/dg4/linguistic/cadre1_en.asp">Common European Framework of Reference</a>. (<em>Note:</em> We do not consider level C2.)
+                As for the exercise types, we consider bundled gaps, sentence rearrangement tasks, sentence composition tasks, yes-no vocabulary tests, and multiple choice test.
+            </p>
+            <p>
+                On this page, you can evaluate the different exercise types.
+                <span class="important">Please pay more attention to the exercise <b>type</b> and less to the actual content. The task is not to solve the exercises but judge the appropriateness of the
+                task for different learner levels.</span>
+            </p>
+
+            <div>                On the right side, you can see the evaluation form that will be used.
+                Please indicate for which levels the task shown is appropriate.
+                Please take into account the <b>lowest</b> level at which the task becomes accessible to the learner
+                and the <b>highest</b> level at which the task is still interesting but not boring.
+                <br/>
+                You can select
+                <ul>
+                    <li>one level, if the lowest and highest level are the same</li>
+                    <li>two levels, if the lowest and highest level are adjacent</li>
+                    <!--<li>three levels, indicating the lowest and highest level that are not adjacent</li>-->
+                    <li>more than two levels to indicate a range from lowest to highest</li>
+                </ul>
+            </div>
+
+            <p>
+                There is also a comment box if you wish to leave some comments concerning the task type. Leaving comments is <b>optional</b>.
+            </p>
+            <p>
+                I would be grateful if you could go through the seven small examples and click on Submit. Please also feel free to share the link with other people who might be willing to evaluate exercise types.
+            </p>
+        </div>
+    </div>
+
+    <div class="etype" [hidden]="currentEx != -1">
+
+        <div class="etitle">Information about you</div>
+        <div class="eexpl">Please select your position:</div>
+
+        <div class="econtent" id="select-position">
+            <input type="radio" name="position" id="radio-student-of-linguistics" value="student-of-linguistics">
+            <label for="radio-student-of-linguistics">student of linguistics</label><br/>
+            <input type="radio" name="position" id="radio-linguist" value="linguist">
+            <label for="radio-linguist">linguist</label><br/>
+            <input type="radio" name="position" id="radio-second-language-teacher" value="second-language-teacher">
+            <label for="radio-second-language-teacher">second language teacher</label><br/>
+            <input type="radio" name="position" id="radio-second-language-researcher" value="second-language-researcher">
+            <label for="radio-second-language-researcher">second language researcher</label><br/>
+            <input type="radio" name="position" id="radio-second-language-learner" value="second-language-learner">
+            <label for="radio-second-language-learner">second language learner</label><br/>
+            <input type="radio" name="position" id="radio-nlp-researcher" value="nlp-researcher">
+            <label for="radio-nlp-researcher">NLP researcher</label><br/>
+            <input type="radio" name="position" id="radio-other" value="other">
+            <label for="radio-other">other (specify):</label><br/>
+            <input type="text" title="otherpos" style="width: 250px" id="input-other-position">
+        </div>
+        <br/>
+        <div class="eexpl">Please select:</div>
+        <div class="econtent" id="select-mothertongue">
+            <input type="radio" name="native" id="radio-native-speaker" value="native-speaker">
+            <label for="radio-native-speaker">Native speaker of Swedish</label><br/>
+            <input type="radio" name="native" id="radio-non-native-speaker" value="non-native-speaker">
+            <label for="radio-non-native-speaker">Non-native speaker of Swedish</label><br/>
+        </div>
+    </div>
+
+    <div class="etype" [hidden]="currentEx != 0">
+        <div class="etitle">Bundled gaps (variant 1)</div>
+        <div class="eexpl">Which word fits into these gaps? Each gap contains the same word. Write the word.</div>
+        <div class="econtent">
+            Hennes <input type="text"> var på hans lår , gned in värme i hans kalla ben .<br/>
+            En annan taxi tar <input type="text"> om skolbarnen .<br/>
+            Novelty hade flera trumf på <input type="text"> .<br/>
+            I första <input type="text"> har hon spelat dragspel och fiol .
+        </div>
+    </div>
+
+    <div class="etype" [hidden]="currentEx != 1">
+        <div class="etitle">Bundled gaps (variant 2)</div>
+        <div class="eexpl">Select all the sentences where the word <em>hand(en)</em> can be used.</div>
+        <div class="econtent">
+            <label><input type="checkbox">Hennes ____ var på hans lår , gned in värme i hans kalla ben .</label><br/>
+            <label><input type="checkbox">En annan taxi tar _____ om skolbarnen .</label><br/>
+            <label><input type="checkbox">Novelty hade flera trumf på _____.</label><br/>
+            <label><input type="checkbox">I första _____ har hon spelat dragspel och fiol .</label>
+        </div>
+    </div>
+
+    <div class="etype" [hidden]="currentEx != 2">
+        <div class="etitle">Vocabulary knowledge (variant 1)</div>
+        <div class="eexpl">Select all the words that you <em>don't know</em>.</div>
+        <div class="econtent">
+            <span class="eselectable">TA</span>
+            <span class="eselectable">BRA</span>
+            <span class="eselectable">BARN</span>
+            <span class="eselectable">VÄDER</span>
+            <span class="eselectable">MOSTER</span>
+        </div>
+    </div>
+
+    <div class="etype" [hidden]="currentEx != 3">
+        <div class="etitle">Vocabulary knowledge (variant 2)</div><!-- yes/no to existing/non existing words -->
+        <div class="eexpl">Select all <em>existing</em> Swedish words.</div>
+        <div class="econtent">
+            <span class="eselectable">ANKA</span>
+            <span class="eselectable">SKRÅP</span>
+            <span class="eselectable">MASSANT</span>
+            <span class="eselectable">SKÖLBARN</span>
+            <span class="eselectable">VERGRISKT</span>
+        </div>
+    </div>
+
+    <div class="etype" [hidden]="currentEx != 4">
+        <div class="etitle">Sentence rearrangement</div>
+        <div class="eexpl">Rearrange the following segments to form a sentence.</div>
+        <div class="econtent">
+            <ul id="sortable">
+                <li>jag</li>
+                <li>ett paraply</li>
+                <li>ute</li>
+                <li>det regnar</li>
+                <li>så</li>
+                <li>tar</li>
+            </ul>
+        </div>
+        <br/>
+        <br/>
+    </div>
+
+    <div class="etype" [hidden]="currentEx != 5">
+        <div class="etitle">Sentence composition</div>
+        <div class="eexpl">Write a sentence using all of these words:</div>
+        <div class="econtent">
+            <span class="listable">studera</span>
+            <span class="listable">fakultet</span>
+            <span class="listable">vad</span>
+            <span class="listable">din</span>
+            <span class="listable">kan</span>
+            <span class="listable">på</span>
+            <span class="listable">man</span>
+            <span class="listable">?</span>
+            <br/>
+            <input type="text" title="solution" style="width: 300px;">
+        </div>
+    </div>
+
+    <div class="etype"  [hidden]="currentEx != 6">
+        <div class="etitle">Multiple choice</div>
+        <div class="eexpl">Which word fits into the gap?</div>
+        <div class="econtent">
+            Det snöade _____ blåste mycket hårda vindar i stora delar av Sverige.<br/>
+            <label><input type="radio" name="ex">och</label><br/>
+            <label><input type="radio" name="ex">eftersom</label><br/>
+            <label><input type="radio" name="ex">antingen</label><br/>
+            <label><input type="radio" name="ex">utan</label>
+        </div>
+    </div>
+
+    <div [hidden]="currentEx!=7">
+        <div class="etitle">Summary</div>
+        <div class="econtent">
+            <table>
+                <tr>
+                    <th>Exercise type</th>
+                    <th>A1</th>
+                    <th>A2</th>
+                    <th>B1</th>
+                    <th>B2</th>
+                    <th>C1</th>
+                </tr>
+                <tr [ngClass]="{oddRowColor: o}" *ngFor="let obj of summary(); let i = index; let o = odd">
+                <td class="left-align">{{exename[i]}}</td>
+                <td class="center-align" *ngFor="let level of obj.levels">
+                    <span class="fa fa-check green" *ngIf="level > 0"></span>
+                    <span class="fa fa-close red" *ngIf="level == 0"></span>
+                </td>
+                </tr>
+            </table>
+            <br/>
+            <label for="general-comments">General comments</label><br/>
+            <textarea id="general-comments"></textarea>
+        </div>
+    </div>
+    <div [hidden]="currentEx < 8">
+        Thank you for your participation! You can now close this page!
+    </div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" *ngIf="hasEx">
+    <div class="eeval" [hidden]="currentEx > 6">
+        <div class="etitle">Evaluation</div>
+        <div class="eexpl">For which levels is this exercise type relevant?</div>
+        <div class="econtent">
+            <div id="levels">
+                <label><input type="checkbox" value="1">A1</label>
+                <label><input type="checkbox" value="2">A2</label>
+                <label><input type="checkbox" value="3">B1</label>
+                <label><input type="checkbox" value="4">B2</label>
+                <label><input type="checkbox" value="5">C1</label>
+            </div>
+            <br/>
+            <div>
+                <label for="comments">
+                    Comments
+                </label>
+                <br/>
+                <textarea id="comments"></textarea>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" [hidden]="currentEx < 0 || currentEx > 6">
+    Page {{currentEx+1}} of 7
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <span [hidden]="currentEx<1||currentEx==8"><button class="btn btn-default" (click)="backv()">Back</button></span>
+    <span [hidden]="currentEx>6"><button class="btn btn-primary" (click)="continuv()">Continue</button></span>
+    <span [hidden]="currentEx<7||currentEx==8"><button class="btn btn-danger" (click)="submitv()">Submit</button></span>
+</div>

@@ -1,0 +1,20 @@
+<div class="container-fluid hidden-xs" id =logo-container-main>
+    <span class="logo-font-big">L</span><img class="logo-img" [src]="getCurrentLogo()"><span class="logo-font-big">RK</span><span class="logo-font-big" [hidden]="getLanguage()!=='sv'">A</span><span class="fa fa-flask logo-font-big-flask"></span>
+</div>
+
+<div class="container-fluid hidden-xs" id="logo-container-extra">
+    <div [hidden]="getLanguage()!=='sv'">
+
+        <span class="logo-font-small">LÄR språket via</span>
+        <span class="logo-font-small text-emphasis"><a href="https://spraakbanken.gu.se/korp/">Korp</a></span><span class="logo-font-small">us Analys</span>
+    </div>
+    <div [hidden]="getLanguage()!=='en'">
+        <span class="logo-font-small">Language Acquisition Reusing</span>
+        <span class="logo-font-small text-emphasis"><a href="https://spraakbanken.gu.se/korp/">Korp</a></span>
+    </div>
+</div>
+
+<div class="col-xs-12 hidden-lg hidden-md hidden-sm">
+    <img class="logo-img" [src]="getCurrentLogoSmall()">
+    <span class="logo-font-small">LÄRKA</span>
+</div>

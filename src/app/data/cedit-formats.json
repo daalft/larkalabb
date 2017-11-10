@@ -1,0 +1,50 @@
+[
+  {
+    "val": "category identification",
+    "text": "Category identification"
+  },
+  {
+    "val": "category substitution",
+    "text": "Category substitution"
+  },
+  {
+    "val": "free answers",
+    "text": "Free/short answers"
+  },
+  {
+    "val": "free writing",
+    "text": "Free writing"
+  },
+  {
+    "val": "gaps",
+    "text": "Gaps"
+  },
+  {
+    "val": "matching",
+    "text": "Matching"
+  },
+  {
+    "val": "multiple choice",
+    "text": "Multiple choice"
+  },
+  {
+    "val": "narration",
+    "text": "Narration/retelling/presentation"
+  },
+  {
+    "val": "reordering/restructuring",
+    "text": "Reordering/Restructuring"
+  },
+  {
+    "val": "sorting",
+    "text": "Sorting"
+  },
+  {
+    "val": "true-false/yes-no",
+    "text": "True-false/Yes-no"
+  },
+  {
+    "val": "wordbank",
+    "text": "Wordbank"
+  }
+]
