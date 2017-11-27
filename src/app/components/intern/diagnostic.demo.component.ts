@@ -4,15 +4,15 @@
 import {Component} from "@angular/core";
 @Component({
     selector: 'dia-test',
-    templateUrl: 'app/templates/diagnostic-demo.html',
-    styleUrls: ['app/css/molna.css', 'app/css/diagnostic.css']
+    templateUrl: '../../templates/diagnostic-demo.html',
+    styleUrls: ['../../css/molna.css', '../../css/diagnostic.css']
 
     }
 )
 
 export class DiagnosticDemoComponent {
-    private page = 1;
-    private gap = 1;
+  public page = 1;
+  public gap = 1;
 
 
     nextgap(event) {
@@ -53,10 +53,10 @@ export class DiagnosticDemoComponent {
     }
 
     ngAfterViewInit () {
-        $( "#sortable" ).sortable({
+        ($( "#sortable" ) as any).sortable({
             placeholder: "ui-state-highlight",
             forcePlaceholderSize: true
         });
-        $( "#sortable" ).disableSelection();
+        ($( "#sortable" ) as any).disableSelection();
     }
 }

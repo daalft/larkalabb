@@ -4,24 +4,24 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 @Component({
     selector: 'tagger',
-    templateUrl: 'app/templates/tagger.html'
+    templateUrl: '../../templates/tagger.html'
 })
 
 export class TaggerComponent {
 
-    private sentences = [];
-    private parallel = [];
+  public sentences = [];
+  public parallel = [];
 
-    private resultsen = "";
-    private resultpar = "";
+  public resultsen = "";
+  public resultpar = "";
 
-    private tags = [];
+  public tags = [];
 
-    private index = 0;
+  public index = 0;
 
-    private target = /put(s|ten|ting)?\s((.+?)\s)?up/;
+  public target = /put(s|ten|ting)?\s((.+?)\s)?up/;
 
-    private resulthidden = true;
+  public resulthidden = true;
 
     acquire (data, tagged) {
         this.sentences = data.split(/\n/);
@@ -29,8 +29,8 @@ export class TaggerComponent {
         this.parallel = tagged.split(/\n/);
     }
 
-    private faulty = 0;
-    
+  public faulty = 0;
+
     process (sentence) {
 
         let match = this.target.exec(sentence);
@@ -58,7 +58,7 @@ export class TaggerComponent {
         return this.process(this.sentences[this.index]);
     }
 
-    private cooldown = false;
+  public cooldown = false;
 
     activate (key) {
         if (this.cooldown) {

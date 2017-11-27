@@ -1,6 +1,5 @@
-System.register(["../../services/localizer.service", "@angular/core", "@angular/http", "../../services/larka.service", "../component/pleasewait.component"], function(exports_1, context_1) {
+System.register(["../../services/localizer.service", "@angular/core", "@angular/http", "../../services/larka.service", "../component/pleasewait.component"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["../../services/localizer.service", "@angular/core", "@angular/
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var localizer_service_1, core_1, http_1, larka_service_1, pleasewait_component_1;
-    var CorpusEditorComponent;
+    var __moduleName = context_1 && context_1.id;
+    var localizer_service_1, core_1, http_1, larka_service_1, pleasewait_component_1, CorpusEditorComponent;
     return {
-        setters:[
+        setters: [
             function (localizer_service_1_1) {
                 localizer_service_1 = localizer_service_1_1;
             },
@@ -28,12 +27,10 @@ System.register(["../../services/localizer.service", "@angular/core", "@angular/
             },
             function (pleasewait_component_1_1) {
                 pleasewait_component_1 = pleasewait_component_1_1;
-            }],
-        execute: function() {
-            /**
-             * Created by David on 2/13/2017.
-             */
-            CorpusEditorComponent = (function () {
+            }
+        ],
+        execute: function () {
+            CorpusEditorComponent = /** @class */ (function () {
                 function CorpusEditorComponent(localizer, http, larka) {
                     this.localizer = localizer;
                     this.http = http;
@@ -431,6 +428,10 @@ System.register(["../../services/localizer.service", "@angular/core", "@angular/
                 CorpusEditorComponent.prototype.keyhandler = function (event) {
                     var code = event.keyCode;
                     if (code == 13) {
+                        // TODO
+                        // get currently focused input element
+                        // focus next input element
+                        // if no next input, close form
                     }
                 };
                 CorpusEditorComponent.prototype.insertAtCaret = function (text) {
@@ -575,25 +576,25 @@ System.register(["../../services/localizer.service", "@angular/core", "@angular/
                     });
                 };
                 __decorate([
-                    core_1.ViewChild('cedit'), 
-                    __metadata('design:type', core_1.ElementRef)
+                    core_1.ViewChild('cedit'),
+                    __metadata("design:type", core_1.ElementRef)
                 ], CorpusEditorComponent.prototype, "cedit", void 0);
                 __decorate([
-                    core_1.ViewChild('waiter'), 
-                    __metadata('design:type', pleasewait_component_1.PleaseWaitComponent)
+                    core_1.ViewChild('waiter'),
+                    __metadata("design:type", pleasewait_component_1.PleaseWaitComponent)
                 ], CorpusEditorComponent.prototype, "waiter", void 0);
                 CorpusEditorComponent = __decorate([
                     core_1.Component({
                         selector: 'corpus-editor',
                         templateUrl: 'app/templates/editor.html',
                         styleUrls: ['app/css/editor.css']
-                    }), 
-                    __metadata('design:paramtypes', [localizer_service_1.LocalizerService, http_1.Http, larka_service_1.LarkaService])
+                    }),
+                    __metadata("design:paramtypes", [localizer_service_1.LocalizerService, http_1.Http, larka_service_1.LarkaService])
                 ], CorpusEditorComponent);
                 return CorpusEditorComponent;
             }());
             exports_1("CorpusEditorComponent", CorpusEditorComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=editor.component.js.map

@@ -1,6 +1,5 @@
-System.register(["@angular/core", '@angular/http', "./larka.adapter.service", "./tts.engine.service"], function(exports_1, context_1) {
+System.register(["@angular/core", "@angular/http", "./larka.adapter.service", "./tts.engine.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["@angular/core", '@angular/http', "./larka.adapter.service", ".
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_1, larka_adapter_service_1, tts_engine_service_1;
-    var LarkaService;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, http_1, larka_adapter_service_1, tts_engine_service_1, LarkaService;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -25,9 +24,10 @@ System.register(["@angular/core", '@angular/http', "./larka.adapter.service", ".
             },
             function (tts_engine_service_1_1) {
                 tts_engine_service_1 = tts_engine_service_1_1;
-            }],
-        execute: function() {
-            LarkaService = (function () {
+            }
+        ],
+        execute: function () {
+            LarkaService = /** @class */ (function () {
                 function LarkaService(http, tts, adapter) {
                     this.http = http;
                     this.tts = tts;
@@ -46,7 +46,7 @@ System.register(["@angular/core", '@angular/http', "./larka.adapter.service", ".
                     //console.log("Testing mode; ignoring CEFR_ML");
                     //console.log("Testing mode; hard-coded text");
                     var url = this.devUrl +
-                        "command=" + command + "&" +
+                        "command=" + command + "&" + // for now, the only command is complexity
                         "produced_by=" + producedBy + "&" +
                         "CEFR_ML=" + (useML ? 1 : 0) + "&" +
                         "text=" + encodeURIComponent(text);
@@ -132,13 +132,13 @@ System.register(["@angular/core", '@angular/http', "./larka.adapter.service", ".
                     return this.http.get(url).map(function (res) { return res.json(); });
                 };
                 LarkaService = __decorate([
-                    core_1.Injectable(), 
-                    __metadata('design:paramtypes', [http_1.Http, tts_engine_service_1.TTSEngine, larka_adapter_service_1.LarkaAdapter])
+                    core_1.Injectable(),
+                    __metadata("design:paramtypes", [http_1.Http, tts_engine_service_1.TTSEngine, larka_adapter_service_1.LarkaAdapter])
                 ], LarkaService);
                 return LarkaService;
             }());
             exports_1("LarkaService", LarkaService);
         }
-    }
+    };
 });
 //# sourceMappingURL=larka.service.js.map

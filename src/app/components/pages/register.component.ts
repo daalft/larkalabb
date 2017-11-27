@@ -9,18 +9,18 @@ import {HashService} from "../../services/hash.service";
 
 @Component({
     selector: 'register-component',
-    templateUrl: 'app/templates/register.html',
-    styleUrls: ['app/css/register.css']
+    templateUrl: '../../templates/register.html',
+    styleUrls: ['../../css/register.css']
 })
 
 export class RegisterComponent {
 
-    private currentPage = 1;
-    private uname;
-    private chash;
-    private allowNext = true;
+  public currentPage = 1;
+  public uname;
+  public chash;
+  public allowNext = true;
 
-    constructor(private localizer: LocalizerService, private login: LoginService) {}
+    constructor(public localizer: LocalizerService, private login: LoginService) {}
 
     nextPage (usn,pw) {
         let me = this;

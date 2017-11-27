@@ -3,6 +3,7 @@
  */
 import {Injectable} from "@angular/core";
 import {Http} from "@angular/http";
+import {HttpClient} from "@angular/common/http";
 @Injectable()
 export class iSpeechTTSEngine {
 
@@ -11,7 +12,7 @@ export class iSpeechTTSEngine {
     private url = "https://api.ispeech.org/api/rest"; //?apikey= action=convert &text=something &format=mp3 &voice=swswedishfemale
 
 
-    constructor(private http: Http) {
+    constructor(private http: HttpClient) {
 
     }
 

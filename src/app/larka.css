@@ -1,0 +1,311 @@
+@font-face {
+    font-family: Intellecta;
+    src: url('./fonts/Intellecta Digital.ttf');
+}
+@font-face {
+    font-family: Titillium;
+    src: url('./fonts/TitilliumWeb-Regular.ttf')
+}
+@font-face {
+    font-family: Prototype;
+    src: url('./fonts/Prototype.ttf')
+}
+/* Lärka orange: FF9510 */
+
+.larka-bg-primary {
+    background-color: #ff9610;
+}
+
+.larka-bg-warn {
+    background-color: #ff7324;
+}
+
+.text-emphasis {
+    font-weight: bold;
+}
+
+.text-emphasis a:hover {
+    text-decoration: none;
+}
+
+.logo-img {
+    vertical-align: bottom;
+}
+
+.logo-font-big {
+    font-family: "Codystar", Intellecta, Helvetica, "Helvetica Neue", sans-serif;
+    font-size: 60px;
+    line-height: normal;
+}
+
+.logo-font-big-flask {
+    font-size: 50px;
+    line-height: normal;
+    margin-left: 20px;
+}
+
+.logo-font-small {
+    font-family: "Titillium", Helvetica, "Helvetica Neue", serif;
+    font-size: 18px;
+}
+
+#logo-container-main {
+    margin-left: 10px;
+
+}
+
+#logo-container-extra {
+    margin-left: 20px;
+
+}
+
+.main-content {
+    width: auto;
+    float: left;
+}
+
+#popoverUserMenu {
+    position: relative;;
+    top: -70px;
+    background-color: rgb(255, 255, 255);
+}
+
+.sidebar {
+    color: #000;
+    background-color: rgba(238, 180, 105, 0.11);
+    height: 100vh;
+    border: 1px solid rgba(255, 165, 0, 0.34);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0;
+    width: 220px;
+    float: left;
+}
+
+.sidebar.away {
+    width: 35px;
+}
+
+.sidebar-title {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 10px 2px 5px;
+}
+
+.acc-title {
+    background-color: rgba(210, 153, 37, 0.81);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 2px;
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+.minimized {
+    height: 20px;
+}
+
+#optionbox {
+    margin-top: 20px;
+
+}
+
+.toggleOff {
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    height: 30px;
+
+}
+
+.toggleOn {
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    height: auto;
+    overflow: hidden;
+}
+
+#optionresume {
+
+}
+
+#optionheader {
+    font-weight: bold;
+}
+
+.selactive {
+    background-color: rgba(184, 221, 187, 0.2) !important;
+    border: 1px solid rgb(23, 225, 208) !important;
+    font-weight: bold;
+    box-shadow: none !important;
+}
+
+.selectable {
+    padding: 2px 5px;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none;
+    /* non-prefixed version, currently
+                           not supported by any browser */
+    text-align: center;
+    margin: 5px 2px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+#forklaring {
+    margin-top: 30%;
+    text-align: center;
+    font-size: 1.5em;
+    border: 1px dotted grey;
+}
+
+.margincontainer {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.select-title {
+    text-transform: uppercase;
+    font-size: 1.5em;
+
+}
+
+.select-header {
+    font-weight: bold;
+}
+
+.mock-link {
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none;
+    text-decoration: none;
+    color: #373737;
+}
+
+.mock-link:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+.overlay {
+    z-index: 99;
+    background-color: transparent;
+    cursor: not-allowed;
+}
+
+.unselectable {
+    padding: 2px 5px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none;
+    /* non-prefixed version, currently
+                           not supported by any browser */
+    text-align: center;
+    margin: 5px 2px;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: rgba(120, 120, 120, 0.51);
+    border: 1px solid transparent;
+
+    border-radius: 5px;
+}
+
+.mode-choice {
+    margin: 10px;
+}
+
+.dropdown-item-wrapper {
+    cursor: pointer;
+    text-align: center;
+}
+
+.dropdown-item-wrapper-xs {
+    cursor: pointer;
+    text-align: left;
+    margin: 5px 2px;
+    padding: 2px;
+    font-size: 1.2em;
+}
+
+.dropdown-item-wrapper:hover {
+    background-color: rgba(186, 170, 170, 0.28);
+}
+
+.langswitcher-xs {
+    float:right;
+}
+
+.notifications {
+    position: relative;
+}
+
+.notification {
+    padding: 5px 10px;
+    margin: 5px 2px;
+    position: absolute;
+    width: 100%;
+    background-color: #f0ad4e;
+    text-align: center;
+
+    font-weight: bold;
+}
+
+#sensitiveLanguage {
+    bottom: 0;
+}
+
+#cookie {
+    bottom: 50px;
+}
+
+#landscaper {
+    display: none;
+}
+
+.noticeme {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 176, 232, 0.80);
+    color: #0e2231;
+    text-align: center;
+}
+.closer {
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.loading-animation {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: -1;
+}
+
+larka-app:empty + .loading-animation {
+    opacity: 1;
+    z-index: 100;
+}
+

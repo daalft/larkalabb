@@ -9,7 +9,7 @@ export class TTSEngine {
 
     constructor(private tts: NuanceService) {}
 
-    textToSpeech(text,spell) {
-        return this.tts.speak(text,spell).map(res => res.json());
+    textToSpeech(text, spell) {
+        return this.tts.speak(text, spell);
     }
 }

@@ -1,6 +1,5 @@
-System.register(["../../services/karp.service", "@angular/http", "@angular/core", "../../services/localizer.service", "./pleasewait.component", "../../services/dataAggregator.service", "../../services/login.service"], function(exports_1, context_1) {
+System.register(["../../services/karp.service", "@angular/http", "@angular/core", "../../services/localizer.service", "./pleasewait.component", "../../services/dataAggregator.service", "../../services/login.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["../../services/karp.service", "@angular/http", "@angular/core"
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var karp_service_1, http_1, core_1, localizer_service_1, pleasewait_component_1, dataAggregator_service_1, login_service_1;
-    var HangBirdComponent;
+    var __moduleName = context_1 && context_1.id;
+    var karp_service_1, http_1, core_1, localizer_service_1, pleasewait_component_1, dataAggregator_service_1, login_service_1, HangBirdComponent;
     return {
-        setters:[
+        setters: [
             function (karp_service_1_1) {
                 karp_service_1 = karp_service_1_1;
             },
@@ -34,12 +33,10 @@ System.register(["../../services/karp.service", "@angular/http", "@angular/core"
             },
             function (login_service_1_1) {
                 login_service_1 = login_service_1_1;
-            }],
-        execute: function() {
-            /**
-             * Created by David on 1/25/2017.
-             */
-            HangBirdComponent = (function () {
+            }
+        ],
+        execute: function () {
+            HangBirdComponent = /** @class */ (function () {
                 function HangBirdComponent(karp, http, localizer, aggregator, login) {
                     this.karp = karp;
                     this.http = http;
@@ -105,9 +102,11 @@ System.register(["../../services/karp.service", "@angular/http", "@angular/core"
                     this.previousWord = this.currentWord;
                     if (!this.language) {
                         this.language = "sqi";
+                        //this.aggregator.aggregate("wordguess-lang", this.language, this.sessionid);
                     }
                     if (!this.level) {
                         this.level = "A1";
+                        //this.aggregator.aggregate("wordguess-level", this.level, this.sessionid);
                     }
                     if (!this.wordlist) {
                         return this.getBackupWord("Wordlist not loaded");
@@ -181,6 +180,7 @@ System.register(["../../services/karp.service", "@angular/http", "@angular/core"
                                 }
                                 else {
                                     console.log(wlist[j]);
+                                    // TODO what to do if no description present?
                                 }
                                 var digits = /(\(\d\))/;
                                 if (desc.match(digits)) {
@@ -279,22 +279,21 @@ System.register(["../../services/karp.service", "@angular/http", "@angular/core"
                     return indices;
                 };
                 __decorate([
-                    // /english/dog.png; /spanish/something.png
-                    core_1.ViewChild(pleasewait_component_1.PleaseWaitComponent), 
-                    __metadata('design:type', pleasewait_component_1.PleaseWaitComponent)
+                    core_1.ViewChild(pleasewait_component_1.PleaseWaitComponent),
+                    __metadata("design:type", pleasewait_component_1.PleaseWaitComponent)
                 ], HangBirdComponent.prototype, "waiter", void 0);
                 HangBirdComponent = __decorate([
                     core_1.Component({
                         selector: 'hangbird',
                         templateUrl: 'app/templates/hangbird.html',
                         styleUrls: ['app/css/hangbird.css']
-                    }), 
-                    __metadata('design:paramtypes', [karp_service_1.KarpService, http_1.Http, localizer_service_1.LocalizerService, dataAggregator_service_1.DataAggregatorService, login_service_1.LoginService])
+                    }),
+                    __metadata("design:paramtypes", [karp_service_1.KarpService, http_1.Http, localizer_service_1.LocalizerService, dataAggregator_service_1.DataAggregatorService, login_service_1.LoginService])
                 ], HangBirdComponent);
                 return HangBirdComponent;
             }());
             exports_1("HangBirdComponent", HangBirdComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=hangbird.component.js.map

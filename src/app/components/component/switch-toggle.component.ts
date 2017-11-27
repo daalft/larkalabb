@@ -4,8 +4,8 @@ import {Component, Input} from "@angular/core";
  */
 @Component({
     selector: 'switch-toggle',
-    templateUrl: 'app/templates/switch-toggle.html',
-    styleUrls: ['app/css/switch-toggle.css']
+    templateUrl: '../../templates/switch-toggle.html',
+    styleUrls: ['../../css/switch-toggle.css']
 })
 
 export class SwitchToggleComponent {
@@ -14,7 +14,7 @@ export class SwitchToggleComponent {
 
     @Input() name: string;
 
-    private toggleArray: boolean[];
+  public toggleArray: boolean[];
 
     constructor() {
         this.toggleArray = [false, false];

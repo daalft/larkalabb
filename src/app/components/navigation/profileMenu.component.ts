@@ -5,13 +5,13 @@ import {Component, Output, EventEmitter} from "@angular/core";
 
 @Component({
     selector: 'profile-menu',
-    templateUrl: 'app/templates/profile-menu.html',
-    styleUrls: ['app/css/profile-menu.css']
+    templateUrl: '../../templates/profile-menu.html',
+    styleUrls: ['../../css/profile-menu.css']
 })
 
 export class ProfileMenuComponent {
 
-    @Output() cp: EventEmitter = new EventEmitter();
+    @Output() cp: EventEmitter<any> = new EventEmitter();
 
     constructor() {
 

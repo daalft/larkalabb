@@ -1,6 +1,5 @@
-System.register(["@angular/core", "@angular/http", "../../services/localizer.service"], function(exports_1, context_1) {
+System.register(["@angular/core", "@angular/http", "../../services/localizer.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["@angular/core", "@angular/http", "../../services/localizer.ser
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_1, localizer_service_1;
-    var WordlistSelectorComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, http_1, localizer_service_1, WordlistSelectorComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -22,9 +21,10 @@ System.register(["@angular/core", "@angular/http", "../../services/localizer.ser
             },
             function (localizer_service_1_1) {
                 localizer_service_1 = localizer_service_1_1;
-            }],
-        execute: function() {
-            WordlistSelectorComponent = (function () {
+            }
+        ],
+        execute: function () {
+            WordlistSelectorComponent = /** @class */ (function () {
                 function WordlistSelectorComponent(localizer, http) {
                     this.localizer = localizer;
                     this.http = http;
@@ -69,21 +69,20 @@ System.register(["@angular/core", "@angular/http", "../../services/localizer.ser
                     this.wordlistChange.emit(this.data[this.getSelectedIndex()].name);
                 };
                 __decorate([
-                    core_1.Output(), 
-                    __metadata('design:type', core_1.EventEmitter)
+                    core_1.Output(),
+                    __metadata("design:type", core_1.EventEmitter)
                 ], WordlistSelectorComponent.prototype, "wordlistChange", void 0);
                 WordlistSelectorComponent = __decorate([
                     core_1.Component({
                         selector: 'wordlist-selector',
-                        templateUrl: 'app/templates/wordlist-selector.html',
-                        schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA]
-                    }), 
-                    __metadata('design:paramtypes', [localizer_service_1.LocalizerService, http_1.Http])
+                        templateUrl: 'app/templates/wordlist-selector.html'
+                    }),
+                    __metadata("design:paramtypes", [localizer_service_1.LocalizerService, http_1.Http])
                 ], WordlistSelectorComponent);
                 return WordlistSelectorComponent;
             }());
             exports_1("WordlistSelectorComponent", WordlistSelectorComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=wordlistSelector.js.map

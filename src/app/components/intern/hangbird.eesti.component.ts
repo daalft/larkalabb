@@ -6,28 +6,29 @@ import {LocalizerService} from "../../services/localizer.service";
 import {DataAggregatorService} from "../../services/dataAggregator.service";
 import {LoginService} from "../../services/login.service";
 import {PleaseWaitComponent} from "../component/pleasewait.component";
+import {HttpClient} from "@angular/common/http";
 
 /**
  * Created by David on 1/25/2017.
  */
 @Component({
     selector: 'hangbird',
-    templateUrl: 'app/templates/hangbird-eesti.html',
-    styleUrls: ['app/css/hangbird.css']
+    templateUrl: '../../templates/hangbird-eesti.html',
+    styleUrls: ['../../css/hangbird.css']
 })
 
 export class HangBirdEestiComponent {
 
-    private numberOfTries = 0;
-    private maxNumberOfTries = 7;
+  public numberOfTries = 0;
+  public maxNumberOfTries = 7;
 
-    private wordlist = ["tomat",  "roos", "lennuk", "jalgratas", "kana", "kamm", "rukkilill"];
+  public wordlist = ["tomat",  "roos", "lennuk", "jalgratas", "kana", "kamm", "rukkilill"];
 
-    private currentWord;
-    private currentWordVector;
-    private previousWord;
-    private description;
-    private descriptions = [
+  public currentWord;
+  public currentWordVector;
+  public previousWord;
+  public description;
+  public descriptions = [
         "pehme punane köögivili, mida kasutatakse salatites või soojades toitudes",
         "magusa lõhnaga lill, mis kasvab teravate okastega põõsa küljes",
         "tiibadega sõiduk, mis lendab õhus",
@@ -36,13 +37,13 @@ export class HangBirdEestiComponent {
         "lame plastist või metallist ese, millega saab juukseid korda seada",
         "sinise õiega lill, mis kasvab põllu peal"
     ];
-    private translation;
-    private translations = [
+  public translation;
+  public translations = [
         "tomato", "rose", "airplane", "bicycle", "chicken", "comb", "cornflower"
     ];
 
-    private image;
-    private images = [
+  public image;
+  public images = [
         "app/img/wge/tomato.png",
         "app/img/wge/rose.png",
         "app/img/wge/aeroplanes.png",
@@ -52,33 +53,33 @@ export class HangBirdEestiComponent {
         "app/img/wge/cornflower.png"
     ];
 
-    private showHint = false;
-    private usedHint = false;
+  public showHint = false;
+  public usedHint = false;
 
-    private showDescription = false;
-    private showImage = false;
+  public showDescription = false;
+  public showImage = false;
 
-    private letters = [ "A", "B", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "Š", "Z", "Ž", "T", "U", "V", "Õ", "Ä", "Ö", "Ü"];
+  public letters = [ "A", "B", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "Š", "Z", "Ž", "T", "U", "V", "Õ", "Ä", "Ö", "Ü"];
 
-    private languages = ["English"];
-    private language;
+  public languages = ["English"];
+  public language;
 
-    private levels = ["A1", "A2", "B1", "B2", "C1"];
-    private ongoing = false;
+  public levels = ["A1", "A2", "B1", "B2", "C1"];
+  public ongoing = false;
 
-    private totalScore = 0;
+  public totalScore = 0;
 
-    private sessionid;
+  public sessionid;
 
-    private inARow = 0;
+  public inARow = 0;
 
-    private index = -1;
+  public index = -1;
 
-    private eggindices = [1,2,3,4];
+  public eggindices = [1,2,3,4];
 
     @ViewChild(PleaseWaitComponent) waiter: PleaseWaitComponent;
 
-    constructor(private karp: KarpService, private http: Http, private localizer: LocalizerService, private aggregator: DataAggregatorService, private login: LoginService) {
+    constructor(private karp: KarpService, private http: HttpClient, public localizer: LocalizerService, private aggregator: DataAggregatorService, private login: LoginService) {
 
     }
 

@@ -463,7 +463,7 @@
             <tr [hidden]="!searchRun || hits.length > 0">
                 <td colspan="3">No sentences matched your criteria. See below for sentences with violations.</td>
             </tr>
-            <template ngFor let-hit [ngForOf]="hits">
+            <ng-template ngFor let-hit [ngForOf]="hits">
                 <tr (click)="hit['showInfo'] = !hit['showInfo']">
                     <td>{{hit["rank"]}}</td>
                     <td>{{hit["score"]}}</td>
@@ -475,7 +475,7 @@
                 <tr [hidden]="hit['violations'].length > 0 || !hit['showInfo']">
                     <td colspan="3">No violations found.</td>
                 </tr>
-            </template>
+            </ng-template>
         </table>
         <br/><br/>
         <div class="title">Results with violations</div>
@@ -485,7 +485,7 @@
                 <th>Score</th>
                 <th>Sentence</th>
             </tr>
-            <template ngFor let-hit [ngForOf]="badhits">
+            <ng-template ngFor let-hit [ngForOf]="badhits">
                 <tr (click)="hit['showInfo'] = !hit['showInfo']">
                     <td>{{hit["rank"]}}</td>
                     <td>{{hit["score"]}}</td>
@@ -494,7 +494,7 @@
                 <tr [hidden]="!hit['showInfo']" *ngFor="let violation of hit['violations']" class="hitex-info">
                     <td colspan="3"><b>{{violation["message"]}}</b> {{violation["data"]}}</td>
                 </tr>
-            </template>
+            </ng-template>
         </table>
     </div>
 </div>

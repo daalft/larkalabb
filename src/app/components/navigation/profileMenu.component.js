@@ -1,6 +1,5 @@
-System.register(["@angular/core"], function(exports_1, context_1) {
+System.register(["@angular/core"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,15 +9,16 @@ System.register(["@angular/core"], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
-    var ProfileMenuComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, ProfileMenuComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
-            }],
-        execute: function() {
-            ProfileMenuComponent = (function () {
+            }
+        ],
+        execute: function () {
+            ProfileMenuComponent = /** @class */ (function () {
                 function ProfileMenuComponent() {
                     this.cp = new core_1.EventEmitter();
                 }
@@ -26,21 +26,21 @@ System.register(["@angular/core"], function(exports_1, context_1) {
                     this.cp.emit({ 'page': page });
                 };
                 __decorate([
-                    core_1.Output(), 
-                    __metadata('design:type', core_1.EventEmitter)
+                    core_1.Output(),
+                    __metadata("design:type", core_1.EventEmitter)
                 ], ProfileMenuComponent.prototype, "cp", void 0);
                 ProfileMenuComponent = __decorate([
                     core_1.Component({
                         selector: 'profile-menu',
                         templateUrl: 'app/templates/profile-menu.html',
                         styleUrls: ['app/css/profile-menu.css']
-                    }), 
-                    __metadata('design:paramtypes', [])
+                    }),
+                    __metadata("design:paramtypes", [])
                 ], ProfileMenuComponent);
                 return ProfileMenuComponent;
             }());
             exports_1("ProfileMenuComponent", ProfileMenuComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=profileMenu.component.js.map

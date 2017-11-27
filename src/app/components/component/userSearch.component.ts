@@ -9,15 +9,14 @@ import {EasterEggService} from "../../services/easteregg.service";
 
 @Component({
     selector: 'user-search',
-    templateUrl: 'app/templates/user-search.html',
-    providers: [KarpService],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    templateUrl: '../../templates/user-search.html',
+    providers: [KarpService]
 })
 
 export class UserSearchComponent {
-    @Output() numberChange: EventEmitter = new EventEmitter();
+    @Output() numberChange: EventEmitter<any> = new EventEmitter();
 
-    constructor(private localizer: LocalizerService, private karp: KarpService, private eggs: EasterEggService) {
+    constructor(public localizer: LocalizerService, private karp: KarpService, private eggs: EasterEggService) {
         this.words = [];
     }
 
@@ -54,7 +53,7 @@ export class UserSearchComponent {
         if (this.currentUserSearch == "god jul") {
             this.eggs.magicFunction1();
         }
-        this.karp.fetchMini(this.currentUserSearch).map(data => data.json()).subscribe(function(data) {
+        this.karp.fetchMini(this.currentUserSearch).subscribe(function(data) {
             var hits = data["hits"]["hits"];
             if (hits.length == 0) {
                 console.log("No HITS for " + me.currentUserSearch);

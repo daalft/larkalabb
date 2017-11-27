@@ -5,19 +5,19 @@ import {Component} from "@angular/core";
 
 @Component({
     selector: 'enetcollect',
-    templateUrl: 'app/templates/enetcollect.html',
-    styleUrls: ['app/css/enetcollect.css']
+    templateUrl: '../../templates/enetcollect.html',
+    styleUrls: ['../../css/enetcollect.css']
 })
 
 export class EnetCollectDemoComponent {
-    private isLoggedIn = false;
-    private isAdmin = false;
+  public isLoggedIn = false;
+  public isAdmin = false;
 
-    private showAddEntry = false;
-    private showLitlist = true;
-    private showReview = false;
+  public showAddEntry = false;
+  public showLitlist = true;
+  public showReview = false;
 
-    private litlist = [
+  public litlist = [
         {
             'author': 'Alfter David',
             'year': '2017',
@@ -48,7 +48,7 @@ export class EnetCollectDemoComponent {
         }
     ];
 
-    private revlist = [
+  public revlist = [
         {
             'author': 'No author',
             'year': '9999',

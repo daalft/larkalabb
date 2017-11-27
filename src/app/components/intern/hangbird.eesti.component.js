@@ -1,6 +1,5 @@
-System.register(["../../services/karp.service", "@angular/http", "@angular/core", "../../services/localizer.service", "../../services/dataAggregator.service", "../../services/login.service", "../component/pleasewait.component"], function(exports_1, context_1) {
+System.register(["../../services/karp.service", "@angular/http", "@angular/core", "../../services/localizer.service", "../../services/dataAggregator.service", "../../services/login.service", "../component/pleasewait.component"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["../../services/karp.service", "@angular/http", "@angular/core"
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var karp_service_1, http_1, core_1, localizer_service_1, dataAggregator_service_1, login_service_1, pleasewait_component_1;
-    var HangBirdEestiComponent;
+    var __moduleName = context_1 && context_1.id;
+    var karp_service_1, http_1, core_1, localizer_service_1, dataAggregator_service_1, login_service_1, pleasewait_component_1, HangBirdEestiComponent;
     return {
-        setters:[
+        setters: [
             function (karp_service_1_1) {
                 karp_service_1 = karp_service_1_1;
             },
@@ -34,12 +33,10 @@ System.register(["../../services/karp.service", "@angular/http", "@angular/core"
             },
             function (pleasewait_component_1_1) {
                 pleasewait_component_1 = pleasewait_component_1_1;
-            }],
-        execute: function() {
-            /**
-             * Created by David on 1/25/2017.
-             */
-            HangBirdEestiComponent = (function () {
+            }
+        ],
+        execute: function () {
+            HangBirdEestiComponent = /** @class */ (function () {
                 function HangBirdEestiComponent(karp, http, localizer, aggregator, login) {
                     this.karp = karp;
                     this.http = http;
@@ -187,21 +184,21 @@ System.register(["../../services/karp.service", "@angular/http", "@angular/core"
                     return indices;
                 };
                 __decorate([
-                    core_1.ViewChild(pleasewait_component_1.PleaseWaitComponent), 
-                    __metadata('design:type', pleasewait_component_1.PleaseWaitComponent)
+                    core_1.ViewChild(pleasewait_component_1.PleaseWaitComponent),
+                    __metadata("design:type", pleasewait_component_1.PleaseWaitComponent)
                 ], HangBirdEestiComponent.prototype, "waiter", void 0);
                 HangBirdEestiComponent = __decorate([
                     core_1.Component({
                         selector: 'hangbird',
                         templateUrl: 'app/templates/hangbird-eesti.html',
                         styleUrls: ['app/css/hangbird.css']
-                    }), 
-                    __metadata('design:paramtypes', [karp_service_1.KarpService, http_1.Http, localizer_service_1.LocalizerService, dataAggregator_service_1.DataAggregatorService, login_service_1.LoginService])
+                    }),
+                    __metadata("design:paramtypes", [karp_service_1.KarpService, http_1.Http, localizer_service_1.LocalizerService, dataAggregator_service_1.DataAggregatorService, login_service_1.LoginService])
                 ], HangBirdEestiComponent);
                 return HangBirdEestiComponent;
             }());
             exports_1("HangBirdEestiComponent", HangBirdEestiComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=hangbird.eesti.component.js.map

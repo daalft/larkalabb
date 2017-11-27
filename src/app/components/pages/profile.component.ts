@@ -12,13 +12,12 @@ import {LoginService} from "../../services/login.service";
 
 @Component({
     selector: 'profile',
-    templateUrl: 'app/templates/profile.html',
-    styleUrls: ['app/css/profile.css'],
-    directives: [ProfileOverviewComponent, ProfileMenuComponent, LearnerProgressComponent, ProfileDetailsComponent]
+    templateUrl: '../../templates/profile.html',
+    styleUrls: ['../../css/profile.css']
 })
 
 export class ProfileComponent implements CanActivate {
-    private currentPage = 0;
+  public currentPage = 0;
 
     constructor(private login: LoginService) {}
 

@@ -1,9 +1,8 @@
 /**
  * Created by David on 3/9/2016.
  */
-System.register(["@angular/core", "../../services/localizer.service", "./../component/choiceSelector.component", "../component/modeSelector.component", "../../services/larka.service", "../../services/larka.adapter.service", "../component/exercise.component", "../../services/state.service", "../navigation/userNavbar.component"], function(exports_1, context_1) {
+System.register(["@angular/core", "../../services/localizer.service", "../component/modeSelector.component", "../../services/larka.service", "../../services/larka.adapter.service", "../component/exercise.component", "../../services/state.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -13,18 +12,15 @@ System.register(["@angular/core", "../../services/localizer.service", "./../comp
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, localizer_service_1, choiceSelector_component_1, modeSelector_component_1, larka_service_1, larka_adapter_service_1, exercise_component_1, state_service_1, userNavbar_component_1;
-    var LinguistComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, localizer_service_1, modeSelector_component_1, larka_service_1, larka_adapter_service_1, exercise_component_1, state_service_1, LinguistComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
             function (localizer_service_1_1) {
                 localizer_service_1 = localizer_service_1_1;
-            },
-            function (choiceSelector_component_1_1) {
-                choiceSelector_component_1 = choiceSelector_component_1_1;
             },
             function (modeSelector_component_1_1) {
                 modeSelector_component_1 = modeSelector_component_1_1;
@@ -40,12 +36,12 @@ System.register(["@angular/core", "../../services/localizer.service", "./../comp
             },
             function (state_service_1_1) {
                 state_service_1 = state_service_1_1;
-            },
-            function (userNavbar_component_1_1) {
-                userNavbar_component_1 = userNavbar_component_1_1;
-            }],
-        execute: function() {
-            LinguistComponent = (function () {
+            }
+        ],
+        execute: function () {/**
+             * Created by David on 3/9/2016.
+             */
+            LinguistComponent = /** @class */ (function () {
                 function LinguistComponent(localizer, larka, state) {
                     this.localizer = localizer;
                     this.larka = larka;
@@ -264,27 +260,25 @@ System.register(["@angular/core", "../../services/localizer.service", "./../comp
                     return [count, total];
                 };
                 __decorate([
-                    core_1.ViewChild(modeSelector_component_1.ModeSelectorComponent), 
-                    __metadata('design:type', modeSelector_component_1.ModeSelectorComponent)
+                    core_1.ViewChild(modeSelector_component_1.ModeSelectorComponent),
+                    __metadata("design:type", modeSelector_component_1.ModeSelectorComponent)
                 ], LinguistComponent.prototype, "modeSelector", void 0);
                 __decorate([
-                    core_1.ViewChild(exercise_component_1.ExerciseComponent), 
-                    __metadata('design:type', exercise_component_1.ExerciseComponent)
+                    core_1.ViewChild(exercise_component_1.ExerciseComponent),
+                    __metadata("design:type", exercise_component_1.ExerciseComponent)
                 ], LinguistComponent.prototype, "exercise", void 0);
                 LinguistComponent = __decorate([
                     core_1.Component({
                         selector: 'tab-out',
                         templateUrl: 'app/templates/linguist-component.html',
-                        directives: [choiceSelector_component_1.ChoiceSelectorComponent, modeSelector_component_1.ModeSelectorComponent, exercise_component_1.ExerciseComponent, userNavbar_component_1.UserNavbarComponent],
-                        providers: [larka_service_1.LarkaService, larka_adapter_service_1.LarkaAdapter, state_service_1.StateService],
-                        schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA]
-                    }), 
-                    __metadata('design:paramtypes', [localizer_service_1.LocalizerService, larka_service_1.LarkaService, state_service_1.StateService])
+                        providers: [larka_service_1.LarkaService, larka_adapter_service_1.LarkaAdapter, state_service_1.StateService]
+                    }),
+                    __metadata("design:paramtypes", [localizer_service_1.LocalizerService, larka_service_1.LarkaService, state_service_1.StateService])
                 ], LinguistComponent);
                 return LinguistComponent;
             }());
             exports_1("LinguistComponent", LinguistComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=linguist.component.js.map

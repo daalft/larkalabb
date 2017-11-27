@@ -1,6 +1,5 @@
-System.register(["@angular/core", "@angular/http", "./autocomplete.component", "./lang-select.component", "../../services/login.service"], function(exports_1, context_1) {
+System.register(["@angular/core", "@angular/http", "./lang-select.component", "../../services/login.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,27 +9,25 @@ System.register(["@angular/core", "@angular/http", "./autocomplete.component", "
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_1, autocomplete_component_1, lang_select_component_1, login_service_1;
-    var ProfileDetailsComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, http_1, lang_select_component_1, login_service_1, ProfileDetailsComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
             function (http_1_1) {
                 http_1 = http_1_1;
             },
-            function (autocomplete_component_1_1) {
-                autocomplete_component_1 = autocomplete_component_1_1;
-            },
             function (lang_select_component_1_1) {
                 lang_select_component_1 = lang_select_component_1_1;
             },
             function (login_service_1_1) {
                 login_service_1 = login_service_1_1;
-            }],
-        execute: function() {
-            ProfileDetailsComponent = (function () {
+            }
+        ],
+        execute: function () {
+            ProfileDetailsComponent = /** @class */ (function () {
                 function ProfileDetailsComponent(http, login) {
                     var _this = this;
                     this.http = http;
@@ -187,31 +184,29 @@ System.register(["@angular/core", "@angular/http", "./autocomplete.component", "
                     this.emitter.emit(this.retrieveData());
                 };
                 __decorate([
-                    core_1.ViewChild('langselect'), 
-                    __metadata('design:type', lang_select_component_1.LanguageSelectionComponent)
+                    core_1.ViewChild('langselect'),
+                    __metadata("design:type", lang_select_component_1.LanguageSelectionComponent)
                 ], ProfileDetailsComponent.prototype, "langselect", void 0);
                 __decorate([
-                    core_1.Output(), 
-                    __metadata('design:type', core_1.EventEmitter)
+                    core_1.Output(),
+                    __metadata("design:type", core_1.EventEmitter)
                 ], ProfileDetailsComponent.prototype, "emitter", void 0);
                 __decorate([
-                    core_1.Output(), 
-                    __metadata('design:type', core_1.EventEmitter)
+                    core_1.Output(),
+                    __metadata("design:type", core_1.EventEmitter)
                 ], ProfileDetailsComponent.prototype, "status", void 0);
                 ProfileDetailsComponent = __decorate([
                     core_1.Component({
                         selector: 'profile-fillout',
                         templateUrl: 'app/templates/profile-fillout.html',
-                        directives: [autocomplete_component_1.AutocompleteComponent, lang_select_component_1.LanguageSelectionComponent],
                         styleUrls: ['app/css/profile-fillout.css'],
-                        schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA]
-                    }), 
-                    __metadata('design:paramtypes', [http_1.Http, login_service_1.LoginService])
+                    }),
+                    __metadata("design:paramtypes", [http_1.Http, login_service_1.LoginService])
                 ], ProfileDetailsComponent);
                 return ProfileDetailsComponent;
             }());
             exports_1("ProfileDetailsComponent", ProfileDetailsComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=profileDetails.component.js.map

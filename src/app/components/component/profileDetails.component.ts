@@ -1,12 +1,12 @@
 /**
  * Created by David on 3/15/2016.
  */
-import {Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild, Output, EventEmitter} from "@angular/core";
+import {Component, ViewChild, Output, EventEmitter} from "@angular/core";
 import {Http} from "@angular/http";
 import {AutocompleteComponent} from "./autocomplete.component";
 import {LanguageSelectionComponent} from "./lang-select.component";
-import {LogoSpaceComponent} from "../navigation/logoSpace.component";
 import {LoginService} from "../../services/login.service";
+import {HttpClient} from "@angular/common/http";
 
 
 
@@ -15,10 +15,8 @@ import {LoginService} from "../../services/login.service";
 
 @Component({
     selector: 'profile-fillout',
-    templateUrl: 'app/templates/profile-fillout.html',
-    directives: [AutocompleteComponent, LanguageSelectionComponent],
-    styleUrls: ['app/css/profile-fillout.css'],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    templateUrl: '../../templates/profile-fillout.html',
+    styleUrls: ['../../css/profile-fillout.css'],
 })
 
 export class ProfileDetailsComponent {
@@ -51,9 +49,9 @@ export class ProfileDetailsComponent {
         "Unknown"
     ];
 
-    constructor(private http: Http, private login: LoginService) {
-        http.get('app/data/countries.json').map(res => res.json()).subscribe(data => this.countries = data);
-        http.get('app/data/langs.json').map(res => res.json()).subscribe(data => this.languages = data);
+    constructor(private http: HttpClient, private login: LoginService) {
+        http.get('app/data/countries.json').subscribe(data => this.countries = data);
+        http.get('app/data/langs.json').subscribe(data => this.languages = data);
     }
 
     handleValue(val) {

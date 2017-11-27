@@ -1,6 +1,5 @@
-System.register(["@angular/core", "@angular/http", "rxjs/Rx"], function(exports_1, context_1) {
+System.register(["@angular/core", "@angular/http", "rxjs/Rx"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["@angular/core", "@angular/http", "rxjs/Rx"], function(exports_
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_1, Rx_1;
-    var NuanceService;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, http_1, Rx_1, NuanceService;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -22,12 +21,10 @@ System.register(["@angular/core", "@angular/http", "rxjs/Rx"], function(exports_
             },
             function (Rx_1_1) {
                 Rx_1 = Rx_1_1;
-            }],
-        execute: function() {
-            /**
-             * Created by David on 12/21/2016.
-             */
-            NuanceService = (function () {
+            }
+        ],
+        execute: function () {
+            NuanceService = /** @class */ (function () {
                 function NuanceService(http) {
                     this.http = http;
                     this.url = "https://ws.spraakbanken.gu.se/ws/larkalabb/icall.cgi?command=tts&prompt=";
@@ -45,13 +42,13 @@ System.register(["@angular/core", "@angular/http", "rxjs/Rx"], function(exports_
                         .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); }); //...errors if a
                 };
                 NuanceService = __decorate([
-                    core_1.Injectable(), 
-                    __metadata('design:paramtypes', [http_1.Http])
+                    core_1.Injectable(),
+                    __metadata("design:paramtypes", [http_1.Http])
                 ], NuanceService);
                 return NuanceService;
             }());
             exports_1("NuanceService", NuanceService);
         }
-    }
+    };
 });
 //# sourceMappingURL=nuance.service.js.map

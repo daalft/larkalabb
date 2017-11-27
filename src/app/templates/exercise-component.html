@@ -1,11 +1,11 @@
 
 <div *ngIf="visible" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-    <modal #reportModal>
-        <modal-header>
+    <div class="modal fade" #reportModal>
+        <div class="modal-header">
             <h4 class="modal-title">{{localizer.localize('report_sentence')}}</h4>
-        </modal-header>
-        <modal-body>
+        </div>
+        <div class="modal-body">
             <div class="form-group">
                 <div class="report-explanation">
                     {{localizer.localize('report_explanation')}}
@@ -30,11 +30,12 @@
                     </select>
                 </div>
             </div>
-        </modal-body>
-        <modal-footer [show-default-buttons]="true">
-
-        </modal-footer>
-    </modal>
+        </div>
+        <div class="modal-footer">
+        <button type="submit">Submit</button>
+          <button type="reset">Cancel</button>
+        </div>
+    </div>
 
     <div class="row instructions">
         {{localizer.localize('trainPOS1_instruction')}}

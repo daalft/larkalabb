@@ -1,6 +1,5 @@
-System.register(["@angular/core", "../../services/localizer.service", "@angular/http", "../../services/larka.service", "./pleasewait.component", "../../services/easteregg.service"], function(exports_1, context_1) {
+System.register(["@angular/core", "../../services/localizer.service", "@angular/http", "../../services/larka.service", "./pleasewait.component", "../../services/easteregg.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["@angular/core", "../../services/localizer.service", "@angular/
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, localizer_service_1, http_1, larka_service_1, pleasewait_component_1, easteregg_service_1;
-    var TextEvaluationComponent, ResponseObject;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, localizer_service_1, http_1, larka_service_1, pleasewait_component_1, easteregg_service_1, TextEvaluationComponent, ResponseObject;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -31,9 +30,10 @@ System.register(["@angular/core", "../../services/localizer.service", "@angular/
             },
             function (easteregg_service_1_1) {
                 easteregg_service_1 = easteregg_service_1_1;
-            }],
-        execute: function() {
-            TextEvaluationComponent = (function () {
+            }
+        ],
+        execute: function () {
+            TextEvaluationComponent = /** @class */ (function () {
                 function TextEvaluationComponent(localizer, http, larka, eggs) {
                     this.localizer = localizer;
                     this.http = http;
@@ -250,6 +250,9 @@ System.register(["@angular/core", "../../services/localizer.service", "@angular/
                             classes = "productive ";
                             classes += "red";
                         }
+                        // should not need to add out-of-saldo here
+                        // since if it is out of saldo in svalex, it
+                        // ought to be out of saldo in swell as well
                     }
                     //style += color;
                     return classes;
@@ -272,12 +275,12 @@ System.register(["@angular/core", "../../services/localizer.service", "@angular/
                     this.userinput["nativeElement"].value = "";
                 };
                 __decorate([
-                    core_1.ViewChild('userinput'), 
-                    __metadata('design:type', HTMLTextAreaElement)
+                    core_1.ViewChild('userinput'),
+                    __metadata("design:type", HTMLTextAreaElement)
                 ], TextEvaluationComponent.prototype, "userinput", void 0);
                 __decorate([
-                    core_1.ViewChild('waiter'), 
-                    __metadata('design:type', pleasewait_component_1.PleaseWaitComponent)
+                    core_1.ViewChild('waiter'),
+                    __metadata("design:type", pleasewait_component_1.PleaseWaitComponent)
                 ], TextEvaluationComponent.prototype, "waiter", void 0);
                 TextEvaluationComponent = __decorate([
                     core_1.Component({
@@ -285,18 +288,18 @@ System.register(["@angular/core", "../../services/localizer.service", "@angular/
                         templateUrl: 'app/templates/textevaluation.html',
                         styleUrls: ['app/css/texteval.css'],
                         providers: [pleasewait_component_1.PleaseWaitComponent]
-                    }), 
-                    __metadata('design:paramtypes', [localizer_service_1.LocalizerService, http_1.Http, larka_service_1.LarkaService, easteregg_service_1.EasterEggService])
+                    }),
+                    __metadata("design:paramtypes", [localizer_service_1.LocalizerService, http_1.Http, larka_service_1.LarkaService, easteregg_service_1.EasterEggService])
                 ], TextEvaluationComponent);
                 return TextEvaluationComponent;
             }());
             exports_1("TextEvaluationComponent", TextEvaluationComponent);
-            ResponseObject = (function () {
+            ResponseObject = /** @class */ (function () {
                 function ResponseObject() {
                 }
                 return ResponseObject;
             }());
         }
-    }
+    };
 });
 //# sourceMappingURL=textevaluation.component.js.map

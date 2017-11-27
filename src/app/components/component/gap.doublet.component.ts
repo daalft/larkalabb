@@ -5,8 +5,8 @@ import {Component, Input, ViewChild, ElementRef} from "@angular/core";
 
 @Component({
     selector: 'gap-doublet',
-    templateUrl: 'app/templates/gap-doublet.html',
-    styleUrls: ['app/css/molna.css', 'app/css/diagnostic.css']
+    templateUrl: '../../templates/gap-doublet.html',
+    styleUrls: ['../../css/molna.css', '../../css/diagnostic.css']
 })
 
 export class GapDoubletComponent {

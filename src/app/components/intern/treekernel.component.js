@@ -1,6 +1,5 @@
-System.register(["@angular/core", "../../services/larka.service", "../../services/dataAggregator.service", "../../services/login.service", "../../services/korp.service"], function(exports_1, context_1) {
+System.register(["@angular/core", "../../services/larka.service", "../../services/dataAggregator.service", "../../services/login.service", "../../services/korp.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["@angular/core", "../../services/larka.service", "../../service
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, larka_service_1, dataAggregator_service_1, login_service_1, korp_service_1;
-    var TreeKernelComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, larka_service_1, dataAggregator_service_1, login_service_1, korp_service_1, TreeKernelComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -28,9 +27,10 @@ System.register(["@angular/core", "../../services/larka.service", "../../service
             },
             function (korp_service_1_1) {
                 korp_service_1 = korp_service_1_1;
-            }],
-        execute: function() {
-            TreeKernelComponent = (function () {
+            }
+        ],
+        execute: function () {
+            TreeKernelComponent = /** @class */ (function () {
                 function TreeKernelComponent(korp, larka, aggregator, login) {
                     this.korp = korp;
                     this.larka = larka;
@@ -40,6 +40,7 @@ System.register(["@angular/core", "../../services/larka.service", "../../service
                     this.tokens = [];
                     this.maxSentenceLength = 10;
                 }
+                TreeKernelComponent_1 = TreeKernelComponent;
                 TreeKernelComponent.prototype.fetchSentence = function (query) {
                     var me = this;
                     this.korp.fetch(query).subscribe(function (data) {
@@ -50,10 +51,10 @@ System.register(["@angular/core", "../../services/larka.service", "../../service
                             if (tokens.length > me.maxSentenceLength) {
                                 continue;
                             }
-                            var words = TreeKernelComponent.extractWords(tokens);
-                            me.modelSentence = TreeKernelComponent.linearize(words);
+                            var words = TreeKernelComponent_1.extractWords(tokens);
+                            me.modelSentence = TreeKernelComponent_1.linearize(words);
                             console.log(me.modelSentence);
-                            me.tokens = TreeKernelComponent.shuffle(words);
+                            me.tokens = TreeKernelComponent_1.shuffle(words);
                             break;
                         }
                         if (me.modelSentence === "") {
@@ -102,18 +103,19 @@ System.register(["@angular/core", "../../services/larka.service", "../../service
                     }
                     // else get next sentence
                 };
-                TreeKernelComponent = __decorate([
+                TreeKernelComponent = TreeKernelComponent_1 = __decorate([
                     core_1.Component({
                         selector: 'treekernel',
                         templateUrl: 'app/templates/treekernel-eval.html',
                         styleUrls: ['app/css/treekernel.css']
-                    }), 
-                    __metadata('design:paramtypes', [korp_service_1.KorpService, larka_service_1.LarkaService, dataAggregator_service_1.DataAggregatorService, login_service_1.LoginService])
+                    }),
+                    __metadata("design:paramtypes", [korp_service_1.KorpService, larka_service_1.LarkaService, dataAggregator_service_1.DataAggregatorService, login_service_1.LoginService])
                 ], TreeKernelComponent);
                 return TreeKernelComponent;
+                var TreeKernelComponent_1;
             }());
             exports_1("TreeKernelComponent", TreeKernelComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=treekernel.component.js.map

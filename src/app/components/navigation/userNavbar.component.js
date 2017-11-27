@@ -1,6 +1,5 @@
-System.register(['@angular/core', "../../services/localizer.service", "@angular/router"], function(exports_1, context_1) {
+System.register(["@angular/core", "../../services/localizer.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,21 +9,19 @@ System.register(['@angular/core', "../../services/localizer.service", "@angular/
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, localizer_service_1, router_1;
-    var UserNavbarComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, localizer_service_1, UserNavbarComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
             function (localizer_service_1_1) {
                 localizer_service_1 = localizer_service_1_1;
-            },
-            function (router_1_1) {
-                router_1 = router_1_1;
-            }],
-        execute: function() {
-            UserNavbarComponent = (function () {
+            }
+        ],
+        execute: function () {
+            UserNavbarComponent = /** @class */ (function () {
                 function UserNavbarComponent(localizer) {
                     this.localizer = localizer;
                     this.roles = [
@@ -43,16 +40,14 @@ System.register(['@angular/core', "../../services/localizer.service", "@angular/
                 UserNavbarComponent = __decorate([
                     core_1.Component({
                         selector: 'user-navbar',
-                        templateUrl: 'app/templates/user-navbar.html',
-                        directives: [router_1.ROUTER_DIRECTIVES],
-                        schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA]
-                    }), 
-                    __metadata('design:paramtypes', [localizer_service_1.LocalizerService])
+                        templateUrl: 'app/templates/user-navbar.html'
+                    }),
+                    __metadata("design:paramtypes", [localizer_service_1.LocalizerService])
                 ], UserNavbarComponent);
                 return UserNavbarComponent;
             }());
             exports_1("UserNavbarComponent", UserNavbarComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=userNavbar.component.js.map

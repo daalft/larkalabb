@@ -1,18 +1,19 @@
 /**
  * Created by David on 6/1/2016.
  */
-import {Component, ViewChild, CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
-import {LocalizerService} from "../../services/localizer.service";
-import {MODAL_DIRECTIVES} from "ng2-bs3-modal/ng2-bs3-modal";
-import {Http} from "@angular/http";
-import {LarkaService} from "../../services/larka.service";
-import {PleaseWaitComponent} from "./pleasewait.component";
-import {EasterEggService} from "../../services/easteregg.service";
+import {Component, ViewChild, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {LocalizerService} from '../../services/localizer.service';
+import {Http} from '@angular/http';
+import {LarkaService} from '../../services/larka.service';
+import {PleaseWaitComponent} from './pleasewait.component';
+import {EasterEggService} from '../../services/easteregg.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
+
     selector: 'textevaluation',
-    templateUrl: 'app/templates/textevaluation.html',
-    styleUrls: ['app/css/texteval.css'],
+    templateUrl: '../../templates/textevaluation.html',
+    styleUrls: ['../../css/texteval.css'],
     providers: [PleaseWaitComponent]
 })
 
@@ -25,10 +26,10 @@ export class TextEvaluationComponent {
     private devMode = false;
 
     private assessText: boolean;
-    private assessEssay: boolean = true;
+    private assessEssay = true;
 
     private mode: number;
-    
+
     private unprocessed = true;
     private processed = !this.unprocessed;
 
@@ -47,7 +48,7 @@ export class TextEvaluationComponent {
 
     private text;
 
-    constructor(private localizer: LocalizerService, private http: Http, private larka: LarkaService, private eggs: EasterEggService) {
+    constructor(public localizer: LocalizerService, private http: Http, private larka: LarkaService, private eggs: EasterEggService) {
         this.words = [];
         this.responseObject = new ResponseObject();
     }
@@ -66,16 +67,16 @@ export class TextEvaluationComponent {
 
     runAssessment () {
         this.waiter.on();
-        let me = this;
+        const me = this;
 
-        let textarea = this.userinput["nativeElement"];
+        const textarea = this.userinput['nativeElement'];
 
         this.text = textarea.value;
-        let ttt = this.text.split(" ");
-        if (ttt.includes("höst") || ttt.includes("Höst") || ttt.includes("hösten") || ttt.includes("Hösten")) {
+        const ttt = this.text.split(' ');
+        if (ttt.includes('höst') || ttt.includes('Höst') || ttt.includes('hösten') || ttt.includes('Hösten')) {
             this.eggs.magicFunction2();
         }
-        this.larka.texteval("complexity",(this.assessText?"expert":"learner"),true,this.text).subscribe(function(data) {
+        this.larka.texteval('complexity', (this.assessText ? 'expert' : 'learner'), true, this.text).subscribe(function(data) {
             //console.log(data);
             me.parseResponse(data);
             me.unprocessed = false;
@@ -88,12 +89,12 @@ export class TextEvaluationComponent {
         // });
     }
 
-    parseResponse(data: string) {
+    parseResponse(data: any) {
         // Overall predicted levels
-        let cefrLevelML = data["CEFR_ML"]; // check whether this exists
-        let cefrLevelKelly = data["CEFR_kelly_avg"];
-        let cefrLevelSvalex = data["CEFR_svalex_avg"];
-        let cefrLevelSwell = data["CEFR_swell_avg"];
+        const cefrLevelML = data['CEFR_ML']; // check whether this exists
+        const cefrLevelKelly = data['CEFR_kelly_avg'];
+        const cefrLevelSvalex = data['CEFR_svalex_avg'];
+        const cefrLevelSwell = data['CEFR_swell_avg'];
 
         this.responseObject.cefrML = cefrLevelML;
         this.responseObject.cefrKelly = cefrLevelKelly;
@@ -101,25 +102,25 @@ export class TextEvaluationComponent {
         this.responseObject.cefrSwell = cefrLevelSwell;
 
         // Different scores
-        let lixScore = data["LIX"];
-        let pntonn = data["PNtoNN"];
+        const lixScore = data['LIX'];
+        const pntonn = data['PNtoNN'];
 
         this.responseObject.lixScore = lixScore;
         this.responseObject.lixMapping = this.mapLixScore(lixScore);
         this.responseObject.pntonn = pntonn;
 
-        let avg_dep_len = data["avg_dep_len"];
-        let avg_sent_len = data["avg_sent_len"];
-        let avg_token_len = data["avg_tok_len"];
+        const avg_dep_len = data['avg_dep_len'];
+        const avg_sent_len = data['avg_sent_len'];
+        const avg_token_len = data['avg_tok_len'];
 
         this.responseObject.avgDepLen = avg_dep_len;
         this.responseObject.avgSentLen = avg_sent_len;
         this.responseObject.avgTokLen = avg_token_len;
 
-        let nominal_ratio = data["nominal_ratio"];
-        let non_lemmatized = data["non-lemmatized"];
-        let nr_sents = data["nr_sents"];
-        let nr_tokens = data["nr_tokens"];
+        const nominal_ratio = data['nominal_ratio'];
+        const non_lemmatized = data['non-lemmatized'];
+        const nr_sents = data['nr_sents'];
+        const nr_tokens = data['nr_tokens'];
 
         this.responseObject.nominalRatio = nominal_ratio;
         this.responseObject.nonLemmatized = non_lemmatized;
@@ -127,16 +128,16 @@ export class TextEvaluationComponent {
         this.responseObject.nrTokens = nr_tokens;
 
         // Frequency distributions over word lists
-        let kelly_cefr = data["kelly_CEFR"];
-        let svalex_cefr = data["svalex_CEFR"];
-        let swell_cefr = data["swell_CEFR"];
+        const kelly_cefr = data['kelly_CEFR'];
+        const svalex_cefr = data['svalex_CEFR'];
+        const swell_cefr = data['swell_CEFR'];
 
         this.responseObject.kellyCefr = kelly_cefr;
         this.responseObject.svalexCefr = svalex_cefr;
         this.responseObject.swellCefr = swell_cefr;
 
         // Text with (wordform,svalex,swell) annotation
-        let levelled_text = data["levelled_text"];
+        const levelled_text = data['levelled_text'];
 
         // TODO remove; replaced by this.words?
         this.responseObject.levelledText = levelled_text;
@@ -145,7 +146,7 @@ export class TextEvaluationComponent {
     }
 
     mapLixScore (score) {
-        let numScore = parseInt(score);
+        const numScore = parseInt(score);
         /*
         < 30	Mycket lättläst, barnböcker
         30 - 40	Lättläst, skönlitteratur, populärtidningar
@@ -158,12 +159,12 @@ export class TextEvaluationComponent {
         if (numScore >= 40 && numScore < 50) return 'lix-interpretation-normal';
         if (numScore >= 50 && numScore < 60) return 'lix-interpretation-hard';
         if (numScore >= 60) return 'lix-interpretation-very-hard';
-        return "could not map lix score";
+        return 'could not map lix score';
     }
 
     renderJson(text: string) {
 
-        let json = JSON.parse(text);
+        const json = JSON.parse(text);
         this.extractWords(json, true);
         this.unprocessed = false;
 
@@ -172,12 +173,12 @@ export class TextEvaluationComponent {
     extractWords (json: string, hasResultNode: boolean = true) {
         let sentences;
         if (hasResultNode) {
-            sentences = json["result"]["corpus"]["paragraph"]["sentence"];
+            sentences = json['result']['corpus']['paragraph']['sentence'];
         } else {
-            sentences = json["corpus"]["paragraph"]["sentence"];
+            sentences = json['corpus']['paragraph']['sentence'];
         }
         for (let i = 0; i < sentences.length; i++) {
-            let words = sentences[i]["w"];
+            const words = sentences[i]['w'];
 
             for (let j = 0; j < words.length; j++) {
                 //console.log(words[j]["$t"]);
@@ -188,72 +189,72 @@ export class TextEvaluationComponent {
     }
 
     isColor (word, pos, level) {
-        let cefr = level.value.toUpperCase();
-        let wordpos = word + "_" + pos;
-        return (wordpos["-receptive"] == cefr || wordpos["-productive"] == cefr) && level.checked;
+        const cefr = level.value.toUpperCase();
+        const wordpos = word + '_' + pos;
+        return (wordpos['-receptive'] == cefr || wordpos['-productive'] == cefr) && level.checked;
     }
 
-    isBlue (word,pos,cb) {
-        return this.isColor(word,pos,cb);
+    isBlue (word, pos, cb) {
+        return this.isColor(word, pos, cb);
     }
 
     isGreen (word, pos, cb) {
-        return this.isColor(word,pos,cb);
+        return this.isColor(word, pos, cb);
     }
 
     isYellow (word, pos, cb) {
-        return this.isColor(word,pos,cb);
+        return this.isColor(word, pos, cb);
     }
 
     isOrange (word, pos, cb) {
-        return this.isColor(word,pos,cb);
+        return this.isColor(word, pos, cb);
     }
 
     isRed (word, pos, cb) {
-        return this.isColor(word,pos,cb);
+        return this.isColor(word, pos, cb);
     }
 
     isReceptive (word) {
-        return word.hasOwnProperty("-receptive");
+        return word.hasOwnProperty('-receptive');
     }
 
     isProductive (word) {
-        return word.hasOwnProperty("-productive");
+        return word.hasOwnProperty('-productive');
     }
 
     isPotentiallyIncorrect (word) {
-        return word.hasOwnProperty("out-of-saldo");
+        return word.hasOwnProperty('out-of-saldo');
     }
 
     getStyle(word) {
 
-        
-        let classes = "";
+
+        let classes = '';
         if (word[1]) {
 
-            let level = word[1];
-            if (level === "A1" && this.ca1) {
-                classes += "receptive ";
-                classes += "blue";
+            const level = word[1];
+            if (level === 'A1' && this.ca1) {
+                classes += 'receptive ';
+                classes += 'blue';
             }
-            if (level === "A2" && this.ca2) {
-                classes += "receptive ";
-                classes += "green";
+            if (level === 'A2' && this.ca2) {
+                classes += 'receptive ';
+                classes += 'green';
             }
-            if (level === "B1" && this.cb1) {
-                classes += "receptive ";
-                classes += "yellow";
+            if (level === 'B1' && this.cb1) {
+                classes += 'receptive ';
+                classes += 'yellow';
             }
-            if (level === "B2" && this.cb2) {
-                classes += "receptive ";
-                classes += "orange";
+            if (level === 'B2' && this.cb2) {
+                classes += 'receptive ';
+                classes += 'orange';
             }
-            if (level === "C1" && this.cc1) {
-                classes += "receptive ";
-                classes += "red";
+            if (level === 'C1' && this.cc1) {
+                classes += 'receptive ';
+                classes += 'red';
             }
-            if (level === "-" && this.cunk) {
-                classes += "out-of-saldo";
+            if (level === '-' && this.cunk) {
+                classes += 'out-of-saldo';
             }
         }
         if (this.assessText) { // TODO premature return; only process receptive for expert texts?
@@ -262,27 +263,27 @@ export class TextEvaluationComponent {
         // productive should *always* overwrite receptive
         if (word[2]) {
             //style = "opacity: 0.8;";
-            let level = word[2];
+            const level = word[2];
 
-            if (level === "A1" && this.ca1) {
-                classes = "productive ";
-                classes += "blue";
+            if (level === 'A1' && this.ca1) {
+                classes = 'productive ';
+                classes += 'blue';
             }
-            if (level === "A2" && this.ca2) {
-                classes = "productive ";
-                classes += "green";
+            if (level === 'A2' && this.ca2) {
+                classes = 'productive ';
+                classes += 'green';
             }
-            if (level === "B1" && this.cb1) {
-                classes = "productive ";
-                classes += "yellow";
+            if (level === 'B1' && this.cb1) {
+                classes = 'productive ';
+                classes += 'yellow';
             }
-            if (level === "B2" && this.cb2) {
-                classes = "productive ";
-                classes += "orange";
+            if (level === 'B2' && this.cb2) {
+                classes = 'productive ';
+                classes += 'orange';
             }
-            if (level === "C1" && this.cc1) {
-                classes = "productive ";
-                classes += "red";
+            if (level === 'C1' && this.cc1) {
+                classes = 'productive ';
+                classes += 'red';
             }
             // should not need to add out-of-saldo here
             // since if it is out of saldo in svalex, it
@@ -311,7 +312,7 @@ export class TextEvaluationComponent {
         this.csch = false;
         this.cunk = false;
         this.unprocessed = true;
-        this.userinput["nativeElement"].value = "";
+        this.userinput['nativeElement'].value = '';
     }
 
 }
@@ -338,5 +339,5 @@ class ResponseObject {
     svalexCefr: any;
     swellCefr: any;
 
-    levelledText: any
+    levelledText: any;
 }

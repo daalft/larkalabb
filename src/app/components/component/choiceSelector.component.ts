@@ -5,15 +5,14 @@ import {Component, Input, CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 import {LocalizerService} from "../../services/localizer.service";
 @Component({
     selector: 'choice-selector',
-    templateUrl: 'app/templates/choice-selector.html',
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    templateUrl: '../../templates/choice-selector.html'
 })
 
 export class ChoiceSelectorComponent {
     @Input() choices;
     @Input() disabled;
 
-    constructor(private localizer: LocalizerService) {}
+    constructor(public localizer: LocalizerService) {}
 
     sense (array) {
         for (let i = 0; i < array.length; i++) {

@@ -3,6 +3,7 @@
  */
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
+import {HttpClient} from "@angular/common/http";
 
 @Injectable()
 export class KarpService {
@@ -16,7 +17,7 @@ export class KarpService {
 
     private restriction: string =   "&show=lemgram";
 
-    constructor(private http: Http) {
+    constructor(private http: HttpClient) {
 
     }
 

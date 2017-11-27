@@ -7,7 +7,7 @@ import {EasterEggService} from "../../services/easteregg.service";
 
 @Component({
     selector: 'logo-space',
-    templateUrl: 'app/templates/logo-space.html'
+    templateUrl: '../../templates/logo-space.html'
 })
 
 export class LogoSpaceComponent {
@@ -17,8 +17,8 @@ export class LogoSpaceComponent {
     private fileEnding = ".png";
 
     private currentLogoSmall = "app/img/lark4_t2s.png";
-    
-    constructor(private localizer: LocalizerService, private eggs: EasterEggService) {}
+
+    constructor(public localizer: LocalizerService, private eggs: EasterEggService) {}
 
     localize(key: string) {
         return this.localizer.localize(key);
@@ -39,7 +39,7 @@ export class LogoSpaceComponent {
         }
         return "app/img/" + this.imageName + (swedish?"d":"") + this.fileEnding;
     }
-    
+
     getCurrentLogoSmall() {
         return this.currentLogoSmall;
     }

@@ -4,18 +4,18 @@
 import {Component, Output, EventEmitter, CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 import {Http} from "@angular/http";
 import {LocalizerService} from "../../services/localizer.service";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
     selector: 'wordlist-selector',
-    templateUrl: 'app/templates/wordlist-selector.html',
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    templateUrl: '../../templates/wordlist-selector.html'
 })
 
 export class WordlistSelectorComponent {
 
-    @Output() wordlistChange: EventEmitter = new EventEmitter();
+    @Output() wordlistChange: EventEmitter<any> = new EventEmitter();
 
-    constructor(private localizer: LocalizerService, private http: Http) {
+    constructor(public localizer: LocalizerService, private http: HttpClient) {
 
         this.loadList();
     }
@@ -29,8 +29,8 @@ export class WordlistSelectorComponent {
 
     private loadList() {
         let me = this;
-        this.http.get('app/data/wordlist.json').map(res => res.json())
-            .subscribe(function(data) {
+        this.http.get('app/data/wordlist.json').map(res => (res as any).json())
+          .subscribe(function(data) {
                 me.data = data;
                 me.mainList = data.slice(0,2);
                 me.otherList = data.slice(2);

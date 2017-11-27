@@ -1,6 +1,5 @@
-System.register(["@angular/core", "../../services/larka.service", "@angular/http", "../../services/localizer.service", "../../services/login.service", "./pleasewait.component", "../../services/dataAggregator.service", "../../services/korp.service", "../intern/treekernel.component"], function(exports_1, context_1) {
+System.register(["@angular/core", "../../services/larka.service", "@angular/http", "../../services/localizer.service", "../../services/login.service", "./pleasewait.component", "../../services/dataAggregator.service", "../../services/korp.service", "../intern/treekernel.component"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["@angular/core", "../../services/larka.service", "@angular/http
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, larka_service_1, http_1, localizer_service_1, login_service_1, pleasewait_component_1, dataAggregator_service_1, korp_service_1, treekernel_component_1;
-    var LiwrixComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, larka_service_1, http_1, localizer_service_1, login_service_1, pleasewait_component_1, dataAggregator_service_1, korp_service_1, treekernel_component_1, LiwrixComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -40,9 +39,10 @@ System.register(["@angular/core", "../../services/larka.service", "@angular/http
             },
             function (treekernel_component_1_1) {
                 treekernel_component_1 = treekernel_component_1_1;
-            }],
-        execute: function() {
-            LiwrixComponent = (function () {
+            }
+        ],
+        execute: function () {
+            LiwrixComponent = /** @class */ (function () {
                 function LiwrixComponent(larka, http, localizer, login, aggregator, korp) {
                     this.larka = larka;
                     this.http = http;
@@ -210,7 +210,7 @@ System.register(["@angular/core", "../../services/larka.service", "@angular/http
                             for (var i_1 = start_index; i_1 < end_index; i_1++) {
                                 words[i_1] = "_____";
                                 words2[i_1] =
-                                    words2[i_1][0] +
+                                    words2[i_1][0] + // first letter of word
                                         words2[i_1].slice(1).split("").reduce(function (acc, n) { return acc + "_"; }, ""); // placeholders for each letter in word
                             }
                             var sent_left = words.slice(0, start_index);
@@ -370,21 +370,36 @@ System.register(["@angular/core", "../../services/larka.service", "@angular/http
                     }
                 };
                 __decorate([
-                    core_1.ViewChild('waiter'), 
-                    __metadata('design:type', pleasewait_component_1.PleaseWaitComponent)
+                    core_1.ViewChild('waiter'),
+                    __metadata("design:type", pleasewait_component_1.PleaseWaitComponent)
                 ], LiwrixComponent.prototype, "waiter", void 0);
                 LiwrixComponent = __decorate([
                     core_1.Component({
                         selector: "liwrix",
                         templateUrl: "app/templates/liwrix.html",
                         styleUrls: ["app/css/liwrix.css"]
-                    }), 
-                    __metadata('design:paramtypes', [larka_service_1.LarkaService, http_1.Http, localizer_service_1.LocalizerService, login_service_1.LoginService, dataAggregator_service_1.DataAggregatorService, korp_service_1.KorpService])
+                    })
+                    /*****************************************************************************
+                     * BUGS AND OTHER STUFF
+                     * ***************************************************************************
+                    
+                    
+                     1. Score only keeps the original score: in self-study mode, the score is not
+                     updated when an incorrect answer is corrected to a correct answer.
+                     Irrelevant for test mode.
+                    
+                     2. Can only select one single CEFR level for training.
+                     Could be expanded to allow more than one level?
+                    
+                     3. Resources are linked in via http, change to https?
+                     */
+                    ,
+                    __metadata("design:paramtypes", [larka_service_1.LarkaService, http_1.Http, localizer_service_1.LocalizerService, login_service_1.LoginService, dataAggregator_service_1.DataAggregatorService, korp_service_1.KorpService])
                 ], LiwrixComponent);
                 return LiwrixComponent;
             }());
             exports_1("LiwrixComponent", LiwrixComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=liwrix.component.js.map

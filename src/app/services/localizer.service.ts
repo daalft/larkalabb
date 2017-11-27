@@ -18,10 +18,10 @@ export class LocalizerService {
         if(!this.currentLanguage) {
             this.currentLanguage = 'sv';
         }
-        http.get('app/data/locale-sv.json')
+        http.get('./app/data/locale-sv.json')
             .map(res => res.json())
             .subscribe(data => this.dictionary['sv'] = data);
-        http.get('app/data/locale-en.json')
+        http.get('./app/data/locale-en.json')
             .map(res => res.json())
             .subscribe(data => this.dictionary['en'] = data);
     }

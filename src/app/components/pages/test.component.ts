@@ -7,13 +7,13 @@ import {LoggerService} from "../../services/logger.service";
 import {NuanceService} from "../../services/nuance.service";
 @Component({
     selector: 'testcomp',
-    templateUrl: 'app/templates/test.html',
+    templateUrl: '../../templates/test.html',
     providers: [LoginService]
 })
 
 export class TestComponent {
 
-    private id;
+  public id;
 
     constructor(private login: LoginService, private log: LoggerService, private tts: NuanceService) {
 
@@ -28,8 +28,6 @@ export class TestComponent {
     }
 
     ttstest () {
-        this.tts.tts("Det är en vacker dag idag.").subscribe(function() {
-            console.log("Got data");
-        });
+
     }
 }

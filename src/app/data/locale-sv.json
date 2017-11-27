@@ -1,5 +1,4 @@
 {
-
 	"checkAll": "Markera alla",
 	"checkNone": "Avmarkera",
 	"en" : "Engelska",
@@ -12,13 +11,13 @@
 	"cancel": "Avbryt",
 
 	"selectTargetLanguage" : "Välj språk att träna",
-	"exe_generator":"Övningsgenerator", 
+	"exe_generator":"Övningsgenerator",
 	"hitex":"Hit-Ex",
 	"learner_lists" : "Inlärarlistor",
 	"corpus-editor" : "Redigeringsverktyg för korpusar",
-	"readability" : "Läsbarhetstester", 
-	"hitex_automatic" : "Användares input", 
-	"selfstudy_checkbox" : "självstudier", 	
+	"readability" : "Läsbarhetstester",
+	"hitex_automatic" : "Användares input",
+	"selfstudy_checkbox" : "självstudier",
 	"control_checkbox" : "test",
 	"diagnostic_test" : "diagnostiskt prov",
 	"selectTargetGroup" : "Välj målgruppen",
@@ -36,11 +35,11 @@
 	"json_link" : "Länkar",
 	"exe_name" : "Övningstyp",
 	"result_sum" : "Korrekt/totalt",
-	"trainPOS1_instruction" : "Välj en korrekt ordklass till ett markerat ord",	
+	"trainPOS1_instruction" : "Välj en korrekt ordklass till ett markerat ord",
 	"choose_pos" : "Välj ordklass(er)",
 
-	"RG":"räkneord: grundtal", 
-	"RO":"räkneord: ordningstal", 
+	"RG":"räkneord: grundtal",
+	"RO":"räkneord: ordningstal",
 
 
 
@@ -76,13 +75,13 @@
 
 	"trainVOC_multi" : "Ordkunskap, flerval",
 	"trainVOC_infl" : "Ordböjning, flerval",
-	"trainMULTI_instruction" : "Välj ett passande alternativ för luckan", 
+	"trainMULTI_instruction" : "Välj ett passande alternativ för luckan",
 	"trainMULTI_INFL_instruction" : "Välj en passande böjningsform för luckan",
 	"trainSemanticRoles": "Semantiska roller",
 	"result_tracker" : "Resultatsamlare",
 	"ling_pos1_selfstudy" : "Språkvetare/POS1, självstudier",
 	"ling_pos2_selfstudy" : "Språkvetare/POS2, självstudier",
-	
+
 	"learner_multi_selfstudy": "Språkinlärare/ordkunskap, självstudier",
 	"learner_multi_infl_selfstudy": "Språkinlärare/böjning, självstudier",
 	"selectWord": "Välj ett ord",
@@ -140,7 +139,7 @@
 	"yesNoType" : "Ja/nej variant",
 	"selectDomain" : "Välj domän/ordlista",
 	"anyDomain" : "Ospecifierat domän",
-	"general" : "Allmänna ord", 
+	"general" : "Allmänna ord",
 	"academic" : "Akademiska ord",
 	"animals" : "Däggdjur, insekter",
 	"family" : "Familj och släkt",
@@ -229,7 +228,7 @@
 	"editable" : "Redigerbar",
 	"generate" : "Generera",
 	"type_in_voc" : "Ange ord för träning",
-	
+
 	"adjective" : "adjektiv",
 	"adjektiv" : "adjektiv",
 
@@ -243,10 +242,10 @@
 	"noun: proper name" : "substantiv: egennamn",
 	"substantiv: egennamn" : "substantiv: egennamn",
 	"egennamn" : "substantiv: egennamn",
-	
+
 	"participle" : "particip",
 	"particip" : "particip",
-	
+
 	"conjunction" : "konjunktion",
 	"konjunktion" : "konjunktion",
 
@@ -263,10 +262,10 @@
 	"räkneord: ordningstal" : "räkneord: ordningstal",
 	"numeral: cardinal" : "räkneord: grundtal",
 	"räkneord: grundtal" : "räkneord: grundtal",
-	
+
 	"verb" : "verb",
-	
-	
+
+
 	"preposition" : "preposition",
 	"partikel" : "partikel",
 	"particle" : "partikel",
@@ -300,7 +299,7 @@
 	"skills": "Skills",
 	"competences":"Competences",
 	"lexin_saldo": "Experimenter med definitioner",
-	
+
 
 
 
@@ -326,12 +325,12 @@
 	"min" : "minst",
 	"and" : "och",
 	"or" : "eller",
-	
-	"is" : "är", 
+
+	"is" : "är",
 	"is_not" : "är inte",
 	"starts_with" : "börjar med",
 	"ends_with" : "slutar med",
-	
+
 	"word_is" : "ordet är",
 	"word_is_not" : "ordet är inte",
 	"word_beginswith" : "ordet börjar med",
@@ -341,23 +340,23 @@
 	"wordclass_starts" : "ordklassen börjar med",
 	"interval" : "intervall",
 	"matches" : "regexp",
-	
+
 	"repeat" : "upprepa",
-	
+
 	"none_selected" : "&lt;ej vald&gt;",
-	
+
 	"any" : "vilket ord som helst",
 	"all" : "alla",
 	"one_of" : "någon av",
 	"error_occurred" : "Ett fel har inträffat.",
-	
+
 	"match" : "Matcha",
 	"following_rules" : "följande regler",
-	
+
 	"simple" : "Enkel",
 	"detailed" : "Utökad",
 	"advanced" : "Avancerad",
-	"lemgram_results" : "Ordbild", 
+	"lemgram_results" : "Ordbild",
 	"sort_default" : "sortera inom korpus på",
 	"word_context" : "träff",
 	"left_context" : "vänsterkontext",
@@ -415,17 +414,17 @@
 	"article_section" : "artikelavdelning",
 	"article_topic" : "artikelns ämne/tema",
 	"text_volume" : "band",
-	
+
 	"sentence_link" : "meningslänk",
 	"text_issue" : "utgåva",
 	"text_recipient" : "mottagare",
 	"text_sv" : "verksnummer",
-	
+
 	"oneSentence" : "en mening",
-	
+
 	"source" : "källa",
 	"age" : "ålder",
-	
+
 	"blog_title" : "bloggtitel",
 	"blog_url" : "bloggaddress",
 	"author_age" : "författarens ålder",
@@ -433,14 +432,14 @@
 	"post_title" : "inläggets titel",
 	"tags" : "nyckelord",
 	"post_url" : "inläggsadress",
-	
+
 	"statistics" : "Statistik",
-	
-	"AB":"adverb", 
+
+	"AB":"adverb",
 
     "DL": "interpunktion",
     "DT": "determinerare",
-    
+
     "HA": "adverb: frågande/relativt",
 
 
@@ -469,14 +468,14 @@
     "SN": "subjunktion",
     "UO": "utländskt ord",
     "VB": "verb",
-	
-	"mx" : "flerordsprefix",	  
-	"sx" : "prefix",
-	
-	"example" : "Exempel",
-	
 
-	
+	"mx" : "flerordsprefix",
+	"sx" : "prefix",
+
+	"example" : "Exempel",
+
+
+
 	"tooltip_AT" : "Nominal (adjectival) pre-modifier",
 	"tooltip_ET" : "Other nominal post-modifier",
 	"tooltip_IO" : "Indirect object",
@@ -485,7 +484,7 @@
 	"tooltip_RA" : "Place adverbial",
 	"tooltip_SS" : "Subject",
 	"tooltip_TA" : "Time adverbial",
-	
+
 	"corpselector_allselected" : " lexikonresurser valda (alla)",
 	"corpselector_noneselected" : "Ingen vald lexikonresurs",
 	"corpselector_selectedone" : " vald",
@@ -500,7 +499,7 @@
 	"corpselector_corporawith_sing" : "korpus med",
 	"corpselector_corporawith_plur" : "korpusar med",
 	"corpselector_lastupdate" : "Senast uppdaterad",
-	
+
 	"statstable_allcorpora" : "Samtliga",
 	"statstable_relfreq" : "relativ frekvens (per en miljon ord):",
 	"statstable_absfreq" : "absolut frekvens:",
@@ -513,13 +512,13 @@
 	"statstable_exp_csv" : "CSV (kommaseparerade värden)",
 	"statstable_exp_tsv" : "TSV (tabseparerade värden)",
 	"statstable_export" : "Exportera",
-	
+
 	"util_decimalseparator" : ",",
 	"util_numbergroupseparator" : "&nbsp;",
-	
+
 	"hitspicture_hits" : "träffar",
 	"hitspicture_gotocorpushits" : "Klicka för att gå till första sidan med träffar från denna korpus.",
-	
+
 	"presentation_more" : "mer",
 	"presentation_less" : "mindre",
 	"presentation_pos" : "Ordklass",
@@ -538,7 +537,7 @@
     "presentation_type" : "Typ",
     "presentation_invar" : "oböjl.",
     "presentation_baseform" : "Grundform",
-    
+
     "tooltip_specialkey" : "Infoga specialtecken",
     "tooltip_reload_korp" : "Sök i en annan slumpmässigt urvald korpus",
     "tooltip_go_previous_korp" : "Gå till föregående träff",
@@ -551,13 +550,13 @@
     "tooltip_hits_in_korp" : "träffar i Korp",
     "tooltip_open_morphology" : "Klicka för att visa lemgrammets böjningsmönster",
     "tooltip_close_morphology" : "Klicka för att gömma lemgrammets böjningsmönster",
-    
+
     "results_merged" : "sammanfogade",
     "results_individual_resources" : "Visa resurserna individuellt",
     "results_use_real_ids" : "Använd ursprungliga ID:n",
     "results_no_hits" : "Hittade inga träffar.",
     "results_did_you_mean" : "Menade du",
-    
+
     "nn" : "substantiv",
     "av" : "adjektiv",
     "vb" : "verb",
@@ -571,7 +570,7 @@
     "kn" : "konjunktion",
     "al" : "artikel",
     "ie" : "infinitivmärke",
-    "mxc" : "flerordsprefix",	  
+    "mxc" : "flerordsprefix",
     "sxc" : "prefix",
     "abh" : "adverbsuffix",
     "avh" : "substantivsuffix",
@@ -594,17 +593,17 @@
     "snm" : "subjunktion, flerording",
     "kna" : "konjunktion, förkortning",
     "ssm" : "flerording",
-	
+
 	"learner_spelling_infl_word_selfstudy":"Språkinlärare/stavning, ordnivå, självstudier",
-	"learner_spelling_word_selfstudy":"Språkinlärare/stavning, böjda ord, självstudier",	
+	"learner_spelling_word_selfstudy":"Språkinlärare/stavning, böjda ord, självstudier",
 	"learner_spelling_word_test":"Språkinlärare/stavning, ordnivå, test",
 	"learner_spelling_infl_word_test":"Språkinlärare/stavning, böjda ord, test",
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	"help_spelling":"Lite hjälp med uppgiften",
 	"word_checkbox" : "ord",
 	"inflected_word_checkbox" : "böjda ord",
@@ -674,7 +673,7 @@
 	"malt_PA" : "Preposition",
 	"malt_head" : "Huvud",
 
-	"pos_AB" : "adverb", 
+	"pos_AB" : "adverb",
 	"pos_MAD" : "interpunktion",
 	"pos_MID" : "interpunktion",
 	"pos_PAD" : "interpunktion",

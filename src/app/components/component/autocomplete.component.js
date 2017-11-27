@@ -1,6 +1,5 @@
-System.register(["@angular/core"], function(exports_1, context_1) {
+System.register(["@angular/core"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,18 +9,19 @@ System.register(["@angular/core"], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, core_2, core_3, core_4;
-    var AutocompleteComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, core_2, core_3, core_4, AutocompleteComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
                 core_2 = core_1_1;
                 core_3 = core_1_1;
                 core_4 = core_1_1;
-            }],
-        execute: function() {
-            AutocompleteComponent = (function () {
+            }
+        ],
+        execute: function () {
+            AutocompleteComponent = /** @class */ (function () {
                 function AutocompleteComponent() {
                     this.selectedValueEmitter = new core_4.EventEmitter();
                     this.currentIndex = -1;
@@ -79,38 +79,36 @@ System.register(["@angular/core"], function(exports_1, context_1) {
                     this.selectedValueEmitter.emit(this.selectedValue);
                 };
                 __decorate([
-                    core_2.Input(), 
-                    __metadata('design:type', Array)
+                    core_2.Input(),
+                    __metadata("design:type", Array)
                 ], AutocompleteComponent.prototype, "values", void 0);
                 __decorate([
-                    core_2.Input(), 
-                    __metadata('design:type', String)
+                    core_2.Input(),
+                    __metadata("design:type", String)
                 ], AutocompleteComponent.prototype, "label", void 0);
                 __decorate([
-                    core_2.Input(), 
-                    __metadata('design:type', Number)
+                    core_2.Input(),
+                    __metadata("design:type", Number)
                 ], AutocompleteComponent.prototype, "limitTo", void 0);
                 __decorate([
-                    core_2.Input(), 
-                    __metadata('design:type', Number)
+                    core_2.Input(),
+                    __metadata("design:type", Number)
                 ], AutocompleteComponent.prototype, "colwidth", void 0);
                 __decorate([
-                    core_3.Output(), 
-                    __metadata('design:type', core_4.EventEmitter)
+                    core_3.Output(),
+                    __metadata("design:type", core_4.EventEmitter)
                 ], AutocompleteComponent.prototype, "selectedValueEmitter", void 0);
                 AutocompleteComponent = __decorate([
                     core_1.Component({
                         selector: 'autocomplete-field',
                         templateUrl: 'app/templates/autocomplete-field.html',
-                        styleUrls: ['app/css/autocomplete.css'],
-                        schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA]
-                    }), 
-                    __metadata('design:paramtypes', [])
+                        styleUrls: ['app/css/autocomplete.css']
+                    })
                 ], AutocompleteComponent);
                 return AutocompleteComponent;
             }());
             exports_1("AutocompleteComponent", AutocompleteComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=autocomplete.component.js.map

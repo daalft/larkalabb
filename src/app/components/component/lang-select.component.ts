@@ -1,15 +1,12 @@
 /**
  * Created by David on 3/18/2016.
  */
-import {Component, Input, CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
-import {AutocompleteComponent} from "./autocomplete.component";
+import {Component, Input} from "@angular/core";
 
 @Component({
     selector: 'lang-select',
-    templateUrl: 'app/templates/lang-select.html',
-    directives: [AutocompleteComponent],
-    styleUrls: ['app/css/autocomplete.css'],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    templateUrl: '../../templates/lang-select.html',
+    styleUrls: ['../../css/autocomplete.css']
 })
 
 export class LanguageSelectionComponent {

@@ -2,26 +2,20 @@
  * Created by David on 4/5/2016.
  */
 
-import {Component, ViewChild, CUSTOM_ELEMENTS_SCHEMA, OnDestroy, AfterViewInit} from "@angular/core";
+import {Component, ViewChild, OnDestroy, AfterViewInit} from "@angular/core";
 import {LocalizerService} from "../../services/localizer.service";
 import {EventEmitter} from "@angular/core";
 import {Output} from "@angular/core";
 import {Router, Route, Routes} from "@angular/router";
-import {InformationComponent} from "./information.component";
-//import {Modal, MODAL_PROVIDERS} from "@angular-modal";
-
-import {MODAL_DIRECTIVES, ModalComponent} from "ng2-bs3-modal/ng2-bs3-modal";
 import {DataAggregatorService} from "../../services/dataAggregator.service";
 import {LoginService} from "../../services/login.service";
 
 @Component({
 
     selector: 'exercise-component',
-    templateUrl: 'app/templates/exercise-component.html',
-    styleUrls: ['app/css/exercise.css'],
-    providers: [DataAggregatorService],
-    directives: [MODAL_DIRECTIVES],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    templateUrl: '../../templates/exercise-component.html',
+    styleUrls: ['../../css/exercise.css'],
+    providers: [DataAggregatorService]
 })
 
 export class ExerciseComponent implements OnDestroy,AfterViewInit {
@@ -29,7 +23,7 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
     @Output() nextRequester: EventEmitter<any>;
     @Output() reloadRequester: EventEmitter<any>;
 
-    @ViewChild('reportModal') modal: ModalComponent;
+    //@ViewChild('reportModal') modal: ModalComponent<any>;
 
     private data = undefined;
     private visible: boolean;
@@ -44,7 +38,7 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
 
     private exerciseStatistics;
 
-    constructor(private localizer: LocalizerService, private _router: Router, private aggregator: DataAggregatorService, private login: LoginService) {
+    constructor(public localizer: LocalizerService, private _router: Router, private aggregator: DataAggregatorService, private login: LoginService) {
         this.nextRequester = new EventEmitter();
         this.reloadRequester = new EventEmitter();
         //console.log("ex comp const");
@@ -278,8 +272,8 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
 
     showjson(json) {
         //console.log(json);
-        var w = window.open();
-        var windowHTML = "<!DOCTYPE HTML><html><head><title>Lärka - JSON result</title></head><body><pre id=\"json_result\">"+JSON.stringify(json, null, 2)+"</pre></body></html>";
+        let w = window.open();
+        let windowHTML = "<!DOCTYPE HTML><html><head><title>Lärka - JSON result</title></head><body><pre id=\"json_result\">"+JSON.stringify(json, null, 2)+"</pre></body></html>";
         w.document.write(windowHTML);
         w.document.close();
         this.aggregate("show-json",json);
@@ -306,7 +300,7 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
             this.reported_sentence.push({"word":exercise.sentence_right[i]["word"]});
         }
 
-        this.modal.open();
+
 
         // TODO aggregate only when user clicks on "save"
         this.aggregate("report", this.reported_sentence);

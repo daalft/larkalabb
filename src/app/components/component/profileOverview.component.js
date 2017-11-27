@@ -1,6 +1,5 @@
-System.register(["@angular/core", "@angular/router", 'rxjs/add/operator/switchMap', "../../services/login.service"], function(exports_1, context_1) {
+System.register(["@angular/core", "@angular/router", "rxjs/add/operator/switchMap", "../../services/login.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,22 +9,24 @@ System.register(["@angular/core", "@angular/router", 'rxjs/add/operator/switchMa
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, login_service_1;
-    var ProfileOverviewComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, router_1, login_service_1, ProfileOverviewComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
             function (router_1_1) {
                 router_1 = router_1_1;
             },
-            function (_1) {},
+            function (_1) {
+            },
             function (login_service_1_1) {
                 login_service_1 = login_service_1_1;
-            }],
-        execute: function() {
-            ProfileOverviewComponent = (function () {
+            }
+        ],
+        execute: function () {
+            ProfileOverviewComponent = /** @class */ (function () {
                 function ProfileOverviewComponent(route, login) {
                     this.route = route;
                     this.login = login;
@@ -50,13 +51,13 @@ System.register(["@angular/core", "@angular/router", 'rxjs/add/operator/switchMa
                         selector: 'profile-overview',
                         templateUrl: 'app/templates/profile-overview.html',
                         styleUrls: ['app/css/profile-overview.css']
-                    }), 
-                    __metadata('design:paramtypes', [router_1.ActivatedRoute, login_service_1.LoginService])
+                    }),
+                    __metadata("design:paramtypes", [router_1.ActivatedRoute, login_service_1.LoginService])
                 ], ProfileOverviewComponent);
                 return ProfileOverviewComponent;
             }());
             exports_1("ProfileOverviewComponent", ProfileOverviewComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=profileOverview.component.js.map

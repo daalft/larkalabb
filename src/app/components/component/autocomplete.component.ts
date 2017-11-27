@@ -9,9 +9,8 @@ import {RequiredValidator} from "@angular/forms";
 
 @Component({
     selector: 'autocomplete-field',
-    templateUrl: 'app/templates/autocomplete-field.html',
-    styleUrls: ['app/css/autocomplete.css'],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    templateUrl: '../../templates/autocomplete-field.html',
+    styleUrls: ['../../css/autocomplete.css']
 })
 
 export class AutocompleteComponent {
@@ -22,11 +21,11 @@ export class AutocompleteComponent {
     @Input() colwidth: number;
     @Output() selectedValueEmitter: EventEmitter<any> = new EventEmitter();
 
-    private currentProps;
-    private currentIndex = -1;
-    private selectedValue = '';
+  public currentProps;
+  public currentIndex = -1;
+  public selectedValue = '';
 
-    private noPropositions: boolean = true;
+  public noPropositions: boolean = true;
 
     onKeyup(event, value) {
 

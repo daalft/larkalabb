@@ -8,15 +8,15 @@ import {LoginService} from "../../services/login.service";
 import {KorpService} from "../../services/korp.service";
 @Component({
     selector: 'treekernel',
-    templateUrl: 'app/templates/treekernel-eval.html',
-    styleUrls: ['app/css/treekernel.css']
+    templateUrl: '../../templates/treekernel-eval.html',
+    styleUrls: ['../../css/treekernel.css']
 })
 
 export class TreeKernelComponent {
 
-    private modelSentence = "";
-    private tokens = [];
-    private maxSentenceLength = 10;
+    public modelSentence = "";
+  public tokens = [];
+  public maxSentenceLength = 10;
 
     constructor(private korp: KorpService, private larka: LarkaService, private aggregator: DataAggregatorService, private login: LoginService) {
 

@@ -1,6 +1,5 @@
-System.register(['@angular/core', "./services/localizer.service", 'rxjs/add/operator/map', "@angular/router", "./services/larka.service", "./services/larka.adapter.service", "./services/logger.service", "./services/login.service", "./services/easteregg.service", "./services/nuance.service", "./services/dataAggregator.service", "./services/korp.service", "./services/karp.service", "./services/hash.service", "./services/tts.engine.service", "./services/ispeech.service"], function(exports_1, context_1) {
+System.register(["@angular/core", "./services/localizer.service", "rxjs/add/operator/map", "@angular/router", "./services/larka.service", "./services/larka.adapter.service", "./services/logger.service", "./services/login.service", "./services/easteregg.service", "./services/nuance.service", "./services/dataAggregator.service", "./services/korp.service", "./services/karp.service", "./services/hash.service", "./services/tts.engine.service", "./services/ispeech.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,17 +9,18 @@ System.register(['@angular/core', "./services/localizer.service", 'rxjs/add/oper
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, localizer_service_1, router_1, larka_service_1, larka_adapter_service_1, logger_service_1, login_service_1, easteregg_service_1, nuance_service_1, dataAggregator_service_1, korp_service_1, karp_service_1, hash_service_1, tts_engine_service_1, ispeech_service_1;
-    var LarkaApp;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, localizer_service_1, router_1, larka_service_1, larka_adapter_service_1, logger_service_1, login_service_1, easteregg_service_1, nuance_service_1, dataAggregator_service_1, korp_service_1, karp_service_1, hash_service_1, tts_engine_service_1, ispeech_service_1, LarkaApp;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
             function (localizer_service_1_1) {
                 localizer_service_1 = localizer_service_1_1;
             },
-            function (_1) {},
+            function (_1) {
+            },
             function (router_1_1) {
                 router_1 = router_1_1;
             },
@@ -59,9 +59,10 @@ System.register(['@angular/core', "./services/localizer.service", 'rxjs/add/oper
             },
             function (ispeech_service_1_1) {
                 ispeech_service_1 = ispeech_service_1_1;
-            }],
-        execute: function() {
-            LarkaApp = (function () {
+            }
+        ],
+        execute: function () {
+            LarkaApp = /** @class */ (function () {
                 function LarkaApp(localizer, router) {
                     this.localizer = localizer;
                     this.router = router;
@@ -74,13 +75,13 @@ System.register(['@angular/core', "./services/localizer.service", 'rxjs/add/oper
                         selector: 'larka-app',
                         templateUrl: 'app/templates/larka-app.html',
                         providers: [localizer_service_1.LocalizerService, larka_service_1.LarkaService, larka_adapter_service_1.LarkaAdapter, logger_service_1.LoggerService, login_service_1.LoginService, korp_service_1.KorpService, karp_service_1.KarpService, dataAggregator_service_1.DataAggregatorService, nuance_service_1.NuanceService, easteregg_service_1.EasterEggService, hash_service_1.HashService, tts_engine_service_1.TTSEngine, ispeech_service_1.iSpeechTTSEngine],
-                    }), 
-                    __metadata('design:paramtypes', [localizer_service_1.LocalizerService, router_1.Router])
+                    }),
+                    __metadata("design:paramtypes", [localizer_service_1.LocalizerService, router_1.Router])
                 ], LarkaApp);
                 return LarkaApp;
             }());
             exports_1("LarkaApp", LarkaApp);
         }
-    }
+    };
 });
 //# sourceMappingURL=app.component.js.map

@@ -1,23 +1,18 @@
 /**
  * Created by David on 3/9/2016.
  */
-import {Component, CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
+import {Component} from "@angular/core";
 import {LocalizerService} from "../../services/localizer.service";
-import {ChoiceSelectorComponent} from "../component/choiceSelector.component";
-import {UserSearchComponent} from "../component/userSearch.component";
-import {WordlistSelectorComponent} from "../component/wordlistSelector";
-import {UserNavbarComponent} from "../navigation/userNavbar.component";
+
 
 @Component({
     selector: 'tab-out',
-    templateUrl: 'app/templates/learner-component.html',
-    directives: [ChoiceSelectorComponent, UserSearchComponent, WordlistSelectorComponent, UserNavbarComponent],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    templateUrl: '../../templates/learner-component.html'
 })
 
 export class LearnerComponent {
 
-    constructor(private localizer: LocalizerService) {
+    constructor(public localizer: LocalizerService) {
         this.calculateResume();
     }
 

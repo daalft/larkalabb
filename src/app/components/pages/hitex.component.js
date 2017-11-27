@@ -1,6 +1,5 @@
-System.register(["@angular/core", "../../services/localizer.service", "../component/switch-toggle.component", "../component/pleasewait.component", "../../services/larka.service", "@angular/http"], function(exports_1, context_1) {
+System.register(["@angular/core", "../../services/localizer.service", "../component/switch-toggle.component", "../component/pleasewait.component", "../../services/larka.service", "@angular/http"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["@angular/core", "../../services/localizer.service", "../compon
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, localizer_service_1, switch_toggle_component_1, pleasewait_component_1, larka_service_1, http_1;
-    var HitexComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, localizer_service_1, switch_toggle_component_1, pleasewait_component_1, larka_service_1, http_1, HitexComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -31,9 +30,10 @@ System.register(["@angular/core", "../../services/localizer.service", "../compon
             },
             function (http_1_1) {
                 http_1 = http_1_1;
-            }],
-        execute: function() {
-            HitexComponent = (function () {
+            }
+        ],
+        execute: function () {
+            HitexComponent = /** @class */ (function () {
                 function HitexComponent(localizer, larka, http) {
                     this.localizer = localizer;
                     this.larka = larka;
@@ -137,7 +137,7 @@ System.register(["@angular/core", "../../services/localizer.service", "../compon
                     var target_cefr = "";
                     var tc = $('#cefrs').find('input[type="radio"]:checked').val();
                     if (tc != "all") {
-                        target_cefr = tc;
+                        target_cefr = "" + tc;
                         this.cefr = tc;
                     }
                     var preserve_bad = $('#preserve_bad').is(':checked');
@@ -336,12 +336,12 @@ System.register(["@angular/core", "../../services/localizer.service", "../compon
                     }
                 };
                 __decorate([
-                    core_1.ViewChild('waiter'), 
-                    __metadata('design:type', pleasewait_component_1.PleaseWaitComponent)
+                    core_1.ViewChild('waiter'),
+                    __metadata("design:type", pleasewait_component_1.PleaseWaitComponent)
                 ], HitexComponent.prototype, "waiter", void 0);
                 __decorate([
-                    core_1.ViewChildren(switch_toggle_component_1.SwitchToggleComponent), 
-                    __metadata('design:type', core_1.QueryList)
+                    core_1.ViewChildren(switch_toggle_component_1.SwitchToggleComponent),
+                    __metadata("design:type", core_1.QueryList)
                 ], HitexComponent.prototype, "switchtoggles", void 0);
                 HitexComponent = __decorate([
                     core_1.Component({
@@ -349,13 +349,13 @@ System.register(["@angular/core", "../../services/localizer.service", "../compon
                         templateUrl: 'app/templates/hitex.html',
                         styleUrls: ['app/css/hitex.css'],
                         providers: [switch_toggle_component_1.SwitchToggleComponent]
-                    }), 
-                    __metadata('design:paramtypes', [localizer_service_1.LocalizerService, larka_service_1.LarkaService, http_1.Http])
+                    }),
+                    __metadata("design:paramtypes", [localizer_service_1.LocalizerService, larka_service_1.LarkaService, http_1.Http])
                 ], HitexComponent);
                 return HitexComponent;
             }());
             exports_1("HitexComponent", HitexComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=hitex.component.js.map

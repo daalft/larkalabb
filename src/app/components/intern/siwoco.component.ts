@@ -7,8 +7,8 @@ import {PleaseWaitComponent} from "../component/pleasewait.component";
 
 @Component({
     selector: 'siwoco',
-    templateUrl: 'app/templates/siwoco.html',
-    styleUrls: ['app/css/siwoco.css']
+    templateUrl: '../../templates/siwoco.html',
+    styleUrls: ['../../css/siwoco.css']
 })
 
 export class SiwocoComponent {
@@ -16,8 +16,8 @@ export class SiwocoComponent {
 
     constructor(private larka: LarkaService) {}
 
-    private analyses = [];
-    private tempData;
+  public analyses = [];
+  public tempData;
 
     predict(word,pos,rop) {
         this.waiter.on();

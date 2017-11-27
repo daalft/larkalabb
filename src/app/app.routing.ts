@@ -16,8 +16,8 @@ import {ExerciseTypeComponent} from "./components/intern/exercisetype.component"
 import {HangBirdComponent} from "./components/component/hangbird.component";
 import {RegisterComponent} from "./components/pages/register.component";
 import {CorpusEditorComponent} from "./components/pages/editor.component";
-import {CeditFormComponent} from "./components/component/cedit.form.component";
-import {HitexDevComponent} from "./components/intern/hitex.dev.component";
+
+
 import {HangBirdEestiComponent} from "./components/intern/hangbird.eesti.component";
 import {DiagnosticDemoComponent} from "./components/intern/diagnostic.demo.component";
 import {LiwrixComponent} from "./components/component/liwrix.component";
@@ -35,7 +35,7 @@ const appRoutes: Routes = [
     {path: 'liwrix', component: LiwrixComponent},
     {path: 'diagnostic', component: DiagnosticTestComponent},
     {path: 'hitex', component: HitexComponent},
-    {path: 'hitexdev', component: HitexDevComponent},
+
 
     {path: 'register', component: RegisterComponent},
     // TODO remove
@@ -48,7 +48,7 @@ const appRoutes: Routes = [
     // {path: 'profile/:id/details', component: ProfileDetailsComponent},
     // {path: 'profile/:id/progress', component: LearnerProgressComponent},
 
-    {path: 'cedit-form', component: CeditFormComponent, outlet: 'formoutlet'},
+
     {path: 'siwoco', component: SiwocoComponent},
     // {path: 'profile/:id/egg', component: ProfileEggComponent},
 

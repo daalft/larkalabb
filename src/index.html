@@ -1,118 +1,31 @@
 <html>
 <head>
-    <title>LärkaLabb</title>
+  <base href="./">
 
-    <meta charset="UTF-8">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="-1">
-    <base href="./">
+  <title>LärkaLabb</title>
 
-    <link rel="icon" href="app/img/favicon3.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico" />
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="app/css/larka.css">
-    <link rel="stylesheet" href="app/css/custom.css">
-
-    <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
-
-    <!-- 1. Load libraries -->
-    <!-- IE required polyfills, in this exact order -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="app/js/larka-aux.js"></script>
-
-    <!-- following links for exetype eval -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    <!-- end exetype eval -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
-<!-- 3. Display the application -->
 <body>
+
 <larka-app></larka-app>
 <div class="loading-animation">
-    <img src="app/img/loading-animation.gif">
-    <div style="text-align: center; font-family: 'Titillium', Helvetica, 'Helvetica Neue', serif"><b>Loading...</b></div>
+  <img src="app/img/loading-animation.gif">
+  <div style="text-align: center; font-family: 'Titillium', Helvetica, 'Helvetica Neue', serif"><b>Loading...</b></div>
 </div>
-<!--
-<div class="notification" id="cookie">
-    This site uses cookies. By using this site, you consent to our use of cookies. <div style="display: inline" role="button" class="fake-button"><span class="fa fa-close"></span></div>
-</div>
-
-<div class="notification" id="sensitiveLanguage">
-    All sentences are taken from existing literary works and may contain language that you might deem offensive. <div style="display: inline" role="button" class="fake-button"><span class="fa fa-close"></span></div>
-</div>
--->
-<!--
-<div class="noticeme" id="notice1">
-    This version of Lärka is under active development and can break sometimes.<br/>
-    The stable version can be found at <a href="https://spraakbanken.gu.se/larka">https://spraakbanken.gu.se/larka</a><br/>
-    <span onclick="nclose()" class="closer">Close</span>
-</div>
--->
-<!--
-<div id="landscaper">
-
-    <div id="ls-logo">
-        <img src="app/img/lark4_t2s.png"> <span class="logo-font-small">LÄRKA</span>
-    </div>
-    <hr/>
-    <div id="ls-message">
-        Please switch your screen orientation to landscape.<br/>
-
-        <img src="app/img/landscape.svg">
-    </div>
-</div>
--->
-<!-- -->
-<script src="node_modules/es6-shim/es6-shim.min.js"></script>
-
-<script src="node_modules/reflect-metadata/Reflect.js"></script>
-
-<script src="node_modules/systemjs/dist/system-polyfills.js"></script>
-<!--<script src="node_modules/angular/es6/dev/src/testing/shims_for_IE.js"></script>-->
-
-<!--<script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>-->
-
-<script src="node_modules/systemjs/dist/system.js"></script>
-<script src="node_modules/rxjs/bundles/Rx.js"></script>
-<!--<script src="node_modules/angular2/bundles/angular2.dev.js"></script>-->
-
-<!--<script src="node_modules/angular2/bundles/http.dev.js"></script>-->
-
-<!--<script src="node_modules/angular2/bundles/router.min.js"></script>-->
-
-
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
-<script src="node_modules/bootstrap/js/button.js"></script>
-<!--<script src="bundle.js"></script>-->
-<script src="systemjs.config.js"></script>
-<!--<script src="node_modules/ng2-bs3-modal/bundles/ng2-bs3-modal.js"></script>-->
 
-<!--<script src="node_modules/ng2-bs-dropdown/dropdown.js"></script>-->
-<!--<script src="node_modules/bootstrap/js/dropdown.js"></script>-->
-<!-- 2. Configure SystemJS -->
-
-<script src="node_modules/zone.js/dist/zone.js"></script>
-<!--<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
-
-<script>
-
-    System.import('app/main')
-            .then(null, console.error.bind(console));
-
-
-</script>
 </body>
-<head>
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="-1">
-</head>
 </html>

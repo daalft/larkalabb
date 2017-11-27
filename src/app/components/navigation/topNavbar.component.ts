@@ -1,25 +1,19 @@
 /**
  * Created by David on 3/8/2016.
  */
-import {Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, AfterViewInit, ViewChild} from '@angular/core';
+import {Component, AfterViewInit, ViewChild} from '@angular/core';
 import {LocalizerService} from '../../services/localizer.service';
-
-//import {MODAL_DIRECTIVES} from "ng2-bs3-modal/ng2-bs3-modal";
-import {LoginService} from "../../services/login.service";
-import {MODAL_DIRECTIVES} from "ng2-bs3-modal/ng2-bs3-modal";
-import {Router} from "@angular/router";
-import {OverlayMenuComponent} from "./overlayMenu.component";
-import {PleaseWaitComponent} from "../component/pleasewait.component";
-
+import {LoginService} from '../../services/login.service';
+import {Router} from '@angular/router';
+import {OverlayMenuComponent} from './overlayMenu.component';
+import {PleaseWaitComponent} from '../component/pleasewait.component';
+import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 
 @Component({
     selector: 'top-navbar',
-    providers: [LoginService],
-    templateUrl:'app/templates/top-navbar-dev.html',
-    styleUrls: ['app/css/topnavbar.css']
+    templateUrl: '../../templates/top-navbar-dev.html',
+    styleUrls: ['../../css/topnavbar.css']
 })
-
-
 export class TopNavbarComponent implements AfterViewInit {
     @ViewChild(PleaseWaitComponent) waiter: PleaseWaitComponent;
 
@@ -34,7 +28,9 @@ export class TopNavbarComponent implements AfterViewInit {
 
     private wrongup;
 
-    constructor(private localizer: LocalizerService, private login: LoginService, private router: Router) {
+    private modalRef: BsModalRef;
+
+    constructor(public localizer: LocalizerService, private login: LoginService, private router: Router) {
 
     }
 
@@ -42,16 +38,16 @@ export class TopNavbarComponent implements AfterViewInit {
         // check what the browser url is
         let url = window.location.pathname;
         let segments = url.split(/\//);
-        let segment = segments[segments.length-1];
+        let segment = segments[segments.length - 1];
 
         // TODO do not hardwire this
 
-        switch(segment) {
-            case "linguist":
-            case "learner": this.currentSelected = 1; break;
-            case "hitex": this.currentSelected = 2; break;
-            case "editor": this.currentSelected = 3; break;
-            case "texteval": this.currentSelected = 4; break;
+        switch (segment) {
+            case 'linguist':
+            case 'learner': this.currentSelected = 1; break;
+            case 'hitex': this.currentSelected = 2; break;
+            case 'editor': this.currentSelected = 3; break;
+            case 'texteval': this.currentSelected = 4; break;
             default: break;
         }
 
@@ -99,18 +95,18 @@ export class TopNavbarComponent implements AfterViewInit {
         this.login.logout();
     }
 
-    tryLogin (username, password) {
+    tryLogin (username, password, modal) {
+      this.modalRef = modal;
         this.waiter.on();
         let remember = this.keep_checkbox;
         if (remember) {
-            document.cookie = username + ":" + password;
+            document.cookie = username + ':' + password;
         }
         let me = this;
-        let loginModal = $('#loginModal');
         this.login.login(username, password, remember).subscribe(function(data) {
-            if (data["Status"] == 200) {
-                me.login.setUserId(data["userid"]);
-                loginModal.modal('hide');
+            if (data['Status'] == 200) {
+                me.login.setUserId(data['userid']);
+                me.modalRef.hide();
                 me.wrongup = false;
                 me.waiter.off();
             } else {
@@ -122,7 +118,7 @@ export class TopNavbarComponent implements AfterViewInit {
     }
 
     isSelected(value: number) {
-        return this.currentSelected == value;
+        return this.currentSelected === value;
     }
 
     setSelected(value: number) {

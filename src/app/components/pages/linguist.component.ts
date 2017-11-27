@@ -15,10 +15,8 @@ import {UserNavbarComponent} from "../navigation/userNavbar.component";
 
 @Component({
     selector: 'tab-out',
-    templateUrl: 'app/templates/linguist-component.html',
-    directives: [ChoiceSelectorComponent, ModeSelectorComponent, ExerciseComponent, UserNavbarComponent],
-    providers: [LarkaService, LarkaAdapter, StateService],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    templateUrl: '../../templates/linguist-component.html',
+    providers: [LarkaService, LarkaAdapter, StateService]
 })
 
 export class LinguistComponent {
@@ -28,16 +26,19 @@ export class LinguistComponent {
     @ViewChild(ExerciseComponent)
     exercise: ExerciseComponent;
 
-    private currentMode;
-    private quarantineList: string[] = [];
+  public showOptions = false;
 
-    private exerciseName: string;
-    private exState;
-    private numberOfChoices: number[] = [0,0];
-    private exerciseParticle: string;
-    private exerciseParticles = ["pos_selectionNote","pos_selectionNote", "synt_selectionNote", "synt_selectionNote", "sem_selectionNote"];
-    
-    constructor(private localizer: LocalizerService, private larka: LarkaService, private state: StateService) {
+  public currentMode;
+  public quarantineList: string[] = [];
+
+  public exerciseName: string;
+  public exState;
+  public numberOfChoices: number[] = [0,0];
+  public exerciseParticle: string;
+  public exerciseParticles = ["pos_selectionNote","pos_selectionNote", "synt_selectionNote", "synt_selectionNote", "sem_selectionNote"];
+
+
+    constructor(public localizer: LocalizerService, private larka: LarkaService, private state: StateService) {
         this.calculateResume();
         if (this.state.hasState("linguist")) {
             let me = this;
@@ -72,11 +73,11 @@ export class LinguistComponent {
     //         console.log("after view init");
     //     }, 0);
     // }
-    
+
     routerOnActivate () {
 
     }
-    
+
     /*ngOnDestroy () {
         console.log("saving state");
         let currentState = {};
@@ -239,7 +240,7 @@ export class LinguistComponent {
         }
     }
 
-   
+
     calculateResume () {
         var index = this._getSelectedIndex();
         this.exerciseName = this.labels1[index].name;

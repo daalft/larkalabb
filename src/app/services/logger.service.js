@@ -1,6 +1,5 @@
-System.register(["@angular/core", "@angular/http", "./client.browser.service"], function(exports_1, context_1) {
+System.register(["@angular/core", "@angular/http", "./client.browser.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["@angular/core", "@angular/http", "./client.browser.service"], 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_1, client_browser_service_1;
-    var LoggerService;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, http_1, client_browser_service_1, LoggerService;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -22,12 +21,10 @@ System.register(["@angular/core", "@angular/http", "./client.browser.service"], 
             },
             function (client_browser_service_1_1) {
                 client_browser_service_1 = client_browser_service_1_1;
-            }],
-        execute: function() {
-            /**
-             * Created by David on 9/28/2016.
-             */
-            LoggerService = (function () {
+            }
+        ],
+        execute: function () {
+            LoggerService = /** @class */ (function () {
                 function LoggerService(http) {
                     this.http = http;
                     this.backend = "https://ws.spraakbanken.gu.se/ws/larkalabb/icall.cgi";
@@ -81,13 +78,13 @@ System.register(["@angular/core", "@angular/http", "./client.browser.service"], 
                 LoggerService.prototype.error = function (message) {
                 };
                 LoggerService = __decorate([
-                    core_1.Injectable(), 
-                    __metadata('design:paramtypes', [http_1.Http])
+                    core_1.Injectable(),
+                    __metadata("design:paramtypes", [http_1.Http])
                 ], LoggerService);
                 return LoggerService;
             }());
             exports_1("LoggerService", LoggerService);
         }
-    }
+    };
 });
 //# sourceMappingURL=logger.service.js.map

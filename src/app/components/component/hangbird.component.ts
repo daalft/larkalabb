@@ -1,91 +1,91 @@
-import {KarpService} from "../../services/karp.service";
-import {Http} from "@angular/http";
-import {Component, ViewChild} from "@angular/core";
-import {LocalizerService} from "../../services/localizer.service";
-import {PleaseWaitComponent} from "./pleasewait.component";
-import {DataAggregatorService} from "../../services/dataAggregator.service";
-import {LoginService} from "../../services/login.service";
+import {KarpService} from '../../services/karp.service';
+import {Component, ViewChild} from '@angular/core';
+import {LocalizerService} from '../../services/localizer.service';
+import {PleaseWaitComponent} from './pleasewait.component';
+import {DataAggregatorService} from '../../services/dataAggregator.service';
+import {LoginService} from '../../services/login.service';
+import {HttpClient} from '@angular/common/http';
 
 /**
  * Created by David on 1/25/2017.
  */
 @Component({
     selector: 'hangbird',
-    templateUrl: 'app/templates/hangbird.html',
-    styleUrls: ['app/css/hangbird.css']
+    templateUrl: '../../templates/hangbird.html',
+    styleUrls: ['../../css/hangbird.css']
 })
 
 export class HangBirdComponent {
 
-    private numberOfTries = 0;
-    private maxNumberOfTries = 7;
+  public numberOfTries = 0;
+  public maxNumberOfTries = 7;
 
     private wordlist = {};
-    private wordlistA1 = "app/data/A1_svalex_lexin.json";
-    private wordlistA2 = "app/data/A2_svalex_lexin.json";
-    private wordlistB1 = "app/data/B1_svalex_lexin.json";
-    private wordlistB2 = "app/data/B2_svalex_lexin.json";
-    private wordlistC1 = "app/data/C1_svalex_lexin.json";
+    private wordlistA1 = 'app/data/A1_svalex_lexin.json';
+    private wordlistA2 = 'app/data/A2_svalex_lexin.json';
+    private wordlistB1 = 'app/data/B1_svalex_lexin.json';
+    private wordlistB2 = 'app/data/B2_svalex_lexin.json';
+    private wordlistC1 = 'app/data/C1_svalex_lexin.json';
 
-    private wordlistBackup = ["villa","tjuv","kassa","process"];
+    private wordlistBackup = ['villa', 'tjuv', 'kassa', 'process'];
 
-    private currentWord;
-    private currentWordVector;
-    private previousWord;
+  public currentWord;
+  public currentWordVector;
+  public previousWord;
 
-    private description;
-    private translation;
+  public description;
+  public translation;
 
-    private showHint = false;
-    private usedHint = false;
+  public showHint = false;
+  public usedHint = false;
 
-    private letters;
-    private levels = ["A1", "A2", "B1", "B2", "C1"];
-    private level = "";
+  public letters;
+  public levels = ['A1', 'A2', 'B1', 'B2', 'C1'];
+  public level = '';
 
-    private languages = ["hb-lang-sqi", "hb-lang-bos", "hb-lang-eng", "hb-lang-fin", "hb-lang-ell", "hb-lang-hrv", "hb-lang-kur_north", "hb-lang-fas",
-        "hb-lang-rus", "hb-lang-srp", "hb-lang-srp_cyrillic", "hb-lang-som", "hb-lang-spa", "hb-lang-kur_south", "hb-lang-tur"];
-    private language;
+  public languages = ['hb-lang-sqi', 'hb-lang-bos', 'hb-lang-eng', 'hb-lang-fin', 'hb-lang-ell', 'hb-lang-hrv', 'hb-lang-kur_north', 'hb-lang-fas',
+        'hb-lang-rus', 'hb-lang-srp', 'hb-lang-srp_cyrillic', 'hb-lang-som', 'hb-lang-spa', 'hb-lang-kur_south', 'hb-lang-tur'];
+  public language;
 
-    private msd;
+  public msd;
 
-    private ongoing = false;
+  public ongoing = false;
 
-    private totalScore = 0;
+  public totalScore = 0;
 
-    private sessionid;
+  public sessionid;
 
-    private inARow = 0;
+  public inARow = 0;
 
-    private eggindices = [1,2,3,4];
+  public eggindices = [1, 2, 3, 4];
 
-    private indexHistory = [];
+  public indexHistory = [];
 
-    private waimsPrefix = "https://ws.spraakbanken.gu.se/ws/icall/img/"; // /english/dog.png; /spanish/something.png
+  public waimsPrefix = 'https://ws.spraakbanken.gu.se/ws/icall/img/'; // /english/dog.png; /spanish/something.png
 
     @ViewChild(PleaseWaitComponent) waiter: PleaseWaitComponent;
 
-    constructor(private karp: KarpService, private http: Http, private localizer: LocalizerService, private aggregator: DataAggregatorService, private login: LoginService) {
-        let me = this;
-        console.log("Loading wordlists");
+    constructor(private karp: KarpService, private http: HttpClient, public localizer: LocalizerService, private aggregator: DataAggregatorService, private login: LoginService) {
+        const me = this;
+        console.log('Loading wordlists');
         this.aggregator.getUserInfo();
-        this.aggregator.setLogType("log_db");
-        this.sessionid = this.login.getRandomId();
-        this.http.get(this.wordlistA1).map(res => res.json()).subscribe(function(data) {
-            me.wordlist["A1"] = data;
-            me.http.get(me.wordlistA2).map(res => res.json()).subscribe(function(data) {
-                me.wordlist["A2"] = data;
-                me.http.get(me.wordlistB1).map(res => res.json()).subscribe(function(data) {
-                    me.wordlist["B1"] = data;
-                    me.http.get(me.wordlistB2).map(res => res.json()).subscribe(function(data) {
-                        me.wordlist["B2"] = data;
-                        me.http.get(me.wordlistC1).map(res => res.json()).subscribe(function(data) {
-                            me.wordlist["C1"] = data;
-                            console.log("Loaded wordlists");
-                        })
-                    })
-                })
-            })
+        this.aggregator.setLogType('log_db');
+        this.sessionid = this.login.isLoggedIn() ? this.login.getUserId() : this.login.getRandomId();
+        this.http.get(this.wordlistA1).subscribe(function(data) {
+            me.wordlist['A1'] = data;
+            me.http.get(me.wordlistA2).subscribe(function(data2) {
+                me.wordlist['A2'] = data2;
+                me.http.get(me.wordlistB1).subscribe(function(data3) {
+                    me.wordlist['B1'] = data3;
+                    me.http.get(me.wordlistB2).subscribe(function(data4) {
+                        me.wordlist['B2'] = data4;
+                        me.http.get(me.wordlistC1).subscribe(function(data5) {
+                            me.wordlist['C1'] = data5;
+                            console.log('Loaded wordlists');
+                        });
+                    });
+                });
+            });
         });
     }
 
@@ -99,54 +99,54 @@ export class HangBirdComponent {
         this.showHint = false;
         this.usedHint = false;
         this.ongoing = false;
-        this.msd = "";
-        this.letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Ö","Ä","Å","É"];
+        this.msd = '';
+        this.letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Ö', 'Ä', 'Å', 'É'];
 
-        console.log("starting game");
+        console.log('starting game');
         this.ongoing = true;
         this.previousWord = this.currentWord;
         if (!this.language) {
-            this.language = "sqi";
+            this.language = 'sqi';
             //this.aggregator.aggregate("wordguess-lang", this.language, this.sessionid);
         }
         if (!this.level) {
-            this.level = "A1";
+            this.level = 'A1';
             //this.aggregator.aggregate("wordguess-level", this.level, this.sessionid);
         }
         if (!this.wordlist) {
-            return this.getBackupWord("Wordlist not loaded");
+            return this.getBackupWord('Wordlist not loaded');
         }
         if (!this.wordlist[this.level]) {
-            return this.getBackupWord("Requested level not loaded");
+            return this.getBackupWord('Requested level not loaded');
         }
-        let words = this.wordlist[this.level];
+        const words = this.wordlist[this.level];
 
         // Select random index
-        let index = Math.floor(Math.random()*words.length);
+        let index = Math.floor(Math.random() * words.length);
         // Check whether index has been used before
-        while ($.inArray(index,this.indexHistory) > -1) {
-            console.log("re-index");
-            index = Math.floor(Math.random()*words.length);
+        while ($.inArray(index, this.indexHistory) > -1) {
+            console.log('re-index');
+            index = Math.floor(Math.random() * words.length);
         }
         // Add index to history
         this.indexHistory.push(index);
 
-        this.currentWord = words[index]["word"].toUpperCase();
-        let pos = words[index]["pos"];
-        this.aggregator.setAggregator({"exercise":"wordguess", "target":this.currentWord, "pos": pos, "sessionid":this.sessionid});
-        this.aggregator.addInformation("language", this.language);
-        this.aggregator.addInformation("level", this.level);
+        this.currentWord = words[index]['word'].toUpperCase();
+        const pos = words[index]['pos'];
+        this.aggregator.setAggregator({'exercise': 'wordguess', 'target': this.currentWord, 'pos': pos, 'sessionid': this.sessionid});
+        this.aggregator.addInformation('language', this.language);
+        this.aggregator.addInformation('level', this.level);
         //this.currentWord = this.wordlistBackup[0];
         this.currentWordVector = [];
         for (let i = 0; i < this.currentWord.length; i++) {
-            this.currentWordVector[i] = "_";
+            this.currentWordVector[i] = '_';
         }
         console.log(this.currentWord);
-        this.getWordInformation(this.currentWord.toLowerCase(),pos);
+        this.getWordInformation(this.currentWord.toLowerCase(), pos);
     }
 
     setLanguage(event) {
-        let pl = event.target.value;
+        const pl = event.target.value;
         this.language = pl.substr(8); // ignore hb-lang- prefix
         //this.aggregator.aggregate("wordguess-lang", this.language, this.sessionid);
     }
@@ -159,19 +159,19 @@ export class HangBirdComponent {
     showTrans () {
         this.showHint = true;
         this.usedHint = true;
-        this.aggregator.addInformation("hint","translation");
+        this.aggregator.addInformation('hint', 'translation');
     }
 
 
-    getWordInformation (word,pos) {
-        let me = this;
+    getWordInformation (word, pos) {
+        const me = this;
 
-        this.karp.fetchFrom(word,pos,"lexin").map(res => res.json()).subscribe(function(data) {
-            let pwords = data["hits"]["hits"];
-            let pwordsf = pwords.filter(function(d) { return d["_source"]["FormRepresentations"].length > 15 && d["_source"]["FormRepresentations"][0]["baseform"] == word; });
-            let sortedws = pwordsf.sort(function(a,b) {  // sort by sense IDs
-                let ax = parseInt(a["_source"]["Sense"][0]["senseid"].slice(-1));
-                let bx = parseInt(b["_source"]["Sense"][0]["senseid"].slice(-1));
+        this.karp.fetchFrom(word, pos, 'lexin').subscribe(function(data) {
+            const pwords = data['hits']['hits'];
+            const pwordsf = pwords.filter(function(d) { return d['_source']['FormRepresentations'].length > 15 && d['_source']['FormRepresentations'][0]['baseform'] == word; });
+            const sortedws = pwordsf.sort(function(a, b) {  // sort by sense IDs
+                const ax = parseInt(a['_source']['Sense'][0]['senseid'].slice(-1));
+                const bx = parseInt(b['_source']['Sense'][0]['senseid'].slice(-1));
                 if (ax > bx) {
                     return 1;
                 }
@@ -181,27 +181,27 @@ export class HangBirdComponent {
                 return 0;
             });
 
-            let wlist = sortedws[0]["_source"]["FormRepresentations"];
+            const wlist = sortedws[0]['_source']['FormRepresentations'];
 
             for (let j = 0; j < wlist.length; j++) {
                 // get baseform and lang
 
-                let bf = wlist[j]["baseform"];
-                let l  = wlist[j]["lang"];
-                if (l == "swe") {
+                const bf = wlist[j]['baseform'];
+                const l  = wlist[j]['lang'];
+                if (l == 'swe') {
                     //me.description = wlist[j]["text"]; // TODO delete (\d) from text
-                    let desc = "";
-                    if (wlist[j]["text"]) {
-                        desc = wlist[j]["text"]; // if no "text" present, try "desc" from Sense?
+                    let desc = '';
+                    if (wlist[j]['text']) {
+                        desc = wlist[j]['text']; // if no "text" present, try "desc" from Sense?
                     } else {
                         console.log(wlist[j]);
                         // TODO what to do if no description present?
                     }
 
-                    let digits = /(\(\d\))/;
+                    const digits = /(\(\d\))/;
                     if (desc.match(digits)) {
-                        let digit = digits.exec(desc);
-                        desc = desc.replace(digit[0], "");
+                        const digit = digits.exec(desc);
+                        desc = desc.replace(digit[0], '');
                     }
                     me.description = desc;
                 }
@@ -212,39 +212,39 @@ export class HangBirdComponent {
 
             // TODO catch if loop was ended without extracting information
             if (!me.currentWord || me.currentWord == me.previousWord) {
-                console.error("Could not get information for " + word);
+                console.error('Could not get information for ' + word);
             }
             me.waiter.off();
         });
     }
 
     getBackupWord (reason) {
-        console.log("Using backup list");
+        console.log('Using backup list');
         console.log(reason);
-        return this.wordlistBackup[Math.floor(Math.random()*this.wordlistBackup.length)];
+        return this.wordlistBackup[Math.floor(Math.random() * this.wordlistBackup.length)];
     }
 
     tryLetter(letter) {
-        this.aggregator.addInformation("letter", letter);
+        this.aggregator.addInformation('letters', letter);
 
-        let res = this.getIndicesOf(letter,this.currentWord);
+        const res = this.getIndicesOf(letter, this.currentWord);
         if (res.length == 0) {
             this.numberOfTries++;
         }
-        this.letters.splice(this.letters.indexOf(letter),1); // Remove letter from array of letters
+        this.letters.splice(this.letters.indexOf(letter), 1); // Remove letter from array of letters
         for (let i = 0; i < res.length; i++) {
             this.currentWordVector[res[i]] = this.currentWord.charAt(res[i]);
         }
         // TODO if num tries > max tries, end game
         if (this.numberOfTries >= this.maxNumberOfTries) {
-            this.aggregator.addInformation("end", "fail");
+            this.aggregator.addInformation('end', 'fail');
             this.endGame(0);
 
             return;
         }
         // TODO if word vector equals word, end game
-        if (this.currentWordVector.join("") == this.currentWord) {
-            this.aggregator.addInformation("end", "win");
+        if (this.currentWordVector.join('') == this.currentWord) {
+            this.aggregator.addInformation('end', 'win');
             this.endGame(1);
 
         }
@@ -252,7 +252,7 @@ export class HangBirdComponent {
     }
 
     restartGame () { // alias
-        let me = this;
+        const me = this;
         setTimeout(function() {
             me.startGame();
         }, 1000);
@@ -270,24 +270,24 @@ export class HangBirdComponent {
                 gscore = 0.5;
             }
             this.totalScore += gscore;
-            if (this.inARow>4) {
+            if (this.inARow > 4) {
                 //alert("Five in a row! Score multiplied by 2!");
                 this.inARow = 0;
                 this.totalScore *= 2;
             }
-            this.aggregator.addInformation("score", this.totalScore);
-            this.aggregator.addInformation("timestamp-end", new Date());
+            this.aggregator.addInformation('score', this.totalScore);
+            this.aggregator.addInformation('timestamp-end', new Date());
             this.aggregator.closeAggregator();
         } else if (status == 0) {
             this.inARow = 0;
             this.showHint = true;
-            this.currentWordVector = this.currentWord.split("");
-            this.aggregator.addInformation("timestamp-end", new Date());
+            this.currentWordVector = this.currentWord.split('');
+            this.aggregator.addInformation('timestamp-end', new Date());
             this.aggregator.closeAggregator();
             return;
         }
 
-        console.log("ending game " + this.totalScore);
+        console.log('ending game ' + this.totalScore);
         // TODO set overall status based on total score
 
         if (status != 2) {
@@ -296,11 +296,11 @@ export class HangBirdComponent {
     }
 
     getIndicesOf(searchStr, str) {
-        var searchStrLen = searchStr.length;
+        const searchStrLen = searchStr.length;
         if (searchStrLen == 0) {
             return [];
         }
-        var startIndex = 0, index, indices = [];
+        let startIndex = 0, index, indices = [];
 
         while ((index = str.indexOf(searchStr, startIndex)) > -1) {
             indices.push(index);

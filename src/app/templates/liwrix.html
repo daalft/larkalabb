@@ -15,7 +15,7 @@
                 <option disabled>Sentences</option>
             </select>
 
-            <input type="checkbox" #mwe class="checkbox-inline" id="mwes" checked disabled><label for="mwes">Include MWEs <span class="fa fa-question-circle"></span></label>
+            <!--<input type="checkbox" #mwe class="checkbox-inline" id="mwes" checked disabled><label for="mwes">Include MWEs <span class="fa fa-question-circle"></span></label>-->
         </div>
         <!-- levels to train -->
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
@@ -35,9 +35,9 @@
             <label><input type="radio" name="mode" #mode2>Test</label>
         </div>
     </div>
-
+    <br/>
     <div class="row" *ngIf="ready">
-        <button type="submit" (click)="setParams(type.selectedIndex,mwe.checked,level.selectedIndex,(mode1.checked?0:mode2.checked?1:2))" class="btn btn-primary">{{localizer.localize('liwrix-play')}}</button>
+        <button type="submit" (click)="setParams(type.selectedIndex,level.selectedIndex,(mode1.checked?0:mode2.checked?1:2))" class="btn btn-primary">{{localizer.localize('liwrix-play')}}</button>
     </div>
 
     <div id="attribution">
@@ -48,14 +48,13 @@
 </div>
 
 <!-- secondary menu bar -->
-<!--
+
 <div class="row" *ngIf="level">
     Mode: {{mode}} <span *ngIf="spell">(spell)</span>
-    MWE: {{mwe}}
     Level: {{level}}
-    <button type="reset" class="btn btn-danger" (click)="level=null">Change settings</button>
+    <button type="reset" class="btn btn-danger" (click)="level=null">Change settings (new game)</button>
 </div>
--->
+<hr/>
 
 <!-- score -->
 <div class="row">
@@ -81,7 +80,7 @@
     </div>
     <!-- answer field -->
     <div class="col-lg-4 col-md-3 col-sm-4 col-xs-4">
-        <input [ngClass]="{sparkleyVowel: currentWord['special-vowel'], sparkleyConsonant: currentWord['special-consonant']}" type="text" id="answer-{{currentWord['id']}}" title="Type here" class="form-control" (keypress)="keyhandler($event)">
+        <input [ngClass]="{sparkleyVowel: currentWord['special-type']==='VOWEL', sparkleyConsonant: currentWord['special-type']==='CONSONANT'}" type="text" id="answer-{{currentWord['id']}}" title="Type here" class="form-control" (keypress)="keyhandler($event)">
     </div>
     <!-- submit button -->
     <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">

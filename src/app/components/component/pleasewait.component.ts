@@ -3,18 +3,18 @@
  */
 import {Component} from "@angular/core";
 import {LocalizerService} from "../../services/localizer.service";
-import random = require("core-js/fn/number/random");
+
 @Component({
     selector: 'pleasewait',
-    templateUrl: 'app/templates/pleasewait.html',
-    styleUrls: ['app/css/pleasewait.css']
+    templateUrl: '../../templates/pleasewait.html',
+    styleUrls: ['../../css/pleasewait.css']
 })
 
 export class PleaseWaitComponent {
     private waiting: boolean = false;
     private magicVariable: boolean = true;
 
-    constructor(private localizer: LocalizerService) {
+    constructor(public localizer: LocalizerService) {
 
     }
 

@@ -1,6 +1,5 @@
-System.register(["@angular/core", "../../services/larka.service", "../component/pleasewait.component"], function(exports_1, context_1) {
+System.register(["@angular/core", "../../services/larka.service", "../component/pleasewait.component"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["@angular/core", "../../services/larka.service", "../component/
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, larka_service_1, pleasewait_component_1;
-    var SiwocoComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, larka_service_1, pleasewait_component_1, SiwocoComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -22,9 +21,10 @@ System.register(["@angular/core", "../../services/larka.service", "../component/
             },
             function (pleasewait_component_1_1) {
                 pleasewait_component_1 = pleasewait_component_1_1;
-            }],
-        execute: function() {
-            SiwocoComponent = (function () {
+            }
+        ],
+        execute: function () {
+            SiwocoComponent = /** @class */ (function () {
                 function SiwocoComponent(larka) {
                     this.larka = larka;
                     this.analyses = [];
@@ -47,21 +47,21 @@ System.register(["@angular/core", "../../services/larka.service", "../component/
                     }
                 };
                 __decorate([
-                    core_1.ViewChild('waiter'), 
-                    __metadata('design:type', pleasewait_component_1.PleaseWaitComponent)
+                    core_1.ViewChild('waiter'),
+                    __metadata("design:type", pleasewait_component_1.PleaseWaitComponent)
                 ], SiwocoComponent.prototype, "waiter", void 0);
                 SiwocoComponent = __decorate([
                     core_1.Component({
                         selector: 'siwoco',
                         templateUrl: 'app/templates/siwoco.html',
                         styleUrls: ['app/css/siwoco.css']
-                    }), 
-                    __metadata('design:paramtypes', [larka_service_1.LarkaService])
+                    }),
+                    __metadata("design:paramtypes", [larka_service_1.LarkaService])
                 ], SiwocoComponent);
                 return SiwocoComponent;
             }());
             exports_1("SiwocoComponent", SiwocoComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=siwoco.component.js.map

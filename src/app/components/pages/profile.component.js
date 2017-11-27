@@ -1,6 +1,5 @@
-System.register(["@angular/core", "../component/profileOverview.component", "../navigation/profileMenu.component", "../component/learnerProgress.component", "../component/profileDetails.component", "../../services/login.service"], function(exports_1, context_1) {
+System.register(["@angular/core", "../../services/login.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,30 +9,19 @@ System.register(["@angular/core", "../component/profileOverview.component", "../
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, profileOverview_component_1, profileMenu_component_1, learnerProgress_component_1, profileDetails_component_1, login_service_1;
-    var ProfileComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, login_service_1, ProfileComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (profileOverview_component_1_1) {
-                profileOverview_component_1 = profileOverview_component_1_1;
-            },
-            function (profileMenu_component_1_1) {
-                profileMenu_component_1 = profileMenu_component_1_1;
-            },
-            function (learnerProgress_component_1_1) {
-                learnerProgress_component_1 = learnerProgress_component_1_1;
-            },
-            function (profileDetails_component_1_1) {
-                profileDetails_component_1 = profileDetails_component_1_1;
-            },
             function (login_service_1_1) {
                 login_service_1 = login_service_1_1;
-            }],
-        execute: function() {
-            ProfileComponent = (function () {
+            }
+        ],
+        execute: function () {
+            ProfileComponent = /** @class */ (function () {
                 function ProfileComponent(login) {
                     this.login = login;
                     this.currentPage = 0;
@@ -48,15 +36,14 @@ System.register(["@angular/core", "../component/profileOverview.component", "../
                     core_1.Component({
                         selector: 'profile',
                         templateUrl: 'app/templates/profile.html',
-                        styleUrls: ['app/css/profile.css'],
-                        directives: [profileOverview_component_1.ProfileOverviewComponent, profileMenu_component_1.ProfileMenuComponent, learnerProgress_component_1.LearnerProgressComponent, profileDetails_component_1.ProfileDetailsComponent]
-                    }), 
-                    __metadata('design:paramtypes', [login_service_1.LoginService])
+                        styleUrls: ['app/css/profile.css']
+                    }),
+                    __metadata("design:paramtypes", [login_service_1.LoginService])
                 ], ProfileComponent);
                 return ProfileComponent;
             }());
             exports_1("ProfileComponent", ProfileComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=profile.component.js.map

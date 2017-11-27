@@ -1,17 +1,16 @@
 import {LocalizerService} from "../../services/localizer.service";
 import {Component, ViewChild, ElementRef} from "@angular/core";
-import {CeditFormComponent} from "../component/cedit.form.component";
-import {Http} from "@angular/http";
 import {LarkaService} from "../../services/larka.service";
 import {PleaseWaitComponent} from "../component/pleasewait.component";
+import {HttpClient} from "@angular/common/http";
 
 /**
  * Created by David on 2/13/2017.
  */
 @Component({
     selector: 'corpus-editor',
-    templateUrl: 'app/templates/editor.html',
-    styleUrls: ['app/css/editor.css']
+    templateUrl: '../../templates/editor.html',
+    styleUrls: ['../../css/editor.css']
 })
 
 export class CorpusEditorComponent {
@@ -19,55 +18,55 @@ export class CorpusEditorComponent {
     @ViewChild('cedit') cedit: ElementRef;
     @ViewChild('waiter') waiter: PleaseWaitComponent;
 
-    private showExtras: boolean;
-    private showText: boolean;
-    private showGenre: boolean;
+  public showExtras: boolean;
+  public showText: boolean;
+  public showGenre: boolean;
 
-    private ce;
+  public ce;
 
-    private openTags = [];
+  public openTags = [];
 
-    private taglist = [];
+  public taglist = [];
 
-    private levels = ["A1", "A2", "B1", "B2", "C1", "C2"];
-    private topics;
-    private activitytypes;
-    private formats;
-    private units;
-    private skills = [{"text":"Listening","val":"listening"},
+  public levels = ["A1", "A2", "B1", "B2", "C1", "C2"];
+  public topics;
+  public activitytypes;
+  public formats;
+  public units;
+  public skills = [{"text":"Listening","val":"listening"},
         {"text":"Reading","val":"reading"},
         {"text":"Speaking","val":"speaking"},
         {"text":"Writing","val":"writing"}];
-    private competences = [{"text": "Grammar", "val": "grammar"},
+  public competences = [{"text": "Grammar", "val": "grammar"},
         {"text": "Pronunciation", "val": "pronunciation"},
         {"text": "Spelling", "val": "spelling"},
         {"text": "Vocabulary", "val": "vocabulary"}];
 
-    private lessoncounter = 0;
-    private textcounter = 0;
-    private activitycounter = 0;
-    private listcounter = 0;
-    private langexcounter = 0;
+  public lessoncounter = 0;
+  public textcounter = 0;
+  public activitycounter = 0;
+  public listcounter = 0;
+  public langexcounter = 0;
 
-    private currentLevel = "";
+  public currentLevel = "";
 
-    private userkey;
-    private lastsaved;
+  public userkey;
+  public lastsaved;
 
-    private coursebookExists;
+  public coursebookExists;
 
-    constructor(private localizer: LocalizerService, private http: Http, private larka: LarkaService) {
+    constructor(public localizer: LocalizerService, private http: HttpClient, private larka: LarkaService) {
         let me = this;
-        http.get("app/data/cedit-topics.json").map(res => res.json()).subscribe(function(data) {
+        http.get("app/data/cedit-topics.json").subscribe(function(data) {
            me.topics = data;
         });
-        http.get("app/data/cedit-activity.json").map(res => res.json()).subscribe(function(data) {
+        http.get("app/data/cedit-activity.json").subscribe(function(data) {
             me.activitytypes = data;
         });
-        http.get("app/data/cedit-formats.json").map(res => res.json()).subscribe(function(data) {
+        http.get("app/data/cedit-formats.json").subscribe(function(data) {
             me.formats = data;
         });
-        http.get("app/data/cedit-units.json").map(res => res.json()).subscribe(function(data) {
+        http.get("app/data/cedit-units.json").subscribe(function(data) {
             me.units = data;
         });
     }
@@ -81,7 +80,7 @@ export class CorpusEditorComponent {
     createTag(event) {
         let target = event.target.text.trim().toLowerCase();
         let parent = $(event.target).parent("div");
-        let superclass = $(parent).prev()[0].text.trim().toLowerCase();
+        let superclass = ($(parent).prev()[0] as any).text.trim().toLowerCase();
         let commaregex = /,/;
         if (target.match(commaregex)) {
             target = target.split(",")[0].trim();
@@ -253,8 +252,8 @@ export class CorpusEditorComponent {
 
         for (let i = 0; i < cbx.length; i++) {
             let cb = cbx[i];
-            if (cb.checked) {
-                topicarray.push(cb.value);
+            if ((cb as any).checked) {
+                topicarray.push((cb as any).value);
             }
         }
 
@@ -282,7 +281,7 @@ export class CorpusEditorComponent {
         title.val("");
         // loop over topics, uncheck all checkboxes
         for (let i = 0; i < cbx.length; i++) {
-            cbx[i].checked = false;
+            (cbx[i] as any).checked = false;
         }
     }
 
@@ -363,7 +362,7 @@ export class CorpusEditorComponent {
         this.taglist.unshift(id.val());
 
         ref.val("");
-        
+
         this.insertAtCaret(tag);
     }
 
@@ -413,14 +412,14 @@ export class CorpusEditorComponent {
         let unitscbs = units.find("input[type='checkbox']");
         let unitarray = [];
         for (let i = 0; i < unitscbs.length; i++) {
-            if (unitscbs[i].checked) {
-                unitarray.push(unitscbs[i].value);
+            if ((unitscbs[i] as any).checked) {
+                unitarray.push((unitscbs[i] as any).value);
             }
-            unitscbs.checked = false;
+            (unitscbs as any).checked = false;
         }
 
         let unitlist = unitarray.join(",");
-        
+
         let tag = '<list id="' + id.val() + '"';
         if (ref.val()) {
             tag += ' ref="#' + ref.val() + '"';
@@ -438,7 +437,7 @@ export class CorpusEditorComponent {
 
         ref.val("");
         title.val("");
-        
+
 
     }
 
@@ -486,10 +485,10 @@ export class CorpusEditorComponent {
         let unitscbs = units.find("input[type='checkbox']");
         let unitarray = [];
         for (let i = 0; i < unitscbs.length; i++) {
-            if (unitscbs[i].checked) {
-                unitarray.push(unitscbs[i].value);
+            if ((unitscbs[i] as any).checked) {
+                unitarray.push((unitscbs[i] as any).value);
             }
-            unitscbs.checked = false;
+            (unitscbs as any).checked = false;
         }
 
         let unitlist = unitarray.join(",");
@@ -570,7 +569,7 @@ export class CorpusEditorComponent {
 
     setCaretBeforeEndingCoursebookTag () {
         let elem = $('#cedit-content');
-        let index = elem.val().search("</coursebook>") - 1;
+        let index = (elem.val() as any).search("</coursebook>") - 1;
 
         console.log(index);
         this.setSelectionRange(this.ce,index,index);
@@ -615,7 +614,7 @@ export class CorpusEditorComponent {
     }
 
     restoreIds () {
-        let text = $('#cedit-content').val().replace(/\n/g, " ");
+        let text = ($('#cedit-content').val() as any).replace(/\n/g, " ");
         let gid = /id="(.+?)"/mg;
         let digits = /^\d+$/;
         let match;

@@ -1,43 +1,45 @@
 <pleasewait #waiter></pleasewait>
 <div id="left-menu" class="menu-column" *ngIf="menuLeft" (click)="close()">
-    <div class="menu-title">
-        {{localizer.localize('menu-linguist')}}
-    </div>
+  <div class="menu-title">
+    {{localizer.localize('menu-linguist')}}
+  </div>
 
-    <a routerLink="/linguist" class="mock-link">{{localizer.localize('menu-linguist-general-gen')}}</a>
-    <hr/>
-    <div class="menu-title">
-        {{localizer.localize('menu-learner')}}
-    </div>
+  <a routerLink="/linguist" class="mock-link">{{localizer.localize('menu-linguist-general-gen')}}</a>
+  <hr/>
+  <div class="menu-title">
+    {{localizer.localize('menu-learner')}}
+  </div>
 
-    <!--<a class="mock-link" routerLink="/learner">{{localizer.localize('menu-learner-general-gen')}}</a><br/>-->
-    <a class="mock-link" routerLink="/wordguess">{{localizer.localize('menu-wordguess')}}</a><br/>
-    <div *ngIf="isAdmin()">
-        <a class="mock-link" routerLink="/wordguess-image">{{localizer.localize('menu-wordguess-image')}}</a><br/>
-    </div>
+  <!--<a class="mock-link" routerLink="/learner">{{localizer.localize('menu-learner-general-gen')}}</a><br/>-->
+  <a class="mock-link" routerLink="/wordguess">{{localizer.localize('menu-wordguess')}}</a><br/>
+  <div *ngIf="isAdmin()">
+    <a class="mock-link" routerLink="/wordguess-image">{{localizer.localize('menu-wordguess-image')}}</a><br/>
+  </div>
 
-    <a class="mock-link" routerLink="/liwrix">{{localizer.localize('menu-liwrix')}}</a>
+  <a class="mock-link" routerLink="/liwrix">{{localizer.localize('menu-liwrix')}}</a>
 </div>
 
 <div class="breakout" *ngIf="menuLeft || menuRight" (click)="close()"></div>
 
 <nav class="navbar navbar-default">
 
-    <modal #citeLarkaModal>
-        <modal-header>
-            <h3>{{localizer.localize('larka_cite')}}</h3>
-        </modal-header>
-        <modal-body>
-            <div>
-                Elena Volodina, Ildikó Pilán, Lars Borin and Therese Lindström Tiedemann. 2014.
-                <i>A flexible language learning platform based on language resources and web services.</i>
-                Proceedings of LREC 2014, Reykjavik, Iceland.
-            </div>
+  <div class="modal fade" bsModal #citeLarkaModal="bs-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>{{localizer.localize('larka_cite')}}</h3>
+        </div>
+        <div class="modal-body">
+          <div>
+            Elena Volodina, Ildikó Pilán, Lars Borin and Therese Lindström Tiedemann. 2014.
+            <i>A flexible language learning platform based on language resources and web services.</i>
+            Proceedings of LREC 2014, Reykjavik, Iceland.
+          </div>
+          <br/>
+          <div>
+            <img src="app/img/bibtex.png"><!-- needs relative address with root node -->
             <br/>
-            <div>
-                <img src="app/img/bibtex.png"><!-- needs relative address with root node -->
-                <br/>
-                <pre>
+            <pre>
 @inProceedings&#123;Volodina-Elena2014-3,
     title = "A flexible language learning platform based on language resources and web services",
     booktitle = "Proceedings of LREC 2014, Reykjavik, Iceland",
@@ -48,190 +50,202 @@
     pages = "3973--3978"
 &#125;
 </pre>
-            </div>
-        </modal-body>
-        <modal-footer>
-            <button type="button" class="btn btn-default" data-dismiss="modal" (click)="citeLarkaModal.dismiss()">{{localizer.localize('close')}}</button>
-        </modal-footer>
-    </modal>
-    <modal #aboutLarkaModal>
-        <modal-header>
-            <h3>{{localizer.localize('larka_about')}}</h3>
-        </modal-header>
-        <modal-body>
-            <div [innerHtml]="localizer.localize('about_body')"></div>
-            <br/><br/>
-            <b>{{localizer.localize('about_man')}}</b>
-            <br/>
-            <a href="https://spraakbanken.gu.se/eng/personal/lars">Lars Borin</a>
-            <br/>
-            <a href="https://spraakbanken.gu.se/eng/personal/markus">Markus Forsberg</a>
-            <br/><br/>
-            <b>{{localizer.localize('about_dev')}}</b>
-            <br/>
-            <a href="https://spraakbanken.gu.se/eng/personal/elena">Elena Volodina</a>
-            <br/>
-            <a href="https://spraakbanken.gu.se/eng/personal/ildiko">Ildikó Pilán</a>
-            <br/>
-            <a href="https://spraakbanken.gu.se/eng/personal/jonupp">Jonatan Uppström</a>
-            <br/>
-            <a href="https://spraakbanken.gu.se/eng/personal/david">David Alfter</a>
-        </modal-body>
-        <modal-footer>
-            <button type="button" class="btn btn-default" data-dismiss="modal" (click)="aboutLarkaModal.dismiss()">{{localizer.localize('close')}}</button>
-        </modal-footer>
-    </modal>
-    <modal #loginModal id="loginModal">
-        <modal-header>
-            <h4 class="modal-title">{{localizer.localize('login')}}</h4>
-        </modal-header>
-        <modal-body>
-            <form #loginForm="ngForm">
-                <div class="form-group">
-                    <label for="username">{{localizer.localize('username')}}</label>
-                    <input name="username" autofocus type="text" class="form-control" id="username" required ngControl="username" #user>
-                </div>
-                <div class="form-group">
-                    <label for="password">{{localizer.localize('password')}}</label>
-                    <input name="upw" type="password" class="form-control" id="password" required ngControl="password" #pw>
-                </div>
-                <div class="checkbox">
-                    <label><input name="rememberme" type="checkbox" id="remember_me" value="" [(ngModel)]="keep_checkbox">
-                        {{localizer.localize('remember_me')}}</label>
-                </div>
-                <div class="form-group" [hidden]="!wrongup">
-                    <span class="errorText">Wrong username or password!</span>
-                </div>
-            </form>
-        </modal-body>
-        <modal-footer>
-            <button type="submit" class="btn btn-primary" [disabled]="!loginForm.form.valid" (click)="wrongup = false;tryLogin(user.value, pw.value)">{{localizer.localize('login')}}</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal" (click)="loginModal.dismiss();wrongup = false;">{{localizer.localize('cancel')}}</button>
-        </modal-footer>
-    </modal>
-
-    <!-- XS menu -->
-    <div class="col-xs-12 hidden-lg hidden-md hidden-sm" id="mobile-menu">
-        <div data-toggle="collapse" data-target="#menuxs" class="btn"><span class="fa fa-fw fa-bars"></span></div>
-        <div class="nav navbar-right" style="float: right;">
-
-                <a (click)="setLanguage('sv')" class="mock-link">SV</a>
-            |
-                <a (click)="setLanguage('en')" class="mock-link">EN</a>
-
+          </div>
         </div>
-        <div id="menuxs" class="collapse">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a class="mock-link" routerLink="/linguist">{{localizer.localize('menu-linguist-general-gen')}}</a>
-                </li>
-                <li>
-                    <a class="mock-link" routerLink="/wordguess">{{localizer.localize('menu-wordguess')}}</a>
-                </li>
-                <li *ngIf="isAdmin()">
-                    <a class="mock-link" routerLink="/wordguess-image">{{localizer.localize('menu-wordguess-image')}}</a>
-                </li>
-                <li>
-                    <a class="mock-link" routerLink="/liwrix">{{localizer.localize('menu-liwrix')}}</a>
-                </li>
-                <li>
-                    <a class="mock-link" routerLink="/hitex">{{localizer.localize('hitex')}}</a>
-                </li>
-                <li *ngIf="isAdmin()">
-                    <a routerLink="/siwoco" class="mock-link">{{localizer.localize('menu-siwoco')}}</a>
-                </li>
-            </ul>
-
-
-            <hr/>
-
-            <div class="" *ngIf="!loggedIn()">
-                <a class="mock-link" routerLink="/register">{{localizer.localize('menu-register')}}</a>
-                <hr/>
-            </div>
-
-            <div class="">
-                <div  class="mock-link" (click)="loginModal.open()" *ngIf="!loggedIn()">{{localizer.localize('login')}}</div>
-                <div *ngIf="loggedIn()"><a class="mock-link" routerLink="/profile">{{localizer.localize('menu-myprofile')}}</a></div>
-                <hr/>
-            </div>
-
-            <div>
-                <div  class="mock-link" (click)="logout()" *ngIf="loggedIn()">{{localizer.localize('logout')}}</div>
-            </div>
-
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" (click)="citeLarkaModal.hide()">{{localizer.localize('close')}}</button>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" bsModal #aboutLarkaModal="bs-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>{{localizer.localize('larka_about')}}</h3>
+        </div>
+        <div class="modal-body">
+          <div [innerHtml]="localizer.localize('about_body')"></div>
+          <br/><br/>
+          <b>{{localizer.localize('about_man')}}</b>
+          <br/>
+          <a href="https://spraakbanken.gu.se/eng/personal/lars">Lars Borin</a>
+          <br/>
+          <a href="https://spraakbanken.gu.se/eng/personal/markus">Markus Forsberg</a>
+          <br/><br/>
+          <b>{{localizer.localize('about_dev')}}</b>
+          <br/>
+          <a href="https://spraakbanken.gu.se/eng/personal/elena">Elena Volodina</a>
+          <br/>
+          <a href="https://spraakbanken.gu.se/eng/personal/ildiko">Ildikó Pilán</a>
+          <br/>
+          <a href="https://spraakbanken.gu.se/eng/personal/jonupp">Jonatan Uppström</a>
+          <br/>
+          <a href="https://spraakbanken.gu.se/eng/personal/david">David Alfter</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" (click)="aboutLarkaModal.hide()">{{localizer.localize('close')}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" bsModal #loginModal="bs-modal" id="loginModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">{{localizer.localize('login')}}</h4>
+        </div>
+        <div class="modal-body">
+          <form #loginForm="ngForm">
+            <div class="form-group">
+              <label for="username">{{localizer.localize('username')}}</label>
+              <input name="username" autofocus type="text" class="form-control" id="username" required ngControl="username" #user>
+            </div>
+            <div class="form-group">
+              <label for="password">{{localizer.localize('password')}}</label>
+              <input name="upw" type="password" class="form-control" id="password" required ngControl="password" #pw>
+            </div>
+            <div class="checkbox">
+              <label><input name="rememberme" type="checkbox" id="remember_me" value="" [(ngModel)]="keep_checkbox">
+                {{localizer.localize('remember_me')}}</label>
+            </div>
+            <div class="form-group" [hidden]="!wrongup">
+              <span class="errorText">Wrong username or password!</span>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" [disabled]="!loginForm.form.valid" (click)="wrongup = false;tryLogin(user.value, pw.value,loginModal)">{{localizer.localize('login')}}</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" (click)="loginModal.hide();wrongup = false;">{{localizer.localize('cancel')}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- XS menu -->
+  <div class="col-xs-12 hidden-lg hidden-md hidden-sm" id="mobile-menu">
+    <div data-toggle="collapse" data-target="#menuxs" class="btn"><span class="fa fa-fw fa-bars"></span></div>
+    <div class="nav navbar-right" style="float: right;">
+
+      <a (click)="setLanguage('sv')" class="mock-link">SV</a>
+      |
+      <a (click)="setLanguage('en')" class="mock-link">EN</a>
+
+    </div>
+    <div id="menuxs" class="collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a class="mock-link" routerLink="/linguist">{{localizer.localize('menu-linguist-general-gen')}}</a>
+        </li>
+        <li>
+          <a class="mock-link" routerLink="/wordguess">{{localizer.localize('menu-wordguess')}}</a>
+        </li>
+        <li *ngIf="isAdmin()">
+          <a class="mock-link" routerLink="/wordguess-image">{{localizer.localize('menu-wordguess-image')}}</a>
+        </li>
+        <li>
+          <a class="mock-link" routerLink="/liwrix">{{localizer.localize('menu-liwrix')}}</a>
+        </li>
+        <li>
+          <a class="mock-link" routerLink="/hitex">{{localizer.localize('hitex')}}</a>
+        </li>
+        <li *ngIf="isAdmin()">
+          <a routerLink="/siwoco" class="mock-link">{{localizer.localize('menu-siwoco')}}</a>
+        </li>
+      </ul>
+
+
+      <hr/>
+
+      <div class="" *ngIf="!loggedIn()">
+        <a class="mock-link" routerLink="/register">{{localizer.localize('menu-register')}}</a>
+        <hr/>
+      </div>
+
+      <div class="">
+        <div  class="mock-link" (click)="loginModal.open()" *ngIf="!loggedIn()">{{localizer.localize('login')}}</div>
+        <div *ngIf="loggedIn()"><a class="mock-link" routerLink="/profile">{{localizer.localize('menu-myprofile')}}</a></div>
+        <hr/>
+      </div>
+
+      <div>
+        <div  class="mock-link" (click)="logout()" *ngIf="loggedIn()">{{localizer.localize('logout')}}</div>
+      </div>
 
     </div>
 
-    <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
+  </div>
+  <!-- End XS Menu -->
 
-            <li [ngClass]="{active:isSelected(1)}" (click)="setSelected(1)">
-                <!--
-                TODO change to role selection
-                Student of linguistics  -> /linguist
-                 Language learner       -> /learner
-                 Teacher                -> /teacher?
-                 Researcher             -> /researcher?
-                -->
-                <a class="mock-link" (click)="toggleMenu(1)">{{localize('exe_generator')}}</a>
-            </li>
-            <li [ngClass]="{active:isSelected(2)}" (click)="setSelected(2)">
-                <a routerLink="/hitex">{{localize('hitex')}}</a>
-            </li>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+
+      <li [ngClass]="{active:isSelected(1)}" (click)="setSelected(1)">
+        <!--
+        TODO change to role selection
+        Student of linguistics  -> /linguist
+         Language learner       -> /learner
+         Teacher                -> /teacher?
+         Researcher             -> /researcher?
+        -->
+        <a class="mock-link" (click)="toggleMenu(1)">{{localize('exe_generator')}}</a>
+      </li>
+      <li [ngClass]="{active:isSelected(2)}" (click)="setSelected(2)">
+        <a routerLink="/hitex">{{localize('hitex')}}</a>
+      </li>
 
 
-            <li [ngClass]="{active:isSelected(3)}" (click)="setSelected(3)">
-                <a routerLink="/editor">{{localize('corpus-editor')}}</a>
-            </li>
+      <li [ngClass]="{active:isSelected(3)}" (click)="setSelected(3)">
+        <a routerLink="/editor">{{localize('corpus-editor')}}</a>
+      </li>
 
-            <li [ngClass]="{active:isSelected(4)}" (click)="setSelected(4)">
-                <a routerLink="/texteval">{{localize('text-evaluation')}}</a>
-            </li>
+      <li [ngClass]="{active:isSelected(4)}" (click)="setSelected(4)">
+        <a routerLink="/texteval">{{localize('text-evaluation')}}</a>
+      </li>
 
-            <li *ngIf="isAdmin()" [ngClass]="{active:isSelected(5)}" (click)="setSelected(5)">
-                <a routerLink="/siwoco">{{localizer.localize('menu-siwoco')}}</a>
-            </li>
+      <li *ngIf="isAdmin()" [ngClass]="{active:isSelected(5)}" (click)="setSelected(5)">
+        <a routerLink="/siwoco">{{localizer.localize('menu-siwoco')}}</a>
+      </li>
 
-        </ul>
+    </ul>
 
-        <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right">
 
-            <li class="active" [ngClass]="{active:getLanguage()=='sv'}">
-                <a (click)="setLanguage('sv')" class="mock-link">{{localize('swedish')}}</a>
-            </li>
-            <li [ngClass]="{active:getLanguage()=='en'}">
-                <a (click)="setLanguage('en')" class="mock-link">{{localize('english')}}</a>
-            </li>
+      <li class="active" [ngClass]="{active:getLanguage()=='sv'}">
+        <a (click)="setLanguage('sv')" class="mock-link">{{localize('swedish')}}</a>
+      </li>
+      <li [ngClass]="{active:getLanguage()=='en'}">
+        <a (click)="setLanguage('en')" class="mock-link">{{localize('english')}}</a>
+      </li>
 
-            <li>
-                <a class="mock-link"><span class="fa fa-fw fa-bars" (click)="toggleMenu(2)" style="font-size: 1.5em; margin: 0 5px; line-height: inherit"></span></a>
-            </li>
+      <li>
+        <a class="mock-link"><span class="fa fa-fw fa-bars" (click)="toggleMenu(2)" style="font-size: 1.5em; margin: 0 5px; line-height: inherit"></span></a>
+      </li>
 
-        </ul>
+    </ul>
 
-    </div>
+  </div>
 
 </nav>
 <div id="right-menu" class="menu-column" *ngIf="menuRight" (click)="close()">
 
-    <div class="" *ngIf="!loggedIn()">
-        <a class="mock-link" routerLink="/register">{{localizer.localize('menu-register')}}</a>
-        <hr/>
-    </div>
+  <div class="" *ngIf="!loggedIn()">
+    <a class="mock-link" routerLink="/register">{{localizer.localize('menu-register')}}</a>
+    <hr/>
+  </div>
 
-    <div class="">
-        <div  class="mock-link" (click)="loginModal.open()" *ngIf="!loggedIn()">{{localizer.localize('login')}}</div>
-        <div *ngIf="loggedIn()"><a class="mock-link" routerLink="/profile">{{localizer.localize('menu-myprofile')}}</a></div>
-    </div>
-    <hr/>
-    <div class="">
-        <div class="mock-link" (click)="aboutLarkaModal.open()">{{localize('larka_about')}}</div>
-        <div class="mock-link"  (click)="citeLarkaModal.open()">{{localize('larka_cite')}}</div>
-    </div>
-    <hr/>
-    <div>
-        <div  class="mock-link" (click)="logout()" *ngIf="loggedIn()">{{localizer.localize('logout')}}</div>
-    </div>
+  <div class="">
+    <div  class="mock-link" (click)="loginModal.show()" *ngIf="!loggedIn()">{{localizer.localize('login')}}</div>
+    <div *ngIf="loggedIn()"><a class="mock-link" routerLink="/profile">{{localizer.localize('menu-myprofile')}}</a></div>
+  </div>
+  <hr/>
+  <div class="">
+    <div class="mock-link" (click)="aboutLarkaModal.show()">{{localize('larka_about')}}</div>
+    <div class="mock-link"  (click)="citeLarkaModal.show()">{{localize('larka_cite')}}</div>
+  </div>
+  <hr/>
+  <div>
+    <div  class="mock-link" (click)="logout()" *ngIf="loggedIn()">{{localizer.localize('logout')}}</div>
+  </div>
 </div>

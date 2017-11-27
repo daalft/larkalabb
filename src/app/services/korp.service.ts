@@ -3,6 +3,7 @@
  */
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
+import {HttpClient} from "@angular/common/http";
 
 @Injectable()
 export class KorpService {
@@ -19,7 +20,7 @@ export class KorpService {
     private restriction: string =   "&show=lemgram";
 
 
-    constructor(private http: Http) {
+    constructor(private http: HttpClient) {
 
     }
 
@@ -35,6 +36,6 @@ export class KorpService {
                                 + "cqp=" + query + "&"
                 + this.corpora + "&start=0&end=9&defaultcontext=1+sentence&"
             + this.cut;
-        return this.http.get(url).map(res => res.json());
+        return this.http.get(url);
     }
 }

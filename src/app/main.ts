@@ -1,4 +1,4 @@
-///<reference path="../node_modules/@angular/core/src/application_ref.d.ts"/>
+///<reference path="../../node_modules/@angular/core/src/application_ref.d.ts"/>
 
 import {AppModule} from "./app.module";
 import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";

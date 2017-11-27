@@ -4,8 +4,8 @@
 import {Component} from "@angular/core";
 @Component({
     selector: 'learner-progress',
-    templateUrl: 'app/templates/learner-progress.html',
-    styleUrls: ['app/css/learner-progress.css']
+    templateUrl: '../../templates/learner-progress.html',
+    styleUrls: ['../../css/learner-progress.css']
 })
 
 export class LearnerProgressComponent {

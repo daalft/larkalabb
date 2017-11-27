@@ -1,6 +1,5 @@
-System.register(["@angular/core", "../../services/localizer.service", "../component/choiceSelector.component", "../component/userSearch.component", "../component/wordlistSelector", "../navigation/userNavbar.component"], function(exports_1, context_1) {
+System.register(["@angular/core", "../../services/localizer.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,30 +9,19 @@ System.register(["@angular/core", "../../services/localizer.service", "../compon
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, localizer_service_1, choiceSelector_component_1, userSearch_component_1, wordlistSelector_1, userNavbar_component_1;
-    var LearnerComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, localizer_service_1, LearnerComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
             function (localizer_service_1_1) {
                 localizer_service_1 = localizer_service_1_1;
-            },
-            function (choiceSelector_component_1_1) {
-                choiceSelector_component_1 = choiceSelector_component_1_1;
-            },
-            function (userSearch_component_1_1) {
-                userSearch_component_1 = userSearch_component_1_1;
-            },
-            function (wordlistSelector_1_1) {
-                wordlistSelector_1 = wordlistSelector_1_1;
-            },
-            function (userNavbar_component_1_1) {
-                userNavbar_component_1 = userNavbar_component_1_1;
-            }],
-        execute: function() {
-            LearnerComponent = (function () {
+            }
+        ],
+        execute: function () {
+            LearnerComponent = /** @class */ (function () {
                 function LearnerComponent(localizer) {
                     this.localizer = localizer;
                     this.disableMulti1 = false;
@@ -190,16 +178,14 @@ System.register(["@angular/core", "../../services/localizer.service", "../compon
                 LearnerComponent = __decorate([
                     core_1.Component({
                         selector: 'tab-out',
-                        templateUrl: 'app/templates/learner-component.html',
-                        directives: [choiceSelector_component_1.ChoiceSelectorComponent, userSearch_component_1.UserSearchComponent, wordlistSelector_1.WordlistSelectorComponent, userNavbar_component_1.UserNavbarComponent],
-                        schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA]
-                    }), 
-                    __metadata('design:paramtypes', [localizer_service_1.LocalizerService])
+                        templateUrl: 'app/templates/learner-component.html'
+                    }),
+                    __metadata("design:paramtypes", [localizer_service_1.LocalizerService])
                 ], LearnerComponent);
                 return LearnerComponent;
             }());
             exports_1("LearnerComponent", LearnerComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=learner.component.js.map

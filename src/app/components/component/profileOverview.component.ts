@@ -2,22 +2,22 @@
  * Created by David on 11/21/2016.
  */
 import {Component} from "@angular/core";
-import {Route, Params, ActivatedRoute, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot} from "@angular/router";
+import {ActivatedRoute, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot} from "@angular/router";
 import {LearnerModelService} from "../../services/learnerModel.service";
 import 'rxjs/add/operator/switchMap';
 import {Observable} from "rxjs/Rx";
 import {LoginService} from "../../services/login.service";
 @Component({
     selector: 'profile-overview',
-    templateUrl: 'app/templates/profile-overview.html',
-    styleUrls: ['app/css/profile-overview.css']
+    templateUrl: '../../templates/profile-overview.html',
+    styleUrls: ['../../css/profile-overview.css']
 })
 
 export class ProfileOverviewComponent implements CanActivate {
 
 
-    private learner: LearnerModelService;
-    private profileId;
+  public learner: LearnerModelService;
+  public profileId;
 
     constructor(private route: ActivatedRoute, private login: LoginService) {}
 

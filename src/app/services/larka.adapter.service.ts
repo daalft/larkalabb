@@ -7,27 +7,28 @@
 
 import {Injectable} from "@angular/core";
 import {Http} from "@angular/http";
+import {HttpClient} from "@angular/common/http";
 @Injectable()
 export class LarkaAdapter {
 
     private baseUrl: string = "https://ws.spraakbanken.gu.se/ws/icall/icall.cgi?";
 
-    constructor(private http: Http) {};
+    constructor(private http: HttpClient) {};
 
 
-    generateMulti (domain, param, level) {
+    generateMulti (domains, param, levels) {
         //exe=multi&lang=sv&poslist=KN,SN,DT,PP,PN,JJ,AB,NN,VB&domain=kelly&level=A1,A2,B1,B2,C1,C2
         let exetype = "exetype=multi";
         let particleQ = "pos";
-        let paramQ = particleQ + "=" + this.map(param).join(",");
-        let domain = "domain=" + domain;
-        let level = "level=" + this.map(level);
+        let paramQ = particleQ + "=" + (this.map(param) as any).join(",");
+        let domain = "domain=" + domains;
+        let level = "level=" + this.map(levels);
         //let lang = "lang=sv";
         let url = this.baseUrl + exetype + "&" + paramQ + "&" + level;
         console.log(url);
         let response = this.http.get(url);
         try {
-            response = response.map(res => res.json());
+            response = response;
         } catch (e) { // sometimes the call returns an error
             console.log(e);
             return this.generateMulti(domain, param, level);
@@ -40,22 +41,22 @@ export class LarkaAdapter {
 
         let exetypeShort = this.map(exetype);
 
-        var exetypeQ = "exetype=" + exetypeShort;
+        let exetypeQ = "exetype=" + exetypeShort;
 
-        var particleQ =
+        let particleQ =
             exetypeShort=='pos1'?"pos":
                 exetypeShort=='pos2'?"pos":
                     exetypeShort=='synt1'?'deprel':
                         exetypeShort=='synt2'?'deprel':
                             exetypeShort=='sem'?'semroles':
                                 "";
-        var paramQ = particleQ+"=" + this.map(param).join(",");
-        var carantineQ = "carantine=" + carantine;
-        var indentQ = "indent=" + indent;
+        let paramQ = particleQ+"=" + (this.map(param) as any).join(",");
+        let carantineQ = "carantine=" + carantine;
+        let indentQ = "indent=" + indent;
 
-        var url = this.baseUrl + exetypeQ + "&" + paramQ + "&" + carantineQ + "&" + indentQ;
+        let url = this.baseUrl + exetypeQ + "&" + paramQ + "&" + carantineQ + "&" + indentQ;
         //console.log(url);
-        return this.http.get(url).map(res => res.json());
+        return this.http.get(url);
     }
 
     map (key: any) {
@@ -71,8 +72,8 @@ export class LarkaAdapter {
         }
         else {
             if ({}.toString.call(key) == "[object Array]") {
-                var mappedOut = [];
-                for (var i = 0; i < key.length; i++) {
+                let mappedOut = [];
+                for (let i = 0; i < key.length; i++) {
                     mappedOut.push(this.posMap(key[i]));
                 }
                 return mappedOut;
@@ -104,7 +105,7 @@ export class LarkaAdapter {
                 return "SN";
             case "numerals":
                 return "RG";
-                
+
             case "subject": return "SS";
             case "adverbial": return "AA";
             case "finite verb": return "FV";
@@ -115,9 +116,9 @@ export class LarkaAdapter {
 
             case "agent_sem":
                     return "Agent";
-            case "experiencer_sem": 
+            case "experiencer_sem":
                 return "Experiencer";
-            case "theme_sem": 
+            case "theme_sem":
                 return "Theme";
             case "instrument_sem": return "Instrument";
             case "location_sem": return "Location";
@@ -128,7 +129,7 @@ export class LarkaAdapter {
             case "manner_sem": return "Manner";
             case "purpose_sem": return "Purpose";
             case "cause_sem": return "Cause";
-                
+
             default:
                 return pos;
         }

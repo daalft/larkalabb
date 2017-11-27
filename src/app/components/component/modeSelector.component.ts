@@ -9,15 +9,14 @@ import {PleaseWaitComponent} from "./pleasewait.component";
 
 @Component({
     selector: 'mode-selector',
-    templateUrl: "app/templates/mode-selector.html",
-    providers: [PleaseWaitComponent],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    templateUrl: "../../templates/mode-selector.html",
+    providers: [PleaseWaitComponent]
 })
 
 export class ModeSelectorComponent {
     @Input() options: string;
-    @Output() modeChangeEmitter: EventEmitter;
-    @Output() generateEmitter: EventEmitter;
+    @Output() modeChangeEmitter: EventEmitter<any>;
+    @Output() generateEmitter: EventEmitter<any>;
 
     private selectedMode;
     private modes;
@@ -26,7 +25,7 @@ export class ModeSelectorComponent {
 
     @ViewChild(PleaseWaitComponent) waiter: PleaseWaitComponent;
 
-    constructor(private localizer: LocalizerService) {
+    constructor(public localizer: LocalizerService) {
         this.modeChangeEmitter = new EventEmitter();
         this.generateEmitter = new EventEmitter();
 

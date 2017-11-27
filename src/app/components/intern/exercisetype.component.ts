@@ -8,22 +8,22 @@ import {DataAggregatorService} from "../../services/dataAggregator.service";
 
 @Component({
     selector: 'exetype',
-    templateUrl: 'app/templates/exetypes.html',
-    styleUrls: ['app/css/molna.css']
+    templateUrl: '../../templates/exetypes.html',
+    styleUrls: ['../../css/molna.css']
     }
 )
 
 export class ExerciseTypeComponent {
 
-    private currentEx = -2;
+  public currentEx = -2;
 
-    private hasEx = true;
+  public hasEx = true;
 
-    private aboutyou = [];
-    private states = [];
-    private levels = [];
+  public aboutyou = [];
+  public states = [];
+  public levels = [];
 
-    private exename = ["Bundled gaps 1", "Bundled gaps 2", "Vocabulary 1", "Vocabulary 2", "Sentence rearrangement", "Sentence composition", "Multiple choice"];
+  public exename = ["Bundled gaps 1", "Bundled gaps 2", "Vocabulary 1", "Vocabulary 2", "Sentence rearrangement", "Sentence composition", "Multiple choice"];
 
     constructor(private logger: LoggerService, private aggregator: DataAggregatorService, private login: LoginService) {
 
@@ -44,10 +44,10 @@ export class ExerciseTypeComponent {
                 alert("Please indicate your position");
                 return;
             }
-            position = position.value;
-            if (position == "other") {
-                position = $('#input-other-position').val();
-                if (!position) {
+            let position_s = (position as any).value;
+            if (position_s == "other") {
+                position_s = $('#input-other-position').val();
+                if (!position_s) {
                     alert("Please indicate your position");
                     return;
                 }
@@ -57,10 +57,10 @@ export class ExerciseTypeComponent {
                 alert("Please indicate whether you are a native speaker");
                 return;
             }
-            swedish = swedish.value;
+            let swedish_s = (swedish as any).value;
             this.currentEx++;
             this.hasEx = true; // enable evaluation form
-            this.aboutyou.push({'position': position, 'native': swedish});
+            this.aboutyou.push({'position': position_s, 'native': swedish_s});
             return;
         }
 
@@ -69,9 +69,9 @@ export class ExerciseTypeComponent {
         for (let i = 0; i < children.length; i++) {
             let child = children[i];
             let childOfChild = $(child).children()[0];
-            let checked = childOfChild.checked;
-            if (checked) {
-                let level = childOfChild.value;
+            let checked_b = (childOfChild as any).checked;
+            if (checked_b) {
+                let level = (childOfChild as any).value;
                 this.levels.push(level);
             } else {
                 this.levels.push(0);
@@ -106,7 +106,7 @@ export class ExerciseTypeComponent {
         for (let i = 0; i < children.length; i++) {
             let child = children[i];
             let childOfChild = $(child).children()[0];
-            childOfChild.checked = levels[i] != 0;
+            (childOfChild as any).checked = levels[i] != 0;
         }
     }
 
@@ -129,7 +129,7 @@ export class ExerciseTypeComponent {
         for (let i = 0; i < children.length; i++) {
             let child = children[i];
             let childOfChild = $(child).children()[0];
-            childOfChild.checked = false;
+            (childOfChild as any).checked = false;
         }
     }
 
@@ -143,10 +143,10 @@ export class ExerciseTypeComponent {
         $('.eselectable').on('click', function(d) {
             $(d.target).toggleClass('eselactive');
         });
-        $( "#sortable" ).sortable({
+        ($( "#sortable" ) as any).sortable({
             placeholder: "ui-state-highlight",
             forcePlaceholderSize: true
         });
-        $( "#sortable" ).disableSelection();
+        ($( "#sortable" ) as any).disableSelection();
     }
 }

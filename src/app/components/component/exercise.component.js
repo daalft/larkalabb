@@ -1,9 +1,8 @@
 /**
  * Created by David on 4/5/2016.
  */
-System.register(["@angular/core", "../../services/localizer.service", "@angular/router", "ng2-bs3-modal/ng2-bs3-modal", "../../services/dataAggregator.service", "../../services/login.service"], function(exports_1, context_1) {
+System.register(["@angular/core", "../../services/localizer.service", "@angular/router", "../../services/dataAggregator.service", "../../services/login.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -13,10 +12,10 @@ System.register(["@angular/core", "../../services/localizer.service", "@angular/
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, localizer_service_1, core_2, core_3, router_1, ng2_bs3_modal_1, dataAggregator_service_1, login_service_1;
-    var ExerciseComponent, Exercise, Target;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, localizer_service_1, core_2, core_3, router_1, dataAggregator_service_1, login_service_1, ExerciseComponent, Exercise, Target;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
                 core_2 = core_1_1;
@@ -28,22 +27,23 @@ System.register(["@angular/core", "../../services/localizer.service", "@angular/
             function (router_1_1) {
                 router_1 = router_1_1;
             },
-            function (ng2_bs3_modal_1_1) {
-                ng2_bs3_modal_1 = ng2_bs3_modal_1_1;
-            },
             function (dataAggregator_service_1_1) {
                 dataAggregator_service_1 = dataAggregator_service_1_1;
             },
             function (login_service_1_1) {
                 login_service_1 = login_service_1_1;
-            }],
-        execute: function() {
-            ExerciseComponent = (function () {
+            }
+        ],
+        execute: function () {/**
+             * Created by David on 4/5/2016.
+             */
+            ExerciseComponent = /** @class */ (function () {
                 function ExerciseComponent(localizer, _router, aggregator, login) {
                     this.localizer = localizer;
                     this._router = _router;
                     this.aggregator = aggregator;
                     this.login = login;
+                    //@ViewChild('reportModal') modal: ModalComponent<any>;
                     this.data = undefined;
                     this.previousExamples = [];
                     this.reported_sentence = [];
@@ -282,7 +282,6 @@ System.register(["@angular/core", "../../services/localizer.service", "@angular/
                     for (var i = 0; i < exercise.sentence_right.length; i++) {
                         this.reported_sentence.push({ "word": exercise.sentence_right[i]["word"] });
                     }
-                    this.modal.open();
                     // TODO aggregate only when user clicks on "save"
                     this.aggregate("report", this.reported_sentence);
                 };
@@ -290,32 +289,26 @@ System.register(["@angular/core", "../../services/localizer.service", "@angular/
                     this.reported_sentence[index]["selected"] = !this.reported_sentence[index]["selected"];
                 };
                 __decorate([
-                    core_3.Output(), 
-                    __metadata('design:type', core_2.EventEmitter)
+                    core_3.Output(),
+                    __metadata("design:type", core_2.EventEmitter)
                 ], ExerciseComponent.prototype, "nextRequester", void 0);
                 __decorate([
-                    core_3.Output(), 
-                    __metadata('design:type', core_2.EventEmitter)
+                    core_3.Output(),
+                    __metadata("design:type", core_2.EventEmitter)
                 ], ExerciseComponent.prototype, "reloadRequester", void 0);
-                __decorate([
-                    core_1.ViewChild('reportModal'), 
-                    __metadata('design:type', ng2_bs3_modal_1.ModalComponent)
-                ], ExerciseComponent.prototype, "modal", void 0);
                 ExerciseComponent = __decorate([
                     core_1.Component({
                         selector: 'exercise-component',
                         templateUrl: 'app/templates/exercise-component.html',
                         styleUrls: ['app/css/exercise.css'],
-                        providers: [dataAggregator_service_1.DataAggregatorService],
-                        directives: [ng2_bs3_modal_1.MODAL_DIRECTIVES],
-                        schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA]
-                    }), 
-                    __metadata('design:paramtypes', [localizer_service_1.LocalizerService, router_1.Router, dataAggregator_service_1.DataAggregatorService, login_service_1.LoginService])
+                        providers: [dataAggregator_service_1.DataAggregatorService]
+                    }),
+                    __metadata("design:paramtypes", [localizer_service_1.LocalizerService, router_1.Router, dataAggregator_service_1.DataAggregatorService, login_service_1.LoginService])
                 ], ExerciseComponent);
                 return ExerciseComponent;
             }());
             exports_1("ExerciseComponent", ExerciseComponent);
-            Exercise = (function () {
+            Exercise = /** @class */ (function () {
                 function Exercise() {
                     this.distractors = [];
                     this.sentence_left = [];
@@ -324,13 +317,13 @@ System.register(["@angular/core", "../../services/localizer.service", "@angular/
                 }
                 return Exercise;
             }());
-            Target = (function () {
+            Target = /** @class */ (function () {
                 function Target() {
                     this.word = "...";
                 }
                 return Target;
             }());
         }
-    }
+    };
 });
 //# sourceMappingURL=exercise.component.js.map

@@ -6,13 +6,14 @@ import {Http, Headers, URLSearchParams} from '@angular/http';
 import {LarkaAdapter} from "./larka.adapter.service";
 import {encode} from "@angular/router/src/url_tree";
 import {TTSEngine} from "./tts.engine.service";
+import {HttpClient, HttpParams} from "@angular/common/http";
 
 @Injectable()
 export class LarkaService {
 
     private devUrl: string = "https://ws.spraakbanken.gu.se/ws/larkalabb/icall.cgi?indent=4&";
 
-    constructor(private http: Http, private tts: TTSEngine, private adapter: LarkaAdapter) {
+    constructor(private http: HttpClient, private tts: TTSEngine, private adapter: LarkaAdapter) {
 
     }
 
@@ -36,7 +37,7 @@ export class LarkaService {
             "text=" + encodeURIComponent(text)
             ;
         console.log(url);
-        return this.http.get(url).map(res => res.json());
+        return this.http.get(url);
     }
 
     hitex (query_w, query_type, use_defaults, query_pos, max_kwics, corpus_list, maxhit, random_seed, target_cefr, preserve_bad, other_params) {
@@ -69,37 +70,37 @@ export class LarkaService {
             url += "&"+other_params;
         }
         console.log(url);
-        return this.http.get(url).map(res => res.json());
+        return this.http.get<any[]>(url);
     }
 
     ptk (sent1, sent2) {
         let url = this.devUrl + "command=ptk&sent1="+encodeURIComponent(sent1)+"&sent2="+encodeURIComponent(sent2);
         console.log(url);
-        return this.http.get(url).map(res => res.json());
+        return this.http.get(url);
     }
 
     cedit_save (userkey, lastpos, content) {
         let url = this.devUrl + "command=cedit_save";
-        let usp = new URLSearchParams();
-        usp.append('userkey', userkey);
-        usp.append('lastposition', lastpos);
-        usp.append('content', encodeURIComponent(content));
+        let usp = new HttpParams();
+        usp = usp.append('userkey', userkey);
+        usp = usp.append('lastposition', lastpos);
+        usp = usp.append('content', encodeURIComponent(content));
 
-        return this.http.post(url, usp).map(res => res.json());
+        return this.http.post(url, usp);
     }
 
     cedit_restore (userkey) {
         let url = this.devUrl + "command=cedit_restore&" +
                 "userkey=" + userkey;
 
-        return this.http.get(url).map(res => res.json());
+        return this.http.get(url);
     }
 
     cedit_checkKey(key) {
         let url = this.devUrl + "command=cedit_checkkey&" +
             "userkey=" + key;
 
-        return this.http.get(url).map(res => res.json());
+        return this.http.get(url);
     }
 
     speak (text, spell) {
@@ -111,7 +112,7 @@ export class LarkaService {
                 "&word=" + encodeURIComponent(word) +
                 "&pos=" + pos;
         console.log(url);
-        return this.http.get(url).map(res => res.json());
+        return this.http.get(url);
     }
 
     siwoco (word, pos, rop) {
@@ -120,12 +121,12 @@ export class LarkaService {
                 "&pos=" + pos +
             (rop?"&receptiveOrProductive="+rop:'');
         console.log(url);
-        return this.http.get(url).map(res => res.json());
+        return this.http.get(url);
     }
 
     wakeup () {
         let url = this.devUrl + "command=hello";
         console.log("wake up call");
-        return this.http.get(url).map(res => res.json());
+        return this.http.get(url);
     }
 }

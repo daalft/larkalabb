@@ -1,6 +1,5 @@
-System.register(["@angular/core", "../../services/logger.service", "../../services/login.service", "../../services/dataAggregator.service"], function(exports_1, context_1) {
+System.register(["@angular/core", "../../services/logger.service", "../../services/login.service", "../../services/dataAggregator.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(["@angular/core", "../../services/logger.service", "../../servic
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, logger_service_1, login_service_1, dataAggregator_service_1;
-    var ExerciseTypeComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, logger_service_1, login_service_1, dataAggregator_service_1, ExerciseTypeComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -25,9 +24,10 @@ System.register(["@angular/core", "../../services/logger.service", "../../servic
             },
             function (dataAggregator_service_1_1) {
                 dataAggregator_service_1 = dataAggregator_service_1_1;
-            }],
-        execute: function() {
-            ExerciseTypeComponent = (function () {
+            }
+        ],
+        execute: function () {
+            ExerciseTypeComponent = /** @class */ (function () {
                 function ExerciseTypeComponent(logger, aggregator, login) {
                     this.logger = logger;
                     this.aggregator = aggregator;
@@ -53,10 +53,10 @@ System.register(["@angular/core", "../../services/logger.service", "../../servic
                             alert("Please indicate your position");
                             return;
                         }
-                        position = position.value;
-                        if (position == "other") {
-                            position = $('#input-other-position').val();
-                            if (!position) {
+                        var position_s = position.value;
+                        if (position_s == "other") {
+                            position_s = $('#input-other-position').val();
+                            if (!position_s) {
                                 alert("Please indicate your position");
                                 return;
                             }
@@ -66,10 +66,10 @@ System.register(["@angular/core", "../../services/logger.service", "../../servic
                             alert("Please indicate whether you are a native speaker");
                             return;
                         }
-                        swedish = swedish.value;
+                        var swedish_s = swedish.value;
                         this.currentEx++;
                         this.hasEx = true; // enable evaluation form
-                        this.aboutyou.push({ 'position': position, 'native': swedish });
+                        this.aboutyou.push({ 'position': position_s, 'native': swedish_s });
                         return;
                     }
                     var comments = $('#comments').val();
@@ -77,8 +77,8 @@ System.register(["@angular/core", "../../services/logger.service", "../../servic
                     for (var i = 0; i < children.length; i++) {
                         var child = children[i];
                         var childOfChild = $(child).children()[0];
-                        var checked = childOfChild.checked;
-                        if (checked) {
+                        var checked_b = childOfChild.checked;
+                        if (checked_b) {
                             var level = childOfChild.value;
                             this.levels.push(level);
                         }
@@ -155,13 +155,13 @@ System.register(["@angular/core", "../../services/logger.service", "../../servic
                         selector: 'exetype',
                         templateUrl: 'app/templates/exetypes.html',
                         styleUrls: ['app/css/molna.css']
-                    }), 
-                    __metadata('design:paramtypes', [logger_service_1.LoggerService, dataAggregator_service_1.DataAggregatorService, login_service_1.LoginService])
+                    }),
+                    __metadata("design:paramtypes", [logger_service_1.LoggerService, dataAggregator_service_1.DataAggregatorService, login_service_1.LoginService])
                 ], ExerciseTypeComponent);
                 return ExerciseTypeComponent;
             }());
             exports_1("ExerciseTypeComponent", ExerciseTypeComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=exercisetype.component.js.map

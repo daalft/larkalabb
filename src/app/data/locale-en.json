@@ -1,16 +1,15 @@
 {
-
 	"checkAll": "Select all",
 	"checkNone": "Select none",
 	"en" : "English",
-	"sv" : "Swedish", 
+	"sv" : "Swedish",
 	"selectTargetLanguage" : "Select target language",
 	"exe_generator":"Exercise Generator",
 	"hitex":"Hit-Ex",
 	"learner_lists" : "Learner lists",
 	"corpus-editor" : "Annotation editor",
 	"readability" : "Readability tests",
-	"hitex_automatic" : "Input area",   
+	"hitex_automatic" : "Input area",
 	"selfstudy_checkbox" : "self-study mode",
 	"control_checkbox" : "test mode",
 	"diagnostic_test" : "diagnostic test",
@@ -34,25 +33,25 @@
 
 
 	"choose_synt" : "Choose relation",
-	"SS":"subject", 
+	"SS":"subject",
     	"FV":"finite verb",
-    	"IV":"nonfinite verb", 
-   	"SP":"predicate", 
+    	"IV":"nonfinite verb",
+   	"SP":"predicate",
     	"FP":"predicate",
-    	"OP":"predicate", 
+    	"OP":"predicate",
     	"IO":"indirect object",
-    	"OO":"object", 
+    	"OO":"object",
     	"RA":"adverbial",
-    	"TA":"adverbial", 
-    	"KA":"adverbial", 
-    	"OA":"adverbial", 
-    	"NA":"adverbial", 
+    	"TA":"adverbial",
+    	"KA":"adverbial",
+    	"OA":"adverbial",
+    	"NA":"adverbial",
     	"VA":"adverbial",
-    	"+A":"adverbial", 
-    	"MA":"adverbial", 
-    	"CA":"adverbial", 
-    	"AG":"adverbial", 
-    	"XA":"adverbial", 
+    	"+A":"adverbial",
+    	"MA":"adverbial",
+    	"CA":"adverbial",
+    	"AG":"adverbial",
+    	"XA":"adverbial",
     	"AA":"adverbial",
 
 	"adverbial": "Adverbial",
@@ -119,7 +118,7 @@
 	"trainSYNT1_instruction":"Assign an appropriate syntactic category to the phrase in bold",
         "trainVOC_multi" : "Vocabulary, multiple-choice",
 	"trainVOC_infl" : "Inflections, multiple-choice",
-	"trainMULTI_instruction" : "Choose an appropriate alternative for the missing word", 
+	"trainMULTI_instruction" : "Choose an appropriate alternative for the missing word",
 	"trainMULTI_INFL_instruction" : "Choose an appropriate word form for the gap",
 	"allGapTypes" : "All types of gapped items",
 	"wordbankItems" : "Wordbank Items",
@@ -131,7 +130,7 @@
 	"selectDomain" : "Select domain/word list",
 
 	"anyDomain" : "Any domain",
-	"general" : "General purpose vocabulary", 
+	"general" : "General purpose vocabulary",
 	"academic" : "Academic vocabulary",
 	"animals" : "Mammals and insects",
 	"family" : "Family and relatives",
@@ -211,7 +210,7 @@
 	"auxVerbs" : "Auxiliary and modal verbs",
 	"participles" : "Participles",
 	"determiners" : "Determiners",
-	
+
 
 	"adjektiv" : "adjective",
 	"adjective" : "adjective",
@@ -239,7 +238,7 @@
 	"interrogative/relative determiner" : "determiner: interrogative/relative",
 	"determinerare: frågande/relativ" : "determiner: interrogative/relative",
 	"frågande/relativ determinerare" : "determiner: interrogative/relative",
-	
+
 	"numeral" : "numeral",
 	"räkneord" : "numeral",
 	"numeral: ordinal" : "numeral: ordinal",
@@ -252,7 +251,7 @@
 	"particle" : "particle",
 	"infinitivmärke" : "infinitive marker",
 	"infinitive marker" : "infinitive marker",
-	
+
 
 	"pronoun" : "pronoun",
 	"pronomen" : "pronoun",
@@ -297,8 +296,8 @@
 
 	"about_logo" : "Logotype by",
 	"warning_header" : "Please note",
-	"warning_body" : "The dependency relations illustrated herein are the result of automated parsing.",  
-	
+	"warning_body" : "The dependency relations illustrated herein are the result of automated parsing.",
+
 	"login": "Login",
 	"logout": "Logout",
 	"username": "Username",
@@ -315,12 +314,12 @@
 	"min" : "at least",
 	"and" : "and",
 	"or" : "or",
-	"is" : "is", 
+	"is" : "is",
 	"is_not" : "is not",
 	"starts_with" : "begins with",
 	"ends_with" : "ends with",
-	
-	
+
+
 	"word_is" : "word is",
 	"word_is_not" : "word is not",
 	"word_beginswith" : "word begins with",
@@ -330,19 +329,19 @@
 	"wordclass_starts" : "word class begins with",
 	"interval" : "interval",
 	"matches" : "regexp",
-	
+
 	"repeat" : "repeat",
-	
+
 	"none_selected" : "&lt;none selected&gt;",
-	
+
 	"any" : "any word",
 	"all" : "all",
 	"one_of" : "any",
 	"error_occurred" : "An error occurred",
-	
+
 	"match" : "Match",
 	"following_rules" : "of the following rules",
-	
+
 	"simple" : "Simple",
 	"detailed" : "Extended",
 	"advanced" : "Advanced",
@@ -350,7 +349,7 @@
 	"sort_default" : "sort within corpora on",
 	"word_context" : "matched word(s)",
 	"left_context" : "left context",
-	"right_context" : "right context", 
+	"right_context" : "right context",
 	"loading" : "Searching...",
 	"autocomplete_header" : "is a word form in",
 	"no_lemgram_results" : "No examples found.",
@@ -404,18 +403,18 @@
 	"article_section" : "article section",
 	"article_topic" : "article topic",
 	"text_volume" : "volume",
-	
+
 	"sentence_link" : "sentence link",
 	"text_issue" : "issue",
-	
+
 	"text_recipient" : "recipient",
 	"text_sv" : "work number",
-	
+
 	"oneSentence" : "one sentence",
-	
+
 	"source" : "source",
 	"age" : "age",
-	
+
 	"blog_title" : "blog title",
 	"blog_url" : "blog address",
 	"author_age" : "author age",
@@ -423,10 +422,10 @@
 	"post_title" : "post title",
 	"tags" : "tags",
 	"post_url" : "post address",
-	
+
 	"statistics" : "Statistics",
-	
-	
+
+
 	"AB" : "adverb",
 	"DL" : "punctuation",
 	"DT" : "determiner",
@@ -452,14 +451,14 @@
 	"UO" : "foreign word",
 	"VB" : "verb",
 
-	
-	"mx" : "flerordsprefix",	  
-	"sx" : "prefix",	  					
-	
+
+	"mx" : "flerordsprefix",
+	"sx" : "prefix",
+
 	"example" : "Example",
 
 
-	
+
 	"tooltip_AT" : "Nominal (adjectival) pre-modifier",
 	"tooltip_ET" : "Other nominal post-modifier",
 	"tooltip_IO" : "Indirect object",
@@ -468,7 +467,7 @@
 	"tooltip_RA" : "Place adverbial",
 	"tooltip_SS" : "Subject",
 	"tooltip_TA" : "Time adverbial",
-	
+
 	"corpselector_allselected" : " lexical resources selected (all)",
 	"corpselector_noneselected" : "No lexical resource selected",
 	"corpselector_selectedone" : " selected",
@@ -483,7 +482,7 @@
 	"corpselector_corporawith_sing" : "corpus with",
 	"corpselector_corporawith_plur" : "corpora with",
 	"corpselector_lastupdate" : "Last update",
-	
+
 	"statstable_allcorpora" : "All&nbsp;corpora",
 	"statstable_relfreq" : "relative frequency (per million words):",
 	"statstable_absfreq" : "absolute frequency:",
@@ -496,13 +495,13 @@
 	"statstable_exp_csv" : "CSV (comma separated values)",
 	"statstable_exp_tsv" : "TSV (tab separated values)",
 	"statstable_export" : "Export",
-	
+
 	"util_decimalseparator" : ".",
 	"util_numbergroupseparator" : ",",
-	
+
 	"hitspicture_hits" : "hits",
 	"hitspicture_gotocorpushits" : "Click to go to the first page with hits from this corpus.",
-	
+
 	"presentation_more" : "more",
 	"presentation_less" : "less",
 	"presentation_pos" : "Part-of-speech",
@@ -521,7 +520,7 @@
     "presentation_type" : "Type",
     "presentation_invar" : "invar.",
     "presentation_baseform" : "Baseform",
-    
+
     "tooltip_specialkey" : "Insert special characters",
     "tooltip_reload_korp" : "Randomized search in another corpus",
     "tooltip_go_previous_korp" : "Go to previous hit",
@@ -534,13 +533,13 @@
     "tooltip_hits_in_korp" : "hits in Korp",
     "tooltip_open_morphology" : "Click to show the morphology of the lemgram",
     "tooltip_close_morphology" : "Click to hide the morphology of the lemgram",
-    
+
     "results_merged" : "merged",
     "results_individual_resources" : "Show resources individually",
     "results_use_real_ids" : "Use original IDs",
     "results_no_hits" : "No hits found.",
     "results_did_you_mean" : "Did you mean",
-    
+
     "nn" : "noun",
     "av" : "adjective",
     "vb" : "verb",
@@ -554,7 +553,7 @@
     "kn" : "conjunction",
     "al" : "article",
     "ie" : "infinitive particle",
-    "mxc" : "multiword prefix",	  
+    "mxc" : "multiword prefix",
     "sxc" : "prefix",
     "abh" : "adverb suffix",
     "avh" : "substantivsuffix",
@@ -577,15 +576,15 @@
     "snm" : "multiword subjunction",
     "kna" : "conjunction, abbreviation",
     "ssm" : "multiword",
-	
+
 
 	"learner_spelling_infl_word_selfstudy":"Learners/spelling-inflected word, selfstudy",
 	"learner_spelling_word_selfstudy":"Learners/spelling-word, selfstudy",
 	"learner_spelling_word_test":"Learners/spelling-word, test",
 	"learner_spelling_infl_word_test":"Learners/spelling-inflected word, test",
-	
-	
-	
+
+
+
 	"help_spelling":"Some help with the task",
 	"word_checkbox" : "word",
 	"inflected_word_checkbox": "inflected word",
@@ -642,7 +641,7 @@
 
 	"dep_tree": "Syntactic tree, visualization",
 	"pos_tree": "Word classes per words, visualization",
- 
+
 	"pos_AB" : "adverb",
 	"pos_MAD" : "punctuation",
 	"pos_MID" : "punctuation",
@@ -671,8 +670,8 @@
 	"pos_UO" : "foreign word",
 	"pos_VB" : "verb",
 	"pos_E" : "e",
-	
-	
+
+
 	"malt_AT" : "Pre-modifier",
 	"malt_ET" : "Post-modifier",
 	"malt_IO" : "Indirect object",
@@ -752,7 +751,7 @@
 	"deprel_PA" : "Complement of preposition",
 	"deprel_UA" : "Subordinate clause minus subordinating conjunction",
 	"deprel_VG" : "Verb group",
-	
+
 	"trainSEM1_instruction": "Assign an appropriate semantic role to the word(s) in bold",
 	"trainSEM1": "Train semantic roles, 1    ",
 	"ling_sem1_selfstudy": "Linguists/SEM1, self-study",

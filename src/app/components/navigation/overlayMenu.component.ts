@@ -5,8 +5,8 @@ import {Component} from "@angular/core";
 import {LocalizerService} from "../../services/localizer.service";
 @Component({
     selector: 'overlay-menu',
-    templateUrl: 'app/templates/overlay-menu.html',
-    styleUrls: ['app/css/overlay-menu.css']
+    templateUrl: '../../templates/overlay-menu.html',
+    styleUrls: ['../../css/overlay-menu.css']
 })
 
 export class OverlayMenuComponent {
@@ -14,7 +14,7 @@ export class OverlayMenuComponent {
     private showOne: boolean = false;
     private showTwo: boolean = false;
 
-    constructor(private localizer: LocalizerService) {
+    constructor(public localizer: LocalizerService) {
 
     }
 

@@ -1,19 +1,15 @@
-System.register(['@angular/core', '@angular/platform-browser', "./app.component", "@angular/forms", "@angular/http", "./app.routing", "./components/pages/home.component", "./components/pages/linguist.component", "./components/pages/learner.component", "./components/intern/tagger.component", "./components/component/textevaluation.component", "./components/navigation/topNavbar.component", "./components/navigation/logoSpace.component", "./components/component/autocomplete.component", "./components/component/choiceSelector.component", "./components/component/exercise.component", "./components/component/userSearch.component", "./components/component/wordlistSelector", "./components/navigation/userNavbar.component", "./components/component/modeSelector.component", "ng2-bs3-modal/ng2-bs3-modal", "./components/component/diagnostic.component", "./components/component/pleasewait.component", "./components/pages/test.component", "./components/pages/hitex.component", "./components/component/switch-toggle.component", "./components/navigation/overlayMenu.component", "./components/component/profileDetails.component", "./components/component/lang-select.component", "./components/component/profileOverview.component", "./components/component/learnerProgress.component", "./components/navigation/profileMenu.component", "./components/pages/profile.component", "./components/component/talkingHead.component", "./components/intern/exercisetype.component", "./components/intern/treekernel.component", "./components/component/hangbird.component", "./components/component/vocabulary.multiple.exercise.component", "./components/pages/register.component", "./components/pages/editor.component", "./components/component/cedit.form.component", "./components/intern/hitex.dev.component", "./components/intern/hangbird.eesti.component", "./components/intern/diagnostic.demo.component", "./components/component/gap.doublet.component", "./components/component/liwrix.component", "./components/component/hangbird.image.component", "./components/intern/siwoco.component", "./components/intern/enelett.component", "./components/intern/enetcollect.component"], function(exports_1, context_1) {
+System.register(["@angular/core", "@angular/platform-browser", "./app.component", "@angular/forms", "@angular/http", "./app.routing", "./components/pages/home.component", "./components/pages/linguist.component", "./components/pages/learner.component", "./components/intern/tagger.component", "./components/component/textevaluation.component", "./components/navigation/topNavbar.component", "./components/navigation/logoSpace.component", "./components/component/autocomplete.component", "./components/component/choiceSelector.component", "./components/component/exercise.component", "./components/component/userSearch.component", "./components/component/wordlistSelector", "./components/navigation/userNavbar.component", "./components/component/modeSelector.component", "./components/component/diagnostic.component", "./components/component/pleasewait.component", "./components/pages/test.component", "./components/pages/hitex.component", "./components/component/switch-toggle.component", "./components/navigation/overlayMenu.component", "./components/component/profileDetails.component", "./components/component/lang-select.component", "./components/component/profileOverview.component", "./components/component/learnerProgress.component", "./components/navigation/profileMenu.component", "./components/pages/profile.component", "./components/intern/exercisetype.component", "./components/intern/treekernel.component", "./components/component/hangbird.component", "./components/component/vocabulary.multiple.exercise.component", "./components/pages/register.component", "./components/pages/editor.component", "./components/component/cedit.form.component", "./components/intern/hangbird.eesti.component", "./components/intern/diagnostic.demo.component", "./components/component/gap.doublet.component", "./components/component/liwrix.component", "./components/component/hangbird.image.component", "./components/intern/siwoco.component", "./components/intern/enelett.component", "./components/intern/enetcollect.component"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var __metadata = (this && this.__metadata) || function (k, v) {
-        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-    };
-    var core_1, platform_browser_1, app_component_1, forms_1, http_1, app_routing_1, home_component_1, linguist_component_1, learner_component_1, tagger_component_1, textevaluation_component_1, topNavbar_component_1, logoSpace_component_1, autocomplete_component_1, choiceSelector_component_1, exercise_component_1, userSearch_component_1, wordlistSelector_1, userNavbar_component_1, modeSelector_component_1, ng2_bs3_modal_1, diagnostic_component_1, pleasewait_component_1, test_component_1, hitex_component_1, switch_toggle_component_1, overlayMenu_component_1, profileDetails_component_1, lang_select_component_1, profileOverview_component_1, learnerProgress_component_1, profileMenu_component_1, profile_component_1, talkingHead_component_1, exercisetype_component_1, treekernel_component_1, hangbird_component_1, vocabulary_multiple_exercise_component_1, register_component_1, editor_component_1, cedit_form_component_1, hitex_dev_component_1, hangbird_eesti_component_1, diagnostic_demo_component_1, gap_doublet_component_1, liwrix_component_1, hangbird_image_component_1, siwoco_component_1, enelett_component_1, enetcollect_component_1;
-    var AppModule;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, platform_browser_1, app_component_1, forms_1, http_1, app_routing_1, home_component_1, linguist_component_1, learner_component_1, tagger_component_1, textevaluation_component_1, topNavbar_component_1, logoSpace_component_1, autocomplete_component_1, choiceSelector_component_1, exercise_component_1, userSearch_component_1, wordlistSelector_1, userNavbar_component_1, modeSelector_component_1, diagnostic_component_1, pleasewait_component_1, test_component_1, hitex_component_1, switch_toggle_component_1, overlayMenu_component_1, profileDetails_component_1, lang_select_component_1, profileOverview_component_1, learnerProgress_component_1, profileMenu_component_1, profile_component_1, exercisetype_component_1, treekernel_component_1, hangbird_component_1, vocabulary_multiple_exercise_component_1, register_component_1, editor_component_1, cedit_form_component_1, hangbird_eesti_component_1, diagnostic_demo_component_1, gap_doublet_component_1, liwrix_component_1, hangbird_image_component_1, siwoco_component_1, enelett_component_1, enetcollect_component_1, AppModule;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -74,9 +70,6 @@ System.register(['@angular/core', '@angular/platform-browser', "./app.component"
             function (modeSelector_component_1_1) {
                 modeSelector_component_1 = modeSelector_component_1_1;
             },
-            function (ng2_bs3_modal_1_1) {
-                ng2_bs3_modal_1 = ng2_bs3_modal_1_1;
-            },
             function (diagnostic_component_1_1) {
                 diagnostic_component_1 = diagnostic_component_1_1;
             },
@@ -113,9 +106,6 @@ System.register(['@angular/core', '@angular/platform-browser', "./app.component"
             function (profile_component_1_1) {
                 profile_component_1 = profile_component_1_1;
             },
-            function (talkingHead_component_1_1) {
-                talkingHead_component_1 = talkingHead_component_1_1;
-            },
             function (exercisetype_component_1_1) {
                 exercisetype_component_1 = exercisetype_component_1_1;
             },
@@ -136,9 +126,6 @@ System.register(['@angular/core', '@angular/platform-browser', "./app.component"
             },
             function (cedit_form_component_1_1) {
                 cedit_form_component_1 = cedit_form_component_1_1;
-            },
-            function (hitex_dev_component_1_1) {
-                hitex_dev_component_1 = hitex_dev_component_1_1;
             },
             function (hangbird_eesti_component_1_1) {
                 hangbird_eesti_component_1 = hangbird_eesti_component_1_1;
@@ -163,9 +150,10 @@ System.register(['@angular/core', '@angular/platform-browser', "./app.component"
             },
             function (enetcollect_component_1_1) {
                 enetcollect_component_1 = enetcollect_component_1_1;
-            }],
-        execute: function() {
-            AppModule = (function () {
+            }
+        ],
+        execute: function () {
+            AppModule = /** @class */ (function () {
                 function AppModule() {
                 }
                 AppModule = __decorate([
@@ -179,7 +167,6 @@ System.register(['@angular/core', '@angular/platform-browser', "./app.component"
                             register_component_1.RegisterComponent,
                             test_component_1.TestComponent,
                             hitex_component_1.HitexComponent,
-                            hitex_dev_component_1.HitexDevComponent,
                             textevaluation_component_1.TextEvaluationComponent,
                             diagnostic_component_1.DiagnosticTestComponent,
                             diagnostic_demo_component_1.DiagnosticDemoComponent,
@@ -207,24 +194,21 @@ System.register(['@angular/core', '@angular/platform-browser', "./app.component"
                             editor_component_1.CorpusEditorComponent,
                             cedit_form_component_1.CeditFormComponent,
                             vocabulary_multiple_exercise_component_1.VocabularyMultipleChoiceExerciseComponent,
-                            talkingHead_component_1.TalkingHeadComponent,
                             exercisetype_component_1.ExerciseTypeComponent,
                             treekernel_component_1.TreeKernelComponent,
                             hangbird_component_1.HangBirdComponent,
                             hangbird_image_component_1.HangBirdImageComponent,
                             hangbird_eesti_component_1.HangBirdEestiComponent,
                             enelett_component_1.EnelettComponent,
-                            enetcollect_component_1.EnetCollectDemoComponent,
-                            ng2_bs3_modal_1.MODAL_DIRECTIVES],
+                            enetcollect_component_1.EnetCollectDemoComponent],
                         bootstrap: [app_component_1.LarkaApp],
                         schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA]
-                    }), 
-                    __metadata('design:paramtypes', [])
+                    })
                 ], AppModule);
                 return AppModule;
             }());
             exports_1("AppModule", AppModule);
         }
-    }
+    };
 });
 //# sourceMappingURL=app.module.js.map

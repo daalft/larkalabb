@@ -7,25 +7,25 @@ import {PleaseWaitComponent} from "./pleasewait.component";
 
 @Component({
     selector: 'voc-mc',
-    templateUrl: 'app/templates/voc-mc.html',
-    styleUrls: ['app/css/voc-mc.css', 'app/css/exercise.css']
+    templateUrl: '../../templates/voc-mc.html',
+    styleUrls: ['../../css/voc-mc.css', '../../css/exercise.css']
 })
 
 export class VocabularyMultipleChoiceExerciseComponent {
 
     @ViewChild(PleaseWaitComponent) waiter: PleaseWaitComponent;
 
-    private sentence_left;
-    private sentence_right;
-    private target;
-    private distractors = [];
+  public sentence_left;
+  public sentence_right;
+  public target;
+  public distractors = [];
 
-    private answer;
+  public answer;
 
-    private previous = [];
+  public previous = [];
 
-    private index;
-    private indexcounter = 1;
+  public index;
+  public indexcounter = 1;
 
     constructor(private larka: LarkaService) {}
 

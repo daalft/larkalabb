@@ -1,6 +1,5 @@
-System.register(['@angular/core', '../../services/localizer.service', "../../services/login.service", "@angular/router", "../component/pleasewait.component"], function(exports_1, context_1) {
+System.register(["@angular/core", "../../services/localizer.service", "../../services/login.service", "@angular/router", "../component/pleasewait.component"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,10 +9,10 @@ System.register(['@angular/core', '../../services/localizer.service', "../../ser
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, localizer_service_1, login_service_1, router_1, pleasewait_component_1;
-    var TopNavbarComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, localizer_service_1, login_service_1, router_1, pleasewait_component_1, TopNavbarComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
@@ -28,9 +27,10 @@ System.register(['@angular/core', '../../services/localizer.service', "../../ser
             },
             function (pleasewait_component_1_1) {
                 pleasewait_component_1 = pleasewait_component_1_1;
-            }],
-        execute: function() {
-            TopNavbarComponent = (function () {
+            }
+        ],
+        execute: function () {
+            TopNavbarComponent = /** @class */ (function () {
                 function TopNavbarComponent(localizer, login, router) {
                     this.localizer = localizer;
                     this.login = login;
@@ -121,8 +121,8 @@ System.register(['@angular/core', '../../services/localizer.service', "../../ser
                     this.currentSelected = value;
                 };
                 __decorate([
-                    core_1.ViewChild(pleasewait_component_1.PleaseWaitComponent), 
-                    __metadata('design:type', pleasewait_component_1.PleaseWaitComponent)
+                    core_1.ViewChild(pleasewait_component_1.PleaseWaitComponent),
+                    __metadata("design:type", pleasewait_component_1.PleaseWaitComponent)
                 ], TopNavbarComponent.prototype, "waiter", void 0);
                 TopNavbarComponent = __decorate([
                     core_1.Component({
@@ -130,13 +130,13 @@ System.register(['@angular/core', '../../services/localizer.service', "../../ser
                         providers: [login_service_1.LoginService],
                         templateUrl: 'app/templates/top-navbar-dev.html',
                         styleUrls: ['app/css/topnavbar.css']
-                    }), 
-                    __metadata('design:paramtypes', [localizer_service_1.LocalizerService, login_service_1.LoginService, router_1.Router])
+                    }),
+                    __metadata("design:paramtypes", [localizer_service_1.LocalizerService, login_service_1.LoginService, router_1.Router])
                 ], TopNavbarComponent);
                 return TopNavbarComponent;
             }());
             exports_1("TopNavbarComponent", TopNavbarComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=topNavbar.component.js.map

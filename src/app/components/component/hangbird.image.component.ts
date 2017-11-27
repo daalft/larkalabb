@@ -6,83 +6,84 @@ import {PleaseWaitComponent} from "./pleasewait.component";
 import {DataAggregatorService} from "../../services/dataAggregator.service";
 import {LoginService} from "../../services/login.service";
 import {LarkaService} from "../../services/larka.service";
+import {HttpClient} from "@angular/common/http";
 
 /**
  * Created by David on 6/27/2017.
  */
 @Component({
     selector: 'hangbird-image',
-    templateUrl: 'app/templates/hangbird-image.html',
-    styleUrls: ['app/css/hangbird.css']
+    templateUrl: '../../templates/hangbird-image.html',
+    styleUrls: ['../../css/hangbird.css']
 })
 
 export class HangBirdImageComponent {
 
-    private numberOfTries = 0;
-    private maxNumberOfTries = 7;
+  public numberOfTries = 0;
+  public maxNumberOfTries = 7;
 
-    private wordlist = {};
-    private wordlistA1 = "app/data/A1_svalex_lexin.json";
-    private wordlistA2 = "app/data/A2_svalex_lexin.json";
-    private wordlistB1 = "app/data/B1_svalex_lexin.json";
-    private wordlistB2 = "app/data/B2_svalex_lexin.json";
-    private wordlistC1 = "app/data/C1_svalex_lexin.json";
+  public wordlist = {};
+  public wordlistA1 = "app/data/A1_svalex_lexin.json";
+  public wordlistA2 = "app/data/A2_svalex_lexin.json";
+  public wordlistB1 = "app/data/B1_svalex_lexin.json";
+  public wordlistB2 = "app/data/B2_svalex_lexin.json";
+  public wordlistC1 = "app/data/C1_svalex_lexin.json";
 
-    private wordlistBackup = ["villa","tjuv","kassa","process"];
+  public wordlistBackup = ["villa","tjuv","kassa","process"];
 
-    private currentWord;
-    private currentWordVector;
-    private previousWord;
+  public currentWord;
+  public currentWordVector;
+  public previousWord;
 
-    private description;
-    private translation;
+  public description;
+  public translation;
 
-    private showHint = false;
-    private usedHint = false;
+  public showHint = false;
+  public usedHint = false;
 
-    private letters;
-    private levels = ["A1", "A2", "B1", "B2", "C1"];
-    private level = "";
+  public letters;
+  public levels = ["A1", "A2", "B1", "B2", "C1"];
+  public level = "";
 
-    private languages = ["hb-lang-sqi", "hb-lang-bos", "hb-lang-eng", "hb-lang-fin", "hb-lang-ell", "hb-lang-hrv", "hb-lang-kur_north", "hb-lang-fas",
+  public languages = ["hb-lang-sqi", "hb-lang-bos", "hb-lang-eng", "hb-lang-fin", "hb-lang-ell", "hb-lang-hrv", "hb-lang-kur_north", "hb-lang-fas",
         "hb-lang-rus", "hb-lang-srp", "hb-lang-srp_cyrillic", "hb-lang-som", "hb-lang-spa", "hb-lang-kur_south", "hb-lang-tur"];
-    private language;
+  public language;
 
-    private msd;
+  public msd;
 
-    private ongoing = false;
+  public ongoing = false;
 
-    private totalScore = 0;
+  public totalScore = 0;
 
-    private sessionid;
+  public sessionid;
 
-    private inARow = 0;
+  public inARow = 0;
 
-    private eggindices = [1,2,3,4];
+  public eggindices = [1,2,3,4];
 
-    private indexHistory = [];
+  public indexHistory = [];
 
-    private images = [];
-    private selectedArray = [];
-    private showImages: boolean = false;
-    private waimsPrefix = "https://ws.spraakbanken.gu.se/ws/icall/img/"; // /english/dog.png; /spanish/something.png
+  public images = [];
+  public selectedArray = [];
+  public showImages: boolean = false;
+  public waimsPrefix = "https://ws.spraakbanken.gu.se/ws/icall/img/"; // /english/dog.png; /spanish/something.png
 
     @ViewChild(PleaseWaitComponent) waiter: PleaseWaitComponent;
 
-    constructor(private karp: KarpService, private http: Http, private localizer: LocalizerService, private aggregator: DataAggregatorService, private login: LoginService, private larka: LarkaService) {
+    constructor(private karp: KarpService, private http: HttpClient, public localizer: LocalizerService, private aggregator: DataAggregatorService, private login: LoginService, private larka: LarkaService) {
         let me = this;
         console.log("Loading wordlists");
         this.aggregator.getUserInfo();
         this.sessionid = this.login.getRandomId();
-        this.http.get(this.wordlistA1).map(res => res.json()).subscribe(function(data) {
+        this.http.get(this.wordlistA1).subscribe(function(data) {
             me.wordlist["A1"] = data;
-            me.http.get(me.wordlistA2).map(res => res.json()).subscribe(function(data) {
+            me.http.get(me.wordlistA2).subscribe(function(data) {
                 me.wordlist["A2"] = data;
-                me.http.get(me.wordlistB1).map(res => res.json()).subscribe(function(data) {
+                me.http.get(me.wordlistB1).subscribe(function(data) {
                     me.wordlist["B1"] = data;
-                    me.http.get(me.wordlistB2).map(res => res.json()).subscribe(function(data) {
+                    me.http.get(me.wordlistB2).subscribe(function(data) {
                         me.wordlist["B2"] = data;
-                        me.http.get(me.wordlistC1).map(res => res.json()).subscribe(function(data) {
+                        me.http.get(me.wordlistC1).subscribe(function(data) {
                             me.wordlist["C1"] = data;
                             console.log("Loaded wordlists");
                         })
@@ -186,7 +187,7 @@ export class HangBirdImageComponent {
     getWordInformation (word,pos) {
         let me = this;
 
-        this.karp.fetchFrom(word,pos,"lexin").map(res => res.json()).subscribe(function(data) {
+        this.karp.fetchFrom(word,pos,"lexin").subscribe(function(data) {
             let pwords = data["hits"]["hits"];
             let pwordsf = pwords.filter(function(d) { return d["_source"]["FormRepresentations"].length > 15 && d["_source"]["FormRepresentations"][0]["baseform"] == word; });
             let sortedws = pwordsf.sort(function(a,b) {  // sort by sense IDs

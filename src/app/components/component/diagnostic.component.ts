@@ -3,11 +3,12 @@
  */
 import {Component, OnInit} from "@angular/core";
 import {Http} from "@angular/http";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
     selector: 'diagnostic-test',
-    templateUrl: 'app/templates/diagnostic.html',
-    styleUrls: ['app/css/diagnostic.css']
+    templateUrl: '../../templates/diagnostic.html',
+    styleUrls: ['../../css/diagnostic.css']
 })
 
 export class DiagnosticTestComponent {
@@ -22,17 +23,17 @@ export class DiagnosticTestComponent {
     private currentLowerBound = 1;
     private currentUpperBound = 5;
 
-    constructor(private http: Http) {
+    constructor(private http: HttpClient) {
         let me = this;
-        this.http.get("app/data/cefr_vnj_wf_fx_C1.json").map(json => json.json()).subscribe(function(data) {
+        this.http.get("app/data/cefr_vnj_wf_fx_C1.json").subscribe(function(data) {
             me.c1words = data;
-            me.http.get("app/data/cefr_vnj_wf_fx_B2.json").map(json => json.json()).subscribe(function(data) {
+            me.http.get("app/data/cefr_vnj_wf_fx_B2.json").subscribe(function(data) {
                 me.b2words = data;
-                me.http.get("app/data/cefr_vnj_wf_fx_B1.json").map(json => json.json()).subscribe(function(data) {
+                me.http.get("app/data/cefr_vnj_wf_fx_B1.json").subscribe(function(data) {
                     me.b1words = data;
-                    me.http.get("app/data/cefr_vnj_wf_fx_A2.json").map(json => json.json()).subscribe(function(data) {
+                    me.http.get("app/data/cefr_vnj_wf_fx_A2.json").subscribe(function(data) {
                         me.a2words = data;
-                        me.http.get("app/data/cefr_vnj_wf_fx_A1.json").map(json => json.json()).subscribe(function(data) {
+                        me.http.get("app/data/cefr_vnj_wf_fx_A1.json").subscribe(function(data) {
                             me.a1words = data;
                             me.words = me.getWords();
                         });

@@ -1,6 +1,5 @@
-System.register(["@angular/core", "@angular/http"], function(exports_1, context_1) {
+System.register(["@angular/core", "@angular/http"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,18 +9,19 @@ System.register(["@angular/core", "@angular/http"], function(exports_1, context_
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, http_1;
-    var DiagnosticTestComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, http_1, DiagnosticTestComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
             function (http_1_1) {
                 http_1 = http_1_1;
-            }],
-        execute: function() {
-            DiagnosticTestComponent = (function () {
+            }
+        ],
+        execute: function () {
+            DiagnosticTestComponent = /** @class */ (function () {
                 function DiagnosticTestComponent(http) {
                     this.http = http;
                     this.currentLowerBound = 1;
@@ -126,13 +126,13 @@ System.register(["@angular/core", "@angular/http"], function(exports_1, context_
                         selector: 'diagnostic-test',
                         templateUrl: 'app/templates/diagnostic.html',
                         styleUrls: ['app/css/diagnostic.css']
-                    }), 
-                    __metadata('design:paramtypes', [http_1.Http])
+                    }),
+                    __metadata("design:paramtypes", [http_1.Http])
                 ], DiagnosticTestComponent);
                 return DiagnosticTestComponent;
             }());
             exports_1("DiagnosticTestComponent", DiagnosticTestComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=diagnostic.component.js.map

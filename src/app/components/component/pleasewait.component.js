@@ -1,6 +1,5 @@
-System.register(["@angular/core", "../../services/localizer.service"], function(exports_1, context_1) {
+System.register(["@angular/core", "../../services/localizer.service"], function (exports_1, context_1) {
     "use strict";
-    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,18 +9,19 @@ System.register(["@angular/core", "../../services/localizer.service"], function(
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, localizer_service_1;
-    var PleaseWaitComponent;
+    var __moduleName = context_1 && context_1.id;
+    var core_1, localizer_service_1, PleaseWaitComponent;
     return {
-        setters:[
+        setters: [
             function (core_1_1) {
                 core_1 = core_1_1;
             },
             function (localizer_service_1_1) {
                 localizer_service_1 = localizer_service_1_1;
-            }],
-        execute: function() {
-            PleaseWaitComponent = (function () {
+            }
+        ],
+        execute: function () {
+            PleaseWaitComponent = /** @class */ (function () {
                 function PleaseWaitComponent(localizer) {
                     this.localizer = localizer;
                     this.waiting = false;
@@ -42,13 +42,13 @@ System.register(["@angular/core", "../../services/localizer.service"], function(
                         selector: 'pleasewait',
                         templateUrl: 'app/templates/pleasewait.html',
                         styleUrls: ['app/css/pleasewait.css']
-                    }), 
-                    __metadata('design:paramtypes', [localizer_service_1.LocalizerService])
+                    }),
+                    __metadata("design:paramtypes", [localizer_service_1.LocalizerService])
                 ], PleaseWaitComponent);
                 return PleaseWaitComponent;
             }());
             exports_1("PleaseWaitComponent", PleaseWaitComponent);
         }
-    }
+    };
 });
 //# sourceMappingURL=pleasewait.component.js.map
