@@ -1,12 +1,12 @@
 /**
  * Created by David on 3/15/2016.
  */
-import {Component, ViewChild, Output, EventEmitter} from "@angular/core";
-import {Http} from "@angular/http";
-import {AutocompleteComponent} from "./autocomplete.component";
-import {LanguageSelectionComponent} from "./lang-select.component";
-import {LoginService} from "../../services/login.service";
-import {HttpClient} from "@angular/common/http";
+import {Component, ViewChild, Output, EventEmitter} from '@angular/core';
+import {Http} from '@angular/http';
+import {AutocompleteComponent} from './autocomplete.component';
+import {LanguageSelectionComponent} from './lang-select.component';
+import {LoginService} from '../../services/login.service';
+import {HttpClient} from '@angular/common/http';
 
 
 
@@ -26,27 +26,27 @@ export class ProfileDetailsComponent {
     @Output() status: EventEmitter<boolean> = new EventEmitter();
 
     private countries;
-    private languages;
+    public languages;
 
-    private noTeacher: boolean = true;
+    public noTeacher = true;
 
-    private selfVisible: boolean = true;
+    private selfVisible = true;
 
-    private educationLevels = [
-        "None",
-        "Compulsory school, max 1 year",
-        "Compulsory school, 2 years",
-        "Compulsory school, 3-4 years",
-        "Compulsory school, 5-7 years",
-        "Compulsory school, 8-9 years",
-        "Compulsory school, 10-12 years",
-        "Upper-secondary (gymnasiet), 1 year",
-        "Upper-secondary school, 2 years",
-        "Upper-secondary school, 3-4 years",
-        "University, 1-3 years",
-        "University, 4+ years",
-        "Doctoral studies (PhD)",
-        "Unknown"
+    public educationLevels = [
+        'None',
+        'Compulsory school, max 1 year',
+        'Compulsory school, 2 years',
+        'Compulsory school, 3-4 years',
+        'Compulsory school, 5-7 years',
+        'Compulsory school, 8-9 years',
+        'Compulsory school, 10-12 years',
+        'Upper-secondary (gymnasiet), 1 year',
+        'Upper-secondary school, 2 years',
+        'Upper-secondary school, 3-4 years',
+        'University, 1-3 years',
+        'University, 4+ years',
+        'Doctoral studies (PhD)',
+        'Unknown'
     ];
 
     constructor(private http: HttpClient, private login: LoginService) {
@@ -55,7 +55,7 @@ export class ProfileDetailsComponent {
     }
 
     handleValue(val) {
-        console.log("got " + val);
+        console.log('got ' + val);
     }
 
     teacherToggle() {
@@ -68,57 +68,57 @@ export class ProfileDetailsComponent {
     }
 
     retrieveData() {
-        let obj = {};
-        let firstname = $('#firstname').val();
-        let middlename = $('#middlename').val();
-        let lastname = $('#lastname').val();
-        obj["firstname"] = firstname;
-        obj["middlename"] = middlename;
-        obj["lastname"] = lastname;
+        const obj = {};
+        const firstname = $('#firstname').val();
+        const middlename = $('#middlename').val();
+        const lastname = $('#lastname').val();
+        obj['firstname'] = firstname;
+        obj['middlename'] = middlename;
+        obj['lastname'] = lastname;
 
-        let yob = $('#yob').val();
-        obj["yob"] = yob;
+        const yob = $('#yob').val();
+        obj['yob'] = yob;
 
-        let sex = $('input:radio[name=sex]:checked').val();
-        obj["sex"] = sex;
+        const sex = $('input:radio[name=sex]:checked').val();
+        obj['sex'] = sex;
 
-        let hel = $('#hel').val();
-        let tles = $('#tles').val();
-        let tlesu = $('#tlesu option:selected').val();
-        let tlis = $('#tlis').val();
-        let tlisu = $('#tlisu option:selected').val();
-        obj["hel"] = hel;
-        obj["tles"] = tles;
-        obj["tlesu"] = tlesu;
-        obj["tlis"] = tlis;
-        obj["tlisu"] = tlisu;
+        const hel = $('#hel').val();
+        const tles = $('#tles').val();
+        const tlesu = $('#tlesu option:selected').val();
+        const tlis = $('#tlis').val();
+        const tlisu = $('#tlisu option:selected').val();
+        obj['hel'] = hel;
+        obj['tles'] = tles;
+        obj['tlesu'] = tlesu;
+        obj['tlis'] = tlis;
+        obj['tlisu'] = tlisu;
 
-        let cefr = $('input:radio[name=cefr]:checked').val();
-        obj["cefr"] = cefr;
+        const cefr = $('input:radio[name=cefr]:checked').val();
+        obj['cefr'] = cefr;
 
-        let mothertongues = this.langselect.getMothertongues();
+        const mothertongues = this.langselect.getMothertongues();
         // external 'required' check on mothertongue component
         if (mothertongues.length == 0) {
-            alert("Please select a mothertongue!");
+            alert('Please select a mothertongue!');
             this.status.emit(false);
             return;
         }
-        let othertongues = this.langselect.getOthertongues();
-        let othertonguelevels = [];
+        const othertongues = this.langselect.getOthertongues();
+        const othertonguelevels = [];
         for (let i = 0; i < this.langselect.getOthertongues().length; i++) {
-            let cefr = $('input:radio[name=otcefr'+i+']:checked').val();
+            const cefr = $('input:radio[name=otcefr' + i + ']:checked').val();
             othertonguelevels.push(cefr);
         }
-        obj["mothertongues"] = mothertongues;
-        obj["othertongues"] = othertongues;
-        obj["othertonguelevels"] = othertonguelevels;
+        obj['mothertongues'] = mothertongues;
+        obj['othertongues'] = othertongues;
+        obj['othertonguelevels'] = othertonguelevels;
 
-        let roleVector = [];
-        let learner = $('#learner').is(':checked');
-        let sweteacher = $('#sweteacher').is(':checked');
-        let teacher = $('#teacher').is(':checked');
-        let linguist = $('#linguist').is(':checked');
-        let researcher = $('#researcher').is(':checked');
+        const roleVector = [];
+        const learner = $('#learner').is(':checked');
+        const sweteacher = $('#sweteacher').is(':checked');
+        const teacher = $('#teacher').is(':checked');
+        const linguist = $('#linguist').is(':checked');
+        const researcher = $('#researcher').is(':checked');
 
         roleVector.push(learner);
         roleVector.push(sweteacher);
@@ -127,77 +127,29 @@ export class ProfileDetailsComponent {
         roleVector.push(researcher);
 
         // check that at least one role has been selected
-        let roleSum = roleVector.reduce(function(a,b) { return a+b;},0);
+        const roleSum = roleVector.reduce(function(a, b) { return a + b; }, 0);
         if (roleSum == 0) {
-            alert("Please select a role!");
+            alert('Please select a role!');
             this.status.emit(false);
             return;
         }
 
-        obj["roles"] = roleVector;
+        obj['roles'] = roleVector;
 
-        let teachingsubject = $('#teachingsubject').val();
-        let teachinglevel = $('#teachinglevel').val();
+        const teachingsubject = $('#teachingsubject').val();
+        const teachinglevel = $('#teachinglevel').val();
 
-        obj["teachingsubject"] = teachingsubject;
-        obj["teachinglevel"] = teachinglevel;
+        obj['teachingsubject'] = teachingsubject;
+        obj['teachinglevel'] = teachinglevel;
 
-        let teacherid = $('#teacherid').val();
+        const teacherid = $('#teacherid').val();
 
-        obj["teacherid"] = teacherid;
+        obj['teacherid'] = teacherid;
 
         return obj;
     }
 
     validateSave() {
-        //let userid = this.login.getUserId();
-        // send data to server
-        /*
-        let firstname = $('#firstname').val();
-        let middlename = $('#middlename').val();
-        let lastname = $('#lastname').val();
-
-        let yob = $('#yob').val();
-
-        let sex = $('input:radio[name=sex]:checked').val();
-
-        let hel = $('#hel').val();
-        let tles = $('#tles').val();
-        let tlesu = $('#tlesu option:selected').val();
-        let tlis = $('#tlis').val();
-        let tlisu = $('#tlisu option:selected').val();
-
-        let cefr = $('input:radio[name=cefr]:checked').val();
-
-        let mothertongues = this.langselect.getMothertongues();
-        let othertongues = this.langselect.getOthertongues();
-        let othertonguelevels = [];
-        for (let i = 0; i < this.langselect.getOthertongues().length; i++) {
-            let cefr = $('input:radio[name=otcefr'+i+']:checked').val();
-            othertonguelevels.push(cefr);
-        }
-
-        let roleVector = [];
-        let learner = $('#learner').is(':checked');
-        let sweteacher = $('#sweteacher').is(':checked');
-        let teacher = $('#teacher').is(':checked');
-        let linguist = $('#linguist').is(':checked');
-        let researcher = $('#researcher').is(':checked');
-
-        roleVector.push(learner);
-        roleVector.push(sweteacher);
-        roleVector.push(teacher);
-        roleVector.push(linguist);
-        roleVector.push(researcher);
-
-        let teachingsubject = $('#teachingsubject').val();
-        let teachinglevel = $('#teachinglevel').val();
-
-        let teacherid = $('#teacherid').val();
-
-        console.log(tles);
-        console.log(tlesu);
-        */
         this.status.emit(true);
         this.emitter.emit(this.retrieveData());
     }

@@ -1,3 +1,4 @@
+
 <!-- LIsten and WRIte eXercise -->
 <div class="title">
     LiWriX - Listen and Write Exercise
@@ -10,7 +11,7 @@
             <label for="type">Select type</label>
             <select id="type" #type  class="form-control">
                 <option>Words</option>
-                <option>Words spell</option>
+                <option disabled>Words spell</option>
                 <option>Phrases</option>
                 <option disabled>Sentences</option>
             </select>
@@ -33,17 +34,24 @@
             <div><b>Select mode</b></div>
             <label><input type="radio" name="mode" checked #mode1>Selfstudy</label>
             <label><input type="radio" name="mode" #mode2>Test</label>
+
+          <!-- voice -->
+          <div><b>Select voice</b></div>
+          <label><input type="radio" name="voice" checked #voice1>Voice 1</label>
+          <label><input type="radio" name="voice" #voice2>Voice 2</label>
         </div>
+
+
     </div>
     <br/>
     <div class="row" *ngIf="ready">
-        <button type="submit" (click)="setParams(type.selectedIndex,level.selectedIndex,(mode1.checked?0:mode2.checked?1:2))" class="btn btn-primary">{{localizer.localize('liwrix-play')}}</button>
+        <button type="submit" (click)="setParams(type.selectedIndex,level.selectedIndex,(mode1.checked?0:mode2.checked?1:2),(voice1.checked?1:3))" class="btn btn-primary">{{localizer.localize('liwrix-play')}}</button>
     </div>
 
     <div id="attribution">
         Words sampled from <a href="">SVAlex</a> (Thomas François, Elena Volodina, Ildikó Pilán, Anaïs Tack. 2016)
         <br/>
-        Text-to-Speech (TTS) by Nuance Vocalizer Embedded 3.0
+      Text-to-Speech (TTS) by <a href="http://www.sitepal.com">SitePal</a>
     </div>
 </div>
 
@@ -70,28 +78,26 @@
 </div>
 
 <!-- EXERCISE -->
-<div class="row" *ngIf="currentWord['path']">
+<div class="row" *ngIf="currentWord['word']">
     <!-- audio element -->
-    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
-        <audio controls autoplay>
-            <source src="{{currentWord['path']}}" type="audio/wav">
-            Your browser does not support WAV file format.
-        </audio>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <button type="button" class="btn btn-default liwrix-play-button" (click)="playback(currentWord['word'])" *ngIf="!playbackInProgress()"><span class="fa fa-play"></span></button>
+      <button type="button" class="btn btn-default" *ngIf="playbackInProgress()"><span class="fa fa-stop"></span></button>
     </div>
     <!-- answer field -->
-    <div class="col-lg-4 col-md-3 col-sm-4 col-xs-4">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         <input [ngClass]="{sparkleyVowel: currentWord['special-type']==='VOWEL', sparkleyConsonant: currentWord['special-type']==='CONSONANT'}" type="text" id="answer-{{currentWord['id']}}" title="Type here" class="form-control" (keypress)="keyhandler($event)">
     </div>
     <!-- submit button -->
-    <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
         <!-- spacer -->
     </div>
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
         <button type="submit" class="btn btn-primary" (click)="next()">{{localizer.localize('liwrix-check')}}</button>
     </div>
-    <div class="col-lg-2 col-md-4">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div>
                 <div *ngIf="!showHint&&currentWord['hints']">
                     <button type="button" class="btn btn-default" (click)="hint(currentWord['id'])">{{localizer.localize('liwrix-show-sentences')}}</button>
                 </div>
@@ -99,7 +105,7 @@
                     <button type="button" class="btn btn-default" (click)="showHint = false;">{{localizer.localize('liwrix-hide-sentences')}}</button>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div>
                 <div *ngIf="!showFirst&&showHint">
                     <button type="button" class="btn btn-default" (click)="hint2();">{{localizer.localize('liwrix-show-first')}}</button>
                 </div>
@@ -130,18 +136,16 @@
 
 <!-- previous words -->
 <div class="row" *ngFor="let previous of previousWords">
-    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
-        <audio controls>
-            <source src="{{previous['path']}}" type="audio/wav">
-        </audio>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <button type="button" class="btn btn-default liwrix-play-button" (click)="playback(previous['word'])"><span class="fa fa-play"></span></button>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         <input type="text" id="answer-{{previous['id']}}" title="Type here" [disabled]="mode==1" value="{{previous['answers'][previous['answers'].length-1]}}" class="form-control" (keypress)="keyhandler($event, previous['id'])">
     </div>
 
     <div *ngIf="mode==0">
-        <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-            <div *ngIf="currentWord['path']">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+            <div *ngIf="currentWord['answers']">
                 <span *ngIf="check(previous['id'])" class="fa fa-smile-o" style="color: green; line-height: inherit; font-size: large"></span>
                 <span *ngIf="!check(previous['id'])" class="fa fa-frown-o" style="color: red; line-height: inherit; font-size: large"></span>
             </div>
@@ -151,7 +155,7 @@
                 <button type="submit" class="btn btn-primary" (click)="checkManual(previous['id'])">{{localizer.localize('liwrix-check')}}</button>
             </div>
         </div>
-        <div class="col-lg-2 col-md-2">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
             <!--
             <div *ngIf="!check(previous['id'])">
                 <button type="button" class="btn btn-default" (click)="hint(previous['id'])">{{localizer.localize('liwrix-show-hint')}}</button>
@@ -161,7 +165,7 @@
     </div>
     <div *ngIf="mode==1">
         <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
-            <div *ngIf="currentWord['path']">
+            <div *ngIf="currentWord['word']">
                 <span *ngIf="check(previous['id'])" class="fa fa-smile-o" style="color: green; line-height: inherit; font-size: large"></span>
                 <span *ngIf="!check(previous['id'])" class="fa fa-frown-o" style="color: red; line-height: inherit; font-size: large"></span>
             </div>

@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Http, Headers, RequestOptions, Response} from "@angular/http";
-import {Observable} from "rxjs/Rx";
+import {Observable} from "rxjs/Observable";
 import {HttpClient} from "@angular/common/http";
 /**
  * Created by David on 12/21/2016.
@@ -25,9 +25,7 @@ export class NuanceService {
 
         console.log(url);
 
-        return this.http.get(url)
-
-            .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if a
+        return this.http.get(url);
     }
 
 }

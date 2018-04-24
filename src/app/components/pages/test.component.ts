@@ -1,10 +1,11 @@
 /**
  * Created by David on 10/17/2016.
  */
-import {Component} from "@angular/core";
-import {LoginService} from "../../services/login.service";
-import {LoggerService} from "../../services/logger.service";
-import {NuanceService} from "../../services/nuance.service";
+import {Component} from '@angular/core';
+import {LoginService} from '../../services/login.service';
+import {LoggerService} from '../../services/logger.service';
+import {NuanceService} from '../../services/nuance.service';
+
 @Component({
     selector: 'testcomp',
     templateUrl: '../../templates/test.html',
@@ -12,7 +13,6 @@ import {NuanceService} from "../../services/nuance.service";
 })
 
 export class TestComponent {
-
   public id;
 
     constructor(private login: LoginService, private log: LoggerService, private tts: NuanceService) {
@@ -25,9 +25,5 @@ export class TestComponent {
 
     getUserInfo () {
         this.log.getUserInfo();
-    }
-
-    ttstest () {
-
     }
 }

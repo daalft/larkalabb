@@ -23,6 +23,10 @@ import {DiagnosticDemoComponent} from "./components/intern/diagnostic.demo.compo
 import {LiwrixComponent} from "./components/component/liwrix.component";
 import {HangBirdImageComponent} from "./components/component/hangbird.image.component";
 import {SiwocoComponent} from "./components/intern/siwoco.component";
+import {EnetCollectDemoComponent} from "./components/intern/enetcollect.component";
+import {CanActivateTestGuard} from "./components/guards/can-activate-test-guard";
+import {VocabularyMultipleChoiceExerciseComponent} from "./components/component/vocabulary.multiple.exercise.component";
+import {InflectionMultipleExerciseComponent} from "./components/component/inflection.multiple.exercise.component";
 
 const appRoutes: Routes = [
 
@@ -35,11 +39,12 @@ const appRoutes: Routes = [
     {path: 'liwrix', component: LiwrixComponent},
     {path: 'diagnostic', component: DiagnosticTestComponent},
     {path: 'hitex', component: HitexComponent},
-
-
+    {path: 'enetcollect', component: EnetCollectDemoComponent},
+  {path: 'voc-mc', component: VocabularyMultipleChoiceExerciseComponent},
+  {path: 'infl-mc', component: InflectionMultipleExerciseComponent},
     {path: 'register', component: RegisterComponent},
     // TODO remove
-    {path: 'ncnd', component: DiagnosticDemoComponent},
+    //{path: 'ncnd', component: DiagnosticDemoComponent},
     //{path: 'tagger', component: TaggerComponent},
     {path: 'test', component: TestComponent},
     {path: 'prode', component: ProfileDetailsComponent},
@@ -47,7 +52,6 @@ const appRoutes: Routes = [
 
     // {path: 'profile/:id/details', component: ProfileDetailsComponent},
     // {path: 'profile/:id/progress', component: LearnerProgressComponent},
-
 
     {path: 'siwoco', component: SiwocoComponent},
     // {path: 'profile/:id/egg', component: ProfileEggComponent},

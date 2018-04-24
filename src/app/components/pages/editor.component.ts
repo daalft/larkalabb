@@ -21,6 +21,10 @@ export class CorpusEditorComponent {
   public showExtras: boolean;
   public showText: boolean;
   public showGenre: boolean;
+  public showNarration;
+  public showFacts;
+  public showEvaluation;
+  public showOther;
 
   public ce;
 

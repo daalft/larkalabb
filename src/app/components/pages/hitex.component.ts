@@ -128,7 +128,7 @@ export class HitexComponent {
     if (this.searchmode == 1) {
       query_type = 'wordform';
     }
-    if (this.searchmode == 3) {
+    if (this.searchmode == 2) {
       query_type = 'cqp';
     }
 

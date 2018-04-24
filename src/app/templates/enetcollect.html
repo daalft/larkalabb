@@ -1,5 +1,5 @@
 <div id="nscontainer">
-    <h1>EnetCOLLECT Literature DEMO</h1>
+    <h1>EnetCOLLECT Literature List</h1>
 
     <div id="menu" class="navbar">
         <ul class="nav navbar-nav">
@@ -34,18 +34,41 @@
         <br/>
     </div>
 
+
     <div id="litlist" [hidden]="!showLitlist">
-        Literature list
+        <!--Literature list-->
         <br/>
+      <div id="searchbar">
+        <div class="input-group">
+          <input type="text" placeholder="Search for..." class="form-control" #sbar>
+          <span class="input-group-btn">
+        <button class="btn btn-default" type="button" (click)="mockSearch(sbar.value)">Search!</button>
+      </span>
+          <span class="input-group-btn" *ngIf="canReset">
+        <button class="btn btn-default" type="button" (click)="mockResetSearch()">Clear!</button>
+      </span>
+        </div>
+
+      </div>
+      <br/>
+      <div *ngIf="litlist">
         <div *ngFor="let entry of litlist">
 
-            {{entry['author']}}. {{entry['year']}}. <i>{{entry["title"]}}</i>. {{entry["journal"]}}. <a href="{{entry['file']}}" *ngIf="isLoggedIn">[PDF]</a>
-            <br/>
+          <span class="fa fa-arrow-right"></span> {{entry['author']}}. {{entry['year']}}. <i>{{entry["title"]}}</i>. <span *ngIf="entry['type'] == 'article'">{{entry["journal"]}}.</span> <span *ngIf="entry['type'] == 'book'">{{entry["publisher"]}}.</span> <span *ngIf="entry['type'] == 'inproceedings' || entry['type'] == 'incollection'">{{entry["booktitle"]}}</span><a href="#" *ngIf="isLoggedIn">[PDF]</a>
+            <br/><br/>
+          <div class="ec-keywords well">
             <b>Keywords</b>: {{entry["keywords"]}}
-            <br/>
-            <b>Summary</b>: {{entry["summary"]}}
+          </div>
+
+          <div class="ec-summary well">
+            <b>Summary</b>: {{entry["abstract"]}}
+          </div>
             <hr/>
         </div>
+      </div>
+      <div *ngIf="litlist.length == 0">
+        Loading...
+      </div>
     </div>
     <div id="addentry" [hidden]="!showAddEntry||isAdmin">
         Suggest entry

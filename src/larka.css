@@ -1,3 +1,5 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 @font-face {
     font-family: Intellecta;
     src: url('app/fonts/Intellecta Digital.ttf');
@@ -315,3 +317,76 @@ larka-app:empty + .loading-animation {
   height: 30px;
 }
 .navbar {min-height:30px !important;}
+
+.spacer-row {
+  height: 20px;
+}
+
+.chromalt tr.chromalt-row:nth-child(odd) {
+  background-color: rgba(167, 167, 167, 0.58);
+}
+
+.chromalt tr.chromalt-row:nth-child(even) {
+  background-color: rgba(209, 209, 209, 0.42);
+}
+
+.chromalt td {
+  padding: 2px 5px;
+}
+
+.dia-track {
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px dashed black;
+}
+
+
+.ec-keywords {
+
+}
+
+.ec-summary {
+
+}
+
+.lmmarked {
+  background-color: rgba(227, 0, 0, 0.21);
+}
+
+._html5Player {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.liwrix-play-button-inactive {
+  cursor: wait;
+}
+
+.exe-info-header {
+  background-color: rgba(167, 167, 167, 0.5);
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  float: left;
+  line-height: normal;
+  height: 30px;
+  padding: 10px 10px 25px 20px;
+  margin-bottom: 10px;
+}
+
+.exe-info-header-expanded {
+  background-color: rgba(147, 233, 255, 0.48);
+}
+
+#linguist-helpcontainer {
+  margin-top: 60px;
+}
+
+.fiincorrect {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.ficorrect {
+  background-color: rgba(0, 128, 0, 0.21);
+}

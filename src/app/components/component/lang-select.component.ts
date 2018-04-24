@@ -13,8 +13,8 @@ export class LanguageSelectionComponent {
     @Input() langs;
 
     // mock arrays for number of fields
-    private mothertongues = [1];
-    private othertongues = [1];
+    public mothertongues = [1];
+    public othertongues = [1];
 
     // real values
     private mothertonguesReal: string[] = [];

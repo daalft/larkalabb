@@ -3,13 +3,14 @@
  */
 import {Injectable} from "@angular/core";
 import {NuanceService} from "./nuance.service";
+import {SitepalAsService} from "./sitepal.as.service";
 
 @Injectable()
 export class TTSEngine {
 
-    constructor(private tts: NuanceService) {}
+    constructor(private tts: SitepalAsService) {}
 
-    textToSpeech(text, spell) {
-        return this.tts.speak(text, spell);
+    textToSpeech(text, voice) {
+        return this.tts.speak(text, voice);
     }
 }

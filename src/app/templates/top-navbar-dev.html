@@ -11,6 +11,8 @@
   </div>
 
   <!--<a class="mock-link" routerLink="/learner">{{localizer.localize('menu-learner-general-gen')}}</a><br/>-->
+  <a class="mock-link" routerLink="/voc-mc">{{localizer.localize('menu-voc-mc')}}</a><br/>
+  <a class="mock-link" routerLink="/infl-mc">{{localizer.localize('menu-infl-mc')}}</a><br/>
   <a class="mock-link" routerLink="/wordguess">{{localizer.localize('menu-wordguess')}}</a><br/>
   <div *ngIf="isAdmin()">
     <a class="mock-link" routerLink="/wordguess-image">{{localizer.localize('menu-wordguess-image')}}</a><br/>
@@ -139,6 +141,9 @@
           <a class="mock-link" routerLink="/linguist">{{localizer.localize('menu-linguist-general-gen')}}</a>
         </li>
         <li>
+          <a class="mock-link" routerLink="/voc-mc">{{localizer.localize('menu-voc-mc')}}</a>
+        </li>
+        <li>
           <a class="mock-link" routerLink="/wordguess">{{localizer.localize('menu-wordguess')}}</a>
         </li>
         <li *ngIf="isAdmin()">
@@ -153,6 +158,9 @@
         <li *ngIf="isAdmin()">
           <a routerLink="/siwoco" class="mock-link">{{localizer.localize('menu-siwoco')}}</a>
         </li>
+        <li *ngIf="isAdmin()">
+          <a routerLink="/test" class="mock-link">Test</a>
+        </li>
       </ul>
 
 
@@ -164,7 +172,7 @@
       </div>
 
       <div class="">
-        <div  class="mock-link" (click)="loginModal.open()" *ngIf="!loggedIn()">{{localizer.localize('login')}}</div>
+        <div  class="mock-link" (click)="loginModal.show()" *ngIf="!loggedIn()">{{localizer.localize('login')}}</div>
         <div *ngIf="loggedIn()"><a class="mock-link" routerLink="/profile">{{localizer.localize('menu-myprofile')}}</a></div>
         <hr/>
       </div>
@@ -208,6 +216,9 @@
         <a routerLink="/siwoco">{{localizer.localize('menu-siwoco')}}</a>
       </li>
 
+      <li *ngIf="isAdmin()">
+        <a routerLink="/test" class="mock-link">Test</a>
+      </li>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
@@ -243,6 +254,7 @@
   <div class="">
     <div class="mock-link" (click)="aboutLarkaModal.show()">{{localize('larka_about')}}</div>
     <div class="mock-link"  (click)="citeLarkaModal.show()">{{localize('larka_cite')}}</div>
+    <div><a class="mock-link" href="https://spraakbanken.gu.se/larkalabb/larkalabb_manual_v1_2.pdf">{{localize('larka_manual')}}</a></div>
   </div>
   <hr/>
   <div>

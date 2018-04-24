@@ -41,7 +41,8 @@
 	"RG":"räkneord: grundtal",
 	"RO":"räkneord: ordningstal",
 
-
+  "exe_correct_answer": "Rätt svar",
+  "press_generate": "Klicka på knappen Generera för att börja",
 
 	"choose_synt" : "Välj relation",
     	"SS":"subjekt",
@@ -125,7 +126,7 @@
 	"trainSyntaxRoles2" : "Satsdelar, 2 (medel)",
 
 
-	"selectSyntRoles_plural": "Välj syntaktista relationer",
+	"selectSyntRoles_plural": "Välj syntaktiska relationer",
 	"synt_selectionNote" : " relationer valda",
 	"selectSemRoles_plural": "Välj semantiska roller",
 	"sem_selectionNote" : " roller valda",
@@ -306,6 +307,7 @@
 	"search_history" : "Sökhistorik",
 	"larka_cite" : "Referera till Lärka",
 	"larka_about" : "Om Lärka",
+  "larka_manual": "Användarmanual",
 	"reference" : "Referera till Lärka",
 	"about_header" : "Lärka, utvecklingsversion",
 	"about_body" : "<b>Lärka</b> (Eng. LÄR språket via Korpus Analys) är Språkbankens övningsgenerator/lärplattform under utveckling. Övningsgenerator för \"Studenter i språkvetenskap\" är en ITG-inspirerad modul, där ITG är ett system som har tidigare använts vid flera universitet i Sverige. <br/>För information, kommentarer eller förslag, kontakta <a href='mailto:sb-larka@svenska.gu.se'>Språkbanken, Lärka utvecklare</a>.",
@@ -979,6 +981,8 @@
 	"menu-wordguess-image": "WG Image",
 	"menu-liwrix": "Hörförståelseövning",
 	"menu-siwoco": "Siwoco",
+  "menu-voc-mc": "Ordförråd (Flerval)",
+  "menu-infl-mc": "Ordböjning (Flerval)",
 
 	"hangbird-play": "Spela!",
 	"hb-instructions": "Välj ett språk för översättningarna och klicka på Spela!",
@@ -1025,5 +1029,17 @@
 	"liwrix-show-sentences": "Show sentences",
 	"liwrix-hide-sentences": "Hide sentences",
 	"liwrix-show-first": "Show initial letter",
-	"liwrix-play": "Start!"
+	"liwrix-play": "Start!",
+
+  "linguist-send-email": "Skicka resultat som mejl",
+  "linguist-send-to": "Skicka till...",
+  "linguist-email-sent": "Mejl avsändes",
+  "linguist-print": "Skriv ut resultat/PDF",
+  "linguist-email-sending": "Vänligen vänta tills mejlet har skickats",
+  "linguist-dont-close": "Vänligen vänta tills mejls har skickats",
+  "linguist-dia-completed": "svar",
+  "linguist-dia-percent": "procent",
+  "linguist-no-information": "Ingen information hittades.",
+
+  "lm-error-instruction": "Paste a text and click on Analyze! Then drag the slider!"
 }

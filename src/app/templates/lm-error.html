@@ -1,0 +1,39 @@
+<pleasewait #waiter></pleasewait>
+<div class="row">
+  <!-- text input -->
+  <div class="col-lg-8 col-md-7 col-sm-6">
+    <div [hidden]="processed">
+    <label for="text">{{localizer.localize('lm-error-instruction')}}</label>
+    <textarea id="text" class="form-control" rows="15" #userinput></textarea>
+    </div>
+    <div [hidden]="!processed">
+      <span *ngFor="let wwp of words_with_probs" [ngClass]="{lmmarked: checkMark(wwp['values'])}">
+        {{wwp["key"]}}
+      </span>
+    </div>
+  </div>
+
+  <!-- button row -->
+  <div class="col-lg-4 col-md-5 col-sm-6">
+    <!-- ngram chooser -->
+    <div>
+      <b>Select mode of analysis</b><br/>
+      <input type="radio" name="anamode" (click)="setMode(0)" id="unigram_mode" class="radio-inline"><label for="unigram_mode">Unigrams</label>
+      <input type="radio" name="anamode" (click)="setMode(1)" id="bigram_mode" class="radio-inline"><label for="bigram_mode">Bigrams</label>
+      <input type="radio" name="anamode" (click)="setMode(2)" id="trigram_mode" checked class="radio-inline"><label for="trigram_mode">Trigrams</label>
+    </div>
+    <hr/>
+    <!-- slider -->
+    <div>
+      <b>Slide to change threshold</b><br/>
+      <mat-slider [min]="min_slider_val" [max]="max_slider_val" thumbLabel tickInterval="auto" (input)="setThreshold(slider.value)" #slider></mat-slider>
+    </div>
+    <hr/>
+    <!-- buttons -->
+    <div>
+      <button type="submit" class="btn btn-primary" (click)="analyze(userinput.value)">Analyze!</button>
+      <button type="button" class="btn btn-default" (click)="edit()">Edit text</button>
+      <button type="reset" class="btn btn-danger" (click)="reset()">Reset</button>
+    </div>
+  </div>
+</div>

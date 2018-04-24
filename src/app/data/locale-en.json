@@ -30,7 +30,8 @@
 	"trainPOS1_instruction" : "Assign an appropriate part of speech to the word in bold",
 	"choose_pos" : "Choose POS",
 
-
+  "exe_correct_answer": "Correct answer",
+  "press_generate": "Click on generate to start",
 
 	"choose_synt" : "Choose relation",
 	"SS":"subject",
@@ -289,6 +290,7 @@
 	"search_history" : "Search history",
 	"larka_cite" : "Cite Lärka",
 	"larka_about": "About Lärka",
+  "larka_manual": "User manual",
 	"about_header" : "Lärka, version under development",
 	"about_body" : "<b>Lärka</b> (Eng. Lark - Language Acquisition Reusing Korp) is the exercise generator/learning platform of Språkbanken (The Swedish Language Bank) under active development. The \"Students of Linguistics\" part of the exercise generator has been ported from the ITG system previously used in several Swedish universities. <br/>For information, comments or suggestions, please contact <a href='mailto:sb-larka@svenska.gu.se'>Språkbanken, Lärka developers</a>.",
 	"about_man" : "Project Managers",
@@ -957,6 +959,8 @@
 	"menu-wordguess-image": "WG Image",
 	"menu-liwrix": "Listening exercise",
 	"menu-siwoco": "Siwoco",
+  "menu-voc-mc": "Vocabulary (MC)",
+  "menu-infl-mc": "Inflection (MC)",
 
 	"hangbird-play": "Play!",
 	"hb-instructions": "Select a language for translation hints and click on Play!",
@@ -1003,5 +1007,16 @@
 	"liwrix-show-sentences": "Show sentences",
 	"liwrix-hide-sentences": "Hide sentences",
 	"liwrix-show-first": "Show initial letter",
-	"liwrix-play": "Start!"
+	"liwrix-play": "Start!",
+
+  "linguist-send-email": "Send result as email",
+  "linguist-send-to": "Send to...",
+  "linguist-email-sent": "Email sent!",
+  "linguist-print": "Print/PDF",
+  "linguist-email-sending": "Please do not close this page until the email has been sent",
+  "linguist-dont-close": "Please do not close this page until the email has been sent",
+  "linguist-dia-completed": "completed",
+  "linguist-dia-percent": "percent",
+  "linguist-no-information": "No information found.",
+  "lm-error-instruction": "Paste a text and click on Analyze! Then drag the slider!"
 }

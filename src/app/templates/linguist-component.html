@@ -1,32 +1,91 @@
 <user-navbar></user-navbar>
 <div id="optionbox" [ngClass]="{optionsOpen: showOptions}">
-    <div [hidden]="showOptions">
-        <div id="optionresume">
-            <ul class="nav nav-pills">
-            <li role="presentation"><a class="mock-link" (click)="showOptions = !showOptions">{{localize(exerciseName)}}</a></li>
-            <li role="presentation"><a class="mock-link" (click)="showOptions = !showOptions">{{numberOfChoices[0] + localize('of') + numberOfChoices[1] + localize(exerciseParticle)}}</a></li>
-            </ul>
-        </div>
-        <div class="col-lg-12" style="text-align: center"><span class="mock-link fa fa-fw fa-chevron-down center-block" title="{{localize('show_settings')}}" (click)="showOptions = !showOptions"></span></div>
+  <div [hidden]="showOptions">
+    <div id="optionresume">
+      <ul class="nav nav-pills">
+        <li role="presentation"><a class="mock-link" (click)="showOptions = !showOptions">{{localize(exerciseName)}}</a></li>
+        <li role="presentation"><a class="mock-link" (click)="showOptions = !showOptions">{{numberOfChoices[0] + localize('of') + numberOfChoices[1] + localize(exerciseParticle)}}</a></li>
+      </ul>
     </div>
-    <div [hidden]="!showOptions" id="fulloptions">
-        <div id="optionheader">{{localize('settings')}}</div>
-            <div class="col-lg-6">
-                <div class="select-title">{{localizer.localize('selectAnExercise')}}</div>
-                <div class="selectable" *ngFor="let label of labels1" [ngClass]="{selactive:label.selected}" (click)="setSelected(label)">
-                    {{localize(label.name)}}
-                </div>
-            </div>
-            <choice-selector [choices]="getChoiceForSelected()" class="col-lg-6"></choice-selector>
-        <div class="col-lg-12" style="text-align: center"><span class="mock-link fa fa-fw fa-chevron-up" title="{{localize('hide_settings')}}" (click)="showOptions = !showOptions;calculateResume()"></span></div>
+    <div class="col-lg-12" style="text-align: center"><span class="mock-link fa fa-fw fa-chevron-down center-block" title="{{localize('show_settings')}}" (click)="showOptions = !showOptions"></span></div>
+  </div>
+  <div [hidden]="!showOptions" id="fulloptions">
+    <div id="optionheader">{{localize('settings')}}</div>
+    <div class="col-lg-6">
+      <div class="select-title">{{localizer.localize('selectAnExercise')}}</div>
+      <div class="selectable" *ngFor="let label of labels1" [ngClass]="{selactive:label.selected}" (click)="setSelected(label)">
+        {{localize(label.name)}}
+      </div>
     </div>
-    <hr/>
+    <choice-selector [choices]="getChoiceForSelected()" class="col-lg-6"></choice-selector>
+    <div class="col-lg-12" style="text-align: center"><span class="mock-link fa fa-fw fa-chevron-up" title="{{localize('hide_settings')}}" (click)="showOptions = !showOptions;calculateResume()"></span></div>
+  </div>
+  <hr/>
 
 </div>
 <div class="col-lg-12">
-    <mode-selector #modeSelector (modeChangeEmitter)="handleModeChange($event)" (generateEmitter)="generate($event)" [options]="'selfstudy_checkbox,control_checkbox'"></mode-selector> <!-- temporarily removed modes: diagnostic_test,timer_checkbox -->
+  <mode-selector #modeSelector (modeChangeEmitter)="handleModeChange($event)" (generateEmitter)="generate($event)" [options]="'selfstudy_checkbox,diagnostic_test,control_checkbox'"></mode-selector> <!-- temporarily removed modes: diagnostic_test,timer_checkbox -->
 </div>
-<div class="container" id="exercises">
-    <exercise-component (nextRequester)="generate($event)"></exercise-component>
+<br/>
+<div id="exercises">
+  <div *ngIf="num_dia_items>0">
+    <br/>
+    <div class="dia-track">
+    {{dia_counter}}/{{num_dia_items}} {{localizer.localize('linguist-dia-completed')}} ({{floor(100*dia_counter/num_dia_items)}} {{localizer.localize('linguist-dia-percent')}})
+      </div>
+  </div>
+  <div id="results" [hidden]="!showSummary">
+    <br/>
+    <h3>Results</h3>
+
+    <table>
+      <tr>
+        <th>Correct</th>
+        <th>Incorrect</th>
+      </tr>
+      <tr>
+        <td>{{summary["corr"]}}</td>
+        <td>{{summary["inc"]}}</td>
+      </tr>
+    </table>
+    <br/>
+    <h3>Details</h3>
+    <table *ngFor="let key of summaryKeys">
+      <tr><th colspan="2">{{localizer.localize(key)}}</th></tr>
+      <tr><td>Correct</td><td>Incorrect</td></tr>
+      <tr><td>{{summary2[key]["corr"]}}</td><td>{{summary2[key]["inc"]}}</td></tr>
+    </table>
+    <br/>
+
+
+    <br/>
+    <div class="form-group row">
+      <div class="col-lg-3">
+        <input type="email"  class="form-control" placeholder="{{localizer.localize('linguist-send-to')}}" #st>
+      </div>
+      <div class="col-lg-9">
+        <button type="submit" class="btn btn-primary" (click)="enhance(st.value)" [disabled]="sendingEnhancement">{{localizer.localize('linguist-send-email')}}</button>
+      </div>
+    </div>
+    <br/>
+
+
+    <div [hidden]="!sentEnhancement">
+      <b style="color: darkgreen">{{localizer.localize('linguist-email-sent')}}</b>
+    </div>
+    <div [hidden]="!sendingEnhancement">
+      <b style="color: darkred">{{localizer.localize('linguist-dont-close')}}</b>
+    </div>
+
+    <br/>
+
+    <button type="button" class="btn btn-default" (click)="print_page()">{{localizer.localize('linguist-print')}}</button>
+
+    <button type="reset" class="btn btn-danger" (click)="closeSummary()">{{localizer.localize('close')}}</button>
+  </div>
+
+  <exercise-component (nextRequester)="generate($event)"></exercise-component>
+
+
 </div>
 

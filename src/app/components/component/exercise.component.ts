@@ -9,6 +9,9 @@ import {Output} from "@angular/core";
 import {Router, Route, Routes} from "@angular/router";
 import {DataAggregatorService} from "../../services/dataAggregator.service";
 import {LoginService} from "../../services/login.service";
+import {LarkaService} from "../../services/larka.service";
+import {KarpService} from "../../services/karp.service";
+import {isDevMode} from '@angular/core';
 
 @Component({
 
@@ -26,11 +29,12 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
     //@ViewChild('reportModal') modal: ModalComponent<any>;
 
     private data = undefined;
-    private visible: boolean;
+    public visible: boolean;
     private current: Exercise;
     private previousExamples = [];
 
     private mode;
+    private canChangeMode: boolean = true;
 
     private reported_sentence = [];
 
@@ -38,13 +42,23 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
 
     private exerciseStatistics;
 
-    constructor(public localizer: LocalizerService, private _router: Router, private aggregator: DataAggregatorService, private login: LoginService) {
+    private no_information: string;
+
+    public hideHelp = false;
+
+    // flags for toggle side menu
+  public showSaldom = false;
+  public showWikipedia = false;
+  public showWiktionary = false;
+
+    constructor(public localizer: LocalizerService, private _router: Router, private aggregator: DataAggregatorService, private login: LoginService, private larka: LarkaService, private karp: KarpService) {
         this.nextRequester = new EventEmitter();
         this.reloadRequester = new EventEmitter();
         //console.log("ex comp const");
         this.visible = false; // should default to false anyway
-        this.user = login.isLoggedIn()?this.login.getUserId():"";
+        this.user = login.isLoggedIn() ? this.login.getUserId() : '';
 
+        this.no_information = '<b>' + this.localizer.localize('linguist-no-information') + '</b>';
     }
 
     ngOnDestroy () {
@@ -54,6 +68,10 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
 
     ngAfterViewInit () {
         this.aggregator.getUserInfo();
+    }
+
+    isDev () {
+      return isDevMode();
     }
 
     reinitialize (ex : ExerciseComponent) {
@@ -101,6 +119,7 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
         //console.log(this.current.target_semrole);
         this.current.index = this.previousExamples.length+1;
         this.current.json = this.data;
+        this.current["time_start"] = Date.now();
     }
     _parse2 (data) {
         this.current.corpus = data["corpus"];
@@ -131,12 +150,23 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
             this.login.getRandomId());
     }
 
+    time_diff(obj, now) {
+      // assume obj["time_start"] exists
+      const ms = now - obj['time_start'];
+      return ms / 1000;
+    }
+
     archive() {
         // TODO prevent buggy behavior!
         this.aggregate("exercise", this.minimize(this.current));
+        this.current["time_taken"] = this.time_diff(this.current, Date.now());
         this.previousExamples.unshift(this.current);
         this.current = new Exercise();
         this.nextRequester.emit("generate");
+    }
+
+    getHistory() {
+      return this.previousExamples;
     }
 
     minimize (exercise:Exercise) {
@@ -167,6 +197,18 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
         }
     }
 
+    isPosExe(ex: Exercise) {
+      return ex.exetype === 'pos1' || ex.exetype === 'pos2';
+    }
+
+    isSyntExe(ex: Exercise) {
+      return ex.exetype === 'synt1' || ex.exetype === 'synt2';
+    }
+
+    isSemExe(ex: Exercise) {
+      return ex.exetype === 'sem';
+    }
+
     concat (left, target, right) {
         let sentence = "";
         for (let i = 0; i < left.length; i++) {
@@ -179,6 +221,18 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
             sentence += right[i]["word"] + " ";
         }
         return sentence;
+    }
+
+    getTarget() {
+      if (this.isPosExe(this.current)) {
+        return this.current.target_pos;
+      }
+      if (this.isSemExe(this.current)) {
+        return this.current.target_semrole;
+      }
+      if (this.isSyntExe(this.current)) {
+        return this.current.target_deprel;
+      }
     }
 
     evaluate(value,exercise: Exercise) {
@@ -209,15 +263,24 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
         }
     }
 
+    setCanChangeMode(value: boolean) {
+      this.canChangeMode = value;
+    }
+
     requestModeChange (mode) {
         // TODO on mode change, clear current exercise?
         // TODO on mode change and clear, save history?
-        //console.log(mode);
+        console.log(mode);
+      this.hideHelp = (this.mode === 'selfstudy_checkbox'); // TODO this doesn't work as expected!!
+      /*
+      When self-study, infobox is shown. When test mode, infobox hidden
+      BUT when diagnostic, infobox shown!!
+       */
+      console.log(this.hideHelp);
         if (!this.mode) {
             this.mode = mode;
         } else {
-            let modeChangeDenied = false;
-            if (modeChangeDenied) {
+            if (!this.canChangeMode) {
                 return;
             }
             // TODO check if we are allowed to change mode
@@ -230,8 +293,114 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
         //this.aggregator.
     }
 
+    public wiki_html;
+
     showInformation(word) {
 
+      const wordLemma = word['lemma'].substr(1, word['lemma'].length - 2);
+
+
+      if (this.mode !== 'selfstudy_checkbox') {  // disable show information except if mode is selfstudy
+        return;
+      }
+      $('#saldomWordHere').html(' <b>'+wordLemma+'</b>');
+      $('#wikiWordHere').html(' <b>'+wordLemma+'</b>');
+      $('#wiktWordHere').html(' <b>'+wordLemma+'</b>');
+      const me = this;
+      let lemgram = word["lex"].split("|")[1];
+
+      this.karp.fetchWordInfo(lemgram).subscribe(function(d) {
+        let saldom_string = "<table class='chromalt'>";
+        let hits = d["hits"]["hits"];
+
+        if (hits.length === 0) {
+          console.log("No HITS for word");
+          $('#saldom').html(me.no_information);
+          return;
+        }
+
+        for (let i = 0; i < hits.length; i++) {
+          let fr = hits[i]["_source"]["FormRepresentations"][0];
+          saldom_string += "<tr><td colspan='2'><b>"+fr["baseform"]+"</b></td></tr>";
+          saldom_string += "<tr><td>lemgram</td><td>"+fr['lemgram']+"</td></tr>";
+          saldom_string += "<tr><td>ordklass</td><td>"+fr['partOfSpeech']+"</td></tr>";
+          saldom_string += "<tr><td>saldo-paradigm</td><td>"+fr['paradigm']+"</td></tr>";
+
+          saldom_string += "<tr class='spacer-row'><td colspan='2'></td></tr>";
+          //saldom_string += "<tr><td>"++"</td><td>"++"</td></tr>";
+
+          let wfs = hits[i]["_source"]["WordForms"];
+          let oddOrEven = false;
+          for (let i = 0; i < wfs.length; i++) {
+            let wf = wfs[i];
+            saldom_string += "<tr class='chromalt-row'><td>"+wf["msd"]+"</td><td>"+wf["writtenForm"]+"</td></tr>";
+            oddOrEven = !oddOrEven;
+          }
+
+        }
+        saldom_string += "</table>";
+        $('#saldom').html(saldom_string);
+      });
+        const wikt = this.larka.wiktionary(word).subscribe(function(data) {
+          let wiktionary_string = "";
+          if (data.hasOwnProperty('parse')) {
+            const result = data["parse"]["text"];
+
+            $.each(result, function(element2, content2){
+              element2 = element2.replace(/\>edit</g, "><");
+              content2 = content2.replace(/\>edit</g, "><");
+              wiktionary_string = wiktionary_string + element2 + content2;
+            });
+            if (wiktionary_string.length > 10) {
+              wiktionary_string = wiktionary_string.replace(/\*/gi, "");
+              wiktionary_string = wiktionary_string.replace(/redigera/gi, "");
+              wiktionary_string = wiktionary_string.replace(/\[</gi, "<");
+              wiktionary_string = wiktionary_string.replace(/>\]/gi, ">");
+              wiktionary_string = wiktionary_string.replace(/<a /gi, "<ank ");
+              wiktionary_string = wiktionary_string.replace(/<\/a>/gi, "<aank> ");
+              /*wiktionary_string = wiktionary_string.replace(/<strong class="selflink">/gi, "");
+			  wiktionary_string = wiktionary_string.replace(/<\/strong>/gi, "");*/
+              wiktionary_string = wiktionary_string.replace(/<table /gi, "<table style=\"text-align: left; font-size: 90%;background:#f6f6f6; margin-left: -5px;");
+            }
+
+          } else {
+            $('#wikt').html(me.no_information);
+          }
+          if (wiktionary_string.length > 0) {
+            // me.wiki_html = wiktionary_string;
+            $('#wikt').html(wiktionary_string);
+          }
+
+        });
+        this.larka.wikipedia(word).subscribe(function(data) {
+          console.log(data);
+          let wiki_string = "";
+          if (data.hasOwnProperty('parse')) {
+            console.log("parse found");
+            let result = data["parse"]["text"];
+
+            $.each(result, function (element, content) {
+              element = element.replace(/\>edit</g, "><");
+              content = content.replace(/\>edit</g, "><");
+              wiki_string = wiki_string + element + content;
+
+            });
+            if (wiki_string.length > 10) {
+              wiki_string = wiki_string.replace(/\*/gi, "");
+              wiki_string = wiki_string.replace(/redigera/gi, "");
+              wiki_string = wiki_string.replace(/\[</gi, "<");
+              wiki_string = wiki_string.replace(/>\]/gi, ">");
+              wiki_string = wiki_string.replace(/<a /gi, "<ank ");
+              wiki_string = wiki_string.replace(/<\/a>/gi, "<aank> ");
+              wiki_string = wiki_string.replace(/edit</gi, "<");
+              $("#wiki").html(wiki_string);
+
+            }
+          } else if (data.hasOwnProperty('error')) {
+            console.log("error found");
+            $("#wiki").html(me.no_information);
+          }
+        });
         let lex = word["lex"].slice(1,-1);
         let lemmaRest = lex.split(/\.{2}/);
         let lemma = lemmaRest[0];
@@ -250,7 +419,7 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
         let pos = posRest[0];
         let sense = posRest[1];
 
-        this._router.navigate( ['.',{ lemma: lemma, pos: pos, sense: sense }] );
+        //this._router.navigate( ['.',{ lemma: lemma, pos: pos, sense: sense }] );
         this.aggregate("show-info",word);
     }
 
@@ -270,6 +439,9 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
         return other;
     }
 
+    hideLinks() {
+      return this.mode !== 'selfstudy_checkbox';
+    }
     showjson(json) {
         //console.log(json);
         let w = window.open();

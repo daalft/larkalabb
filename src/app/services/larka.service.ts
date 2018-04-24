@@ -7,18 +7,36 @@ import {LarkaAdapter} from "./larka.adapter.service";
 import {encode} from "@angular/router/src/url_tree";
 import {TTSEngine} from "./tts.engine.service";
 import {HttpClient, HttpParams} from "@angular/common/http";
+import {LocalizerService} from "./localizer.service";
 
 @Injectable()
 export class LarkaService {
 
-    private devUrl: string = "https://ws.spraakbanken.gu.se/ws/larkalabb/icall.cgi?indent=4&";
 
-    constructor(private http: HttpClient, private tts: TTSEngine, private adapter: LarkaAdapter) {
+    private devUrl: string = "https://ws.spraakbanken.gu.se/ws/larkalabb/icall.cgi?indent=4&";
+private quarantine = "";
+    constructor(private http: HttpClient, private tts: TTSEngine, private adapter: LarkaAdapter, private localizer: LocalizerService) {
 
     }
 
+    generateMultiInfl (domain, pos, level, quarantine) {
+      const url = this.devUrl +
+        "command=multi_infl&" +
+        "pos=" + pos + "&" +
+        "level=" + level + "&" +
+        "quarantine=" + quarantine;
+
+      console.log(url);
+      return this.http.get(url);
+    }
+
     generateMulti (domain, pos, level) {
-        return this.adapter.generateMulti(domain,pos,level);
+        //return this.adapter.generateMulti(domain,pos,level);
+      const url = this.devUrl +
+        "command=multi_voc&" +
+        "level=" + level;
+      console.log(url);
+      return this.http.get(url);
     }
 
     generate (exetype, pos, quarantine, indent) {
@@ -46,7 +64,7 @@ export class LarkaService {
             + "query_type=" + query_type + "&"
             + "use_defaults=" + use_defaults;
         if (query_pos) {
-            url += "&query_pos=" + query_pos
+            url += "&query_pos=" + query_pos;
         }
         if (max_kwics) {
             url += "&max_kwics=" + max_kwics;
@@ -128,5 +146,40 @@ export class LarkaService {
         let url = this.devUrl + "command=hello";
         console.log("wake up call");
         return this.http.get(url);
+    }
+
+    retrieve_ec() {
+      let url = this.devUrl + "command=get_ec";
+      return this.http.get(url);
+    }
+
+    wiktionary(page) {
+      //console.log(page);
+      const pagina = (page["lemma"].split("|"))[1];
+      const lang = this.localizer.getLanguage();
+      const url = "https://"+lang+".wiktionary.org/w/api.php?action=parse&prop=text&origin=*&format=json&page=" + pagina;
+      return this.http.get(url);
+    }
+
+    wikipedia(page) {
+      const pagina = (page["lemma"].split("|"))[1];
+      const url = "https://"+this.localizer.getLanguage()+".wikipedia.org/w/api.php?action=parse&origin=*&format=json&section=0&prop=text&page=" + pagina;
+      return this.http.get(url);
+    }
+
+    enhance(rc, obj) {
+      let url = this.devUrl + "command=enhance";
+      let usp = new HttpParams();
+      const obj_json = JSON.stringify(obj);
+      usp = usp.append('receiver', rc);
+      usp = usp.append('object', obj_json);
+
+      return this.http.post(url, usp);
+    }
+
+    ngram_lm_prob(text) {
+      const url = this.devUrl + "command=sentence_word_prob&sentence=" + encodeURIComponent(text);
+      console.log(url);
+      return this.http.get(url);
     }
 }

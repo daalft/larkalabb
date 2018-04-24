@@ -1,5 +1,5 @@
 
-<div *ngIf="visible" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div *ngIf="visible" class="col-lg-9 col-md-8 col-sm-6 col-xs-12">
 
     <div class="modal fade" #reportModal>
         <div class="modal-header">
@@ -38,7 +38,15 @@
     </div>
 
     <div class="row instructions">
+      <span *ngIf="isPosExe(current)">
         {{localizer.localize('trainPOS1_instruction')}}
+        </span>
+      <span *ngIf="isSyntExe(current)">
+              {{localizer.localize('trainSYNT1_instruction')}}
+            </span>
+      <span *ngIf="isSemExe(current)">
+              {{localizer.localize('trainSEM1_instruction')}}
+            </span>
     </div>
     <div class="row exercise header">
         <div class="col-lg-1 col-md-1 col-sm-1 hidden-xs">
@@ -54,7 +62,12 @@
         </div>
         <div class="col-lg-3 col-md-2 col-sm-2 hidden-xs">
             <!-- links -->
+          <div [ngClass]="{hidden:hideLinks()}">
             {{localizer.localize('json_link')}}
+          </div>
+          <div [ngClass]="{hidden:!hideLinks()}">
+            {{localizer.localize('exe_correct_answer')}}
+          </div>
         </div>
     </div>
     <div [hidden]="current.target[0].word=='...'">
@@ -83,7 +96,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-2 col-sm-2 hidden-xs">
+            <div class="col-lg-3 col-md-2 col-sm-2 hidden-xs" [ngClass]="{hidden:hideLinks()}">
                 <!-- links -->
                 <div class="help-link mock-link" (click)="pronounce(current)">
                     PRON
@@ -98,6 +111,7 @@
                     <span class="fa fa-exclamation"></span>R<span class="fa fa-exclamation"></span>
                 </div>
             </div>
+
         </div>
     </div>
     <div class="row exercise" *ngFor="let previous of previousExamples">
@@ -125,11 +139,35 @@
             </div>
         </div>
         <div class="col-lg-3 col-md-2 col-sm-2 hidden-xs">
+          <div [ngClass]="{hidden:hideLinks()}">
             <!-- links -->
             {{previous.links}}
+          </div>
+          <div [ngClass]="{hidden:!hideLinks()}">
+            <span *ngIf="isPosExe(previous)">
+              {{localizer.localize(previous.target_pos)}}
+            </span>
+
+            <span *ngIf="isSyntExe(previous)">
+              {{localizer.localize(previous.target_deprel)}}
+            </span>
+            <span *ngIf="isSemExe(previous)">
+              {{localizer.localize(previous.target_semrole)}}
+            </span>
+          </div>
         </div>
     </div>
 </div>
+<div class="col-lg-3 col-md-4 hidden-sm hidden-xs" *ngIf="isDev()" [hidden]="!visible || hideHelp" id="linguist-helpcontainer">
+  <span class="exe-info-header" (click)="showSaldom = !showSaldom" [ngClass]="{'exe-info-header-expanded': showSaldom}">SALDOM<span id="saldomWordHere"></span></span>
+  <div id="saldom" [hidden]="!showSaldom"></div>
+  <hr/>
+  <span class="exe-info-header" (click)="showWikipedia = !showWikipedia" [ngClass]="{'exe-info-header-expanded': showWikipedia}">WIKIPEDIA<span id="wikiWordHere"></span></span>
+  <div id="wiki" [hidden]="!showWikipedia"></div>
+  <hr/>
+  <span class="exe-info-header" (click)="showWiktionary = !showWiktionary" [ngClass]="{'exe-info-header-expanded': showWiktionary}">WIKTIONARY<span id="wiktWordHere"></span></span>
+  <div id="wikt" [hidden]="!showWiktionary"></div>
+</div>
 <div *ngIf="!visible">
-No data
+{{localizer.localize('press_generate')}}
 </div>

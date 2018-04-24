@@ -11,7 +11,7 @@ import {LocalizerService} from "../../services/localizer.service";
 })
 
 export class PleaseWaitComponent {
-    private waiting: boolean = false;
+    public waiting: boolean = false;
     private magicVariable: boolean = true;
 
     constructor(public localizer: LocalizerService) {

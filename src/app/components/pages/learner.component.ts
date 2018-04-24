@@ -12,6 +12,7 @@ import {LocalizerService} from "../../services/localizer.service";
 
 export class LearnerComponent {
 
+  public showOptions: boolean;
     constructor(public localizer: LocalizerService) {
         this.calculateResume();
     }
@@ -137,7 +138,7 @@ export class LearnerComponent {
     public numberOfWordChoices: number[];
     public exerciseParticle: string;
     private exerciseParticles = ["pos_selectionNote","pos_selectionNote"];
-    private levelParticle = "level_selectNote";
+    public levelParticle = "level_selectNote";
     public numberOfLevelChoices: number[];
     public wordListOrUserSearch: string = "...";
 

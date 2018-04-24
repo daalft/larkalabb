@@ -1,5 +1,27 @@
-<h1>Vocabulary Multiple Choice</h1>
+<h3>Vocabulary Multiple Choice</h3>
 <pleasewait></pleasewait>
+
+<div id="installningar" class="row">
+
+  <div class="col-lg-1 col-md-1 col-sm-12 col-xs-12">
+  <select #levelsel class="form-control" [disabled]="buttonToggle">
+    <option>A1</option>
+    <option>A2</option>
+    <option selected>B1</option>
+    <option>B2</option>
+    <option>C1</option>
+  </select>
+  </div>
+  <div *ngIf="!buttonToggle">
+  <button class="btn btn-default" (click)="setLevel(levelsel.selectedIndex)">Set level!</button>
+  </div>
+  <div *ngIf="buttonToggle">
+    <button class="btn btn-danger" (click)="resetButton()">Change level</button>
+  </div>
+</div>
+
+<br/>
+
 <button type="button" (click)="generate()" class="btn btn-primary">Click to generate!</button>
 
 <div *ngIf="target">

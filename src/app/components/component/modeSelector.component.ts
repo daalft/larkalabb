@@ -19,9 +19,11 @@ export class ModeSelectorComponent {
     @Output() generateEmitter: EventEmitter<any>;
 
     private selectedMode;
-    private modes;
+    public modes;
 
-    private busyGenerating = false;
+    private canChangeMode: boolean = true;
+
+    public busyGenerating = false;
 
     @ViewChild(PleaseWaitComponent) waiter: PleaseWaitComponent;
 
@@ -37,19 +39,35 @@ export class ModeSelectorComponent {
         this.modeChangeEmitter.emit(this.selectedMode);
     }
 
+    setCanChangeMode(value: boolean) {
+      this.canChangeMode = value;
+    }
+
     isActive(modus) {
         return this.selectedMode == modus;
     }
 
     setMode(modus) {
+      if (this.canChangeMode) {
         this.selectedMode = modus;
         this.modeChangeEmitter.emit(modus);
+      } else {
+        alert("Cannot change mode. Complete diagnostic test first.");
+      }
     }
 
     generate() {
+      if (this.busyGenerating) {
+        return;
+      }
         this.waiter.on();
         this.generateEmitter.emit("generate");
         this.busyGenerating = true;
+    }
+
+    waiterOff() {
+      this.waiter.off();
+      this.busyGenerating = true;
     }
 
     releaseButton () {

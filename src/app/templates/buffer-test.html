@@ -1,0 +1,15 @@
+
+<div>
+  <h3>Enter word</h3>
+  <input type="text" [(ngModel)]="word" title="Test" class="form-control">
+  <hr/>
+  {{word}}
+  <hr/>
+  <button class="btn btn-default" type="submit" (click)="test()">Click me</button>
+  <hr/>
+  <button class="btn btn-danger" type="reset" (click)="cancel()">Interrupt buffer</button>
+  <hr/>
+  <button class="btn btn-primary" type="button" (click)="elems()">Try fetch elems</button>
+  <hr/>
+  <div *ngFor="let l of el">{{l}}</div>
+</div>

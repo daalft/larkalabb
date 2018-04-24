@@ -2,12 +2,8 @@
  * Created by David on 11/21/2016.
  */
 import {Component} from "@angular/core";
-import {ProfileOverviewComponent} from "../component/profileOverview.component";
-import {ProfileMenuComponent} from "../navigation/profileMenu.component";
-import {LearnerProgressComponent} from "../component/learnerProgress.component";
-import {ProfileDetailsComponent} from "../component/profileDetails.component";
 import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot} from "@angular/router";
-import {Observable} from "rxjs/Rx";
+import {Observable} from "rxjs/Observable";
 import {LoginService} from "../../services/login.service";
 
 @Component({

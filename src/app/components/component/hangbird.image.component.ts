@@ -7,6 +7,7 @@ import {DataAggregatorService} from "../../services/dataAggregator.service";
 import {LoginService} from "../../services/login.service";
 import {LarkaService} from "../../services/larka.service";
 import {HttpClient} from "@angular/common/http";
+import {DatetimeService} from "../../services/datetime.service";
 
 /**
  * Created by David on 6/27/2017.
@@ -131,16 +132,16 @@ export class HangBirdImageComponent {
         let index = Math.floor(Math.random()*words.length);
         // Check whether index has been used before
         while ($.inArray(index,this.indexHistory) > -1) {
-            // In order to avoid infinite loops, reset the history when it reaches a certain size
+            // In order to avoid infinite loops, reset the dia_counter when it reaches a certain size
             // as a function of the current level's wordlist's length
             if (this.indexHistory.length >= this.wordlist[this.level].length/2) {
-                console.log("clearing history");
+                console.log("clearing dia_counter");
                 this.indexHistory = [];
             }
             console.log("re-index");
             index = Math.floor(Math.random()*words.length);
         }
-        // Add index to history
+        // Add index to dia_counter
         this.indexHistory.push(index);
 
         this.currentWord = words[index]["word"].toUpperCase();
@@ -246,7 +247,7 @@ export class HangBirdImageComponent {
     }
 
     tryLetter(letter) {
-        this.aggregator.addInformation("letter", letter);
+        this.aggregator.addInformation("letters", letter);
 
         let res = this.getIndicesOf(letter,this.currentWord);
         if (res.length == 0) {
@@ -306,14 +307,14 @@ export class HangBirdImageComponent {
                 this.totalScore *= 2;
             }
             this.aggregator.addInformation("score", this.totalScore);
-            this.aggregator.addInformation("timestamp-end", new Date());
+            this.aggregator.addInformation("timestamp-end", DatetimeService.currentTimestamp());
             this.aggregator.closeAggregator();
             this.showImages = true;
         } else if (status == 0) {
             this.inARow = 0;
             this.showHint = true;
             this.currentWordVector = this.currentWord.split("");
-            this.aggregator.addInformation("timestamp-end", new Date());
+            this.aggregator.addInformation("timestamp-end", DatetimeService.currentTimestamp());
             this.aggregator.closeAggregator();
             return;
         }

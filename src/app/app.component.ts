@@ -17,11 +17,16 @@ import {KarpService} from './services/karp.service';
 import {HashService} from './services/hash.service';
 import {TTSEngine} from './services/tts.engine.service';
 import {iSpeechTTSEngine} from './services/ispeech.service';
+import {CanActivateTestGuard} from "./components/guards/can-activate-test-guard";
+import {BufferService} from "./services/buffer.service";
+import {ChartsModule} from "ng2-charts";
+import {SitepalAsService} from "./services/sitepal.as.service";
+import {DatetimeService} from "./services/datetime.service";
 
 @Component({
     selector: 'larka-app',
     templateUrl: 'templates/larka-app.html',
-    providers: [LocalizerService, LarkaService, LarkaAdapter, LoggerService, LoginService, KorpService, KarpService, DataAggregatorService, NuanceService, EasterEggService, HashService, TTSEngine, iSpeechTTSEngine]
+    providers: [LocalizerService, LarkaService, LarkaAdapter, LoggerService, LoginService, KorpService, KarpService, DataAggregatorService, NuanceService, EasterEggService, HashService, TTSEngine, iSpeechTTSEngine, BufferService, SitepalAsService, DatetimeService]
 })
 
 

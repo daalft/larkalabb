@@ -1,88 +1,116 @@
 /**
  * Created by David on 3/17/2016.
  */
-import {Injectable} from "@angular/core";
-import {HashService} from "./hash.service";
-import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
+import {Injectable} from '@angular/core';
+import {HashService} from './hash.service';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 
 @Injectable()
 export class LoginService {
-    private baseUrl = "https://ws.spraakbanken.gu.se/ws/larkadev/icall.cgi?";
+  private baseUrl = 'https://ws.spraakbanken.gu.se/ws/larkalabb/icall.cgi?';
 
-    private loggedIn: boolean;
+  private loginUrl = this.baseUrl + 'command=login';
 
-    private randomId;
-    private userId;
+  private loggedIn: boolean;
 
-    constructor(private http: HttpClient) {}
+  private randomId;
+  private userId;
 
-    isLoggedIn () {
-        return this.loggedIn;
+  constructor(private http: HttpClient) {}
+
+  isLoggedIn () {
+    return this.loggedIn;
+  }
+
+  userExists(username) {
+
+    const url = this.baseUrl + 'command=exists&username=' + username;
+    return this.http.get(url);
+
+  }
+
+  createUser (udata) {
+    const command = 'command=create_user';
+    const url = this.baseUrl + command;
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
+    let usp = new HttpParams();
+    for (const property in udata) {
+      if (udata.hasOwnProperty(property)) {
+        usp = usp.append(property, udata[property]);
+      }
+    }
+    return this.http.post(url, usp, {headers: headers});
+  }
+
+  logout () {
+    this.loggedIn = false;
+    this.userId = null;
+    window.localStorage.removeItem('remember');
+  }
+
+  login (username: string, password: string, remember: boolean) {
+    const hpw = HashService.hashCode(password + username);
+    const hpws = hpw + '';
+
+    const params: HttpParams = new HttpParams()
+      .append('username', username)
+      .append('chash', hpws);
+
+    if (remember) {
+      window.localStorage.setItem('username', username);
+      window.localStorage.setItem('chash', hpws);
+      window.localStorage.setItem('remember', 'true');
     }
 
-    userExists(username) {
+    return this.http.post(this.loginUrl, params);
+  }
 
-        let url = this.baseUrl + "command=exists&username=" + username;
-        return this.http.get(url);
+  loginWithHash(username: string, chash: string) {
+    const params: HttpParams = new HttpParams()
+      .append('username', username)
+      .append('chash', chash);
+    return this.http.post(this.loginUrl, params);
+  }
 
-    }
-
-    createUser (udata) {
-
-        let command = "command=create_user";
-        //this.baseUrl;
-        let url = this.baseUrl + command;
-        let headers = new HttpHeaders();
-        headers.append('Content-Type', 'application/x-www-form-urlencoded');
-        let usp = new HttpParams();
-        for (let property in udata) {
-            if (udata.hasOwnProperty(property)) {
-                usp = usp.append(property, udata[property]);
-            }
+  cookieLogin () {
+    const me = this;
+    if (window.localStorage.getItem('remember')) {
+      const username = window.localStorage.getItem('username');
+      const chash = window.localStorage.getItem('chash');
+      const params: HttpParams = new HttpParams()
+        .append('username', username)
+        .append('chash', chash);
+      return this.http.post(this.loginUrl, params).subscribe(function(d) {  // subscribe here for auto-login
+        if (d['Status'] === 200) {
+          me.setUserId(d['userid']);
         }
-        this.http.post(url, usp, {headers: headers}).subscribe(function(data) {
+      });
+    } else {
+      console.log('No preference for remember found');
+    }
+  }
 
-        });
-
+  getRandomId() {
+    if (!this.randomId) {
+      this.randomId = 'guestsession' + this.randomNumber();
     }
 
-    logout () {
-        alert("Logging out");
-        this.loggedIn = false;
-        this.userId = null;
-    }
+    return this.randomId;
+  }
 
-    login (username:string, password: string, remember: boolean) {
-        let url = this.baseUrl + 'command=login';
-        let hpw = HashService.hashCode(password + username);
-        let hpws = hpw + '';
+  randomNumber () {
+    return Math.round(Math.random() * 1000000);
+  }
 
-        const params: HttpParams = new HttpParams()
-          .append('username', username)
-          .append('chash', hpws);
+  getUserId () {
+    return this.userId;
+  }
 
-        return this.http.post(url, params);
-    }
-
-    getRandomId() {
-        if (!this.randomId) {
-            this.randomId = "guestsession" + this.randomNumber();
-        }
-
-        return this.randomId;
-    }
-
-    randomNumber () {
-        return Math.round(Math.random() * 1000000);
-    }
-
-    getUserId () {
-        return this.userId;
-    }
-
-    setUserId(uid) {
-        this.userId = uid;
-        this.loggedIn = true;
-    }
+  setUserId(uid) {
+    this.userId = uid;
+    this.loggedIn = true;
+    console.log(uid);
+  }
 
 }

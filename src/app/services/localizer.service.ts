@@ -3,6 +3,7 @@
  */
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
+import {HttpClient} from "@angular/common/http";
 
 @Injectable()
 export class LocalizerService {
@@ -11,7 +12,7 @@ export class LocalizerService {
 
     private dictionary: Object;
 
-    constructor (http: Http) {
+    constructor (http: HttpClient) {
         this.dictionary = {};
         this.dictionary['sv'] = {};
         this.dictionary['en'] = {};
@@ -19,10 +20,8 @@ export class LocalizerService {
             this.currentLanguage = 'sv';
         }
         http.get('./app/data/locale-sv.json')
-            .map(res => res.json())
             .subscribe(data => this.dictionary['sv'] = data);
         http.get('./app/data/locale-en.json')
-            .map(res => res.json())
             .subscribe(data => this.dictionary['en'] = data);
     }
 

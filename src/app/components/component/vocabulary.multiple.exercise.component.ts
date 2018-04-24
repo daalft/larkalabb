@@ -24,14 +24,27 @@ export class VocabularyMultipleChoiceExerciseComponent {
 
   public previous = [];
 
-  public index;
+  public index = 0;
   public indexcounter = 1;
+
+  private levels = ["A1", "A2", "B1", "B2", "C1"];
+  private level = 2;
+
+  public buttonToggle: boolean;
 
     constructor(private larka: LarkaService) {}
 
     //{"target":"t\u00e5rades","distractors":{"t\u00e5rades":"correct","utvecklades":"distractor","genomfors":"distractor","h\u00f6rdes":"distractor","erh\u00f6lls":"distractor"},
     // "target_item":"VB.PRT.SFO","sent_index":51133,"corpus":"SUC3","sentence_left":"Klistret satt ordentligt och han k\u00e4nde hur det ",
     // "sentence_right":"i \u00f6gonen , men han teg och led . ","target_index":8,"exetype":"multi"}
+
+  resetButton() {
+      this.buttonToggle = false;
+  }
+  setLevel(lvl) {
+      this.level = lvl;
+      this.buttonToggle = true;
+  }
 
     generate (domain?, pos?, level?) {
         this.waiter.on();
@@ -41,31 +54,37 @@ export class VocabularyMultipleChoiceExerciseComponent {
         if (!pos) {
             pos = ["NN", "VB", "JJ", "AB"]; // defaults taken from old-old Lärka
         }
-        if (!level) {
-            level = "B1";
-        }
+        level = this.levels[this.level];
         this.distractors = [];
-        let me = this;
-        this.larka.generateMulti(domain,pos,level).subscribe(function(data) {
+        const me = this;
+        this.larka.generateMulti(domain, pos, level).subscribe(function(data) {
             me.parse(data);
         });
     }
 
     parse (data) {
-        this.target = data["target"];
-        let distractors = data["distractors"];
-        let target_item = data["target_item"];
-        let sent_index = data["sent_index"];
-        let corpus = data["corpus"];
+      if (data["msg"]) {
+        console.log(data);
+        this.waiter.off();
+
+        return this.generate();
+      }
+        this.target = data["target"]["word"];
+        this.distractors = data["distractors"];
+        //let target_item = data["target_item"];
+        let sent_index = data["sentence_id"];
+        //let corpus = data["corpus"];
         this.sentence_left = data["sentence_left"];
         this.sentence_right = data["sentence_right"];
-        let target_index = data["target_index"];
-        let exetype = "multi"; // TODO needed for logging??
+        //let target_index = data["target_index"];
+        let exetype = "multi_voc"; // TODO needed for logging??
+      /*
         for (var property in distractors) {
             if (distractors.hasOwnProperty(property)) {
                 this.distractors.push(property);
             }
         }
+        */
         this.index = this.indexcounter++;
         this.answer = this.distractors[0]; // answer only set on explicit change, assume first choice to avoid null answer
         this.waiter.off();

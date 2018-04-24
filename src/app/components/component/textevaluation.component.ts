@@ -23,26 +23,27 @@ export class TextEvaluationComponent {
     @ViewChild('waiter') waiter: PleaseWaitComponent;
 
     // TODO remove
-    private devMode = false;
+    public devMode = false;
 
-    private assessText: boolean;
-    private assessEssay = true;
+    public assessText: boolean;
+    public assessEssay = true;
 
+    public assessModal;
     private mode: number;
 
-    private unprocessed = true;
+    public unprocessed = true;
     private processed = !this.unprocessed;
 
-    private ca1: boolean;
-    private ca2: boolean;
-    private cb1: boolean;
-    private cb2: boolean;
-    private cc1: boolean;
+    public ca1: boolean;
+    public ca2: boolean;
+    public cb1: boolean;
+    public cb2: boolean;
+    public cc1: boolean;
 
-    private cunk: boolean;
-    private csch: boolean;
+    public cunk: boolean;
+    public csch: boolean;
 
-    private words;
+    public words;
 
     private responseObject: ResponseObject;
 

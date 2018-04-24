@@ -17,16 +17,16 @@ import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 export class TopNavbarComponent implements AfterViewInit {
     @ViewChild(PleaseWaitComponent) waiter: PleaseWaitComponent;
 
-    private keep_checkbox: boolean;
+    public keep_checkbox: boolean;
 
     private currentSelected;
 
     private currentRole;
 
-    private menuLeft;
-    private menuRight;
+    public menuLeft;
+    public menuRight;
 
-    private wrongup;
+    public wrongup;
 
     private modalRef: BsModalRef;
 
@@ -49,6 +49,13 @@ export class TopNavbarComponent implements AfterViewInit {
             case 'editor': this.currentSelected = 3; break;
             case 'texteval': this.currentSelected = 4; break;
             default: break;
+        }
+
+        this.login.cookieLogin();
+
+        const prefLang = window.localStorage.getItem('lang');
+        if (prefLang) {
+            this.setLanguage(prefLang);
         }
 
     }
@@ -76,6 +83,7 @@ export class TopNavbarComponent implements AfterViewInit {
     }
 
     setLanguage(lang: string) {
+        window.localStorage.setItem('lang', lang);
         this.localizer.setLanguage(lang);
     }
 
@@ -98,13 +106,14 @@ export class TopNavbarComponent implements AfterViewInit {
     tryLogin (username, password, modal) {
       this.modalRef = modal;
         this.waiter.on();
-        let remember = this.keep_checkbox;
+        /*
         if (remember) {
             document.cookie = username + ':' + password;
         }
-        let me = this;
-        this.login.login(username, password, remember).subscribe(function(data) {
-            if (data['Status'] == 200) {
+        */
+        const me = this;
+        this.login.login(username, password, this.keep_checkbox).subscribe(function(data) {
+            if (data['Status'] === 200) {
                 me.login.setUserId(data['userid']);
                 me.modalRef.hide();
                 me.wrongup = false;

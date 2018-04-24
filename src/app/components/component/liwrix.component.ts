@@ -11,6 +11,8 @@ import {DataAggregatorService} from '../../services/dataAggregator.service';
 import {KorpService} from '../../services/korp.service';
 import {TreeKernelComponent} from '../intern/treekernel.component';
 import {HttpClient} from '@angular/common/http';
+import {TTSEngine} from "../../services/tts.engine.service";
+import {DatetimeService} from "../../services/datetime.service";
 
 @Component({
   selector: 'liwrix',
@@ -39,17 +41,19 @@ export class LiwrixComponent {
   // specific params
   private type;
   private mode;
-  private level;
+  public level;
   private spell = false;
   private mwe = true;
+
+  private voice = 1;
 
   // wordlists by level
   private wordlist = {};
   private phrases = [];
 
   // keeping track of words
-  private previousWords = [];
-  private currentWord = {'path': ''};
+  public previousWords = [];
+  public currentWord = {'word': ''};
 
   private score = 0;
 
@@ -59,8 +63,8 @@ export class LiwrixComponent {
   private idCounter = 1;
   private indexes = [];
 
-  private showFirst = false;
-  private showHint = false;
+  public showFirst = false;
+  public showHint = false;
 
   private svc = 0; // special vowel count
   private scc = 0; // special consonant count
@@ -79,7 +83,7 @@ export class LiwrixComponent {
 
   private phraselist = 'app/data/lexin-phrases.json';
 
-  constructor(private larka: LarkaService, private http: HttpClient, public localizer: LocalizerService, private login: LoginService, private aggregator: DataAggregatorService, private korp: KorpService) {
+  constructor(private larka: LarkaService, private http: HttpClient, public localizer: LocalizerService, private login: LoginService, private aggregator: DataAggregatorService, private korp: KorpService, private tts: TTSEngine) {
     this.aggregator.setLogType('log_db');
 
     // load word lists
@@ -116,12 +120,20 @@ export class LiwrixComponent {
     });
   }
 
+  vh_audioStarted () {
+    console.log("TS: Audio started!");
+  }
+
+  playback(text) {
+    this.tts.textToSpeech(text, this.voice);
+  }
+
   check (id) {
     const word = this.fetchById(id);
     //word["tries"]++;
     const newanswer = $('#answer-' + id).val();
     //word["answer"] = newanswer; // TODO problematic?? removes previous answer?
-    return word['word'] == newanswer;
+    return word['word'] === newanswer;
   }
 
   checkManual (id) {
@@ -132,13 +144,13 @@ export class LiwrixComponent {
 
     // TODO add aggregator information about updated answer
 
-    return word['word'] == newanswer;
+    return word['word'] === newanswer;
   }
 
   fetchById (id) {
     for (let i = 0; i < this.previousWords.length; i++) {
       const cobj = this.previousWords[i];
-      if (cobj['id'] == id) {
+      if (cobj['id'] === id) {
         return cobj;
       }
     }
@@ -171,6 +183,7 @@ export class LiwrixComponent {
     this.currentWord['id'] = this.idCounter++;
     this.currentWord['tries'] = 0;
     this.currentWord['answers'] = [];
+
     this.currentWord['special-type'] = 'NORMAL';
     if (this.score > 0) {
       if (this.type < 2) {
@@ -187,7 +200,13 @@ export class LiwrixComponent {
         }
       }
     }
-    this.larka.speak(word, this.spell ? 'spell' : '').subscribe(function(d) {
+    this.waiter.off();
+    $('#answer-' + (this.idCounter - 1)).focus();
+    if (this.type < 2) {
+        this.loadhints(word);
+    }
+    return 1;
+    /*this.larka.speak(word, this.spell ? 'spell' : '').subscribe(function(d) {
       if (d['Status']) {
         if (d['Status'] == 200) {
           me.currentWord['path'] = me.pathprefix + d['filename'];
@@ -205,6 +224,7 @@ export class LiwrixComponent {
       me.waiter.off();
       return 0; // should never happen anyway
     });
+    */
   }
 
   loadhints(word) {
@@ -263,12 +283,13 @@ export class LiwrixComponent {
   validate () {
     const lastAnswer = this.currentWord['answers'][this.currentWord['answers'].length - 1];
     if (!lastAnswer) {
+      console.log("no last answer");
       return;
     }
     const target = this.currentWord['word'];
     const isSpecialVowel = this.currentWord['special-type'] === 'VOWEL';
     const isSpecialConsonant = this.currentWord['special-type'] === 'CONSONANT';
-
+    console.log(this.currentWord);
     const me = this;
 
     if (isSpecialVowel) {
@@ -282,9 +303,9 @@ export class LiwrixComponent {
       const tav = target.split('').filter(function(v) {
         return me.vowels.test(v);
       });
-      if (lav.length == tav.length) {
+      if (lav.length === tav.length) {
         for (let i = 0; i < lav.length; i++) {
-          if (lav[i] != tav[i]) {
+          if (lav[i] !== tav[i]) {
             return;
           }
         }
@@ -301,9 +322,9 @@ export class LiwrixComponent {
       const tav = target.split('').filter(function(v) {
         return me.consonants.test(v);
       });
-      if (lav.length == tav.length) {
+      if (lav.length === tav.length) {
         for (let i = 0; i < lav.length; i++) {
-          if (lav[i] != tav[i]) {
+          if (lav[i] !== tav[i]) {
             return;
           }
         }
@@ -311,6 +332,7 @@ export class LiwrixComponent {
       this.score += 2;
     } else {
       if (lastAnswer === target) {
+        console.log("score+");
         this.score++;
       }
     }
@@ -327,19 +349,20 @@ export class LiwrixComponent {
     this.validate(); // update score
 
     const temp = this.currentWord;
-    if (temp['path']) {
+    if (temp['word']) {
       for (const key in temp) {
         if (temp.hasOwnProperty(key)) {
           this.aggregator.addInformation(key, temp[key]);
         }
       }
       this.aggregator.addInformation('uid', this.sessionid);
-      this.aggregator.addInformation('timestamp-end', new Date());
+      this.aggregator.addInformation('level', this.level);
+      this.aggregator.addInformation('timestamp-end', DatetimeService.currentTimestamp());
     }
     // new word
-    this.currentWord = {'path': ''};
+    this.currentWord = {'word': ''};
     this.generateWord(this.getRandomWord(this.level));
-    if (temp['path']) { // catch first time archiving void object
+    if (temp['word']) { // catch first time archiving void object
       this.previousWords.unshift(temp);
       this.aggregator.closeAggregator();
       this.aggregator.setAggregator({'exercise': 'liwrix'});
@@ -347,15 +370,20 @@ export class LiwrixComponent {
     // reset stuff
     this.showHint = false;
     this.showFirst = false;
+    $('#answer-' + (this.currentWord['id']-1)).val('');
+    this.waiter.on();
+    this.tts.textToSpeech(this.currentWord['word'], this.voice);
+    this.waiter.off();
   }
 
-  setParams(type, level, mode) {
-    if (type == 1) {
+  setParams(type, level, mode, voice) {
+    if (type === 1) {
       this.spell = true;
     }
     this.type = type;
     this.mode = mode;
     this.level = this.mapToLevel(level);
+    this.voice = voice;
     this.next();
   }
 
@@ -377,19 +405,29 @@ export class LiwrixComponent {
 
   getCorrect() {
     return this.previousWords.filter(function(d) {
-      if (d['word'] == d['answers'][d['answers'].length - 1]) {
+      if (d['word'] === d['answers'][d['answers'].length - 1]) {
         return 1;
       }
     }).length;
   }
 
   keyhandler(event, id?) {
-    if (event.keyCode == 13) {
+    if (event.keyCode === 13) {
       if (!id) {
         this.next();
       } else {
         this.checkManual(id);
       }
     }
+  }
+
+  playbackInProgress() {
+    const pbs = $('.liwrix-play-button');
+    for (let i = 0; i < pbs.length; i++) {
+      if ($(pbs[i]).hasClass('liwrix-play-button-inactive')) {
+        return true;
+      }
+    }
+    return false;
   }
 }

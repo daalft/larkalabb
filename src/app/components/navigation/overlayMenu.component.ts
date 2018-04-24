@@ -11,8 +11,8 @@ import {LocalizerService} from "../../services/localizer.service";
 
 export class OverlayMenuComponent {
 
-    private showOne: boolean = false;
-    private showTwo: boolean = false;
+    public showOne: boolean = false;
+    public showTwo: boolean = false;
 
     constructor(public localizer: LocalizerService) {
 

@@ -5,6 +5,7 @@ import {PleaseWaitComponent} from './pleasewait.component';
 import {DataAggregatorService} from '../../services/dataAggregator.service';
 import {LoginService} from '../../services/login.service';
 import {HttpClient} from '@angular/common/http';
+import {DatetimeService} from "../../services/datetime.service";
 
 /**
  * Created by David on 1/25/2017.
@@ -276,13 +277,13 @@ export class HangBirdComponent {
                 this.totalScore *= 2;
             }
             this.aggregator.addInformation('score', this.totalScore);
-            this.aggregator.addInformation('timestamp-end', new Date());
+            this.aggregator.addInformation('timestamp-end', DatetimeService.currentTimestamp());
             this.aggregator.closeAggregator();
         } else if (status == 0) {
             this.inARow = 0;
             this.showHint = true;
             this.currentWordVector = this.currentWord.split('');
-            this.aggregator.addInformation('timestamp-end', new Date());
+            this.aggregator.addInformation('timestamp-end', DatetimeService.currentTimestamp());
             this.aggregator.closeAggregator();
             return;
         }

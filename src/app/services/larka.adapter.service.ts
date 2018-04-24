@@ -12,9 +12,22 @@ import {HttpClient} from "@angular/common/http";
 export class LarkaAdapter {
 
     private baseUrl: string = "https://ws.spraakbanken.gu.se/ws/icall/icall.cgi?";
+    private baseUrl2: string = "https://ws.spraakbanken.gu.se/ws/icall/icall4.cgi?";
+    constructor(private http: HttpClient) {}
 
-    constructor(private http: HttpClient) {};
 
+    generateMultiInfl(domains, param, levels) {
+      let exetype = "exetype=multi";
+      let particleQ = "pos";
+      let paramQ = particleQ + "=" + param;
+      let domain = "domain=" + domains;
+      let level = "level=" + this.map(levels);
+      //let lang = "lang=sv";
+      let url = this.baseUrl2 + exetype + "&" + paramQ + "&" + level;
+      console.log(url);
+      return this.http.get(url);
+
+    }
 
     generateMulti (domains, param, levels) {
         //exe=multi&lang=sv&poslist=KN,SN,DT,PP,PN,JJ,AB,NN,VB&domain=kelly&level=A1,A2,B1,B2,C1,C2
@@ -24,7 +37,7 @@ export class LarkaAdapter {
         let domain = "domain=" + domains;
         let level = "level=" + this.map(levels);
         //let lang = "lang=sv";
-        let url = this.baseUrl + exetype + "&" + paramQ + "&" + level;
+        let url = this.baseUrl2 + exetype + "&" + paramQ + "&" + level;
         console.log(url);
         let response = this.http.get(url);
         try {
@@ -55,7 +68,7 @@ export class LarkaAdapter {
         let indentQ = "indent=" + indent;
 
         let url = this.baseUrl + exetypeQ + "&" + paramQ + "&" + carantineQ + "&" + indentQ;
-        //console.log(url);
+        console.log(url);
         return this.http.get(url);
     }
 

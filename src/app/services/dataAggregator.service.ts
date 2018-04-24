@@ -3,6 +3,7 @@
  */
 import {Injectable, AfterViewInit} from "@angular/core";
 import {LoggerService} from "./logger.service";
+import {DatetimeService} from "./datetime.service";
 @Injectable()
 export class DataAggregatorService {
 
@@ -27,7 +28,7 @@ export class DataAggregatorService {
 
     aggregate (type,data, id) {
         // automatically add timestamp
-        let now = new Date();
+        let now = DatetimeService.currentTimestamp();
         let obj = {
             'type': type,
             'data': data,
@@ -38,7 +39,7 @@ export class DataAggregatorService {
     }
 
     setAggregator(obj) {
-        obj['timestamp'] = new Date();
+        obj['timestamp'] = DatetimeService.currentTimestamp();
         this.currentAggregator = obj;
     }
 

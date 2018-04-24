@@ -5,7 +5,7 @@ import {Component} from "@angular/core";
 import {ActivatedRoute, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot} from "@angular/router";
 import {LearnerModelService} from "../../services/learnerModel.service";
 import 'rxjs/add/operator/switchMap';
-import {Observable} from "rxjs/Rx";
+import {Observable} from "rxjs/Observable";
 import {LoginService} from "../../services/login.service";
 @Component({
     selector: 'profile-overview',

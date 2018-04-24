@@ -1,0 +1,18 @@
+
+<div [hidden]="modeChosen">
+  <label><input type="radio" name="song" #song1>Karhunpoika sairastaa</label>
+  <label><input type="radio" name="song" #song2>Sininen ja valkoinen</label>
+<br/>
+  <label><input type="radio" name="mode" #mode1>Words</label>
+  <label><input type="radio" name="mode" #mode2>Lines</label>
+<br/>
+  <button class="btn btn-default" (click)="setMode(song1.checked?0:1, mode1.checked?0:1);">Set mode</button>
+</div>
+
+<div [hidden]="!modeChosen">
+  <div *ngFor="let line of currentSong">
+    <span *ngFor="let word of line">
+      <button type="button" class="btn btn-default" (click)="pronounce(word)">|></button><input [ngClass]="{fiincorrect: !isCorrect(inpu.value, word), ficorrect: isCorrect(inpu.value, word)}" type="text" (blur)="validate(inpu.value,word)" title="" #inpu>
+      </span>
+  </div>
+</div>
