@@ -30,11 +30,14 @@ private quarantine = "";
       return this.http.get(url);
     }
 
-    generateMulti (domain, pos, level) {
+    generateMulti (domain, pos, level, seedWord?) {
         //return this.adapter.generateMulti(domain,pos,level);
-      const url = this.devUrl +
+      let url = this.devUrl +
         "command=multi_voc&" +
         "level=" + level;
+      if (seedWord) {
+        url += "&seedWord=" + encodeURIComponent(seedWord);
+      }
       console.log(url);
       return this.http.get(url);
     }

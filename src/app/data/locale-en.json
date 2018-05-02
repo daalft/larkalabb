@@ -850,7 +850,7 @@
     "texteval-nominalRatio": "Nominal ratio",
     "texteval-pntonn": "Pronoun-to-noun ratio",
     "texteval-nonLemmatized": "Non-lemmatized forms",
-	"texteval-overall-level": "Overall level",
+	"texteval-overall-level": "Suggested overall level",
 	"texteval-evaluation": "Evaluation",
 	"texteval-detailed-evaluation": "Detailed evaluation",
 	"texteval-reset": "Reset",

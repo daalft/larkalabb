@@ -1,3 +1,4 @@
+<!--
 <div>Diagnostic Test</div>
 
 <div id="testcontainer">
@@ -7,4 +8,67 @@
 </div>
 
 <button class="btn btn-primary" type="submit" (click)="updateBounds()">Done</button>
+-->
+<style>
+  #sortable { list-style-type: none; margin: 0; padding: 0; }
+  #sortable li { margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; display: block; }
+  html>body #sortable li {line-height: 1.2em; }
+  .ui-state-highlight { padding: 5px; }
+  #rdroptarget { padding: 5px; }
+</style>
+<pleasewait #waiter></pleasewait>
+<div> <!-- main container -->
+  <div> <!-- common header -->
 
+  </div> <!-- end header -->
+  <h2>Diagnostic test</h2>
+  <div [hidden]="currentView != 0"> <!-- start -->
+
+    <hr/>
+      Some text explaining the test...
+    <hr/>
+
+    <button type="submit" class="btn btn-primary" (click)="startTest()">Start</button>
+  </div>
+
+  <div [hidden]="currentView != 1"> <!-- MC -->
+    <h4>Multiple Choice</h4>
+    <hr/>
+      <span>{{mcdata['sent_left']}}</span> __________ <span>{{mcdata['sent_right']}}</span>
+<br/>
+    <select title="Select answer" class="form-control">
+      <option *ngFor="let answer of mcdata['answers']">{{answer}}</option>
+    </select>
+
+  </div> <!-- end MC -->
+
+  <div [hidden]="currentView != 2"> <!-- Gap -->
+    <h4>Gap</h4>
+    <hr/>
+
+
+  </div> <!-- end Gap -->
+
+  <div [hidden]="currentView != 3"> <!-- Voc knowledge -->
+    <h4>Vocabulary knowledge</h4>
+    <hr/>
+    <span *ngFor="let word of vkwords" class="dia-selectable" [ngClass]="{'dia-selected': word['selected']}" (click)="select(word)">{{word['word']}}</span>
+
+  </div> <!-- end Voc Knowledge -->
+
+  <div [hidden]="currentView != 4"> <!-- Re-arrange -->
+    <h4>Re-arrangement</h4>
+    <hr/>
+    <div id="rdroptarget">
+    <ul id="sortable">
+      <li class="ui-state-default" *ngFor="let chunk of rdata['chunks']" id="{{chunk['id']}}">{{chunk['text']}}</li>
+    </ul>
+    </div>
+
+  </div> <!-- end re-arrange -->
+
+  <div [hidden]="currentView == 0"> <!-- common footer -->
+    <hr/>
+    <button type="button" class="btn btn-primary" (click)="moveOn()">Continue</button>
+  </div> <!-- end footer -->
+</div> <!-- end main container -->

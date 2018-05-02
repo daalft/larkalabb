@@ -5,7 +5,7 @@ import {Injectable} from "@angular/core";
 @Injectable()
 export class SparvService {
     private baseurl = "https://ws.spraakbanken.gu.se";
-    private basefunction = "/ws/sparv/v1/?text=";
+    private basefunction = "/ws/sparv/v2/?text=";
 
 
 }
