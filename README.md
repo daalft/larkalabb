@@ -1,6 +1,8 @@
-# Bcp
+# LärkaLabb dev version
 
+This is the development version of [LärkaLabb](https://spraakbanken.gu.se/larkalabb), developed at Språkbanken, University of Gothenburg, Sweden.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
+
 
 ## Development server
 
