@@ -168,7 +168,23 @@
                 <td>{{responseObject.}}</td>
             </tr>
             -->
+
+
         </table>
+
+      <div>
+        <b>CEFR Receptive Distribution</b>
+        <div *ngFor="let key of rkeys">
+          {{key}}: {{cefrDistR[key]}} %
+        </div>
+      </div>
+      <br/>
+      <div>
+        <b>CEFR Productive Distribution</b>
+        <div *ngFor="let key of pkeys">
+          {{key}}: {{cefrDistP[key]}} %
+        </div>
+      </div>
     </div>
     </div>
 </div>

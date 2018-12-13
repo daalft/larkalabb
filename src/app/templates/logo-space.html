@@ -1,5 +1,5 @@
 <div class="container-fluid hidden-xs" id =logo-container-main>
-    <span class="logo-font-big">L</span><img class="logo-img" [src]="getCurrentLogo()"><span class="logo-font-big">RK</span><span class="logo-font-big" [hidden]="getLanguage()!=='sv'">A</span><span class="fa fa-flask logo-font-big-flask"></span>
+    <span class="logo-font-big">L</span><img class="logo-img" [src]="getCurrentLogo()"><span class="logo-font-big">RK</span><span class="logo-font-big" [hidden]="getLanguage()!=='sv'">A</span><span [hidden]="!isLabb()"><span class="fa fa-flask logo-font-big-flask"></span></span>
 </div>
 
 <div class="container-fluid hidden-xs" id="logo-container-extra">

@@ -1,0 +1,82 @@
+<pleasewait #waiter></pleasewait>
+
+<h2>eNetCollect informed consent form</h2>
+
+<div *ngIf="!alreadyDone">
+<div>
+<p>
+  Working group 1 (WG1) within the eNetCollect COST Action &lt;<a href='http://enetcollect.eurac.edu'>http://enetcollect.eurac.edu</a>&gt; is carrying out an experiment which aims to test crowdsourcing as a method to compile reliable resources for second language teaching, learning and research. The experiment has started in September 2018 and involves a crowdsourcing task to be completed by <b>31 October 2018</b>. The analysis of the results (e.g. cross-referencing the crowdsourcers’ profile information and votes) is planned to span over 2019. For more information on the experiment, visit &lt;<a href="https://spraakbanken.gu.se/eng/wg1-dec18-gbg">https://spraakbanken.gu.se/eng/wg1-dec18-gbg</a>&gt;.
+</p>
+  <p>
+  For the analysis, we require some background information about the participants. For this reason, we ask you to fill in the form below.
+  </p>
+  <p>
+  All your information will be treated with the utmost confidentiality. It will only be visible to the members of the project team, used only for the purposes of this experiment, and will not be shared with third parties. You will be de-identified (i.e. your email removed) as soon as we can replace it with PyBossa-ID, and the rest of your personal information will be deleted upon the completion of the analysis of the experiment (planned by the end of 2019).
+  </p>
+</div>
+<div>
+
+
+  <form>
+    <fieldset>
+      <legend>Information</legend>
+
+
+      <label>Email address:<input type="email" class="form-control" name="emaila" id="emaila" #emaila="ngModel" [(ngModel)]="info.email" pattern=".+@.+\..+" required></label>
+      <br/>
+      <b>Is English your mother tongue:</b><br/>
+      <label><input type="radio" name="emt" value="yes" [(ngModel)]="emt">Yes</label>
+      <label><input type="radio" name="emt" value="no" [(ngModel)]="emt">No</label>
+
+
+
+
+    </fieldset>
+    <br/><br/>
+    <fieldset>
+      <legend>Professional profile</legend>
+
+      Please select all the roles that apply to you:<br/>
+
+      <label class="checkbox-inline"><input type="checkbox" class="checkbox" value="teacherEnglish" #teacherEnglish>Teacher of English (ESL/EFL)</label>
+      <label class="checkbox-inline"><input type="checkbox" class="checkbox" value="teacherAssessor" #teacherAssessor>Teacher/Assessor</label>
+      <label class="checkbox-inline"><input type="checkbox" class="checkbox" value="nlpResearcher" #nlpResearcher>NLP researcher</label>
+      <label class="checkbox-inline"><input type="checkbox" class="checkbox" value="slaResearcher" #slaResearcher>SLA/L2 researcher</label>
+      <label class="checkbox-inline"><input type="checkbox" class="checkbox" value="linguist" #linguist>Linguist</label>
+      <label class="checkbox-inline"><input type="checkbox" class="checkbox" value="softwareEngineer" #softwareEngineer>Software engineer</label>
+      <label class="checkbox-inline"><input type="checkbox" class="checkbox" value="other" (change)="showOther = !showOther" #other>Other</label>
+      <br/>
+      <label for="otherWhat" [hidden]="!showOther">Please indicate:</label>
+      <br/>
+      <input type="text" [hidden]="!showOther" id="otherWhat" #otherwhat>
+    </fieldset>
+    <hr/>
+    <label class="checkbox-inline"><input type="checkbox" class="checkbox" name="iagree" #iagree>I agree to the above terms and conditions</label>
+    <hr/>
+    <button type="submit" [disabled]="" class="btn btn-primary" (click)="validate(iagree.checked, teacherEnglish.checked, teacherAssessor.checked, nlpResearcher.checked, slaResearcher.checked, linguist.checked, softwareEngineer.checked, (other.checked?otherwhat.value:null));">Submit</button>
+  </form>
+</div>
+</div>
+
+<div *ngIf="alreadyDone">
+  Thank you for completing the consent form.
+</div>
+
+<div class="modal fade" bsModal #referModal="bs-modal" id="referModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Success</h4>
+      </div>
+      <div class="modal-body">
+        We have sent the instructions on how to sign up and contribute to the task to the indicated email address.<br/>
+        If necessary, check the junk mail folder.<hr/>
+        Please use the <b>same email address</b> that you indicated on this form to sign up in PyBossa.<br/>This is important
+        for us so that we can link your information to your PyBossa account.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="referModal.hide();">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

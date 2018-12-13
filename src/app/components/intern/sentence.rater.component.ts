@@ -2,8 +2,7 @@ import {Component} from "@angular/core";
 
 @Component({
   selector: 'sentence-rater',
-  templateUrl: '../../templates/sentence-rater.html',
-  styleUrls: ['../../css/cesera.css']
+  templateUrl: '../../templates/sentence-rater.html'
 })
 
 export class SentenceRaterComponent {

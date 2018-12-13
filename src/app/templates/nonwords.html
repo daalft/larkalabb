@@ -1,0 +1,71 @@
+<h2>Non-word generator</h2>
+
+<div> <!-- main panel -->
+  <form>
+  <label for="nwlen">Generate non-words of length (3 - 11):</label>
+  <input id="nwlen" type="number" #nwlen class="form-control" min="3" max="11" value="6">
+
+  <br/>
+
+  <label for="nwnum">How many non-words (1 - 100):</label>
+  <input id="nwnum" type="number" #nwnum class="form-control" min="1" max="100" value="10">
+
+  <br/>
+
+  <button type="submit" class="btn btn-primary" (click)="generate(nwlen.value)">Generate</button>
+  </form>
+</div>
+
+<br/><br/>
+
+<div> <!-- options -->
+  <div (click)="showOptions = !showOptions" style="font-weight: bold"><span *ngIf="showOptions">Hide</span><span *ngIf="!showOptions">Show</span> Options <i *ngIf="!showOptions" class="fa fa-arrow-circle-down"></i><i *ngIf="showOptions" class="fa fa-arrow-circle-up"></i></div>
+  <div [hidden]="!showOptions">
+    <h3>Options</h3>
+
+    <!-- language specific filtering -->
+
+    <label for="l1specific" class="checkbox-inline"><input type="checkbox" id="l1specific" (change)="useL1 = !useL1">L1-specific ordering:</label>
+
+    <br/>
+    <label for="langlist">Select L1</label>
+    <select id="langlist" [disabled]="!useL1" class="form-control">
+      <option value="de">German</option>
+      <option value="en">English</option>
+      <option value="ar">Arabic</option>
+    </select>
+
+    <br/>
+    <br/>
+
+    <!-- pos similarity -->
+    <label for="posgrid">Generate words that look like:</label>
+    <br/>
+    <div id="posgrid">
+      <label class="checkbox-inline"><input type="checkbox" (change)="noop()">nouns</label>
+      <br/>
+      <label class="checkbox-inline"><input type="checkbox" (change)="noop()">verbs</label>
+      <br/>
+      <label class="checkbox-inline"><input type="checkbox" (change)="noop()">adjectives</label>
+      <br/>
+      <label class="checkbox-inline"><input type="checkbox" (change)="noop()">adverbs</label>
+    </div>
+
+    <br/>
+    <br/>
+    <!-- elements to generate before filtering -->
+    <label for="elbf" class="checkbox-inline"><input type="checkbox" id="elbf" (change)="useNumbf = !useNumbf" class="checkbox-inline">Number of items to generate before filtering:</label>
+
+    <br/>
+    <label for="elbfn">Enter number:</label>
+    <input type="number" min="1" max="10000" value="10000" id="elbfn" [disabled]="!useNumbf" class="form-control">
+
+    <hr/>
+
+    <!-- ADVANCED OPTIONS -->
+    <h3>Advanced options</h3>
+
+    <!-- do not filter -->
+    <label for="nofilter" class="checkbox-inline"><input type="checkbox" class="checkbox-inline" (change)="nofilter = !nofilter" id="nofilter">Do not rank results</label>
+  </div>
+</div>

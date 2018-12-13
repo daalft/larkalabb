@@ -22,11 +22,15 @@ import {BufferService} from "./services/buffer.service";
 import {ChartsModule} from "ng2-charts";
 import {SitepalAsService} from "./services/sitepal.as.service";
 import {DatetimeService} from "./services/datetime.service";
+import {VersionControllerService} from "./services/version.controller.service";
+import {D3Service} from "d3-ng2-service";
+import {MatAutocomplete, MatInput, MatSnackBar} from "@angular/material";
+import {FormControlDirective} from "@angular/forms";
 
 @Component({
     selector: 'larka-app',
     templateUrl: 'templates/larka-app.html',
-    providers: [LocalizerService, LarkaService, LarkaAdapter, LoggerService, LoginService, KorpService, KarpService, DataAggregatorService, NuanceService, EasterEggService, HashService, TTSEngine, iSpeechTTSEngine, BufferService, SitepalAsService, DatetimeService]
+    providers: [LocalizerService, LarkaService, LarkaAdapter, LoggerService, LoginService, KorpService, KarpService, DataAggregatorService, NuanceService, EasterEggService, HashService, TTSEngine, iSpeechTTSEngine, BufferService, SitepalAsService, DatetimeService, VersionControllerService, D3Service, MatSnackBar, MatInput, MatAutocomplete]
 })
 
 

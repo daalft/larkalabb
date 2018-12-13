@@ -11,7 +11,7 @@ import {LarkaService} from "../../services/larka.service";
 })
 
 export class EnetCollectDemoComponent {
-  public isLoggedIn = false;
+  public isLoggedIn = true;
   public isAdmin = false;
 
   public showAddEntry = false;
@@ -25,18 +25,23 @@ export class EnetCollectDemoComponent {
 
   public canReset: boolean;
 
+  private offset = 735;
   constructor(private larka: LarkaService) {
     const me = this;
-    const offset = 735;
+
     larka.retrieve_ec().subscribe(function(d) {
       for (let i = 1; i < Object.keys(d).length; i++) {
-        const j = i + offset;
+        const j = i + me.offset;
 
         me.litlist.push(d[j]);
         me.originalList.push(d[j]);
       }
       console.log("loaded literature list");
     });
+
+    //larka.retrieve_ec_taken().subscribe(function(d) {
+
+    //});
   }
     nav (i) {
         if (i == 1) {
@@ -113,5 +118,43 @@ export class EnetCollectDemoComponent {
     mockResetSearch() {
       this.litlist = this.originalList;
       this.canReset = false;
+    }
+
+    ec_login() {
+      const uname = window.prompt("Enter email address:");
+      const me = this;
+      /*
+      this.larka.try_ec_logn(uname).subscribe(function(d) {
+        me.isLoggedIn = true;
+      });
+*/
+    }
+
+    hasKeywords(i) {
+    if (this.litlist.length === 0) {
+      return false;
+    }
+      return this.litlist[i].hasOwnProperty("keywords");
+    }
+
+    iwant(i) {
+      this.revlist.push(i);
+    }
+
+    ssave(i, kw, ss) {
+      console.log(i);
+      console.log(kw);
+      console.log(ss);
+    }
+
+    takenSelf(i) {
+      return this.revlist.indexOf(i) > -1;
+    }
+
+    takenOther(i) {
+    if (i === 1) {
+      return true;
+    }
+    return false;
     }
 }

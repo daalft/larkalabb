@@ -44,9 +44,14 @@
 
     </div>
     <br/>
-    <div class="row" *ngIf="ready">
+    <div class="row" *ngIf="ready&&ttsLoaded">
         <button type="submit" (click)="setParams(type.selectedIndex,level.selectedIndex,(mode1.checked?0:mode2.checked?1:2),(voice1.checked?1:3))" class="btn btn-primary">{{localizer.localize('liwrix-play')}}</button>
     </div>
+
+  <div class="row" *ngIf="!ready||!ttsLoaded">
+    Loading resources...
+    <img src="app/img/ajax-loader.gif" aria-hidden="true">
+  </div>
 
     <div id="attribution">
         Words sampled from <a href="">SVAlex</a> (Thomas François, Elena Volodina, Ildikó Pilán, Anaïs Tack. 2016)

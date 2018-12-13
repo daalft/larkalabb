@@ -1,0 +1,37 @@
+<h2>Bundle gap component</h2>
+
+<div>
+
+  <div class="bundle-info" [hidden]="!showInfo">
+  <div>
+    {{bundle['target']}}
+  </div>
+
+  <div>
+    {{bundle['level']}}
+  </div>
+  </div>
+<div class="show-info" [hidden]="showInfo">
+  <button type="button" class="btn btn-default" (click)="showAdd();">Show solution</button>
+</div>
+
+  <div class="bundle-s">
+    {{unquote(bundle['s1'])}}
+  </div>
+
+  <div class="bundle-s">
+    {{unquote(bundle['s2'])}}
+  </div>
+
+  <div class="bundle-s">
+    {{unquote(bundle['s3'])}}
+  </div>
+
+  <div class="bundle-s">
+    {{unquote(bundle['s4'])}}
+  </div>
+</div>
+<hr/>
+<div>
+  <button type="button" class="btn btn-primary" (click)="next()">Continue</button>
+</div>

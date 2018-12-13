@@ -63,6 +63,10 @@ export class BufferMultiExeComponent {
     clearInterval(this.id);
   }
 
+  empty() {
+    this.buffer = [];
+  }
+
   ready () {
     return this.buffer.length > 0;
   }

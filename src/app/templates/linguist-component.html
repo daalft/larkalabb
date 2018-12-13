@@ -28,7 +28,7 @@
 </div>
 <br/>
 <div id="exercises">
-  <div *ngIf="num_dia_items>0">
+  <div *ngIf="num_dia_items>0 && currentMode=='diagnostic_test'">
     <br/>
     <div class="dia-track">
     {{dia_counter}}/{{num_dia_items}} {{localizer.localize('linguist-dia-completed')}} ({{floor(100*dia_counter/num_dia_items)}} {{localizer.localize('linguist-dia-percent')}})

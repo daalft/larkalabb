@@ -27,7 +27,9 @@
       ],
       "scripts": [
         "app/js/larka-aux.js",
-		"app/js/hammer.min.js"
+		"app/js/hammer.min.js",
+		"app/js/jquery.ui.touch-punch.min.js"
+		
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

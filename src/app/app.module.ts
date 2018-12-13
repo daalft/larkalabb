@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {LarkaApp} from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {routing} from './app.routing';
 import {HomeComponent} from './components/pages/home.component';
@@ -51,14 +51,37 @@ import {BufferTest} from "./components/intern/buffer.test";
 import {BufferMultiExeComponent} from "./components/buffer/buffer.multi.exe.component";
 import {ChartsModule} from "ng2-charts";
 import {CefrlexComponent} from "./components/intern/cefrlex.component";
-import {MatSliderModule} from "@angular/material";
+import {
+  MatAutocompleteModule,
+  MatIconModule,
+  MatBadgeModule,
+  MatInputModule,
+  MatSliderModule,
+  MatSnackBarModule
+} from "@angular/material";
+
 import {LmErrorComponent} from "./components/intern/lm.error.component";
 import {FinnishComponent} from "./components/intern/finnish.component";
 import {TalkingHead} from "./components/intern/talkingHead";
+import {WordraterComponent} from "./components/intern/wordrater.component";
+import {SentenceRaterComponent} from "./components/intern/sentence.rater.component";
+import {XRaterComponent} from "./components/intern/xrater.component";
+import {UserinfoComponent} from "./components/pages/userinfo.component";
+import {BundledGapComponent} from "./components/intern/bundled.gap.component";
+import {SixesComponent} from "./components/intern/sixes.component";
+import {Wordrater2Component} from "./components/intern/wordrater2.component";
+import {NonwordComponent} from "./components/intern/nonword.component";
+import {EnetcollectConsentComponent} from "./components/intern/enetcollect.consent.component";
+import {L2pAnnotatorComponent} from "./components/intern/l2p.annotator.component";
+import {OverlayModule} from "@angular/cdk/overlay";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {CallectorComponent} from "./components/intern/callector.component";
+
+
 
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, HttpModule, HttpClientModule, ModalModule.forRoot(), routing, ChartsModule, MatSliderModule],
+    imports: [BrowserModule, MatBadgeModule, MatIconModule, FormsModule, HttpModule, HttpClientModule, ModalModule.forRoot(), routing, ChartsModule, MatSliderModule, OverlayModule, MatSnackBarModule, BrowserAnimationsModule, MatInputModule, MatAutocompleteModule, ReactiveFormsModule],
     declarations: [LarkaApp,
         HomeComponent,
         LinguistComponent,
@@ -104,8 +127,19 @@ import {TalkingHead} from "./components/intern/talkingHead";
       BufferMultiExeComponent,
       LmErrorComponent,
       FinnishComponent,
+      NonwordComponent,
+      EnetcollectConsentComponent,
+      L2pAnnotatorComponent,
       TalkingHead,
-      CefrlexComponent
+      WordraterComponent,
+      CefrlexComponent,
+      SentenceRaterComponent,
+      XRaterComponent,
+      UserinfoComponent,
+      BundledGapComponent,
+    SixesComponent,
+CallectorComponent,
+      Wordrater2Component
     ],
 
     bootstrap: [LarkaApp]

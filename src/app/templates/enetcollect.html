@@ -6,23 +6,28 @@
             <li (click)="nav(1)">
                 <a>Home</a>
             </li>
-            <li *ngIf="isLoggedIn&&!isAdmin" (click)="nav(2)">
-                <a>Suggest entry</a>
+            <li *ngIf="isLoggedIn" (click)="nav(2)">
+                <a>My list</a>
             </li>
+          <!--
             <li *ngIf="isAdmin&&isLoggedIn" (click)="nav(3)">
                 <a>Add entry</a>
             </li>
             <li *ngIf="isAdmin&&isLoggedIn" (click)="nav(4)">
                 <a>Review suggestions</a>
             </li>
+            -->
         </ul>
+
         <ul class="nav navbar-right navbar-nav">
-            <li *ngIf="!isLoggedIn" (click)="isLoggedIn = true;">
+            <li *ngIf="!isLoggedIn" (click)="ec_login()">
                 <a>Login</a>
             </li>
+          <!--
             <li (click)="isAdmin = !isAdmin">
                 <a>Admin</a>
             </li>
+            -->
             <li *ngIf="isLoggedIn" (click)="isLoggedIn = false;nav(1)">
                 <a>Logout</a>
             </li>
@@ -52,9 +57,13 @@
       </div>
       <br/>
       <div *ngIf="litlist">
-        <div *ngFor="let entry of litlist">
+        <div *ngFor="let entry of litlist; let i = index;">
 
-          <span class="fa fa-arrow-right"></span> {{entry['author']}}. {{entry['year']}}. <i>{{entry["title"]}}</i>. <span *ngIf="entry['type'] == 'article'">{{entry["journal"]}}.</span> <span *ngIf="entry['type'] == 'book'">{{entry["publisher"]}}.</span> <span *ngIf="entry['type'] == 'inproceedings' || entry['type'] == 'incollection'">{{entry["booktitle"]}}</span><a href="#" *ngIf="isLoggedIn">[PDF]</a>
+          <span class="fa fa-arrow-right"></span><span style="border: 2px solid rgba(0,237,255,0.38); font-weight: bold; padding: 5px;">{{i+1}}</span> {{entry['author']}}. {{entry['year']}}. <i>{{entry["title"]}}</i>. <span *ngIf="entry['type'] == 'article'">{{entry["journal"]}}.</span> <span *ngIf="entry['type'] == 'book'">{{entry["publisher"]}}.</span> <span *ngIf="entry['type'] == 'inproceedings' || entry['type'] == 'incollection'">{{entry["booktitle"]}}</span>
+          <!--
+          <button type="button" class="btn btn-primary" *ngIf="isLoggedIn&&!hasKeywords(i)&&!takenSelf(i)&&!takenOther(i)" (click)="iwant(i)">Take!</button>
+          <span *ngIf="takenSelf(i)" style="font-weight: bold; color:red; border: 1px dashed red;">You have taken this!</span>
+          <span *ngIf="takenOther(i)" style="font-weight: bold; color:blueviolet; border: 1px dashed blueviolet;">Someone else has taken this!</span>
             <br/><br/>
           <div class="ec-keywords well">
             <b>Keywords</b>: {{entry["keywords"]}}
@@ -64,6 +73,7 @@
             <b>Summary</b>: {{entry["abstract"]}}
           </div>
             <hr/>
+            -->
         </div>
       </div>
       <div *ngIf="litlist.length == 0">
@@ -71,6 +81,7 @@
       </div>
     </div>
     <div id="addentry" [hidden]="!showAddEntry||isAdmin">
+      <!--
         Suggest entry
         <br/>
         <form>
@@ -97,6 +108,29 @@
             </div>
             <button type="submit" class="btn btn-primary" (click)="suggest(author.value,year.value,title.value,journal.value,keywords.value,summary.value)">Submit</button>
         </form>
+        -->
+      <h3>My list for review</h3>
+
+      <div class="well" *ngFor="let idx of revlist">
+        {{litlist[idx]['author']}}. {{litlist[idx]['year']}}. <i>{{litlist[idx]["title"]}}</i>. <span *ngIf="litlist[idx]['type'] == 'article'">{{litlist[idx]["journal"]}}.</span> <span *ngIf="litlist[idx]['type'] == 'book'">{{litlist[idx]["publisher"]}}.</span> <span *ngIf="litlist[idx]['type'] == 'inproceedings' || litlist[idx]['type'] == 'incollection'">{{litlist[idx]["booktitle"]}}</span>
+
+        <br/><br/>
+
+        <label class="control-label">Keywords (comma-separated):
+        <input type="text" class="form-control" title="Keywords" id="kwords" #kwords>
+        </label>
+
+        <br/><br/>
+
+        <label>Short summary:
+        <textarea title="Short summary" class="form-control" id="ssummary" #ssumary></textarea>
+        </label>
+
+        <br/><br/>
+        <button type="submit" class="btn btn-danger" (click)="ssave(idx, kwords.value, ssumary.value)">Save!</button>
+      </div>
+
+
     </div>
     <div id="addentryadmin" [hidden]="!isAdmin||!showAddEntry">
         Add entry

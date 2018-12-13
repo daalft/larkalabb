@@ -4,6 +4,7 @@
 import {Component, ViewChild} from "@angular/core";
 import {LarkaService} from "../../services/larka.service";
 import {PleaseWaitComponent} from "./pleasewait.component";
+import {BufferMultiExeComponent} from "../buffer/buffer.multi.exe.component";
 
 @Component({
     selector: 'voc-mc',
@@ -32,7 +33,12 @@ export class VocabularyMultipleChoiceExerciseComponent {
 
   public buttonToggle: boolean;
 
-    constructor(private larka: LarkaService) {}
+  public buffer;
+
+  private quarantine = ["0"];
+    constructor(private larka: LarkaService) {
+      this.buffer = new BufferMultiExeComponent();
+    }
 
     //{"target":"t\u00e5rades","distractors":{"t\u00e5rades":"correct","utvecklades":"distractor","genomfors":"distractor","h\u00f6rdes":"distractor","erh\u00f6lls":"distractor"},
     // "target_item":"VB.PRT.SFO","sent_index":51133,"corpus":"SUC3","sentence_left":"Klistret satt ordentligt och han k\u00e4nde hur det ",
@@ -40,6 +46,9 @@ export class VocabularyMultipleChoiceExerciseComponent {
 
   resetButton() {
       this.buttonToggle = false;
+      this.buffer.interrupt();
+      this.buffer.empty();
+      this.quarantine = ["0"];
   }
   setLevel(lvl) {
       this.level = lvl;
@@ -47,6 +56,15 @@ export class VocabularyMultipleChoiceExerciseComponent {
   }
 
     generate (domain?, pos?, level?) {
+      if (this.buffer.ready()) {
+        let data = this.buffer.next();
+        let sentence_id = data['sentence_id'];
+        while (this.quarantine.indexOf(sentence_id) > -1 && this.buffer.ready()) {
+          data = this.buffer.next();
+          sentence_id = data['sentence_id'];
+        }
+        return this.parse(data);
+      }
         this.waiter.on();
         if (!domain) {
             domain = "kelly";
@@ -57,9 +75,20 @@ export class VocabularyMultipleChoiceExerciseComponent {
         level = this.levels[this.level];
         this.distractors = [];
         const me = this;
+      const qstring = this.quarantine;
+      this.buffer.setParams(this.larka.generateMulti, domain, pos.join(','), level, qstring, 5, this.larka);
+      const pid = setInterval(function() {
+        if (me.buffer.ready.call(me.buffer)) {
+          me.parse.call(me, me.buffer.next.call(me.buffer));
+          clearInterval(pid);
+          me.waiter.off();
+        }
+      }, 2000);
+      /*
         this.larka.generateMulti(domain, pos, level).subscribe(function(data) {
             me.parse(data);
         });
+        */
     }
 
     parse (data) {
@@ -73,6 +102,7 @@ export class VocabularyMultipleChoiceExerciseComponent {
         this.distractors = data["distractors"];
         //let target_item = data["target_item"];
         let sent_index = data["sentence_id"];
+        this.quarantine.push(sent_index);
         //let corpus = data["corpus"];
         this.sentence_left = data["sentence_left"];
         this.sentence_right = data["sentence_right"];

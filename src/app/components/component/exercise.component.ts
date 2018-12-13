@@ -12,6 +12,7 @@ import {LoginService} from "../../services/login.service";
 import {LarkaService} from "../../services/larka.service";
 import {KarpService} from "../../services/karp.service";
 import {isDevMode} from '@angular/core';
+import {VersionControllerService} from "../../services/version.controller.service";
 
 @Component({
 
@@ -67,7 +68,7 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
     }
 
     ngAfterViewInit () {
-        this.aggregator.getUserInfo();
+
     }
 
     isDev () {
@@ -482,6 +483,10 @@ export class ExerciseComponent implements OnDestroy,AfterViewInit {
 
         this.reported_sentence[index]["selected"] = !this.reported_sentence[index]["selected"];
     }
+
+    isLabb() {
+    return VersionControllerService.isLabb();
+  }
 }
 
 class Exercise {

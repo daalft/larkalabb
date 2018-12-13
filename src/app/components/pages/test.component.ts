@@ -5,6 +5,7 @@ import {Component} from '@angular/core';
 import {LoginService} from '../../services/login.service';
 import {LoggerService} from '../../services/logger.service';
 import {NuanceService} from '../../services/nuance.service';
+import {VersionControllerService} from "../../services/version.controller.service";
 
 @Component({
     selector: 'testcomp',
@@ -23,7 +24,7 @@ export class TestComponent {
         this.id = this.login.getRandomId();
     }
 
-    getUserInfo () {
-        this.log.getUserInfo();
+    isLabb() {
+      return VersionControllerService.isLabb();
     }
 }

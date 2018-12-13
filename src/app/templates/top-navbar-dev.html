@@ -93,37 +93,39 @@
   </div>
 
   <div class="modal fade" bsModal #loginModal="bs-modal" id="loginModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">{{localizer.localize('login')}}</h4>
-        </div>
-        <div class="modal-body">
-          <form #loginForm="ngForm">
-            <div class="form-group">
-              <label for="username">{{localizer.localize('username')}}</label>
-              <input name="username" autofocus type="text" class="form-control" id="username" required ngControl="username" #user>
-            </div>
-            <div class="form-group">
-              <label for="password">{{localizer.localize('password')}}</label>
-              <input name="upw" type="password" class="form-control" id="password" required ngControl="password" #pw>
-            </div>
-            <div class="checkbox">
-              <label><input name="rememberme" type="checkbox" id="remember_me" value="" [(ngModel)]="keep_checkbox">
-                {{localizer.localize('remember_me')}}</label>
-            </div>
-            <div class="form-group" [hidden]="!wrongup">
-              <span class="errorText">Wrong username or password!</span>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-primary" [disabled]="!loginForm.form.valid" (click)="wrongup = false;tryLogin(user.value, pw.value,loginModal)">{{localizer.localize('login')}}</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal" (click)="loginModal.hide();wrongup = false;">{{localizer.localize('cancel')}}</button>
-        </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">{{localizer.localize('login')}}</h4>
+      </div>
+      <div class="modal-body">
+        <form #loginForm="ngForm">
+          <div class="form-group">
+            <label for="username">{{localizer.localize('username')}}</label>
+            <input name="username" autofocus type="text" class="form-control" id="username" required ngControl="username" #user>
+          </div>
+          <div class="form-group">
+            <label for="password">{{localizer.localize('password')}}</label>
+            <input name="upw" type="password" class="form-control" id="password" required ngControl="password" #pw>
+          </div>
+          <!--
+          <div class="checkbox">
+            <label><input name="rememberme" type="checkbox" id="remember_me" value="" [(ngModel)]="keep_checkbox">
+              {{localizer.localize('remember_me')}}</label>
+          </div>
+          -->
+          <div class="form-group" [hidden]="!wrongup">
+            <span class="errorText">Wrong username or password!</span>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" [disabled]="!loginForm.form.valid" (click)="wrongup = false;tryLogin(user.value, pw.value,loginModal)">{{localizer.localize('login')}}</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="loginModal.hide();wrongup = false;">{{localizer.localize('cancel')}}</button>
       </div>
     </div>
   </div>
+</div>
 
   <!-- XS menu -->
   <div class="col-xs-12 hidden-lg hidden-md hidden-sm" id="mobile-menu">
@@ -165,12 +167,14 @@
 
 
       <hr/>
-
-      <div class="" *ngIf="!loggedIn()">
-        <a class="mock-link" routerLink="/register">{{localizer.localize('menu-register')}}</a>
-        <hr/>
+<!--
+      <div [hidden]="!isLabb()">
+        <div class="" *ngIf="!loggedIn()">
+          <a class="mock-link" routerLink="/register">{{localizer.localize('menu-register')}}</a>
+          <hr/>
+        </div>
       </div>
-
+-->
       <div class="">
         <div  class="mock-link" (click)="loginModal.show()" *ngIf="!loggedIn()">{{localizer.localize('login')}}</div>
         <div *ngIf="loggedIn()"><a class="mock-link" routerLink="/profile">{{localizer.localize('menu-myprofile')}}</a></div>
@@ -241,11 +245,14 @@
 </nav>
 <div id="right-menu" class="menu-column" *ngIf="menuRight" (click)="close()">
 
-  <div class="" *ngIf="!loggedIn()">
-    <a class="mock-link" routerLink="/register">{{localizer.localize('menu-register')}}</a>
-    <hr/>
+  <!--
+  <div [hidden]="!isLabb()">
+    <div class="" *ngIf="!loggedIn()">
+      <a class="mock-link" routerLink="/register">{{localizer.localize('menu-register')}}</a>
+      <hr/>
+    </div>
   </div>
-
+  -->
   <div class="">
     <div  class="mock-link" (click)="loginModal.show()" *ngIf="!loggedIn()">{{localizer.localize('login')}}</div>
     <div *ngIf="loggedIn()"><a class="mock-link" routerLink="/profile">{{localizer.localize('menu-myprofile')}}</a></div>
@@ -254,7 +261,7 @@
   <div class="">
     <div class="mock-link" (click)="aboutLarkaModal.show()">{{localize('larka_about')}}</div>
     <div class="mock-link"  (click)="citeLarkaModal.show()">{{localize('larka_cite')}}</div>
-    <div><a class="mock-link" href="https://spraakbanken.gu.se/larkalabb/larkalabb_manual_v1_2.pdf">{{localize('larka_manual')}}</a></div>
+    <div><a class="mock-link" href="https://spraakbanken.gu.se/larkalabb/larkalabb_manual_v1_3.pdf">{{localize('larka_manual')}}</a></div>
   </div>
   <hr/>
   <div>

@@ -106,7 +106,7 @@ export class DiagnosticTestComponent {
         this.currentView = 3;
       } else if (type === 3) {
         this.waiter.on();
-        this.larka.generateMulti("kelly", _.sample(this.lexicalPos), CefrToolsService.numericToCefr(lvl, 1)).subscribe(function(d) {
+        this.larka.generateMulti("kelly", _.sample(this.lexicalPos), CefrToolsService.numericToCefr(lvl, 1), "0").subscribe(function(d) {
           const sleft = d['sentence_left'];
           const sright = d['sentence_right'];
           const target = d['target']['word'];

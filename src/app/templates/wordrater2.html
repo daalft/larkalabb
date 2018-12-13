@@ -1,0 +1,57 @@
+<pleasewait #waiter></pleasewait>
+<h2>Wordrater v2</h2>
+
+<div *ngIf="!ongoing"> <!-- start panel -->
+  On the following page, you will be shown one word at a time, as well as two buttons.
+  <br/>
+  Select the CEFR level at which a learner of Swedish of that level should be able to <u>understand</u> the word.
+  If none of the levels are suitable, select the level which is closest to the level you estimate should be correct.
+  <br/>
+  It is <b>NOT</b> possible to go back to previous words.
+  <br/>
+  You can stop and continue at a later time by clicking on the "Stop/Save" button on the right. This functionality
+  only works if you use the same device to continue.
+  <br/>
+  Note that the labels of the buttons can change. You can switch color-enhancement of the buttons on or off during the task.
+  <hr/><label for="rater">Rater:</label>
+  <select id="rater" #rater class="form-control">
+    <option value="anders">anders</option>
+    <option value="test">test</option>
+  </select>
+  <hr/>
+  <button type="button" class="btn btn-primary" (click)="start(rater.selectedIndex)" *ngIf="ready">Start</button>
+  <div *ngIf="!ready">Loading data...<img src="app/img/ajax-loader.gif" aria-hidden="true"></div>
+</div>
+
+
+
+<div *ngIf="ongoing"> <!-- continuation panel -->
+  <div> <!-- progress -->
+      {{currentIndex}}/{{totalWords}}
+  </div>
+
+  <div style="padding: 10px; margin: 10px; font-weight: bold;"> <!-- word -->
+    <span *ngIf="currentItem['pos']=='NN_NEU'">(ett) </span><span *ngIf="currentItem['pos']=='NN_UTR'">(en) </span>{{currentItem['word']}} <span *ngIf="currentItem['pos']!=='NN_NEU'&&currentItem['pos']!=='NN_UTR'">({{currentItem['pos']}})</span>
+  </div>
+
+  <div> <!-- buttons -->
+    <button type="button" class="btn btn-default wr2b" (click)="validate(1); blurSI($event);" [ngClass]="getColorClass(1)">{{currentItem['fo_lvl']}}</button>
+    <button type="button" class="btn btn-default wr2b" (click)="validate(2); blurSI($event);" [ngClass]="getColorClass(2)">{{currentItem['tt_lvl']}}</button>
+  </div>
+
+  <div> <!-- spacer -->
+    <br/><br/>
+  </div>
+
+  <div> <!-- color enhancement -->
+    <label for="cei"><input type="checkbox" id="cei" (change)="colorbutton($event)" class="checkbox checkbox-inline"> Enable/disable color enhancement</label>
+  </div>
+
+  <div style="float: right;"> <!-- cancel -->
+    <button type="button" class="btn btn-danger" (click)="cancel()">Stop/Save</button>
+  </div>
+</div>
+
+<div *ngIf="final"> <!-- final panel -->
+  Thank you for your cooperation. You can close this page now.
+</div>

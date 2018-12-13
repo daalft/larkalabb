@@ -46,6 +46,8 @@
     margin-left: 20px;
 }
 
+
+
 .logo-font-small {
     font-family: "Titillium", Helvetica, "Helvetica Neue", serif;
     font-size: 18px !important;
@@ -228,7 +230,18 @@
 
     border-radius: 5px;
 }
+.unselectable-nobg {
+  padding: 2px 5px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none;
+  /* non-prefixed version, currently
+                         not supported by any browser */
 
+}
 .mode-choice {
     margin: 10px;
 }
@@ -389,4 +402,72 @@ larka-app:empty + .loading-animation {
 
 .ficorrect {
   background-color: rgba(0, 128, 0, 0.21);
+}
+
+#datainfo {
+  background-color: black;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#datainfo a {
+  color: yellow;
+}
+
+.bundle-info {
+  padding: 20px;
+}
+
+.bundle-s {
+  padding: 10px;
+  background-color: rgba(184, 218, 255, 0.38);
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.wr2b-A1 {
+  background-color: rgba(0,176,232,.2);
+}
+
+.wr2b-A2 {
+  background-color: rgba(0,170,0,.2)
+}
+
+.wr2b-B1 {
+  background-color: rgba(255,255,0,.2)
+}
+
+.wr2b-B2 {
+  background-color: rgba(255,165,0,.2)
+}
+
+.wr2b-C1 {
+  background-color: rgba(255,0,0,.2)
+}
+
+.wr2b:hover {
+
+}
+
+.roundbox {
+  border: 2px solid rgba(128, 128, 128, 0.51);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(167, 167, 167, 0.09);
+}
+.checkbox-grid {
+  display: block;
+  overflow: auto;
+}
+
+.checkbox-grid li {
+  float: left;
+  width: 50%;
+  display: inline-block;
+}
+
+#legato {
+  font-family: "Titillium", Helvetica, "Helvetica Neue", serif;
 }

@@ -4,6 +4,7 @@
 import {Component} from '@angular/core';
 import {LocalizerService} from "../../services/localizer.service";
 import {EasterEggService} from "../../services/easteregg.service";
+import {VersionControllerService} from "../../services/version.controller.service";
 
 @Component({
     selector: 'logo-space',
@@ -42,5 +43,9 @@ export class LogoSpaceComponent {
 
     getCurrentLogoSmall() {
         return this.currentLogoSmall;
+    }
+
+    isLabb() {
+      return VersionControllerService.isLabb();
     }
 }

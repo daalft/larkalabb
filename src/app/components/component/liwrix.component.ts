@@ -70,6 +70,7 @@ export class LiwrixComponent {
   private scc = 0; // special consonant count
 
   private ready = false;
+  private ttsLoaded = false;
 
   private vowels = /[aeiouåöäüéy]/;
   private consonants = /[^aeiouåöäüéy]/;
@@ -82,6 +83,8 @@ export class LiwrixComponent {
   private wordlistC1 = 'app/data/C1_svalex_2.json';
 
   private phraselist = 'app/data/lexin-phrases.json';
+
+  private quarantine;
 
   constructor(private larka: LarkaService, private http: HttpClient, public localizer: LocalizerService, private login: LoginService, private aggregator: DataAggregatorService, private korp: KorpService, private tts: TTSEngine) {
     this.aggregator.setLogType('log_db');
@@ -118,6 +121,12 @@ export class LiwrixComponent {
       me.phrases = (data as any);
       console.log('Loaded phrases');
     });
+    const pid = setInterval(function() {
+      if ((<any>window).hasOwnProperty('sayText')) {
+        me.ttsLoaded = true;
+        clearInterval(pid);
+      }
+    }, 500);
   }
 
   vh_audioStarted () {

@@ -10,23 +10,12 @@ import {HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 export class LoggerService {
 
     private backend = 'https://ws.spraakbanken.gu.se/ws/larkalabb/icall.cgi';
-    private ipbackend = 'https://ipinfo.io/json';
-
-    private geodata;
 
     private clientbrowser;
 
     constructor (private http: HttpClient) {
 
     }
-
-    getUserInfo () {
-        const me = this;
-        this.http.get(this.ipbackend).subscribe(function(data) {
-            me.geodata = data;
-        });
-    }
-
 
     log (message, mode?) {
         //console.log("logging " + message);
@@ -39,8 +28,7 @@ export class LoggerService {
         }
         message['userclient'] = this.clientbrowser;
 
-        // Inject geodata
-        message['geodata'] = this.geodata;
+
         console.log(message);
         // TODO json encode string escape
         const jsonmessage = JSON.stringify(message);
@@ -58,8 +46,12 @@ export class LoggerService {
         // let hdr = new Headers();
         // hdr.append('Content-Type', 'application/x-www-form-urlencoded');
         let usp = new HttpParams();
-        usp = usp.append('type', message['exercise']);
-        usp = usp.append('log_type', message['exercise']); // for compatibility with previous labb logging
+        if (message['exercise']) {
+          usp = usp.append('type', message['exercise']);
+        }
+        if (!usp.has('log_type') && message['exercise']) {
+          usp = usp.append('log_type', message['exercise']); // for compatibility with previous labb logging
+        }
         for (const property in message) {
             if (message.hasOwnProperty(property)) {
                 usp = usp.append(property, message[property]);

@@ -1,0 +1,126 @@
+<div>
+  <h2>Swedish word or not?</h2>
+</div>
+
+<div id="page1" [hidden]="started">
+  On the following pages, you will be shown one word at a time.<br/>
+  Please select whether the word is a <b>real</b>, <b>existing</b> <u>Swedish</u> word or not.<br/>
+  Please note that it is <b><span style="color: red;">not</span></b> possible to go back to previous words.
+  Think carefully before proceeding.<br/>
+  Please also note that words can occur in inflected forms, so that for example the following words should all be
+  counted as Swedish words:
+  <ul>
+    <li>villa</li>
+    <li>villan</li>
+    <li>villor</li>
+    <li>villors</li>
+    <li>villorna</li>
+    <li>g&aring;</li>
+    <li>gick</li>
+    <li>g&aring;r</li>
+    <li>g&aring;ende</li>
+    <li>g&aring;tt</li>
+  </ul>
+
+  Non-standard forms such as slang, dialectal variations and similar should  not be counted as Swedish words.
+  <hr/>
+
+  <!-- identifier
+
+  <p>
+    Please enter identifier:
+  </p>
+  <label>Identifier: <input type="text" class="form-control" #identime></label>
+  -->
+  <!-- mothertongue -->
+  <p>
+    Please select your mothertongue:
+  </p>
+  <label>Mothertongue:
+    <select #mt class="form-control">
+      <option value="en">English</option>
+      <option value="de">German</option>
+      <option value="sv">Swedish</option>
+      <option value="na">None of the above</option>
+  </select>
+  </label>
+<br/><br/>
+  <p>
+    Please select your proficiency in Swedish:
+  </p>
+  <label>
+    Proficiency:
+    <select #prof class="form-control">
+      <option value="beginner">Beginner</option>
+      <option value="intermediate">Intermediate</option>
+      <option value="advanced">Advanced</option>
+      <option value="native">Native</option>
+    </select>
+  </label>
+<br/><br/>
+  <p>
+    If you have been given an identifier, please enter it here. Otherwise, leave blank.
+  </p>
+  <label>
+    Identifier: <input type="text" class="form-control" #identime>
+  </label>
+<br/><br/>
+<div [hidden]="!ready">
+  <button type="button" class="btn btn-default" (click)="start(mt.value, prof.value, identime.value)">Start!</button>
+</div>
+</div>
+
+<div id="page2" *ngIf="currentWord">
+  <div id="progress">{{currentNum}}/{{totalNum}}</div>
+  <div style="font-size: large; padding: 20px; margin: 20px;">{{currentWord['word']}}</div>
+  <hr/>
+  <button type="button" class="btn btn-primary" (click)="record(1)">Swedish word!</button>
+  <button type="button" class="btn btn-default" (click)="record(0)">Not a Swedish word!</button>
+</div>
+
+<div id="continue?" *ngIf="finished && !finalpage">
+  <p>
+    Thank your for your participation!
+  </p>
+
+  <hr/>
+
+  <button type="button" class="btn btn-default" (click)="iwantmore()">That was fun! Give me more!</button>
+  <button type="button" class="btn btn-primary" (click)="finalizeme()">Finish and show results!</button>
+</div>
+
+<div *ngIf="finalpage && finished">
+  <p>
+    Thank your for your participation!
+  </p>
+  <div>
+    You managed to identify {{identifiedSwedish}}/{{totalNum/4}} real Swedish words!
+    <br/>
+    <button type="button" class="btn btn-default" (click)="showResult1 = true;" *ngIf="(correctList.length > 0 || missedList.length > 0) && !showResult1">Show me</button>
+    <div [hidden]="!showResult1">
+      <p>Identified:</p>
+      <ul *ngFor="let idi of correctList">
+        <li>{{idi}}</li>
+      </ul>
+      <br/>
+      <p>Missed:</p>
+      <ul *ngFor="let mid of missedList">
+        <li>{{mid}}</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    You misidentified {{misidentifiedSwedish}}/{{totalNum/4}} non-existing words as Swedish words!
+    <br/>
+    <button type="button" class="btn btn-default" (click)="showResult2 = true;" *ngIf="incorrectList.length > 0 && !showResult2">Show me</button>
+    <div [hidden]="!showResult2">
+      <p>Misidentified words:</p>
+      <ul *ngFor="let nw of incorrectList">
+        <li>{{nw}}</li>
+      </ul>
+    </div>
+  </div>
+  <p>
+    Please wait a few minutes before you close this page.
+  </p>
+</div>

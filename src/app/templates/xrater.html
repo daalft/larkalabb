@@ -1,0 +1,67 @@
+<div>
+  <h2>MWE and sentence rater</h2>
+</div>
+
+<div id="explanation">
+  <p>
+    User interface for CEFR ratings of MWEs and sentences.
+  </p>
+
+  <p>
+    Please select your identifier and make a choice between multi-word expressions (MWEs) and sentences.
+    You will be shown one item at a time and asked to rate it for <i>understandeability</i> by learners of different
+    proficiency levels.
+  </p>
+  <p>
+    Please note that it is <span style="color: red;"><b>not</b></span> possible to go back to previous items.
+  </p>
+  <p>
+    If you want to save your progress, click on the "Save/Stop" button on the right. If you use the
+    same device to visit the page again, you can resume from where you stopped.
+  </p>
+</div>
+<div *ngIf="mode == 0">
+  Progress: <b>{{mweCounter}}/{{totalMwes}}</b>
+</div>
+
+<div *ngIf="mode == 1">
+  Progress: <b>{{sentenceCounter}}/{{totalSentences}}</b>
+</div>
+
+<div [hidden]="ongoing">
+  <label for="rater">Who are you?</label>
+  <select id="rater">
+    <option>elena</option>
+    <option>david</option>
+    <option>anders</option>
+  </select>
+  <hr/>
+  Select what you want to rate:<br/>
+  <label><input type="radio" name="mode" value="0">MWEs</label>
+  <label><input type="radio" name="mode" value="1">Sentences</label>
+</div>
+
+<div *ngIf="ongoing" style="padding: 20px;">
+  <b>{{currentItem['item']}}</b>
+</div>
+
+<div [hidden]="!ongoing" style="padding: 15px;">
+  <label class="radio-inline"><input type="radio" name="cefr" value="A1">A1</label>
+  <label class="radio-inline"><input type="radio" name="cefr" value="A2">A2</label>
+  <label class="radio-inline"><input type="radio" name="cefr" value="B1">B1</label>
+  <label class="radio-inline"><input type="radio" name="cefr" value="B2">B2</label>
+  <label class="radio-inline"><input type="radio" name="cefr" value="C1">C1</label>
+  <label class="radio-inline"><input type="radio" name="cefr" value="C1p">Above C1</label>
+</div>
+
+<div [hidden]="!ongoing">
+  <button type="button" class="btn btn-default" (click)="next()">Next</button>
+</div>
+
+<div [hidden]="ongoing">
+  <button type="button" class="btn btn-primary" (click)="start()">Start</button>
+</div>
+
+<div [hidden]="!ongoing" style="float:right;">
+  <button type="button" class="btn btn-danger" (click)="exit()">Save/Stop</button>
+</div>

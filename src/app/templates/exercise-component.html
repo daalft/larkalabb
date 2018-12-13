@@ -98,16 +98,16 @@
             </div>
             <div class="col-lg-3 col-md-2 col-sm-2 hidden-xs" [ngClass]="{hidden:hideLinks()}">
                 <!-- links -->
-                <div class="help-link mock-link" (click)="pronounce(current)">
+                <div class="help-link mock-link" (click)="pronounce(current)" *ngIf="isLabb()">
                     PRON
                 </div>
-                <div class="help-link mock-link" (click)="tree(current)">
+                <div class="help-link mock-link" (click)="tree(current)" *ngIf="isLabb()">
                     TREE
                 </div>
                 <div class="help-link mock-link" (click)="showjson(current)">
                     JSON
                 </div>
-                <div class="help-link mock-link report-link" (click)="report(current)">
+                <div class="help-link mock-link report-link" (click)="report(current)" *ngIf="isLabb()">
                     <span class="fa fa-exclamation"></span>R<span class="fa fa-exclamation"></span>
                 </div>
             </div>

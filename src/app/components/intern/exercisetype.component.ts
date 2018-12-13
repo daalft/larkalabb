@@ -5,6 +5,7 @@ import {Component} from "@angular/core";
 import {LoggerService} from "../../services/logger.service";
 import {LoginService} from "../../services/login.service";
 import {DataAggregatorService} from "../../services/dataAggregator.service";
+import {VersionControllerService} from "../../services/version.controller.service";
 
 @Component({
     selector: 'exetype',
@@ -138,7 +139,6 @@ export class ExerciseTypeComponent {
     }
 
     ngAfterViewInit () {
-        this.aggregator.getUserInfo();
         let me = this;
         $('.eselectable').on('click', function(d) {
             $(d.target).toggleClass('eselactive');

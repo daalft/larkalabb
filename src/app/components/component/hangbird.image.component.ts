@@ -74,7 +74,7 @@ export class HangBirdImageComponent {
     constructor(private karp: KarpService, private http: HttpClient, public localizer: LocalizerService, private aggregator: DataAggregatorService, private login: LoginService, private larka: LarkaService) {
         let me = this;
         console.log("Loading wordlists");
-        this.aggregator.getUserInfo();
+
         this.sessionid = this.login.getRandomId();
         this.http.get(this.wordlistA1).subscribe(function(data) {
             me.wordlist["A1"] = data;

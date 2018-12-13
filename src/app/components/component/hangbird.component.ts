@@ -69,7 +69,7 @@ export class HangBirdComponent {
     constructor(private karp: KarpService, private http: HttpClient, public localizer: LocalizerService, private aggregator: DataAggregatorService, private login: LoginService) {
         const me = this;
         console.log('Loading wordlists');
-        this.aggregator.getUserInfo();
+
         this.aggregator.setLogType('log_db');
         this.sessionid = this.login.isLoggedIn() ? this.login.getUserId() : this.login.getRandomId();
         this.http.get(this.wordlistA1).subscribe(function(data) {

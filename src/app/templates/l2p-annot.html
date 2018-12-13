@@ -1,0 +1,276 @@
+<pleasewait #waiter></pleasewait>
+<h2>Lexicographic Annotation Tool (<span id="legato">LEGATO</span>)</h2>
+
+<div>
+  <b><a href="https://spraakbanken.gu.se/larkalabb/LegatoGUIDELINES3.pdf" target="_blank">Guidelines</a></b>
+
+  <b><mat-icon matBadge="{{skipList.length}}">Skipped items</mat-icon></b>
+</div>
+
+<br/>
+
+<div id="comp1" [hidden]="started||ended">
+  <div class="roundbox">
+    <label class="control-label">Select category to annotate:
+      <select class="form-control" #taskTypeSelector>
+        <option *ngFor="let o of field_names" value="{{o}}">
+          {{o}}
+        </option>
+      </select>
+    </label>
+
+    <br/><br/>
+
+    <label class="control-label">Select annotation mode:
+      <select class="form-control" #annotationMode>
+        <option value="manual">Manual</option>
+        <option value="auto">Semi-automatic</option>
+      </select>
+    </label>
+
+    <br/><br/>
+
+    <label class="control-label">Enter annotator ID:
+      <input type="text" class="form-control" #annotatorId>
+    </label>
+
+    <br/><br/>
+
+    <button type="submit" class="btn btn-primary" (click)="startTask(taskTypeSelector.value, annotationMode.value, annotatorId.value);">Start</button>
+  </div>
+</div>
+
+
+<!--
+  <br/><br/>
+  <div class="guidelines roundbox">
+    <p><b style="text-transform: uppercase;">Guidelines</b></p>
+    <p>
+      Read the following guidelines carefully before starting the annotation task.
+    </p>
+
+    <p><b style="text-transform: uppercase;">General Information</b></p>
+    <p>
+    In order to start annotating, select a category and an annotation mode, enter the assigned annotator ID and click on the
+      <span style="font-family:'Lucida Console', monospace">Start</span> button.
+    </p>
+
+    <p><b style="text-transform: uppercase;">About Annotation Modes</b></p>
+    <p>
+      There are two annotation modes, manual and semi-automatic. In manual mode, you have to fill in all
+      the information yourself.
+      In semi-automatic mode, some information has already been extracted automatically for some words. If this
+      is the case, some of the value fields will be populated. Check whether the information is correct
+      and, if necessary, correct it. If no information could be extracted automatically, proceed as in manual mode.
+    </p>
+
+    <p><b style="text-transform: uppercase;">Next, Save and Exit</b></p>
+    <p>
+      Upon clicking the <span style="font-family:'Lucida Console', monospace">Next</span> button, your answer is automatically saved.
+      If you want to stop annotating, click the <span style="font-family:'Lucida Console', monospace">Save & Exit</span> button. Please note that the <b>currently shown task</b>
+      will be saved and you will be returned to the title screen. Upon selecting the same category,
+      you will continue at the <b>next</b> item<sup>Note 1</sup>, not the last one shown before exiting. <span style="text-decoration: underline">Make sure to complete
+      the current task before selecting <span style="font-family:'Lucida Console', monospace">Save & Exit</span></span>.
+      <br/>
+      <em>Note 1</em>: You must use the same computer device and the same browser in order to this functionality to work.
+      If that is not the case, you will start from scratch.
+    </p>
+
+    <p><b style="text-transform: uppercase;">Navigating tasks</b></p>
+    <p>
+      Navigation through tasks is done via the <span style="font-family:'Lucida Console', monospace">Next</span> button. Please note that it is <b>not</b> possible to
+      return to previous items. Please consider your answer carefully before proceeding.
+    </p>
+
+    <p><b style="text-transform: uppercase;">Synonyms</b></p>
+    <p>
+      The synonym category presents an empty field in manual mode and may contain values in semi-automatic mode.
+      You will notice that the automatically extracted synonyms have the form <span style="font-family:'Lucida Console', monospace">XYZ..1</span>.
+      The <span style="font-family:'Lucida Console', monospace">..NUMBER</span> part corresponds to SALDO sense identifiers.
+      When adding synonyms, you do not need to specify these identifiers and instead of <span style="font-family:'Lucida Console', monospace">XYZ..1</span>
+      you can write <span style="font-family:'Lucida Console', monospace">XYZ</span>.
+    </p>
+
+    <p><b style="text-transform: uppercase;">Adding multiple values</b></p>
+    <p>
+      <i>Currently only applies to Synonyms</i><br/>
+      When entering multiple values, separate each value from the previous with a comma (<span style="font-family:'Lucida Console', monospace">,</span>).
+      No other separators are recognized as valid and use of other separators will result in inconsistent data.
+    </p>
+
+    <p><b style="text-transform: uppercase;">Task completion</b></p>
+    <p>
+      Once you have completed a category such as nominal declension, make sure to click on the <span style="font-family:'Lucida Console', monospace">Save & Return to front page</span> button.
+      Otherwise, your answers will <b>not</b> be saved. After completing a task, you cannot access the task anymore.
+      If you notice that you made mistakes, contact <span style="font-family:'Lucida Console', monospace">david.alfter@gu.se</span>.
+    </p>
+
+    <p><b style="text-transform: uppercase;">Something seems not to work</b></p>
+    <p>
+      Some issues not to worry about: (1) there is no example sentence, only an opening and closing parenthesis; (2) Saldo descriptors say None or PRIM..1.
+      <br/>For everything else contact <span style="font-family:'Lucida Console', monospace">david.alfter@gu.se</span>.
+    </p>
+
+    <p><b style="text-transform: uppercase;">I do not have an annotator ID</b></p>
+    <p>
+      You are currently not assigned as annotator to this project. If you think you should be included,
+      contact <span style="font-family:'Lucida Console', monospace">therese.lindstromtiedemann@helsinki.fi</span>
+      and <span style="font-family:'Lucida Console', monospace">david.alfter@gu.se</span>.
+    </p>
+
+    <p><b style="text-transform: uppercase;">Can I use my smartphone for annotation?</b></p>
+    <p>
+      While the web site supports dynamic layout and will work on smaller screens such as smartphone screens,
+      some categories such as Topics will not fit comfortably on the screen. We suggest you use a bigger screen.
+    </p>
+
+    <p><b style="text-transform: uppercase;">Where is Morphology1?</b></p>
+    <p>
+      The category named Morphology 1 is currently not included. For compatibility purposes, Morphology 2 was not renamed.
+    </p>
+  </div>
+  <br/><br/>
+  -->
+
+
+
+<div id="comp2" *ngIf="started&&currentItem&&!ended">
+
+  <div id="tasktype">
+    Current task:
+    <b>{{taskTypeUpper}}</b>
+  </div>
+
+
+  <div id="counter" style="float:right;">
+    Progress:
+    {{counter+1}}/{{total}}
+  </div>
+
+
+  <div id="skippedItems" style="clear: right;">
+
+    <mat-form-field>
+      <!--<label for="l2psearch">Search</label>-->
+      <input type="text" placeholder="Search" id="l2psearch" matInput [matAutocomplete]="auto" [formControl]="myControl">
+    </mat-form-field>
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option['key']" (click)="goto(option);">
+        {{option['key']}}
+      </mat-option>
+    </mat-autocomplete>
+
+
+    <div style="display: inline-block; float: right;">
+    <b (click)="showHide();" title="Click to hide/show" style="cursor: pointer;">Skipped items <span *ngIf="showSkipList" class="fa fa-chevron-up"></span><span *ngIf="!showSkipList" class="fa fa-chevron-down"></span></b>
+    <ul style="list-style-type: circle;" *ngIf="showSkipList">
+      <li *ngFor="let skitem of skipList">
+        <a style="cursor: pointer;" (click)="goto(skitem)">{{skitem['sense']}}</a>
+      </li>
+    </ul>
+    </div>
+
+    <div style="clear: right;">
+
+    </div>
+  </div>
+
+  <br/>
+
+  <div id="itempresenter">
+    <span class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+      <label for="currentSense">SALDO sense</label>
+      <input type="text" value="{{currentItem['sense']}}" title="Head sense" class="form-control" (click)="enableSense();" [readonly]="!editSense" (blur)="editSense=false;" id="currentSense">
+    </span>
+    <span class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+      <label for="currentPos">Part-of-Speech</label>
+      <input type="text" value="{{currentItem['pos']}}" title="POS" class="form-control" (click)="enablePos();" [readonly]="!editPos" (blur)="editPos=false;" id="currentPos">
+    </span>
+    <span class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
+      <label for="currentCefr">CEFR level</label>
+      <input type="text" value="{{currentItem['cefr']}}" title="CEFR" class="form-control" readonly id="currentCefr">
+    </span>
+  </div>
+
+  <br/><br/>
+
+  <div style="padding-top: 20px; margin: 20px;">
+    Saldo primary descriptor: <b>{{currentItem['saldo1']}}</b>
+    <br/>
+    Saldo secondary descriptor: <b>{{currentItem['saldo2']}}</b>
+  </div>
+
+
+  <hr/>
+
+
+  <div id="example" style="margin: 20px;">
+    <b>Example:</b><br/>
+    {{currentItem['example']}} ({{currentItem['example_level']}})
+  </div>
+
+  <hr/>
+
+  <!--
+  Task presentation block
+  -->
+  <div id="is" [hidden]="taskType!='is'">
+    <label for="istext">Current value:</label>
+    <input type="text" id="istext">
+  </div>
+
+  <div id="im" [hidden]="taskType!='im'">
+    <label for="imtext">Current values:</label>
+    <textarea id="imtext" class="form-control"></textarea>
+  </div>
+
+  <div id="ps" [hidden]="taskType!='ps'">
+    <label for="pssel">Select value:</label>
+    <select class="form-control" id="pssel">
+      <option *ngFor="let pred of predefs; let i = index" value="{{pred}}">{{getDecoratedPredef(i)}}</option>
+    </select>
+  </div>
+
+  <div id="pm" [hidden]="taskType!='pm'">
+    <ul id="predef-grid" class="checkbox-grid">
+      <li *ngFor="let o of predefs">
+        <label class="checkbox-inline unselectable-nobg"><input class="checkbox" type="checkbox" value="{{o}}">{{o.toUpperCase()}}</label>
+      </li>
+    </ul>
+  </div>
+
+  <hr/>
+
+  <!--
+  Bottom button row
+  -->
+  <div id="buttonrow">
+    <!--
+    <button class="btn btn-default" (click)="relink();" data-toggle="tooltip" data-placement="top" title="Lexical relinking not available in manual mode!">Retry lexical linking</button>
+    -->
+    <button class="btn btn-danger" (click)="exit();">Exit</button>
+    <div  style="float:right;">
+      <button class="btn btn-default" (click)="skip();">Skip</button>
+      <span style="margin-left: 10px; margin-right: 10px;">|</span>
+      <button class="btn btn-primary" (click)="prev();">Previous</button>
+      <button class="btn btn-primary" (click)="save(0);">Save</button>
+      <button class="btn btn-primary" (click)="next(0);">Next</button>
+    </div>
+  </div>
+
+</div>
+
+<div [hidden]="!ended">
+  <br/>
+  There are no more items to annotate for this category ({{taskTypeUpper}}).
+  <hr/>
+  <div [hidden]="skipList.length === 0">
+    You have a list of skipped items.<br/>
+    Do you want to revisit the skipped items?
+    <br/><br/>
+    <button type="button" class="btn btn-primary" (click)="revisit()">Revisit skipped items</button>
+  </div>
+  <hr/>
+  <button type="button" class="btn btn-primary" (click)="exit();">Return to front page</button>
+</div>
+

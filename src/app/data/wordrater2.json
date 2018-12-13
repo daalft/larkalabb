@@ -1,0 +1,8080 @@
+[{
+"word": "fik", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "rimlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förbli", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "diskussion", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "häftig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "anställningsintervju", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förening", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "statlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "stadsdel", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "i_fråga", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "befinna_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "irritation", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "falla_ihop", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tilltala", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "inställsam", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "få_ihop", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "hinna_med", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "uppsättning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "trivas", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "samvaro", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "storlek", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "förtvivla", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "bölja", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tänka_efter", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "över_huvud_taget", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ask", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "bland_annat", "pos": "ABM_MWE", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "sydvästra", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "uppdrag", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "present", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "frånskild", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "strömning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tillstånd", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "baksida", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "vis", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "otalig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "meter", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "ond", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "generös", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "bisats", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "lida", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "diskutera", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "gift", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sång", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "mörker", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "gods", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "förverkliga", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "samtalspartner", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "bestämd", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "tvål", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "blott", "pos": "AB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ruta", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "obefintlig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "indoeuropeisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vit", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "stol", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "annorlunda", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förtvivlad", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "arvord", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "gård", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "träd", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "italiensk", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "roll", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "sociolog", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "bräcka", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "förmåga", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "bl_a", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "text", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "lära", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "äta_upp", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "pupill", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ofarlig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tonåring", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "friidrott", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ägg", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "britt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "skynda", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "modell", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "ta_sig_fram", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "baka", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "slå_ner", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kommentera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "riva", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "komma_ut", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "årstid", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "lärdom", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "punkt", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "persisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "stämning", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "tonvikt", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "debattinlägg", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tilltro", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "krokodil", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "piga", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ohygglig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "samhälle", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "presens", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "uppsats", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ställa_in", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "dra_sig_tillbaka", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tavla", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "servering", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "naturvetenskap", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "avlägsen", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ta_ut", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "jäkla", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "vinka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "konservburk", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "anse", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "humor", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "fjärran", "pos": "AB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "svår", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "omskrivning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lära_sig", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "garderob", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "lägga_ned", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "begära", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "fysisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "utvandra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kyrklig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "dröm", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "visum", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "lätta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "yrkesliv", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "åldersskillnad", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "bryta_upp", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "begripa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "skapa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "avskaffa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "överge", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "skildra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "norm", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tyda", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "hopfällbar", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "betydlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "oerhörd", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sanning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "signalera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "besvikelse", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "stavgång", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "tjäna", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "energisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "villig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kick", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "däremellan", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ljud", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "temperatur", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "märka", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "television", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "omedelbar", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "mellanrum", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sinne", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "avbryta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "överblicka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "känna", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "självklarhet", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "bröd", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "livsfarlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "inleda", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "mycken", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "anta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "enkel", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "familjetyp", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "geografisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "invandrarbakgrund", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "befalla", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "prov", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "satsning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vårda", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "lyse", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "stuga", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "marknad", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "studentexamen", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "inkludera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hälsa", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "förhållande", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "proposition", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "topp", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "till_slut", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "beteende", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bokhylla", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "rusa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "överta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "konstatera", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "diabetes", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "äga_rum", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "utdrag", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "tänka_sig", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "binda", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "diskriminera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kaotisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "djävul", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ropa_upp", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kontroll", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "klipp", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "klar", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "teckna", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "snacka", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "grek", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "uppfordra", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "nå", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "demonstration", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "skalle", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "förklara", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "för_närvarande", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "utvandring", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "i_smyg", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "by", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "då_och_då", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "arbetsgivare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "romani", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "frustration", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "myndighet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "särskild", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "chansa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fontän", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kram", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "locka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "jag", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "koppla_ihop", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vind", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "konkurs", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "föreställa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "skuld", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "systerdotter", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lager", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "surr", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "valuta", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vilse", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "knä", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "karaktär", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "järnväg", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "pensionera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "press", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "l", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "macka", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "på_nära_håll", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "till_stor_del", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "veckoslut", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "epistel", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "u-land", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "solig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "låna_ut", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "himla", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "spruta", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "språkkunskap", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "mjuk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "stolthet", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "eld", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "majoritet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "därför", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "poängtera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hem", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "visserligen", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "osynlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fet", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "självförtroende", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "starta_eget", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kurva", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "slå_ihjäl", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "bris", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "dvs", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "dödsfall", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sakna", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "handel", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "bok", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "pålitlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "när_än", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kines", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "talesätt", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "definiera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ögonkontakt", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "gren", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "överfalla", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "skynda_på", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "nervositet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "folk", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "kläder", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "campa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "däck", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "dra_ut", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "bidra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "barfota", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "slå_igenom", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "skriftspråk", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "missbruk", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hitta", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "förändring", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "å", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "mejla", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "mänsklig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "te", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "blå", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "syfte", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fördöma", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ordentlig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "dygn", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "sås", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "skön", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "tanke", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "central", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "noggrann", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hjärna", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "påstående", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "stå_sig", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "väldig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "konvention", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "måne", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "adoptera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sångkör", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ordlista", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "länge", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "ta_till_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "krånglig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "simhall", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "jordklot", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "berika", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "glömska", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "uppskatta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "privilegiera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hantverkare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bibliotek", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "förstås", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "e-brev", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "mat", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "död", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "show", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "anhålla", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "mobil", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "föregångare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "informationskanal", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "förgå", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "installera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "monarki", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "politik", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "växthuseffekt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "absurd", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "positiv", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "privatägd", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "gälla", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "olja", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "el", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "gedigen", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lösa", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "presentera", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "hög", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "känsla", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "slita", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "port", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "taxichaufför", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "ogillande", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "på_så_sätt", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "befolkning", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "polisman", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "humoristisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "hierarkisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fara", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "alls", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "fart", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "åka_fast", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "åsikt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ja", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "andel", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "släkt", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "skidåkare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bilolycka", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "skriva_ned", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "skiva", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "balett", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "höger", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "semitisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lapp", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "viss", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "bestämma", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "blomma", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "inspelning", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "språklig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "lura", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "illa", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "partner", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "före_detta", "pos": "JJM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "gemenskap", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bana", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "dialekt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "gubbe", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "himmel", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "psykisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "utrota", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "grubbla", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "verksam", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "term", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kista", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ta_in", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "bedöma", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "beteckning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "halva", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "stortorg", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "brännvin", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "ärva", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "flykting", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "tunn", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "ha_sitt", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "gatuförsäljare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "dela_med_sig", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kostnad", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "basera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "försiktig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "invandra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "svida", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bjuda", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "enkelhet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "längta", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "undervisning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "markera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "berätta", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "på_samma_gång", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kock", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "stabilitet", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "viktig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "spinna", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "stark", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "skyddsnät", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "allvarlig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "nära", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "fort", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "landsbygd", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "inomhus", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "till_exempel", "pos": "ABM_MWE", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "teknisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "underlätta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hy", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "utmärkelse", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "i_tid", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "allmän", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "känslig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "föra_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "infödd", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fal", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ansträngning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "bekräfta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "uttrycka", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kors", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fartyg", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "system", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "samba", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "rikta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "höja", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "diskriminering", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "arm", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fras", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "obekväm", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "köpman", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ställ", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "tempel", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "väder", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "arabisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "roman", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "grupp", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "överhuvudtaget", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "inbrottstjuv", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "konstverk", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "donera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "måltid", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "löneanspråk", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "mer", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "jiddisch", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "mysig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "funktionell", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "transportera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ridå", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "jämställdhet", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "förhör", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "färdas", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tomt", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "fortfarande", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "syn", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "miljö", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "hjälpmedel", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kröka", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "form", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "idiomatisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ordförande", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "krok", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "väsen", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "klädkod", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "trist", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "smörja", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "som_mest", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "diskret", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "nyfikenhet", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "nog", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "avundsjuk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "botaniker", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bord", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "morsa", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "pall", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hav", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "som_bäst", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "krav", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "måste", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "pojkvän", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "bli_kvar", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "domstol", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "enhetlig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "forskarlag", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "skådespelare", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "djävel", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "möjlig", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "uppleva", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "slump", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "i_botten", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "säga_sig", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "förresten", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "smörgåsbord", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "medveten", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lera", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "vilja", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "urval", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "upphöra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "måla", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "upplevelse", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "grupptillhörighet", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "telefonera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "utmatta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "forma", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förekomma", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "gäst", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "stark", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "definitiv", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "riktig", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "mikrofon", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kritik", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ge", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "ta_ner", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "extra", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "rakt_på_sak", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "imponera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "regel", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "skida", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "älv", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "tröskel", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "svälja", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "sur", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "framkalla", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "osannolik", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "grabb", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "stråla", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "transportsätt", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "föreställa_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tvåspråkig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "så_klart", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "misslyckad", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "uppfattning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lösning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "internet", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "order", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "metod", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "delvis", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "blombukett", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "misstänksam", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hunger", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "glimma", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "flock", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "oavsedd", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ritual", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "social", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "lertavla", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "verb", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "nykter", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ledamot", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vacker", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "skinn", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "förlåt", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "medium", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fara", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "växla", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "studie", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "anknytning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "synd", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "betalning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "omtanke", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "rökfri", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "anmärkning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "resa_sig_upp", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "frost", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "födelsestad", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ny", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "gul", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "fri", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "utsätta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "chockera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "turné", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "omfamning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "odyssé", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "jul", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "sjöman", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "gräl", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "fresta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kanske", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "göra_sitt_bästa", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "gyllene", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "politisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "böja", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "vecka", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "tystna", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "språkforskare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "broder", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "uppfylla", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kris", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "manskläder", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hebreisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "absolut", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "datum", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "dålig", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "sen", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kontinent", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "i_samråd", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "motivation", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "intervjua", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "riksförbund", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hända", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "förhindra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tränare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ta_bort", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "mössa", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "rensa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ner", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "grammatik", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "stresstålig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "midnatt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "nia", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "instänga", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ingång", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ovan", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "reglera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "rad", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "avbrott", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "avsluta", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "reklampelare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "inträffa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "jämförelse", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "göra_ont", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "sängkammare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "verbal", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "uppmuntra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "fader", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "härma", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "engelsman", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "märklig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "äcklig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "utgångspunkt", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "byta", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "underlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "lön", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "överallt", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "stiga", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "kåldolma", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lutfisk", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "motion", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "dessutom", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "klang", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "stjärnhimmel", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "konstruera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vinst", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tjuta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "löpa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "konst", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "omvärld", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hålla_på", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "humanist", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "flexibel", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "sammanlagd", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "riskabel", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "på_avbetalning", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "för_alltid", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "anklagelse", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "omfatta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "svära", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "till_brädden", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "samisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "äppelträd", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "inlärning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "blyghet", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "plats", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "dräng", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "statistisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "visa", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "stanna", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "ensamstående", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "hjälp", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "arabiska", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "sätta_ut", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "samvete", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "tät", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "rolig_historia", "pos": "NNM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hustak", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fantastisk", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "hierarki", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "nedan", "pos": "AB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "peppar", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "fosterbarn", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "brits", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "en_gång", "pos": "ABM_MWE", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "tragisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "drag", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "trakt", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "snickare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "märkvärdig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "församling", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "forskare", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "övergång", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tunga", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "återigen", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "skruv", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "tanzanier", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tillvaro", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "nämligen", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "svårighet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "impulsiv", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bankfack", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fånig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tråkig", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "provocera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "öra", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "dö_ut", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "italienare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tom", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "diskrimineringsombudsman", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "exempelvis", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "dela", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "linda", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "höra", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "kylig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "platt", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "gran", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "slänga", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "resultera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "region", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förklaring", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ta_hand", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "idrottsförening", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "tveka", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "äktenskap", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "erfarenhet", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "i_detalj", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "heller", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "separation", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bero", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "synlig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "same", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "i_onödan", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "nederlag", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "skicka", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "ungefär", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "salong", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ställning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ingenjör", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "barnslig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "gå_igen", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "lem", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "utomhus", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "enkelriktad", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "sväng", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "avvakta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "övrig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "förvirra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "tolka", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "endast", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sladd", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "trygg", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "hastighetsgräns", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "topplista", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "tappa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ha_för_sig", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "i_första_hand", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "klicka", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "vrida", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "landskap", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "sådär", "pos": "AB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kol", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "rullator", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "asiatisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fruktan", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "stam", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "starta", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "x-sida", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kärnfamilj", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "följeslagare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "stöna", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lägga_om", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kliv", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "väl_så", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "slippa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "potatis", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "knapp", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "domare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "sällskap", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "fördelning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "utmaning", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "tapet", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "i_allmänhet", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vårdnad", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "erbjuda", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "förakta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "prinsessa", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "intensiv", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "rå", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "tidningspapper", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "bruten", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "begåvning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lita", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "stjälpa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "springa", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "gå_i_ide", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "nöja_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vägverk", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förstöra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "förälskelse", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "s_k", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "kombination", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kräm", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "motvillig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fast", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "giftermål", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "anlägga", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "psalm", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hålla", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "järnvägsstation", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "lägga_till", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tonår", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "öde", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "katolicism", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ut", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "slå_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "dock", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "utrotningshotad", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "flytta_på_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ökning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "andas_ut", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "känd", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kasta_bort", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "blind", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "längtan", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kategori", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "döda", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "handfat", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "landområde", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "riskzon", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lägga_in", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "ansvara", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "intryck", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "dela_ut", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "spårvagn", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "minsann", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "nuförtiden", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "verklig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "flertal", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "leda", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kiosk", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "smak", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kassa", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "på_tiden", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "levnadsvillkor", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "förbereda", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "veckodag", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "formulera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ömsesidig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "blixtra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "betrakta", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "pippi", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "rädd", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "trygghet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "påsk", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "inledning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "rösträtt", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "givetvis", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "nämna", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "lift", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "avancera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kämpa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "dialektal", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "bild", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "buljong", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "julklapp", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "villkor", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "omtänksam", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fenomen", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "mord", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "godkänna", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "i_hast", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lärobok", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "hända_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "extrem", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ankomst", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "förstärkning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kommunikation", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kyrka", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "dubbel", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "såra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "somlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "armé", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "för", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kriminalitet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "huvudroll", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "upptäcktsresande", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "plast", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "protestera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "pristagare", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "dryfta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "vara_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "vara_med", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "äntligen", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "cykelväg", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "regional", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "norrut", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "förordning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "frihetstid", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "i_mål", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "mönster", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ömtålig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "falla_in", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "inbjudan", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "strax", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "så_här", "pos": "ABM_MWE", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "nytta", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "livlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "avspänd", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "samla", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "lur", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "handikapp", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fiske", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "biskop", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "mental", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "livrädd", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "undersökning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kasta", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "tända", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "resonemang", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "reflektera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "rim", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tvärtom", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "andra", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "referera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ljus", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "förbinda", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hålla_sig", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "stat", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "motsats", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "d", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "i_stort_sett", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "struktur", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lag", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "ju", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "pyramid", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "verkligen", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "arbetsrum", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "klara_sig", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kvällsmat", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "sannolik", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "cykelställ", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "mark", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "tiotal", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hona", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "i_fjol", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "stiftelse", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "peka_ut", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "bageri", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "nyligen", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "leva", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "utgå", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "vimmel", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "nära", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kula", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "latin", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "dikt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "pryl", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "orättvisa", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "beskrivning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kasta_sig", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fläck", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vis", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "i_praktiken", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "försena", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "uppehälle", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vandring", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "par", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tand", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "fly", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "behov", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "benägen", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lax", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "ersätta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ung", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "tvekan", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "sann", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kunnig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "studium", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "ständig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sak", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "ta_tag", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "dölja", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "stjärna", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "få_rätt", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "innebära", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "upplösa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förlora", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "utseende", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sekund", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "koll", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "jordglob", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "slag", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "kräk", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "reda", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "närvaro", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "engagera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "arbetsplats", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "reservera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "decennium", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "innehåll", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "forskningsprojekt", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tvätt", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "blåsa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "påve", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "ungdom", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "sparlåga", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "omröstning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "spela_upp", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "konstnär", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "hembakad", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "mittemellan", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "ohövlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lyx", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "utsikt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "tro", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "ren", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "redan", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "spännande", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "självbiografi", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "öppna", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "ljus", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "bilist", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "batteri", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "översättning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "innebörd", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "afrikansk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "prygla", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "industri", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "fundera", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "seg", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fattigdom", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "misstänksamhet", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "kvarter", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ske", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bebygga", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "naturligtvis", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "fira", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "föredrag", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "grammatisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "invälja", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "värk", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "ända", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "skilja_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "holländsk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "funktion", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "spärra", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "orsak", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kroppsspråk", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "brorsa", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "fotografera", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "björn", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "mångsidig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "irriterad", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "hemort", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "föra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "gumma", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "enorm", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "komma_på_tal", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "noga", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "oklar", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "asa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "inbunden", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "formulering", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "symbol", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "gå_vidare", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kö", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "hindra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "främmande", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "dill", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "identifiera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ordna", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "känna_igen", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "sekel", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "skörd", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "fynd", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "modersmål", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förarga", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "dumhet", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "sajt", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "inrätta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ovanlig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "barnbok", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "gångbar", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "reta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "råd", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "trolla", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "skämma", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "f_kr", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "råka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "högklackad", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "långt_ifrån", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "kristen", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "i_värsta_fall", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lås", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "otur", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "prioritera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "börja_om", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "slå_ut", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "förfärlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "annanstans", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "nät", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "allvar", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "slutsats", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "arbetslös", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "fjärdedel", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "skärtorsdag", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kulturkrock", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "riva_sönder", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bunt", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "eftersökt", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "avfyra", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "frusen", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "gå_hem", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "uppfinna", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "regnskog", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "således", "pos": "AB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "minnesmärke", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "extra", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "smidig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kind", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "boll", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "jobb", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "påfrestande", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kompromissa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tillhöra", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "dra_upp", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "passa_in", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "samspel", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "fortsätta", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "bälte", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "räkna", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "näve", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "surfa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "läsning", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "fat", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "viss", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "mm", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "stödja", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "däremot", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "titel", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "populär", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "bryta", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "skala", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fullmakt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hem", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "svensk", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "hemland", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "radio", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "exakt", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "passa_ihop", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "fräsch", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "butik", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "likasinnad", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "förfader", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "muttra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ström", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "återge", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ingripa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "alltmer", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sträcka_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "präst", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "slå_sig_ner", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "vatten", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "nobelstiftelse", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "skilsmässa", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "smuts", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "solljus", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "klippa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sätta_in", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "pappaledig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "blekna", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "liksom", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "kanot", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "svartklädd", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "växa_upp", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "läsa_på", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "smör", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "framgångssaga", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "relativ", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "så_länge_som", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "försämra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "mörk", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "styrka", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "i_vägen", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hembjuda", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "protokoll", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "område", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "vila", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "ting", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "choklad", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "skinka", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "kyckling", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "ganska", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "för_en_stund", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bokstav", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "handelsman", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "klä", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "lägga_märke", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "julbord", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "siden", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "gömma", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "utmärka", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "i_övrigt", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "omöjlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fnysa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "köttätande", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "döpa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "service", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "polsk", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "språk", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "innan_dess", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "statistik", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "jordyta", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "bokmål", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fisk", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "värdering", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "uppenbarligen", "pos": "AB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "olycklig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "efter_hand", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "djup", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "diktning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "brutal", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "nyttig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "enda", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "normal", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "smitta", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "utbre", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "skaffa_sig", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "personlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "artist", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "tillsätta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "bödel", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "oberoende", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vardag", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "sällan", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "vidga", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fånge", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "orörlig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "egentligen", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "motto", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "samla_sig", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "just_nu", "pos": "ABM_MWE", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "begrepp", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "språklärare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hit", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "stavelse", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "cykel", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "badrum", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "på_gång", "pos": "JJM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "fotgängare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "antagligen", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "aspekt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "låta", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "lugn", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "färd", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "strömma_in", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ljuvlig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "darra", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "man", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "föremål", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kvinna", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "stadsbo", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "allmän", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kulturskillnad", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ta_tid", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "tvättstuga", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "lekplats", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "serie", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "färga", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "smörgås", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "bege_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kejsar", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lillasyster", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sända", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "medelväg", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "stirra", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "strykjärn", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "missa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "människa", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "poäng", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "klädsel", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "nyans", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "se_ut", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "café", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "recept", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "äng", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "lantlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bryta_ut", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förundra", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "icke", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "föra_med_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "officiell", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "flygbolag", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "framtida", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "på_sätt_och_vis", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "monopol", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "likväl", "pos": "AB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "drivkraft", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "sätta_sin_fot", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hot", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "snö", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "gris", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "mejl", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "år", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "saffran", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "minspel", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "äventyrare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "mena", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "bomb", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "pressa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "bilism", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "alkohol", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "litterär", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "på_riktigt", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "pistol", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kärleksfull", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tung", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "blomsterhandel", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "snaps", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "uppåt", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "rätta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ödla", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "rörelse", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "varuhus", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "jämställd", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "trots_allt", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "uppväxt", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "verklighet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kraft", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "straffa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "vistas", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "bänk", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "i_fred", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "ända", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "nöt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "underteckna", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "sitta_ner", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "moder", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "baltisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "tex", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "låg", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "bebis", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "testa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "tycka", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "för", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "svag", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "ärlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ta_med", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "komma_igång", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "länge_sedan", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "skrämma", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "tjänare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lika", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "hemåt", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "halka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "gaffel", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ful", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "gärningsman", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "handlare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hinna", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "nyfiken", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "tradition", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "nyss", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "soppa", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "död", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kvida", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "småflicka", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "svetta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "med_säkerhet", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "argument", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hemifrån", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "bondgård", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "klagomål", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "effektiv", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "uppträda", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "samtala", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "i_synnerhet", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "synas", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "hand", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "kvitta", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "än", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "dua", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "stöta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kunglig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "religiös", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "brittisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fordon", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "återkomma", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "resonera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bevara", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "virka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "verksamhet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "skrivregel", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bankärende", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "roa_sig", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "skogsarbetare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fylla_år", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "fot", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "skyffla", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "gräns", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "idealisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kräfta", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "okunnig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "satsmelodi", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "egen", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "inflytande", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "lägga_sig", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "smita", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "svenska", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "tjänst", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "millimeter", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "snar", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "bort", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "flicka", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "eventuell", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "hälsningsfras", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "skydda", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "borta", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "hamna", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sluka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "hota", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "festlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kvalifikation", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "skal", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "aktuell", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "alltså", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "nedläggning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "övernaturlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "spegla", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "förgifta", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "glida", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "professor", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "naturvetenskaplig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "halm", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hövlig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kortsiktig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ingenstans", "pos": "AB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ben", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "verka", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "drickbar", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "möjlighet", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "lägga_av", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "frakta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "befolka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "stress", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "långsam", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "middagsmat", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "idrottsman", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "skam", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "anställd", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "nykomling", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "logik", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "öppna_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "allra", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "marmelad", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "annorlunda", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "dagstidning", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "konkurrera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sammanhang", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "kollega", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "ta_plats", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "nätverk", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "promenad", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "nordiska_språk", "pos": "NNM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bil", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "förare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "mun", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "härifrån", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "hamn", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "medlem", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "hatt", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "enslig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "applikation", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "penna", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "håll", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "bläddra_igenom", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "medveten", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "tillgodose", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kökssoffa", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "charterresa", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "täcke", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "jury", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "nederländsk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kroppsdel", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "förebygga", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "självständighet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "apparat", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "affärsmöte", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "osäkerhet", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lekfull", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "motorstopp", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "automatisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "matbord", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "vinna", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "maka", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "övervaka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "gest", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "miljon", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "sms", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "flyga", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "fantisera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vetenskap", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "bitter", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "grundvatten", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "i_regel", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kontrollera", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "sy", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "tankeverksamhet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "diktsamling", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ytterlig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "rita", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "grund", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "mystisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "trä", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "när_som_helst", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ideell", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "värde", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "grävling", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "återhämta_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "andas_in", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "lag", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tv-rum", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "vetenskapsman", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "hänsyn", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hela_dagen", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "x-tal", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "löna_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "riktning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "uppriktig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hälsning", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "in", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "sätt", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "usel", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "belöna", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tillbringa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "bota", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ädel", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "disponera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "konserthus", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "onormal", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hallick", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "faktisk", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "tjur", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "axel", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "typ", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "uppbygga", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "maraton", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "s_k", "pos": "JJM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "anstränga_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bestämma_sig", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "poetisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "bröst", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "trösta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "vanlig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "tveksam", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "räcka", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "frigörelse", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "peka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "begå", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hundratal", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "galen", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "småländsk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "förmån", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vid", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "hastig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "på_sitt_sätt", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "intellektuell", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "socialdemokrat", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "notis", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "till_sist", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "anpassa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hur_än", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "till_sig", "pos": "JJM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "göra_sig", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "otålig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "föregå", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "flod", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "härstamma", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "samhällsplanering", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "stavning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "gäng", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "oekonomisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lagom", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "resenär", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ovan", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tillfällig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "vapen", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fördel", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "utnyttja", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "mytologi", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "vilorum", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "matvara", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "himmelsk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "värma_upp", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "som_regel", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "variant", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "slipa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "bröllopsfest", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "jägare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "mage", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "biologisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "motstånd", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bearbeta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "sköta", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "älta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tråd", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "klä_ut_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "instinktiv", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "framstå", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "vetenskaplig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "föreläsning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hel", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "röra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "grekiska", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "underlag", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "släppa_ut", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "jämra_sig", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "identitet", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "bonusbarn", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "skärm", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "växelvis", "pos": "AB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "enig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tårta", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "hål", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "omge", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ta_slut", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "föräldraledighet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "helt_och_hållet", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "existera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "djärv", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "gå_miste", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "trasa", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "mataffär", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "telefonlur", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "chatta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "drottning", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "holländare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "igen", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "meningsbyggnad", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "vare_sig", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "k", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "hysterisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "samkönad", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "familjemedlem", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "inälvor", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "engagemang", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kamratskap", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "skylla", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lämplig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "stänka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "betoning", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "snabb", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "lucka", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "variera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "köra_på", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "praktiskt_taget", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kommunicera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hela_tiden", "pos": "ABM_MWE", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "familjeliv", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ägna", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "stå_ut", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "europé", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "glas", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "relation", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "trettioårig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kyssa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "just", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "resa", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "ord", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "olycka", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "granne", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "ställa_upp", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "mista", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "så_här_dags", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "klaga", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "avsikt", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "väva", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sätta_sig_in", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "låta_bli", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "handelsplats", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "gapa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "förbund", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "dra_ut_på_tiden", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "rike", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "utförlig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "vänta", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "undgå", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "gå_långt", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "jazzklubb", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "våt", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ton", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "daghem", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "amerikansk", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "tendens", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tidskrift", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "svans", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "dö", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "tänkbar", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "is", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "upplösning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "forskarkollega", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "blad", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "krydda", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "manlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "arab", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "expandera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "läggning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "slå", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "bidrag", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kvar", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "omtyckt", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "åtminstone", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "beräkna", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kvicksilver", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fördyra", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lokal", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "påstå", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "skola", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "kreativ", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "i_stånd", "pos": "JJM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "önska", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kontrast", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "naturkatastrof", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tillåta", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "av_allt_att_döma", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "beteckna", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "band", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "storfamilj", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "driva", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "saga", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "avslutning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "fråga_sig", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "mästare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lättläst", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "exempel", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "namn", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "doktorsavhandling", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hälft", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "umgås", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ana", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "genomskinlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "rikssvensk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "fylla", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "självkänsla", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "testamente", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "dokumentera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "missförstå", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "jämföra", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "möte", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kombinera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "hävda", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "utesluta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fara_ut", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fram_och_tillbaka", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "substantiv", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "lyckas", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "välfärdssamhälle", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "dra_in", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "medkänsla", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "skaffa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "spekulera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kvinnlig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "museum", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "låtsa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "situation", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "tv-serie", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "folkhögskola", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "paradis", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ha_reda", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hjälpa_till", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "därefter", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "auktoritet", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "förmodligen", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "konjunktion", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "invandrare", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "uttryck", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "tröst", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kall", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "kontakt", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "tro", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "gym", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "anonym", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vishet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "invandrartät", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "åldersgräns", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "jultomte", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "fria", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "förbränna", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "risk", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "förhålla_sig", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "make", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "förbättra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "plan", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "skönlitterär", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "politiker", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "i_form", "pos": "JJM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "sort", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sexuell", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ideligen", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tysta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "pop", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "utländsk", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "sprida_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "funktionshinder", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "angripa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "viska", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "c", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "buske", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "utrymme", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "rättighet", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "oändlig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "vattnig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "fördela", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "lida_nederlag", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tolerans", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "mätning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "minister", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "möta", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "resande", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "okej", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "utlandsresa", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "företagsledare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "opålitlig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "intressera_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "samtlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "flytta_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vers", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "lära", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "elektriker", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "förnärma", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "akademiker", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "önskan", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "avstå", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "flaska", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "ägna_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kort", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "omfattning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hembakt", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "analys", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "län", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "slarvig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "chaufför", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "aggressiv", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "chanslös", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "privat", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "vokal", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "förlovad", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "medge", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "något", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "a", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "lånord", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "artikel", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "vagn", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "nordisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "jakt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "påverka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "x-årsåldern", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "krig", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "språknämnd", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "andetag", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "här_och_nu", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förvänta_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "felaktig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "utan_vidare", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "idiot", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bov", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "högtid", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "gudstjänst", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "synpunkt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ekonomisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "stinka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ta_ansvar", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "innersta", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "juni", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "historisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "föra_fram", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "uppstå", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "bakgrund", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "utsträckning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tapper", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "förtrolla", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "sätta", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "salt", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "trafik", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "kranvatten", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "analysera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "snitt", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "markant", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sår", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vänlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "entydig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "musiker", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "animation", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fantasi", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "gärna", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "göra_om", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "försvinnande", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tämligen", "pos": "AB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "omdöme", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "blick", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ens", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "undersöka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "arvtagare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "löjtnant", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "dagligen", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ansikte", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "olik", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "satan", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "osams", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "uppsluka", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "egenskap", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "förhållandevis", "pos": "AB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ordförråd", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "offra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "hållplats", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "yvig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "jubel", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "början", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "nyhet", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "fräsa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "överdriva", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "käpp", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "imorgon", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "rest", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "lind", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "analytisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "art", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "täcka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "trycka_ner", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "överens", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "inse", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "upplaga", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "dra", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "ljuga", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "historia", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "skydd", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "tolkning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lägenhet", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "träff", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "teater", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "transport", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "konstgjord", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "svärd", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "göra_skillnad", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lära_in", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förkasta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "obegriplig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fel", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "sätta_samman", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "logisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fordra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "konstmuseum", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "genast", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "passa_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tjock", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "negativ", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "norr", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "samtal", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "status", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "rättvisa", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "steka", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "konflikt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "i_sin", "pos": "JJM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "grov", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "i_väg", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "referatmarkör", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "organisation", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kultur", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "låna", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "anteckna", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "dramatisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "finkläder", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "förena", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hålla_upp", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tendera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lik", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "få", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "snus", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "dominera", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "kanin", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "slav", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bokhandel", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "prova", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "förutsättning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kassörska", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fullständig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "projekt", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kunna", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "kvalificera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "företeelse", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "frihet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "sannolikhet", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "passagerare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "grekisk", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "pass", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "fräsig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "åstadkomma", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "enbart", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "betydelse", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "olika", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "troll", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "en_aning", "pos": "NNM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "bekännelse", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fräck", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "välja", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "naturlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "komma_fram", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "utöka", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "utpräglad", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "svärförälder", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "överdådig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kalabalik", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "resa_bort", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "utrusta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "gruva", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "höjd", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "teori", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "för_gott", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "rentav", "pos": "AB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "barnlös", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "brinna", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "byggnad", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "matematisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "överlägsen", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "slå_in", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kröna", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lydig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "snyfta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "dyster", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "handling", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "oartig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "utveckla", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "annars", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kränka", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "avsnitt", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "aning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "snygg", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "tecken", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "intrig", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "göra_gott", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "blunda", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "stöd", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "rapport", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "termometer", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "lärd", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "promenera", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "meny", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "gynna", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "biljettpris", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tydlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "utomlands", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "troligtvis", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kanon", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "färg", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "upprörd", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lexikon", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "slut", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "därmed", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "utveckling", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kung", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "personal", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "ange", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "mugg", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "lämna", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "vika", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "även", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "frysbox", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "part", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "yta", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "föda", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ännu", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "vild", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "tillfälle", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "dagis", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "hylla", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "betydelsefull", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "sväva", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "dator", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "främling", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ont", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "söka_upp", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "stormig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "skafferi", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "brodera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "läkemedel", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "procent", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "dansk", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "midsommarafton", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "adjektiv", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "typisk", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "träsko", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "beslut", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "besked", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ritual", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "konstant", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "klättra", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "fatta_beslut", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "rymd", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "nuläge", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "samhällsklass", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "reagera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "knäppa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "liberal", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "flitig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "välta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "smaklig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "mottagare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tank", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "fält", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "enskild", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "segling", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "arm", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "altare", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "popcorn", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "chans", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "komma_igen", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "vin", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "uttala", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "klara_av", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "höft", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "mål", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "hypotes", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "rovdjur", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tvilling", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "handelshögskola", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "halvtimme", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "skriva_ut", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "iransk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "flyta", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "sjunka", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "sätta_ihop", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "botemedel", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "gud", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "motta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "mjöl", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "därpå", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "mätta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "respektlös", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "blodig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "oväntad", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "bonusfamilj", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "i_stället", "pos": "ABM_MWE", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "ingå", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "gräs", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kommentar", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "information", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "vård", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "utifrån", "pos": "AB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "jättelik", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "peng", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "amerikan", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "direkt", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "utgöra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "åskväder", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lingonsylt", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "använda", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "ändelse", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lysa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "vinkel", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "blanda", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "karl", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "institution", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ursprunglig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "simma", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "global", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "berg", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "släktnamn", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fatta", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "i_gång", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "under_tiden", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "tuff", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "sekreterare", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "kompetent", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fiska", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "drömma", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "frigöra", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kärra", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "färgglad", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sportig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "nicka", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "utlandsvistelse", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "stång", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "trend", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "grå", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "framställa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "stad", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "självständig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "yttrande", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "efterlysa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "praktisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kräva", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "filma", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "etnisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "listig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "seriös", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vela", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "gemensam", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "ordbok", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "öka", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "brist", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "spansk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kommun", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "b", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "dinosaurie", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "någonsin", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ingrepp", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tyvärr", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "luta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "nazism", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "höger", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "platsa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "halt", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "utsläpp", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "bön", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "knäckebröd", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "engelska", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "utspelas", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förknippa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "skruva", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "avspegla", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "slaktare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ångest", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "tilltalsord", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "nöje", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "läpp", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "drama", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "putsa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "mod", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "värdera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "överleva", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "bilradio", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ordning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "beskriva", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "atmosfär", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "spränga", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "led", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "dunkel", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "deklaration", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "resultat", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "het", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "x-talen", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förmedla", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "egendomlig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "klimatförändring", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "försöka", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "intressant", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "bilda", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "dyr", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "fikarast", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "bröllop", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "budskap", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "oro", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vänja", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "unge", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "älskarinna", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hjälpa", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "skilja", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "väl", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "kyss", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "primitiv", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ofrihet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lätt", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "ställa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "aktiv", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "dåvarande", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "inre", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "midsommarstång", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "granska", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "töras", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hålla_kvar", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "omedveten", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "gravid", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "radiokanal", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "respektera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "revolution", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "teknik", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "berömd", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "omvänd", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "väsentlig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "speciell", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "skönhet", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "bak", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "pizza", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "burk", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "le", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "sista", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "massmedium", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "hotfull", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ersättning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "uppnå", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "arg", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "rycka_på_axlarna", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "byte", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "moralisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "rubrik", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "jämlik", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "orm", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "svaghet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "maj", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "planera", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "vitamin", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "faktor", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "i_kors", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "osäker", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "övertyga", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "mänsklighet", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "avsätta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "regeringstid", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "begränsa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ställa_sig", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "sned", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "famn", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "uttalande", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "klinga", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kaka", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "rätt", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "paraply", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "linje", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "patient", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "läka", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "president", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "bekanta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "frysa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "uppfatta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "pacifistisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "närvara", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hemsida", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sjukdom", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "porslin", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hinder", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "avsiktlig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "köksbord", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "krypa_upp", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "väcka", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "jaga_upp", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "prägla", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "mirakel", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "kritisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "arbetsliv", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "anledning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "harmoni", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "idé", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "föga", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kroppslig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "grevinna", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "artig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "berömma", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förståelse", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "syna", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "praktik", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "generation", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "närhet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "uttal", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sida_vid_sida", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ansökan", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "väsa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "användning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bransch", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tänka", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "stöld", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "nattgäst", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "franska", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "kramgo", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "efteråt", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "säga", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "genomsnittlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "vigsel", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "grundlägga", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ge_upp", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "i_alla_fall", "pos": "ABM_MWE", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "observera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "expert", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "lokal", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "viol", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "filosofi", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "stryka", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "sammanbo", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "plötslig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "förskoleålder", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "värd", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "dra_på_sig", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "statsminister", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "drunkna", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "gång", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "radikal", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "affärsman", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "psykologisk", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "minoritetsspråk", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hotellrum", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "jobbig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "undantag", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "variation", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "mångfald", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "träning", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "följd", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fröken", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "utvandrare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "konto", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "älskling", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "trötthet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "entusiasm", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "formel", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "smeknamn", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "passera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "fallskärmshoppare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "mobil", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "staket", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "fäkta", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "balans", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "fri", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "i_rörelse", "pos": "JJM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "förskola", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "motiv", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "hyra", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "heja", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "veckotidning", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "rätt", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "veta_om", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "bädda_in", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "smälta", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "riskera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "få_tag", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "fel", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "fascinera", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "elektricitet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "signal", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "hal", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "vara", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "köra", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "genuin", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "författare", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "vad_då", "pos": "ABM_MWE", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "försörjning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "rätt", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "styvbarn", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "glimt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "myt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "viking", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "skohylla", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "turkisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ynklig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "anpassa_sig", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "dum", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "organisera", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "koka", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "bygga", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "snusa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "korrekt", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kolhydrat", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ta_illa_upp", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "älgko", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "jord", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "västvärld", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "skänka", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ropa", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "helig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lättmjölk", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "självklar", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "ordspråk", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "föredra", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "tvinga", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "stoppa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "neutral", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "frisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "midsommar", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "lindrig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "i_själva_verket", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förfluten", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tid", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "åkare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "högtidlig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "kokbok", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "traska", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "passion", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "angelägen", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "inställning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "konsekvens", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "i_livet", "pos": "JJM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "flina", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "esperanto", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bråk", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "komplicera", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "representant", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ta_sig_an", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "mercedes", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kopplaupp", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "bosätta_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "hur_som_helst", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "vaken", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "duk", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "omgivning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "doft", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "misstänka", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "samförstånd", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "exklusiv", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "lönlös", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "horn", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "uppfostra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "uppfinning", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "gifta_sig", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "förändra", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "yttre", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "objektiv", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "skolbok", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "säga_till", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "välplanerad", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "borra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kanal", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "juli", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "formell", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "suffix", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "besegra", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "vända_sig", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "hemtrakt", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "obehaglig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "frivillig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "vålla", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "skit", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "mening", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förminska", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "svartsjuk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "näring", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "indisk", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "land", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "respekt", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "spela_roll", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "tåras", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "oavbruten", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "autentisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "blåsa_upp", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lukta", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "fest", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "besökare", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "natur", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "redovisa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "individ", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "grej", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "varv", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "förankra", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "så_gott_som", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förkyld", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "rykte", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ta_emot", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "medicin", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "träna_upp", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "steg", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "tunnel", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "medvetande", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "farlig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "initiativ", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "upptäckt", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "lagom", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "vid_liv", "pos": "JJM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "västerut", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "kvast", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "genre", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "uppgift", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "trampa", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "spänning", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "belasta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "påse", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "gå_vilse", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "bli", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "fiffig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "noga", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "volym", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "okänd", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "palats", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "fästa", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "runsten", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "paj", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "alkoholkonsumtion", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "framåt", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "syfta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "makt", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "påverkan", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "från_början", "pos": "ABM_MWE", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "sko", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "fruktansvärd", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "hammare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "estnisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ställe", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "för_när", "pos": "ABM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "få", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "forskning", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "C1"
+},
+{
+"word": "löjlig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "vittne", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "person", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "len", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "uppföra_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "indirekt", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "ladda", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "godis", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "bla", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "spara", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "försörja", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "döma", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "samla_ihop", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "straff", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "luft", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "sedan_dess", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "sammanfattning", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "allt", "pos": "AB", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "missnöjd", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "som_sagt", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "förskrämd", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "tillgång", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ifjol", "pos": "AB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "omväg", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "insats", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "jämt", "pos": "AB", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "värdinna", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "referat", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "muskel", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "utvald", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "dödstrött", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "kropp", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "kön", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "snubbla", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "ort", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "statare", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "legitimation", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "i_framtiden", "pos": "ABM_MWE", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "daglig", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "horisont", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "talare", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "därinne", "pos": "AB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "följa", "pos": "VB", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "förlänga", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "dyka_upp", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "på_nytt", "pos": "ABM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "strukturera", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lång", "pos": "JJ", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "reaktion", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "janssons_frestelse", "pos": "NNM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "schyst", "pos": "JJ", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "behärska", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "oskyldig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "komma_ifrån", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kurs", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "nackdel", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "generell", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "mentalsjukhus", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "se_om", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "förvärva", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "lasta", "pos": "VB", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ledighet", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "onödig", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "etablera", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "fall", "pos": "NN_NEU", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "missta_sig", "pos": "VBM_MWE", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "bibliotekarie", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "häxa", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "lunginflammation", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "pågå", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "slå_sönder", "pos": "VBM_MWE", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "augusti", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "jätte", "pos": "NN_UTR", "fo_lvl": "B1", "tt_lvl": "B2"
+},
+{
+"word": "företag", "pos": "NN_NEU", "fo_lvl": "A1", "tt_lvl": "B1"
+},
+{
+"word": "ihärdig", "pos": "JJ", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "magisk", "pos": "JJ", "fo_lvl": "B1", "tt_lvl": "C1"
+},
+{
+"word": "sport", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "indier", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "upprepa", "pos": "VB", "fo_lvl": "A2", "tt_lvl": "C1"
+},
+{
+"word": "ha_rätt", "pos": "VBM_MWE", "fo_lvl": "A1", "tt_lvl": "B2"
+},
+{
+"word": "comeback", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "ge_sig_iväg", "pos": "VBM_MWE", "fo_lvl": "A2", "tt_lvl": "B1"
+},
+{
+"word": "skog", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "kollektiv", "pos": "NN_NEU", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "kvist", "pos": "NN_UTR", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "examen", "pos": "NN_UTR", "fo_lvl": "A1", "tt_lvl": "A2"
+},
+{
+"word": "torg", "pos": "NN_NEU", "fo_lvl": "A2", "tt_lvl": "B2"
+},
+{
+"word": "reporter", "pos": "NN_UTR", "fo_lvl": "B2", "tt_lvl": "C1"
+},
+{
+"word": "framträda", "pos": "VB", "fo_lvl": "B1", "tt_lvl": "C1"
+}
+]

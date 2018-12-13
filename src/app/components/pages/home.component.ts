@@ -3,17 +3,23 @@
  */
 import {Component, CUSTOM_ELEMENTS_SCHEMA, AfterViewInit} from '@angular/core';
 import {LarkaService} from '../../services/larka.service';
+import {VersionControllerService} from "../../services/version.controller.service";
+import {Title} from "@angular/platform-browser";
 
 @Component({
     selector: 'home',
     templateUrl: '../../templates/home-component.html',
-    styleUrls: ['../../css/home.css']
+    styleUrls: ['../../css/home.css'],
+  providers: [Title]
 })
 
 export class HomeComponent implements AfterViewInit {
 
-    constructor(private larka: LarkaService) {
-        this.larka.wakeup().subscribe(function(d) {console.log(d); });
+    constructor(private title: Title) {
+        // this.larka.wakeup().subscribe(function(d) {console.log(d); });
+      // apparently this doesn't help?
+      const versionTitle = 'Lärka' + (VersionControllerService.isLabb()?'Labb':VersionControllerService.isDev()?'Dev':'');
+      this.title.setTitle(versionTitle);
     }
 
     ngAfterViewInit () {
@@ -27,6 +33,14 @@ export class HomeComponent implements AfterViewInit {
             (twttr as any).widgets.load();
         }
 
+    }
+
+    isLabb() {
+      return VersionControllerService.isLabb();
+    }
+
+    isDev() {
+      return VersionControllerService.isDev();
     }
 
 }

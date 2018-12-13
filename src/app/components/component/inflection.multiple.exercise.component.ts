@@ -69,11 +69,16 @@ export class InflectionMultipleExerciseComponent {
   }
   resetButton() {
       this.buttonToggle = false;
-
+      this.buffer.interrupt();
+      this.buffer.empty();
+    this.quarantine = ["0"];
     }
 
   resetButton2() {
     this.buttonToggle2 = false;
+    this.buffer.interrupt();
+    this.buffer.empty();
+    this.quarantine = ["0"];
   }
   setLevel(lvl) {
       this.level = lvl;
@@ -82,7 +87,13 @@ export class InflectionMultipleExerciseComponent {
 
     generate (domain?, pos?, level?) {
       if (this.buffer.ready()) {
-        return this.parse(this.buffer.next());
+        let data = this.buffer.next();
+        let sentence_id = data['sentence_id'];
+        while (this.quarantine.indexOf(sentence_id) > -1 && this.buffer.ready()) {
+          data = this.buffer.next();
+          sentence_id = data['sentence_id'];
+        }
+        return this.parse(data);
       }
         this.waiter.on();
         if (!domain) {

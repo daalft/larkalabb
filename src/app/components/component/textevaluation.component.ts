@@ -8,6 +8,7 @@ import {LarkaService} from '../../services/larka.service';
 import {PleaseWaitComponent} from './pleasewait.component';
 import {EasterEggService} from '../../services/easteregg.service';
 import {HttpClient} from '@angular/common/http';
+import {D3, D3Service} from "d3-ng2-service";
 
 @Component({
 
@@ -45,13 +46,24 @@ export class TextEvaluationComponent {
 
     public words;
 
+    // public posDist; -> not returned by texteval
+    public cefrDistP = {'A1': 0, 'A2': 0, 'B1': 0, 'B2': 0, 'C1': 0, '?': 0};
+    public cefrDistR = {'A1': 0, 'A2': 0, 'B1': 0, 'B2': 0, 'C1': 0, '?': 0};
+
+    public rkeys;
+    public pkeys;
+
     private responseObject: ResponseObject;
 
     private text;
 
-    constructor(public localizer: LocalizerService, private http: Http, private larka: LarkaService, private eggs: EasterEggService) {
+    private d3: D3;
+
+
+    constructor(public localizer: LocalizerService, private http: Http, private larka: LarkaService, private eggs: EasterEggService, d3Service: D3Service) {
         this.words = [];
         this.responseObject = new ResponseObject();
+        this.d3 = d3Service.getD3();
     }
 
     setAssessmentMode(mode: number) {
@@ -144,6 +156,41 @@ export class TextEvaluationComponent {
         this.responseObject.levelledText = levelled_text;
 
         this.words = levelled_text;
+
+        for (let i = 0; i < this.words.length; i++) {
+          const w = this.words[i];
+          if (w[1] !== '') {
+            if (w[1] === '-') {
+              this.cefrDistR['?'] += 1;
+            } else {
+            this.cefrDistR[w[1]] += 1;
+            }
+          }
+
+          if (w[2] !== '') {
+            if (w[2] === '-') {
+              this.cefrDistP['?'] += 1;
+            } else {
+            this.cefrDistP[w[2]] += 1;
+            }
+          }
+        }
+        const totalCefrR = Object.values(this.cefrDistR).reduce((a, b) => a + b, 0);
+        const totalCefrP = Object.values(this.cefrDistP).reduce((a, b) => a + b, 0);
+
+        this.rkeys = Object.keys(this.cefrDistR);
+        this.pkeys = Object.keys(this.cefrDistP);
+
+        for (let k in this.cefrDistR) {
+          if (this.cefrDistR.hasOwnProperty(k)) {
+            this.cefrDistR[k] = ((this.cefrDistR[k] / totalCefrR) * 100).toFixed(2);
+          }
+        }
+        for (let k in this.cefrDistP) {
+          if (this.cefrDistP.hasOwnProperty(k)) {
+            this.cefrDistP[k] = ((this.cefrDistP[k] / totalCefrP) * 100).toFixed(2);
+          }
+        }
     }
 
     mapLixScore (score) {

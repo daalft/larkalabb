@@ -123,6 +123,9 @@ export class LinguistComponent {
     //console.log("mode changed " + event);
     this.currentMode = event;
     this.exercise.requestModeChange(this.currentMode);
+    // reset dia-test stuff
+    this.showSummary = false;
+    this.dia_counter = 0;
     if (this.currentMode === "diagnostic_test") {
       this.modeSelector.setCanChangeMode(false);
     }

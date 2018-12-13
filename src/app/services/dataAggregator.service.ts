@@ -19,11 +19,6 @@ export class DataAggregatorService {
     constructor (private logger: LoggerService) {
         // turn on autoFlush with default interval of 1 minute
         this.setAutoFlush(true);
-
-    }
-
-    getUserInfo () {
-        this.logger.getUserInfo();
     }
 
     aggregate (type,data, id) {
@@ -59,13 +54,14 @@ export class DataAggregatorService {
     }
 
     closeAggregator() {
+        this.currentAggregator['timestamp-end'] = DatetimeService.currentTimestamp();
         this.dataBuffer.push(this.currentAggregator);
         this.currentAggregator = null;
         this.flush();
     }
 
     flush () {
-        if (this.dataBuffer.length == 0) {
+        if (this.dataBuffer.length === 0) {
             //console.log("Nothing to flush");
             return;
         }
@@ -73,7 +69,6 @@ export class DataAggregatorService {
         // send buffered data via logger service to database
 
         for (let i = 0; i < this.dataBuffer.length; i++) {
-
             this.logger.log(this.dataBuffer[i], this.mode);
         }
         this.dataBuffer = [];
@@ -88,8 +83,8 @@ export class DataAggregatorService {
             this.autoFlushProcessID = window.setInterval((function(self) {
                 return function () {
                     self.flush();
-                }
-            })(this), 1000*intervalSeconds);
+                };
+            })(this), 1000 * intervalSeconds);
         } else {
             clearInterval(this.autoFlushProcessID);
         }

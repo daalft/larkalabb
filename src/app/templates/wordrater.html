@@ -1,0 +1,40 @@
+<div>
+  <h2>Word rater</h2>
+</div>
+
+<div>
+  Progress: <b>{{counter}}/{{totalWords}}</b>
+</div>
+
+<div [hidden]="counter > 0">
+  <label for="rater">Who are you?</label>
+  <select id="rater">
+    <option>elena</option>
+    <option>david</option>
+  </select>
+</div>
+
+<div *ngIf="currentWord" style="padding: 20px;">
+  <b>{{currentWord['word']}}</b> ({{currentWord['pos']}})
+</div>
+
+<div [hidden]="counter == 0" style="padding: 15px;">
+  <label class="radio-inline"><input type="radio" name="cefr" value="A1">A1</label>
+  <label class="radio-inline"><input type="radio" name="cefr" value="A2">A2</label>
+  <label class="radio-inline"><input type="radio" name="cefr" value="B1">B1</label>
+  <label class="radio-inline"><input type="radio" name="cefr" value="B2">B2</label>
+  <label class="radio-inline"><input type="radio" name="cefr" value="C1">C1</label>
+  <label class="radio-inline"><input type="radio" name="cefr" value="C1p">Above C1</label>
+</div>
+
+<div [hidden]="counter == 0">
+  <button type="button" class="btn btn-default" (click)="next()">Next</button>
+</div>
+
+<div [hidden]="counter > 0">
+  <button type="button" class="btn btn-primary" (click)="start()">Start</button>
+</div>
+
+<div [hidden]="counter == 0" style="float:right;">
+  <button type="button" class="btn btn-danger" (click)="exit()">Stop/Exit</button>
+</div>

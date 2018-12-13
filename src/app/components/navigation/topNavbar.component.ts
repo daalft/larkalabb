@@ -8,6 +8,7 @@ import {Router} from '@angular/router';
 import {OverlayMenuComponent} from './overlayMenu.component';
 import {PleaseWaitComponent} from '../component/pleasewait.component';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';
+import {VersionControllerService} from "../../services/version.controller.service";
 
 @Component({
     selector: 'top-navbar',
@@ -32,6 +33,10 @@ export class TopNavbarComponent implements AfterViewInit {
 
     constructor(public localizer: LocalizerService, private login: LoginService, private router: Router) {
 
+    }
+
+    isLabb () {
+      return VersionControllerService.isLabb();
     }
 
     ngAfterViewInit () {

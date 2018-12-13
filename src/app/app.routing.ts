@@ -27,6 +27,16 @@ import {EnetCollectDemoComponent} from "./components/intern/enetcollect.componen
 import {CanActivateTestGuard} from "./components/guards/can-activate-test-guard";
 import {VocabularyMultipleChoiceExerciseComponent} from "./components/component/vocabulary.multiple.exercise.component";
 import {InflectionMultipleExerciseComponent} from "./components/component/inflection.multiple.exercise.component";
+import {WordraterComponent} from "./components/intern/wordrater.component";
+import {XRaterComponent} from "./components/intern/xrater.component";
+import {UserinfoComponent} from "./components/pages/userinfo.component";
+import {SixesComponent} from "./components/intern/sixes.component";
+import {Wordrater2Component} from "./components/intern/wordrater2.component";
+import {NonwordComponent} from "./components/intern/nonword.component";
+import {EnetcollectConsentComponent} from "./components/intern/enetcollect.consent.component";
+import {BundledGapComponent} from "./components/intern/bundled.gap.component";
+import {L2pAnnotatorComponent} from "./components/intern/l2p.annotator.component";
+import {CallectorComponent} from "./components/intern/callector.component";
 
 const appRoutes: Routes = [
 
@@ -43,24 +53,33 @@ const appRoutes: Routes = [
   {path: 'voc-mc', component: VocabularyMultipleChoiceExerciseComponent},
   {path: 'infl-mc', component: InflectionMultipleExerciseComponent},
     {path: 'register', component: RegisterComponent},
+  {path: 'userinfo', component: UserinfoComponent},
+  {path: 'enetcollectconsent', component: EnetcollectConsentComponent},
+  {path: 'bundles', component: BundledGapComponent},
     // TODO remove
     //{path: 'ncnd', component: DiagnosticDemoComponent},
     //{path: 'tagger', component: TaggerComponent},
     {path: 'test', component: TestComponent},
     {path: 'prode', component: ProfileDetailsComponent},
     {path: 'profile', component: ProfileComponent},
-
+    {path: 'sixes', component: SixesComponent},
+  {path: 'legato', component: L2pAnnotatorComponent},
     // {path: 'profile/:id/details', component: ProfileDetailsComponent},
     // {path: 'profile/:id/progress', component: LearnerProgressComponent},
 
     {path: 'siwoco', component: SiwocoComponent},
     // {path: 'profile/:id/egg', component: ProfileEggComponent},
+  {path: 'nonwords', component: NonwordComponent},
 
     {path: 'wordguess', component: HangBirdComponent},
     {path: 'wordguess-image', component: HangBirdImageComponent},
     {path: 'wordguess-eesti', component: HangBirdEestiComponent},
+  {path: 'callector', component: CallectorComponent},
+    {path: 'wordrater', component: WordraterComponent},
+  {path: 'wordrater2', component: Wordrater2Component},
+  {path: 'xrater', component: XRaterComponent},
 
-    {path: 'exeval', component: ExerciseTypeComponent},
+  {path: 'exeval', component: ExerciseTypeComponent},
     {path:'**', component: HomeComponent},
     {path: '', redirectTo: 'home',  pathMatch: 'full'}
     //{path: '*', component: LinguistComponent},

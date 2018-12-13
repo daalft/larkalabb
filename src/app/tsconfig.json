@@ -18,9 +18,10 @@
       "dom"
     ],
 	"types": [
-	"core-js"
+	"core-js",
 	"jasmine",
 	"jquery"
+
 	]
   },
   "exclude": [

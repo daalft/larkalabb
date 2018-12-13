@@ -29,3 +29,8 @@ function vh_audioStarted () {
 function vh_audioEnded () {
   $('.liwrix-play-button').removeClass('liwrix-play-button-inactive');
 }
+
+function dismissInfo() {
+  console.log("dimissing");
+  $('#datainfo').css('display', 'none');
+}

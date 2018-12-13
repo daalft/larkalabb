@@ -1,0 +1,85 @@
+<h2>CALLector crowdsourcing prototype</h2>
+
+<div class="roundbox" [hidden]="started">
+
+  <label for="langsel">Select language of input:</label>
+  <select id="langsel" class="form-control" #lsel>
+    <option *ngFor="let lang of languages" value="{{lang}}">{{lang}}</option>
+  </select>
+
+  <br/>
+
+  <label for="gamesel">Select game:</label>
+  <select id="gamesel" class="form-control" #gsel>
+    <option *ngFor="let game of games" value="{{game}}">{{game}}</option>
+  </select>
+
+  <br/>
+
+  <button type="button" class="btn btn-primary" (click)="start(lsel.value, gsel.value);">Start</button>
+</div>
+
+<div class="roundbox" [hidden]="!started">
+  <!-- title -->
+  <b>{{gameName}}</b>
+
+  <!-- progress -->
+  <div style="float:right">Submitted {{tasknum}} task{{pluralize}}</div>
+  <br/>
+
+  <div> <!-- prompt field -->
+    <div>
+      {{getTaskDescription()}}.
+    </div>
+
+    <br/>
+
+    <div [hidden]="gameMode != 'textual'"> <!-- textual prompt -->
+      <label for="gprompt">Enter prompt:</label>
+      <input type="text" class="form-control" id="gprompt">
+    </div>
+    <div [hidden]="gameMode != 'recording'"> <!-- recorded input -->
+      <button type="button" class="btn btn-primary" (click)="record();" id="recordbutton">Record</button>
+      <button type="button" class="btn btn-danger" (click)="stopRecording();" id="stopbutton" [disabled]="true">Stop</button>
+      <hr/>
+      Listen to the recording, make sure it is understandeable and click Next.
+      <br/><br/>
+      <audio id="audio" autoplay controls></audio>
+    </div>
+    <div [hidden]="gameMode != 'upload'">
+      <label for="gupload">Select file:</label>
+      <input type="file" id="gupload" accept="audio/*" class="form-control">
+    </div>
+  </div>
+
+  <br/>
+
+  <div [hidden]="gameMode === 'recording'"><!-- answer fields -->
+    Enter one answer per answer field. Use the button 'Add another answer' to add another answer.
+    <div *ngFor="let a of dummyAnswers; let i = index">
+      <label for="answer{{i+1}}">
+        Enter answer {{i+1}}:
+      </label>
+      <input id="answer{{i+1}}" class="form-control ganswers">
+    </div>
+
+    <br/>
+
+    <button type="button" class="btn btn-default" (click)="addAnswer()">
+      Add another answer
+    </button>
+
+
+  </div>
+
+  <div style="float:right;">
+    <button type="submit" class="btn btn-primary" (click)="next();">Next</button>
+    <button type="button" class="btn btn-danger" (click)="exit();">Exit</button>
+  </div>
+
+  <div style="clear: both;">
+
+  </div>
+</div>
+
+<br/><br/>
