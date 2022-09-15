@@ -25,7 +25,7 @@
     "@angular/router": "^5.0.0",
     "@types/dom-mediacapture-record": "^1.0.0",
     "@types/lodash": "^4.14.108",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "chart.js": "^2.7.1",
     "core-js": "^2.4.1",
     "d3-ng2-service": "^2.2.0",
